@@ -529,6 +529,59 @@ section { padding: var(--section-pad) 0; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* ═══════════════════════════════════════════
+   CERTIFICATION STRIP
+   ═══════════════════════════════════════════ */
+
+.cert-strip {
+  padding: 56px 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--charcoal-10);
+}
+.cert-strip-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--charcoal-50);
+  margin-bottom: 36px;
+}
+.cert-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.cert-item img {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.72;
+  filter: grayscale(15%);
+}
+.cert-item-text { line-height: 1.4; }
+.cert-item-text strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+.cert-item-text span {
+  font-size: 12px;
+  color: var(--charcoal-50);
+}
+
 </style>
 </head>
 <body>
@@ -867,7 +920,7 @@ section { padding: var(--section-pad) 0; }
             "Looks like Amazon is performing well now it's under Rosetta stewardship. Really pleased – the switch to the new packs has gone well and the whole process has been straightforward."
           </p>
           <div class="proof-attribution" style="flex-direction:column;align-items:flex-start;gap:12px;">
-            <img src="img/logos/For Goodness Shakes.png" alt="For Goodness Shakes" style="height:64px;width:auto;filter:brightness(0) invert(1);opacity:0.9;">
+            <img src="img/logos/For Goodness Shakes.png" alt="For Goodness Shakes" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:1;display:block;">
             <div>
               <div class="proof-name">Commercial Director</div>
               <div class="proof-role">For Goodness Shakes</div>
