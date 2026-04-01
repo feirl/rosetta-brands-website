@@ -489,7 +489,7 @@ section { padding: var(--section-pad) 0; }
 
 .page-hero h1 {
   font-family: var(--font-display);
-  font-size: 46px;
+  font-size: 42px;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.2px;
@@ -513,7 +513,7 @@ section { padding: var(--section-pad) 0; }
   gap: 16px;
 }
 
-/* Hero visual — styled card */
+/* Hero visual – styled card */
 .hero-visual {
   position: relative;
   z-index: 1;
@@ -1409,8 +1409,6 @@ section { padding: var(--section-pad) 0; }
 
       <div class="hero-text fade-in">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="breadcrumb-sep"></span>
           <a href="index.html#services">Services</a>
           <span class="breadcrumb-sep"></span>
           <span class="breadcrumb-current">Vendor-as-a-Service</span>
@@ -1421,7 +1419,7 @@ section { padding: var(--section-pad) 0; }
           Vendor-as-a-Service
         </div>
 
-        <h1>We don't manage your Amazon<br> account. <span>We are it.</span></h1>
+        <h1>We don't manage your Amazon account. <span>We are it.</span></h1>
 
         <p class="hero-sub">
           Your products sold and fulfilled through our established Amazon vendor relationship.
@@ -1749,14 +1747,14 @@ section { padding: var(--section-pad) 0; }
             <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
           </div>
           <p class="proof-quote">
-            "Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery — this has made a huge difference, and we are finding this process a lot more straightforward and cost efficient."
+            "Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery – this has made a huge difference, and we are finding this process a lot more straightforward and cost efficient."
           </p>
-          <div class="proof-attribution">
-            <div class="proof-avatar">S</div>
+          <div class="proof-attribution" style="flex-direction:column;align-items:flex-start;gap:8px;">
             <div>
               <div class="proof-name">Head of Sales</div>
               <div class="proof-role">San Francisco Bay Coffee</div>
             </div>
+            <div style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.55);letter-spacing:0.01em;">San Francisco Bay Coffee</div>
           </div>
         </div>
       </div>
@@ -1777,7 +1775,7 @@ section { padding: var(--section-pad) 0; }
           </div>
           <div>
             <div class="proof-stat-num">+361%</div>
-            <div class="proof-stat-label">Annual growth for a health food brand — from £245K to £900K run rate in one year</div>
+            <div class="proof-stat-label">Annual growth for a health food brand – from £245K to £900K run rate in one year</div>
           </div>
         </div>
         <div class="proof-stat-item">
@@ -1844,6 +1842,39 @@ section { padding: var(--section-pad) 0; }
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CERTIFICATION STRIP
+     ═══════════════════════════════════════════ -->
+<section class="cert-strip">
+  <div class="container">
+    <div class="cert-strip-label">Official Amazon Partnerships &amp; Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-item fade-in">
+        <img src="img/badges/amazon-vendor-central.png" alt="Amazon Vendor Central">
+        <div class="cert-item-text">
+          <strong>Vendor Central Access</strong>
+          <span>Enterprise vendor infrastructure</span>
+        </div>
+      </div>
+      <div class="cert-item fade-in fade-in-delay-1">
+        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Ads Certified">
+        <div class="cert-item-text">
+          <strong>Amazon Ads Certified</strong>
+          <span>Certified advertising partner</span>
+        </div>
+      </div>
+      <div class="cert-item fade-in fade-in-delay-2">
+        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner">
+        <div class="cert-item-text">
+          <strong>Amazon Freight Partner</strong>
+          <span>Direct logistics partnership</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
