@@ -431,10 +431,10 @@ a {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: 56px;
+  font-size: 46px;
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -1.5px;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
   color: var(--charcoal);
   margin-bottom: 24px;
 }
@@ -1544,6 +1544,257 @@ button:focus-visible {
   .cta-box { padding: 48px 24px; }
   .cta-title { font-size: 26px; }
 }
+
+/* ═══════════════════════════════════════════
+   HERO 2-COL LAYOUT
+   ═══════════════════════════════════════════ */
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.hero-left {}
+
+/* ═══════════════════════════════════════════
+   HERO VISUAL CARD
+   ═══════════════════════════════════════════ */
+
+.hero-right {
+  padding-top: 32px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-visual {
+  background: var(--charcoal);
+  border-radius: 20px;
+  padding: 28px 28px 24px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  position: relative;
+  box-shadow:
+    0 40px 80px rgba(45,41,51,0.22),
+    0 8px 24px rgba(45,41,51,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+  transition: transform 0.7s cubic-bezier(0.23,1,0.32,1), box-shadow 0.7s ease;
+}
+
+.hero-visual:hover {
+  transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
+  box-shadow:
+    0 48px 96px rgba(45,41,51,0.28),
+    0 12px 32px rgba(45,41,51,0.14),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Live pill */
+.hv-live-pill {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: white;
+  color: var(--charcoal);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px 5px 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+  letter-spacing: 0.1px;
+}
+
+.hv-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hv-live-dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.3);
+  animation: hv-pulse 1.8s ease-out infinite;
+}
+
+@keyframes hv-pulse {
+  0%   { transform: scale(0.4); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Badge row */
+.hv-badge-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+
+.hv-bs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f17d02;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 11px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
+}
+
+.hv-bs-star {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.hv-bs-category {
+  font-size: 11px;
+  color: rgba(255,255,255,0.42);
+  padding-left: 1px;
+}
+
+.hv-rank-box {
+  text-align: right;
+}
+
+.hv-rank-arrow {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.hv-rank-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.38);
+  margin-top: 3px;
+}
+
+/* Chart */
+.hv-chart-wrap {
+  margin-bottom: 18px;
+}
+
+.hv-chart-meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.hv-chart-caption {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 2px;
+}
+
+.hv-chart-headline {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.hv-chart-headline span {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--font-body);
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0;
+}
+
+.hv-chart-period {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  padding-bottom: 2px;
+}
+
+.hv-chart-svg {
+  width: 100%;
+  height: 88px;
+  display: block;
+  overflow: visible;
+}
+
+.hv-chart-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.2px;
+  margin-top: 6px;
+}
+
+/* Metrics */
+.hv-metrics {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.09);
+}
+
+.hv-metric {
+  flex: 1;
+  text-align: center;
+}
+
+.hv-metric-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  line-height: 1;
+}
+
+.hv-metric-lbl {
+  font-size: 10px;
+  color: rgba(255,255,255,0.38);
+  margin-top: 4px;
+  letter-spacing: 0.1px;
+}
+
+.hv-metric-sep {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.09);
+  flex-shrink: 0;
+}
+
+/* Responsive: hide visual on smaller screens */
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-right {
+    display: none;
+  }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -1867,51 +2118,143 @@ button:focus-visible {
 <main id="main-content">
 <section class="hero">
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge fade-in">
-        <span class="dot"></span>
-        The UK's Only Vendor-as-a-Service
-      </div>
+    <div class="hero-inner">
 
-      <h1 class="fade-in fade-in-delay-1">
-        Your FMCG brand on Amazon.<br>
-        <span>Our vendor platform.</span><br>
-        Shared success.
-      </h1>
+      <!-- LEFT: copy + stats -->
+      <div class="hero-left">
+        <div class="hero-content">
+          <div class="hero-badge fade-in">
+            <span class="dot"></span>
+            The UK's Only Vendor-as-a-Service
+          </div>
 
-      <p class="hero-sub fade-in fade-in-delay-2">
-        When you partner with Rosetta Brands, your products are sold and fulfilled through our
-        unique Amazon vendor relationship  -  giving you enterprise-grade access, operational
-        infrastructure, and strategic growth without the hassle.
-      </p>
+          <h1 class="fade-in fade-in-delay-1">
+            Your FMCG brand on Amazon.<br>
+            <span>Our vendor platform.</span><br>
+            Shared success.
+          </h1>
 
-      <div class="hero-actions fade-in fade-in-delay-3">
-        <button class="btn btn-primary btn-lg">
-          Schedule a Call
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="btn btn-secondary btn-lg">See How It Works</button>
-      </div>
-    </div>
+          <p class="hero-sub fade-in fade-in-delay-2">
+            When you partner with Rosetta Brands, your products are sold and fulfilled through our
+            unique Amazon vendor relationship – giving you enterprise-grade access, operational
+            infrastructure, and strategic growth without the hassle.
+          </p>
 
-    <div class="hero-stats fade-in fade-in-delay-3">
-      <div>
-        <div class="hero-stat-number">£100M+</div>
-        <div class="hero-stat-label">Generated for clients</div>
-      </div>
-      <div>
-        <div class="hero-stat-number">958+</div>
-        <div class="hero-stat-label">Brands managed</div>
-      </div>
-      <div>
-        <div class="hero-stat-number">100+</div>
-        <div class="hero-stat-label">Amazon Best Sellers</div>
-      </div>
-      <div>
-        <div class="hero-stat-number">15+</div>
-        <div class="hero-stat-label">Years Amazon experience</div>
-      </div>
-    </div>
+          <div class="hero-actions fade-in fade-in-delay-3">
+            <button class="btn btn-primary btn-lg">
+              Schedule a Call
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="btn btn-secondary btn-lg">See How It Works</button>
+          </div>
+        </div>
+
+        <div class="hero-stats fade-in fade-in-delay-3">
+          <div>
+            <div class="hero-stat-number">£100M+</div>
+            <div class="hero-stat-label">Generated for clients</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">958+</div>
+            <div class="hero-stat-label">Brands managed</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">100+</div>
+            <div class="hero-stat-label">Amazon Best Sellers</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">15+</div>
+            <div class="hero-stat-label">Years Amazon experience</div>
+          </div>
+        </div>
+      </div><!-- /hero-left -->
+
+      <!-- RIGHT: CSS/SVG results dashboard -->
+      <div class="hero-right fade-in fade-in-delay-2">
+        <div class="hero-visual">
+
+          <!-- Live indicator pill -->
+          <div class="hv-live-pill">
+            <span class="hv-live-dot"></span>
+            Live dashboard
+          </div>
+
+          <!-- Best Seller badge row -->
+          <div class="hv-badge-row">
+            <div>
+              <div class="hv-bs-badge">
+                <span class="hv-bs-star">★</span>
+                #1 Best Seller
+              </div>
+              <div class="hv-bs-category">Sports Nutrition · Amazon UK</div>
+            </div>
+            <div class="hv-rank-box">
+              <div class="hv-rank-arrow">↑47</div>
+              <div class="hv-rank-sub">positions</div>
+            </div>
+          </div>
+
+          <!-- Growth chart -->
+          <div class="hv-chart-wrap">
+            <div class="hv-chart-meta">
+              <div>
+                <div class="hv-chart-caption">Revenue growth</div>
+                <div class="hv-chart-headline">+558% <span>year on year</span></div>
+              </div>
+              <div class="hv-chart-period">12 months</div>
+            </div>
+            <svg class="hv-chart-svg" viewBox="0 0 300 88" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hvcGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f17d02" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#f17d02" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="hvcLine" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#f17d02" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#f17d02" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              <!-- Area fill -->
+              <path d="M0,80 C30,78 55,72 85,62 C115,52 140,42 170,28 C200,14 240,6 300,2 L300,88 L0,88 Z" fill="url(#hvcGrad)"/>
+              <!-- Line -->
+              <path d="M0,80 C30,78 55,72 85,62 C115,52 140,42 170,28 C200,14 240,6 300,2" stroke="url(#hvcLine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Data dots -->
+              <circle cx="85" cy="62" r="3.5" fill="#f17d02" fill-opacity="0.7"/>
+              <circle cx="170" cy="28" r="3.5" fill="#f17d02" fill-opacity="0.85"/>
+              <!-- End dot with ring -->
+              <circle cx="300" cy="2" r="5" fill="#f17d02"/>
+              <circle cx="300" cy="2" r="9" fill="none" stroke="#f17d02" stroke-opacity="0.3" stroke-width="1.5"/>
+              <!-- Vertical reference lines -->
+              <line x1="85" y1="62" x2="85" y2="88" stroke="#f17d02" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="170" y1="28" x2="170" y2="88" stroke="#f17d02" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
+            </svg>
+            <div class="hv-chart-axis">
+              <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Now</span>
+            </div>
+          </div>
+
+          <!-- Platform metrics -->
+          <div class="hv-metrics">
+            <div class="hv-metric">
+              <div class="hv-metric-num">7.4×</div>
+              <div class="hv-metric-lbl">ROAS</div>
+            </div>
+            <div class="hv-metric-sep"></div>
+            <div class="hv-metric">
+              <div class="hv-metric-num">£900K</div>
+              <div class="hv-metric-lbl">Annual revenue</div>
+            </div>
+            <div class="hv-metric-sep"></div>
+            <div class="hv-metric">
+              <div class="hv-metric-num">4</div>
+              <div class="hv-metric-lbl">Markets active</div>
+            </div>
+          </div>
+
+        </div><!-- /hero-visual -->
+      </div><!-- /hero-right -->
+
+    </div><!-- /hero-inner -->
   </div>
 </section>
 
