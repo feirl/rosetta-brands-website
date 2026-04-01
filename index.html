@@ -814,7 +814,7 @@ section {
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -1027,21 +1027,8 @@ section {
 
 .testimonial-author {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.testimonial-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--orange-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--orange);
+  flex-direction: column;
+  gap: 10px;
 }
 
 .testimonial-name {
@@ -1052,6 +1039,28 @@ section {
 .testimonial-role {
   font-size: 12.5px;
   color: var(--text-secondary);
+}
+
+.testimonial-company-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--charcoal-05);
+  border: 1px solid var(--charcoal-10);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--charcoal-70);
+  letter-spacing: 0.01em;
+  width: fit-content;
+}
+
+.testimonial-company-tag img {
+  height: 16px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
 }
 
 /* ═══════════════════════════════════════════
@@ -1508,7 +1517,8 @@ button:focus-visible {
   :root { --section-pad: 80px; }
   .hero h1 { font-size: 42px; }
   .section-title { font-size: 34px; }
-  .pillar-grid, .solutions-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .pillar-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-inner, .pricing-inner { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .steps-track { grid-template-columns: 1fr; gap: 24px; }
@@ -1528,6 +1538,7 @@ button:focus-visible {
   .hero h1 { font-size: 32px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .category-pills { flex-direction: column; align-items: center; }
+  .solutions-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .zero-grid { grid-template-columns: 1fr 1fr; }
   .cta-box { padding: 48px 24px; }
@@ -1921,7 +1932,6 @@ button:focus-visible {
       <img src="img/logos/Mr Filberts.png" alt="Mr Filberts" class="logo-grid-item">
       <img src="img/logos/Shaken Udder.png" alt="Shaken Udder" class="logo-grid-item">
       <img src="img/logos/Tayto.png" alt="Tayto" class="logo-grid-item">
-      <img src="img/logos/Dr Bronners.png" alt="Dr Bronner's" class="logo-grid-item">
     </div>
   </div>
 </section>
@@ -1937,14 +1947,14 @@ button:focus-visible {
         <div class="diff-label">Why This Is Different</div>
         <h2 class="diff-title">We don't manage<br>your Amazon account.<br>We <em>are</em> your Amazon account.</h2>
         <p class="diff-text">
-          Most Amazon agencies sit outside your operations. We sit inside them.
+          Most Amazon vendor agencies sit outside your operations. We sit inside them.
           Your products are bought, stocked, and sold through our vendor relationship
           with Amazon. Rosetta Brands carries the risk. We absorb the chargebacks. We're only successful when you are. Many of our brands consistently rank Top 10  -  often Top 5  -  in their category.
         </p>
         <ul class="diff-points">
           <li class="diff-point">
             <span class="diff-point-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Unique Amazon vendor account  -  rare, established, and structurally irreplaceable
+            Amazon vendor access  -  rare, established, and structurally irreplaceable
           </li>
           <li class="diff-point">
             <span class="diff-point-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -2162,7 +2172,8 @@ button:focus-visible {
       <h2 class="section-title">Wherever you are today, we'll get you where you need to be.</h2>
       <p class="section-subtitle">
         Your starting point determines your path. Whether you're a Seller upgrading,
-        a Vendor optimising, or a D2C brand launching on Amazon.
+        a Vendor optimising, a D2C brand launching on Amazon, or an Agency looking
+        for white-label vendor infrastructure.
       </p>
     </div>
 
@@ -2189,12 +2200,23 @@ button:focus-visible {
 
       <div class="solution-card fade-in fade-in-delay-2">
         <div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h3>D2C Brands</h3>
+        <h3>New to Amazon</h3>
         <p class="pain">
           You're selling through Shopify and your own site, but Amazon feels like a mountain.
           The complexity is terrifying. Small order fulfilment is killing your unit economics.
         </p>
         <div class="outcome">Launch on Amazon in 24 hours. Prime badge from day one. →</div>
+      </div>
+
+      <div class="solution-card fade-in fade-in-delay-3">
+        <div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Amazon Agencies</h3>
+        <p class="pain">
+          You manage multiple brand accounts but lack vendor infrastructure. Your clients
+          are asking for Prime, vendor pricing, and exclusive programs you can't deliver.
+          Retainer revenue is capped by what you can operationally deliver.
+        </p>
+        <div class="outcome">White-label vendor infrastructure. Scale your client offer. →</div>
       </div>
     </div>
   </div>
@@ -2281,11 +2303,11 @@ button:focus-visible {
           Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery — this has made a huge difference, and we are finding this process a lot more straightforward and cost efficient.
         </div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">S</div>
           <div>
             <div class="testimonial-name">Head of Sales</div>
-            <div class="testimonial-role">San Francisco Bay Coffee</div>
+            <div class="testimonial-role">International hot drink brand</div>
           </div>
+          <div class="testimonial-company-tag">San Francisco Bay Coffee</div>
         </div>
       </div>
 
@@ -2294,11 +2316,11 @@ button:focus-visible {
           We saw an instant impact on sales. They really know their stuff about the world of Amazon and offer opportunities to boost sales which we never knew were available to us.
         </div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">C</div>
           <div>
             <div class="testimonial-name">Founder</div>
-            <div class="testimonial-role">Claire's Handmade</div>
+            <div class="testimonial-role">Artisan food brand</div>
           </div>
+          <div class="testimonial-company-tag">Claire's Handmade</div>
         </div>
       </div>
 
@@ -2307,11 +2329,11 @@ button:focus-visible {
           We couldn't be more excited about our growth to date and the potential going forward both in the UK and in Europe.
         </div>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">B</div>
           <div>
             <div class="testimonial-name">Founder</div>
-            <div class="testimonial-role">Biltong Boss</div>
+            <div class="testimonial-role">Premium snack brand</div>
           </div>
+          <div class="testimonial-company-tag">Biltong Boss</div>
         </div>
       </div>
     </div>
@@ -2327,33 +2349,24 @@ button:focus-visible {
     <div class="cert-strip-label">Official Amazon Partnerships &amp; Certifications</div>
     <div class="cert-grid">
       <div class="cert-item fade-in">
-        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Verified Partner">
-        <div class="cert-item-text">
-          <strong>Amazon Verified Partner</strong>
-          <span>Officially recognised by Amazon</span>
-        </div>
-      </div>
-      <div class="cert-item fade-in">
-        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner">
-        <div class="cert-item-text">
-          <strong>Amazon Freight Partner</strong>
-          <span>Direct logistics partnership</span>
-        </div>
-      </div>
-      <div class="cert-item fade-in">
         <img src="img/badges/amazon-vendor-central.png" alt="Amazon Vendor Central">
         <div class="cert-item-text">
           <strong>Vendor Central Access</strong>
           <span>Enterprise vendor infrastructure</span>
         </div>
       </div>
-      <div class="cert-item fade-in">
-        <div style="width:40px;height:40px;background:var(--orange-mid);border-radius:8px;display:flex;align-items:center;justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
+      <div class="cert-item fade-in fade-in-delay-1">
+        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Ads Certified">
         <div class="cert-item-text">
           <strong>Amazon Ads Certified</strong>
           <span>Certified advertising partner</span>
+        </div>
+      </div>
+      <div class="cert-item fade-in fade-in-delay-2">
+        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner">
+        <div class="cert-item-text">
+          <strong>Amazon Freight Partner</strong>
+          <span>Direct logistics partnership</span>
         </div>
       </div>
     </div>
