@@ -511,15 +511,15 @@ a {
 }
 
 .logo-grid-item {
-  height: 32px;
-  opacity: 0.45;
-  filter: grayscale(100%);
+  height: 40px;
+  opacity: 0.75;
+  filter: none;
   transition: all 0.3s ease;
 }
 
 .logo-grid-item:hover {
-  opacity: 0.8;
-  filter: grayscale(0%);
+  opacity: 1;
+  filter: none;
 }
 
 /* ═══════════════════════════════════════════
@@ -722,6 +722,13 @@ section {
   background: var(--white);
   transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card .btn-ghost {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .pillar-card::before {
@@ -1329,7 +1336,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.4);
+  color: var(--orange);
   margin-bottom: 20px;
 }
 
@@ -1546,6 +1553,15 @@ button:focus-visible {
 }
 }
 
+
+.zero-subtitle {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.7);
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1592,7 +1608,6 @@ button:focus-visible {
     </ul>
 
     <div class="nav-actions">
-      <a href="#" class="nav-login">Login</a>
       <button class="btn btn-primary btn-sm">Schedule a Call</button>
       <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
@@ -1611,7 +1626,6 @@ button:focus-visible {
   <a class="mobile-nav-link" href="#">Why Rosetta Brands</a>
   <a class="mobile-nav-link" href="#">Resources</a>
   <div class="mobile-nav-divider"></div>
-  <a class="mobile-nav-link" href="#" style="color:var(--text-secondary);font-size:15px;">Login</a>
   <div class="mobile-nav-cta">
     <button class="btn btn-primary">
       Schedule a Call
@@ -1951,7 +1965,7 @@ button:focus-visible {
         <p class="diff-text">
           Most Amazon vendor agencies sit outside your operations. We sit inside them.
           Your products are bought, stocked, and sold through our vendor relationship
-          with Amazon. Rosetta Brands carries the risk. We absorb the chargebacks. We're only successful when you are. Many of our brands consistently rank Top 10  -  often Top 5  -  in their category.
+          with Amazon. All your Amazon headaches and hassle are removed. We're only successful when you are. Many of our brands consistently rank Top 10  -  often Top 5  -  in their category.
         </p>
         <ul class="diff-points">
           <li class="diff-point">
@@ -1968,7 +1982,7 @@ button:focus-visible {
           </li>
           <li class="diff-point">
             <span class="diff-point-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            6 exclusive Amazon programs  -  access that simply cannot be bought
+            Exclusive Amazon programs – access that simply cannot be bought
           </li>
           <li class="diff-point">
             <span class="diff-point-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1979,38 +1993,38 @@ button:focus-visible {
 
       <div class="diff-visual fade-in fade-in-delay-2">
         <div class="diff-card">
-          <div class="diff-card-header">Your Brand on Rosetta Brands</div>
+          <div class="diff-card-header">Your Brand With Rosetta Brands</div>
           <div class="diff-card-row">
             <span class="label">Vendor Status</span>
-            <span class="value green">● Active  -  Enterprise Tier</span>
+            <span class="value green">Active – Enterprise Tier</span>
           </div>
           <div class="diff-card-row">
             <span class="label">Prime Badge</span>
-            <span class="value green">● Enabled</span>
+            <span class="value green">Enabled – Dispatched &amp; Sold By Amazon</span>
           </div>
           <div class="diff-card-row">
-            <span class="label">Chargebacks Absorbed</span>
-            <span class="value green">100%</span>
+            <span class="label">Orders</span>
+            <span class="value green">Streamlined</span>
           </div>
           <div class="diff-card-row">
-            <span class="label">Returns & Damages</span>
+            <span class="label">Chargebacks</span>
+            <span class="value green">Managed</span>
+          </div>
+          <div class="diff-card-row">
+            <span class="label">Returns, Damages &amp; Overstocks</span>
             <span class="value green">Covered</span>
           </div>
           <div class="diff-card-row">
-            <span class="label">Pick & Pack</span>
-            <span class="value green">Case-pack only</span>
+            <span class="label">Brand Integrity</span>
+            <span class="value green">Protected</span>
+          </div>
+          <div class="diff-card-row">
+            <span class="label">Performance</span>
+            <span class="value green">Accelerated</span>
           </div>
           <div class="diff-card-row">
             <span class="label">Success Fee</span>
-            <span class="value orange">Only above target</span>
-          </div>
-          <div class="diff-card-row">
-            <span class="label">Amazon Experience</span>
-            <span class="value green">15+ Years</span>
-          </div>
-          <div class="diff-card-row">
-            <span class="label">Units Sold (2025)</span>
-            <span class="value green">1.5M+</span>
+            <span class="value orange">Only above agreed target</span>
           </div>
         </div>
       </div>
@@ -2127,7 +2141,7 @@ button:focus-visible {
       <div class="step fade-in fade-in-delay-1">
         <div class="step-number"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
         <h4>You ship once</h4>
-        <p>Case-pack to one Amazon fulfilment centre. No individual pick & pack</p>
+        <p>You ship to one Amazon fulfilment centre. No individual pick &amp; pack</p>
       </div>
       <div class="step fade-in fade-in-delay-2">
         <div class="step-number"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
@@ -2137,7 +2151,7 @@ button:focus-visible {
       <div class="step fade-in fade-in-delay-3">
         <div class="step-number"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h4>You get paid</h4>
-        <p>We handle reconciliation, chargebacks, and compliance. You see results</p>
+        <p>We pay you on receipt of a POD. No reconciliation headaches or delayed payments</p>
       </div>
     </div>
   </div>
@@ -2150,14 +2164,16 @@ button:focus-visible {
 <section class="zero-section">
   <div class="container">
     <div class="zero-inner">
+      <div class="section-tag orange fade-in" style="display:inline-block;margin-bottom:16px">Solutions</div>
       <h2 class="zero-title fade-in">What you never have to deal with</h2>
+      <p class="zero-subtitle fade-in">Those Amazon pain points that you simply can't shake, disappear with Rosetta Brands, providing you with peace of mind of financial and operational stability.</p>
       <div class="zero-grid">
-        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Chargebacks  -  we absorb them</div>
-        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Returns or damages costs</div>
-        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Individual pick and pack</div>
-        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Amazon customer service</div>
+        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Vendor or Seller Central fees</div>
+        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Variable chargebacks</div>
+        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Returns, damages or overstock costs</div>
         <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Reconciliation headaches</div>
-        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Storage or overstock costs</div>
+        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Dispute and case management</div>
+        <div class="zero-item fade-in"><span class="zero-badge">ZERO</span> Inhouse resource and expertise needed</div>
       </div>
     </div>
   </div>
@@ -2184,8 +2200,8 @@ button:focus-visible {
         <div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
         <h3>Amazon Sellers</h3>
         <p class="pain">
-          You're doing everything yourself  -  fulfilment, customer service, Buy Box battles, FBA fees.
-          Individual pick and pack is eating your margin. Agencies keep approaching with promises but the retainers don't make sense.
+          You're doing everything yourself – fulfilment, customer service, Buy Box battles, FBA/FBM fees.
+          Individual pick and pack is eating your margin. Struggling to scale, with no access to Amazon Vendor Central.
         </p>
         <div class="outcome">Upgrade to vendor status. Scale without the headache. →</div>
       </div>
@@ -2194,8 +2210,8 @@ button:focus-visible {
         <div class="solution-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><path d="M9 22v-4h6v4"/></svg></div>
         <h3>Amazon Vendors</h3>
         <p class="pain">
-          You have vendor status but managing the account is a full-time job. Chargebacks, shortages,
-          and reconciliation errors are bleeding margin. Nobody's coming to you with growth ideas.
+          You have vendor status but managing the account is beyond a full-time job with many hats.
+          Nobody's coming to you with growth ideas and a vendor strategy.
         </p>
         <div class="outcome">Better profitability. Strategic partnership. Zero operational burden. →</div>
       </div>
@@ -2215,7 +2231,7 @@ button:focus-visible {
         <h3>Amazon Agencies</h3>
         <p class="pain">
           You manage multiple brand accounts but lack vendor infrastructure. Your clients
-          are asking for Prime, vendor pricing, and exclusive programs you can't deliver.
+          are asking for Prime, solutions, strategy, and exclusive programs you can't deliver.
           Retainer revenue is capped by what you can operationally deliver.
         </p>
         <div class="outcome">White-label vendor infrastructure. Scale your client offer. →</div>
@@ -2274,7 +2290,7 @@ button:focus-visible {
         <div class="pricing-component">
           <div class="pricing-component-num">Component 1</div>
           <h4>Partner Efficiencies</h4>
-          <p>You sell to us at your agreed price. We sell to Amazon at the negotiated vendor price.
+          <p>You sell to us at your agreed price and we list your product on Amazon at your RRP.
              The margin in between covers your vendor access, fulfilment management, and operational infrastructure.</p>
         </div>
         <div class="pricing-component">
@@ -2297,19 +2313,19 @@ button:focus-visible {
     <div class="section-header center">
       <div class="section-tag orange">What Our Partners Say</div>
       <h2 class="section-title">Trusted by FMCG brand leaders</h2>
+      <p class="section-subtitle">FMCG leaders choose Rosetta Brands for our expertise – and stay for our partnership. We deliver consistently high standards of service, measurable impact, and a collaborative approach that drives strong client satisfaction and long-term retention.</p>
     </div>
 
     <div class="testimonials-grid">
       <div class="testimonial-card fade-in">
         <div class="testimonial-quote">
-          Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery – this has made a huge difference, and we are finding this process a lot more straightforward and cost efficient.
+          Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery – <strong>this has made a huge difference</strong>, and we are finding this process a lot more straightforward and cost efficient.
         </div>
         <div class="testimonial-author">
           <div>
             <div class="testimonial-name">Head of Sales</div>
             <div class="testimonial-role">International hot drink brand</div>
           </div>
-          <div class="testimonial-company-tag">San Francisco Bay Coffee</div>
         </div>
       </div>
 
@@ -2322,7 +2338,6 @@ button:focus-visible {
             <div class="testimonial-name">Founder</div>
             <div class="testimonial-role">Artisan food brand</div>
           </div>
-          <div class="testimonial-company-tag">Claire's Handmade</div>
         </div>
       </div>
 
@@ -2335,7 +2350,6 @@ button:focus-visible {
             <div class="testimonial-name">Founder</div>
             <div class="testimonial-role">Premium snack brand</div>
           </div>
-          <div class="testimonial-company-tag">Biltong Boss</div>
         </div>
       </div>
     </div>
@@ -2384,7 +2398,7 @@ button:focus-visible {
     <div class="cta-box">
       <h2 class="cta-title fade-in">Ready to grow your brand on Amazon?</h2>
       <p class="cta-text fade-in fade-in-delay-1">
-        We work with UK FMCG brands with £5M+ revenue who want to grow profitably on Amazon.
+        We work with FMCG brands who want to grow profitably and scale on Amazon.
         Let's explore whether vendor status is right for your brand.
       </p>
       <div class="cta-actions fade-in fade-in-delay-2">
@@ -2448,7 +2462,6 @@ button:focus-visible {
         <ul>
           <li><a href="why-rosetta-brands.html">Why Rosetta Brands</a></li>
           <li><a href="#">Schedule a Call</a></li>
-          <li><a href="#">Client Login</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>

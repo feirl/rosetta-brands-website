@@ -111,8 +111,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--orange); outlin
 .btn-ghost:hover svg { transform: translateX(3px); }
 .btn-lg { font-size: 15px; padding: 14px 32px; border-radius: 12px; }
 .btn-sm { font-size: 13px; padding: 10px 20px; border-radius: 8px; }
-.btn-ghost-light { background: transparent; color: rgba(255,255,255,0.9); border: 1.5px solid rgba(255,255,255,0.3); padding: 14px 32px; border-radius: 12px; font-size: 15px; font-weight: 600; }
-.btn-ghost-light:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+.btn-ghost-light { background: transparent; color: var(--charcoal); border: 1.5px solid var(--charcoal-50); padding: 14px 32px; border-radius: 12px; font-size: 15px; font-weight: 600; }
+.btn-ghost-light:hover { border-color: var(--charcoal); background: var(--charcoal-05); }
 
 /* ═══ HAMBURGER / MOBILE NAV ═══ */
 .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; transition: background 0.2s; }
@@ -144,7 +144,7 @@ section { padding: var(--section-pad) 0; }
 /* ═══ HERO  -  Template B (dark, centred) ═══ */
 .page-hero-b {
   padding: 140px 0 96px;
-  background: var(--charcoal);
+  background: var(--off-white);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -185,7 +185,7 @@ section { padding: var(--section-pad) 0; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: rgba(255,255,255,0.5);
+  color: var(--charcoal-50);
   margin-bottom: 20px;
 }
 
@@ -200,7 +200,7 @@ section { padding: var(--section-pad) 0; }
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.5px;
-  color: var(--white);
+  color: var(--charcoal);
   margin-bottom: 20px;
 }
 
@@ -209,7 +209,7 @@ section { padding: var(--section-pad) 0; }
 .page-hero-b .hero-sub {
   font-size: 18px;
   line-height: 1.65;
-  color: rgba(255,255,255,0.65);
+  color: var(--text-secondary);
   margin-bottom: 40px;
   max-width: 600px;
   margin-left: auto;
@@ -228,7 +228,8 @@ section { padding: var(--section-pad) 0; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(255,255,255,0.08);
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
   max-width: 600px;
@@ -236,7 +237,7 @@ section { padding: var(--section-pad) 0; }
 }
 
 .hero-b-stat {
-  background: rgba(255,255,255,0.04);
+  background: var(--off-white);
   padding: 24px;
   text-align: center;
 }
@@ -245,13 +246,13 @@ section { padding: var(--section-pad) 0; }
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 800;
-  color: var(--white);
+  color: var(--charcoal);
   margin-bottom: 4px;
   letter-spacing: -0.5px;
 }
 
 .hero-b-stat-num span { color: var(--orange); }
-.hero-b-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); }
+.hero-b-stat-label { font-size: 12px; color: var(--text-secondary); }
 
 /* ═══ CHALLENGE GRID ═══ */
 .challenge-section {
@@ -770,7 +771,7 @@ section { padding: var(--section-pad) 0; }
       <h2 class="section-title">What's eating your Amazon margin</h2>
       <p class="section-subtitle">
         Existing vendor accounts face a different set of problems from sellers.
-        These are the three we see most often.
+        These are the three we see most often. These are the challenges we can solve.
       </p>
     </div>
 
@@ -779,10 +780,9 @@ section { padding: var(--section-pad) 0; }
         <div class="challenge-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <h3>Margin erosion from chargebacks</h3>
+        <h3>Complete Margin Erosion</h3>
         <p>
-          Amazon's chargeback regime is aggressive. Shortages, EDI non-compliance, labelling issues, and late shipments all trigger financial deductions that compound over months.
-          Without dedicated compliance expertise and direct ABS access, these costs quietly destroy your profitability.
+          From your Amazon fixed vendor terms to your unmanageable variable chargebacks, managing your margin soon becomes a nightmare. T&amp;Cs negotiations, shortages, packaging and labelling, late shipments – the list is endless! These all trigger financial deductions that compound over months. Without dedicated compliance expertise and direct AVS access, these costs quietly destroy your profitability.
         </p>
       </div>
       <div class="challenge-card fade-in fade-in-delay-1">
@@ -802,9 +802,7 @@ section { padding: var(--section-pad) 0; }
         </div>
         <h3>Underutilised programs and opportunities</h3>
         <p>
-          Most vendor brands are unaware of or unable to access the full range of exclusive Amazon programs.
-          Subscribe &amp; Save, Amazon Fresh, Climate Pledge Friendly, and vendor-exclusive placements can
-          significantly accelerate growth - if you have access and know how to activate them.
+          Most vendor brands are unaware of or unable to access the full range of exclusive Amazon programs. Limited by their account ceiling but wanting to accelerate growth, they're cautious of what to explore and wondering if their operations and margin can support such programs. Without the confidence and support, you're stuck and sales become stagnant.
         </p>
       </div>
     </div>
@@ -821,7 +819,7 @@ section { padding: var(--section-pad) 0; }
       <div class="section-tag orange">How We Help</div>
       <h2 class="section-title">Challenge mapped. Solution delivered.</h2>
       <p class="section-subtitle">
-        We don't just manage your vendor account. We take ownership of every aspect of it.
+        We don't just manage your vendor account. We become your Amazon vendor account. We take ownership of every aspect of it.
       </p>
     </div>
 
@@ -846,14 +844,14 @@ section { padding: var(--section-pad) 0; }
         <div class="solution-map-challenge">Challenge 02 – Logistics &amp; Operations</div>
         <h3 class="solution-map-title">Simple. Predictable. Automated.</h3>
         <p class="solution-map-desc">
-          Case pack ordering issues, intermittent POs, and manual processing across up to 28 fulfilment
+          Case pack ordering issues, intermittent POs, and manual processing across up to 31 fulfilment
           centres creates constant operational chaos. We consolidate everything: weekly Monday POs,
           automated shipping labels in minutes, delivery to a single FC.
         </p>
         <ul class="solution-map-features">
           <li><span class="smap-dot"></span> Weekly Monday PO – predictable, never intermittent</li>
           <li><span class="smap-dot"></span> Automated shipping labels generated in minutes</li>
-          <li><span class="smap-dot"></span> Single FC delivery – not 28 separate shipments</li>
+          <li><span class="smap-dot"></span> Single FC delivery – not 31 separate shipments</li>
           <li><span class="smap-dot"></span> EDI &amp; labelling compliance fully managed</li>
         </ul>
       </div>
@@ -870,7 +868,7 @@ section { padding: var(--section-pad) 0; }
           <li><span class="smap-dot"></span> Dedicated Account Manager + Onboarding Team</li>
           <li><span class="smap-dot"></span> Marketing, Advertising &amp; Technical specialists</li>
           <li><span class="smap-dot"></span> Orders &amp; Finance team managing your account daily</li>
-          <li><span class="smap-dot"></span> 6 exclusive Amazon programs activated as standard</li>
+          <li><span class="smap-dot"></span> Exclusive Amazon programs and marketplaces activated as standard</li>
         </ul>
       </div>
     </div>
@@ -897,8 +895,8 @@ section { padding: var(--section-pad) 0; }
         <div class="metric-label">Chargebacks absorbed by Rosetta</div>
       </div>
       <div class="metric-item fade-in fade-in-delay-3">
-        <div class="metric-num">6</div>
-        <div class="metric-label">Exclusive Amazon programs for every brand</div>
+        <div class="metric-num">15<span>+</span></div>
+        <div class="metric-label">Years vendor experience</div>
       </div>
     </div>
   </div>
@@ -920,18 +918,18 @@ section { padding: var(--section-pad) 0; }
             "Looks like Amazon is performing well now it's under Rosetta stewardship. Really pleased – the switch to the new packs has gone well and the whole process has been straightforward."
           </p>
           <div class="proof-attribution" style="flex-direction:column;align-items:flex-start;gap:12px;">
-            <img src="img/logos/For Goodness Shakes.png" alt="For Goodness Shakes" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:1;display:block;">
             <div>
               <div class="proof-name">Commercial Director</div>
-              <div class="proof-role">For Goodness Shakes</div>
+              <div class="proof-role">Leading RTD protein brand</div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="fade-in fade-in-delay-1">
-        <h3 class="proof-context-title">What vendor optimisation actually looks like</h3>
-        <p class="proof-context-text">
+        <div class="section-tag orange" style="margin-bottom:12px;">Growth Marketing</div>
+        <h3 class="proof-context-title" style="text-align:center;">What vendor optimisation actually looks like</h3>
+        <p class="proof-context-text" style="text-align:center;">
           We don't just protect what you have. We actively grow it. From eliminating cost leakage
           through chargebacks to expanding into new markets, the Rosetta Brands partnership
           is structured to compound value over time.
