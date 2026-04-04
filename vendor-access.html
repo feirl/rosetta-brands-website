@@ -1134,12 +1134,12 @@ section { padding: var(--section-pad) 0; }
 }
 .related-card-icon.pink-bg { background: var(--pink-light); color: var(--pink); }
 .related-card-icon.purple-bg { background: var(--purple-light); color: var(--purple); }
-.related-card-icon.orange-bg { background: var(--orange-light); color: var(--orange); }
+.related-card-icon.orange-bg { background: var(--orange); color: white; }
 
-.related-card h4 { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.related-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
 .related-card p { font-size: 14px; line-height: 1.6; color: var(--text-secondary); flex: 1; margin-bottom: 20px; }
 
-.related-link {
+.related-card-link {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1148,8 +1148,8 @@ section { padding: var(--section-pad) 0; }
   color: var(--orange);
   margin-top: auto;
 }
-.related-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
-.related-card:hover .related-link svg { transform: translateX(3px); }
+.related-card-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
+.related-card:hover .related-card-link svg { transform: translateX(3px); }
 
 /* ═══════════════════════════════════════════
    CTA SECTION
@@ -2044,41 +2044,41 @@ section { padding: var(--section-pad) 0; }
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
-        <h4>Fulfilment &amp; Logistics</h4>
+        <h3>Fulfilment &amp; Logistics</h3>
         <p>One weekly order, one fulfilment centre, automated labels, and optional Amazon Freight collection from your warehouse.</p>
-        <span class="related-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
       <a href="#" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h4>Vendor Management Team</h4>
+        <h3>Vendor Management Team</h3>
         <p>Seven dedicated roles behind your brand. Client Manager, Advertiser, Finance, Onboarding, Technical, Orders, and Logistics Support.</p>
-        <span class="related-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
       <a href="#" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h4>Compliance &amp; Escalation</h4>
+        <h3>Compliance &amp; Escalation</h3>
         <p>Direct AVS access, chargeback dispute management, GSCOP compliance monitoring, and proactive account protection.</p>
-        <span class="related-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
       <a href="#" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
-        <h4>International Expansion</h4>
+        <h3>International Expansion</h3>
         <p>UK, Ireland, Germany, Australia and pan-EU through one vendor relationship. No separate accounts, no local teams required.</p>
-        <span class="related-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
       <a href="#" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <h4>Exclusive Amazon Programmes</h4>
+        <h3>Exclusive Amazon Programmes</h3>
         <p>Subscribe &amp; Save, Amazon Business, Pallet Ordering, Amazon Fresh, Amazon Freight, and international marketplaces.</p>
-        <span class="related-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
     </div>
   </div>
@@ -2103,36 +2103,36 @@ section { padding: var(--section-pad) 0; }
         <div class="related-card-icon pink-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <h4>Growth Marketing</h4>
+        <h3>Growth Marketing</h3>
         <p>Specialist marketing that takes your brand presence, content, and advertising to the next level. Advertising, A+ Content, Brand Store, and product launch services.</p>
-        <span class="related-link">
+        <div class="related-card-link">
           Explore Growth Marketing
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        </div>
       </a>
 
       <a href="platform.html" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon purple-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h4>Platform</h4>
+        <h3>Platform</h3>
         <p>Purpose-built technology powering your vendor account - from automated order management to live analytics, listing health monitoring, and detailed performance reporting.</p>
-        <span class="related-link">
+        <div class="related-card-link">
           Explore Platform
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        </div>
       </a>
 
       <a href="pricing.html" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
-        <h4>Pricing &amp; Partnership Model</h4>
+        <h3>Pricing &amp; Partnership Model</h3>
         <p>Outcome-based pricing - our success fee only kicks in when you grow beyond your target. Understand exactly how the commercial model works before you commit.</p>
-        <span class="related-link">
+        <div class="related-card-link">
           See Pricing
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        </div>
       </a>
     </div>
   </div>
