@@ -557,8 +557,134 @@
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .cta-actions { flex-direction: column; }
 }
+
+/* ═══════════════════════════════════════════
+   FAQ SECTION
+   ═══════════════════════════════════════════ */
+.faq-section { padding: var(--section-pad) 0; background: var(--off-white); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; }
+.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+.faq-item:hover { box-shadow: 0 2px 12px rgba(45,41,51,0.06); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: none; cursor: pointer; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--charcoal); text-align: left; transition: color 0.2s ease; }
+.faq-q:hover, .faq-q[aria-expanded="true"] { color: var(--orange); }
+.faq-chevron { flex-shrink: 0; transition: transform 0.25s ease; color: var(--charcoal-50); }
+.faq-q[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); color: var(--orange); }
+.faq-a { padding: 0 24px 20px; border-top: 1px solid var(--border); }
+.faq-a p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding-top: 16px; }
 </style>
   <script src="nav-loader.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://rosettabrands.co.uk/pricing.html",
+      "url": "https://rosettabrands.co.uk/pricing.html",
+      "name": "Amazon VaaS Pricing & Partnership Model | Rosetta Brands",
+      "description": "Rosetta Brands operates on a partnership model: three components working together as one growth engine. No retainers. We only win when you win.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://rosettabrands.co.uk",
+        "name": "Rosetta Brands"
+      },
+      "breadcrumb": {
+        "@id": "https://rosettabrands.co.uk/pricing.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rosettabrands.co.uk/pricing.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://rosettabrands.co.uk/pricing.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Pricing & Partnership Model",
+      "description": "Rosetta Brands operates on an outcome-based pricing model with a base component covering infrastructure costs and a success fee that only applies when your brand grows beyond its agreed target. No retainers, no upfront fees.",
+      "serviceType": "Amazon Vendor-as-a-Service",
+      "url": "https://rosettabrands.co.uk/pricing.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk"
+      },
+      "areaServed": [
+        "GB",
+        "IE",
+        "DE",
+        "AU"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Rosetta Brands pricing work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our model has three components: a Vendor Access fee covering the infrastructure cost of your vendor account; a Fulfilment fee based on order volume and complexity; and a Success Fee that only applies when your Amazon revenue grows beyond an agreed target. The success fee is our primary incentive — we only earn it when you grow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an upfront fee or retainer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No upfront fees and no retainer. Our base fees cover the operational cost of running your vendor account and fulfilment. Beyond that, our compensation is tied directly to your growth. If you do not grow beyond target, we do not earn the success fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the success fee kick in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The success fee only applies to revenue above a mutually agreed growth target. The target is set at onboarding based on your current Amazon revenue and realistic growth potential. Only growth beyond that threshold triggers the success fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the base Vendor Access fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Vendor Access fee covers: maintenance of your vendor account relationship with Amazon, compliance management, catalogue management, weekly purchase order processing, and access to our platform technology."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum contract length?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We ask for an initial partnership term to allow the account infrastructure to bed in and performance to stabilise — typically six months. After that, the partnership continues on a rolling basis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate the growth target?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The growth target is agreed collaboratively at onboarding. We look at your current Amazon revenue run rate, category growth rates, and realistic timelines. The target should be achievable — an unachievable target is not in our interest either."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -1036,6 +1162,74 @@
 </main>
 
 <!-- ═══ JAVASCRIPT ═══ -->
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-tag orange">Common Questions</div>
+      <h2 class="section-title">Everything you need to know</h2>
+      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How does Rosetta Brands pricing work?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Our model has three components: a Vendor Access fee covering the infrastructure cost of your vendor account; a Fulfilment fee based on order volume and complexity; and a Success Fee that only applies when your Amazon revenue grows beyond an agreed target. The success fee is our primary incentive — we only earn it when you grow.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Is there an upfront fee or retainer?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>No upfront fees and no retainer. Our base fees cover the operational cost of running your vendor account and fulfilment. Beyond that, our compensation is tied directly to your growth. If you do not grow beyond target, we do not earn the success fee.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            When does the success fee kick in?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>The success fee only applies to revenue above a mutually agreed growth target. The target is set at onboarding based on your current Amazon revenue and realistic growth potential. Only growth beyond that threshold triggers the success fee.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What is included in the base Vendor Access fee?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>The Vendor Access fee covers: maintenance of your vendor account relationship with Amazon, compliance management, catalogue management, weekly purchase order processing, and access to our platform technology.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Is there a minimum contract length?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>We ask for an initial partnership term to allow the account infrastructure to bed in and performance to stabilise — typically six months. After that, the partnership continues on a rolling basis.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How do you calculate the growth target?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>The growth target is agreed collaboratively at onboarding. We look at your current Amazon revenue run rate, category growth rates, and realistic timelines. The target should be achievable — an unachievable target is not in our interest either.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
 <div id="footer-placeholder"></div>
 </body>
 </html>

@@ -842,14 +842,51 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Rosetta Brands",
-  "description": "The UK's only Vendor-as-a-Service for FMCG brands on Amazon. 958+ brands managed across UK, Ireland, Germany, and Australia.",
-  "url": "https://rosettabrands.co.uk",
-  "areaServed": ["GB", "IE", "DE", "AU"],
-  "serviceType": "Vendor-as-a-Service",
-  "knowsAbout": ["Amazon Vendor Management", "FMCG Brand Growth", "Amazon Advertising", "Amazon Fulfilment", "E-commerce Operations"],
-  "numberOfEmployees": {"@type": "QuantitativeValue", "value": 50}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rosettabrands.co.uk/#website",
+      "url": "https://rosettabrands.co.uk",
+      "name": "Rosetta Brands",
+      "description": "The UK's only Vendor-as-a-Service for FMCG brands on Amazon."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rosettabrands.co.uk/",
+      "url": "https://rosettabrands.co.uk/",
+      "name": "Rosetta Brands | FMCG Vendor-as-a-Service for Amazon",
+      "description": "UK Amazon Vendor-as-a-Service for FMCG brands. 958+ brands managed, £100M+ revenue generated. Vendor access, Prime badge and growth marketing — one partnership.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://rosettabrands.co.uk/#website"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://rosettabrands.co.uk/#organization",
+      "name": "Rosetta Brands",
+      "url": "https://rosettabrands.co.uk",
+      "description": "The UK's only Vendor-as-a-Service for FMCG brands on Amazon. 958+ brands managed across UK, Ireland, Germany, and Australia.",
+      "areaServed": [
+        "GB",
+        "IE",
+        "DE",
+        "AU"
+      ],
+      "serviceType": "Vendor-as-a-Service",
+      "knowsAbout": [
+        "Amazon Vendor Management",
+        "FMCG Brand Growth",
+        "Amazon Advertising",
+        "Amazon Fulfilment",
+        "E-commerce Operations"
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 50
+      }
+    }
+  ]
 }
 </script>
   <script src="nav-loader.js" defer></script>

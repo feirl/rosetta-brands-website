@@ -668,8 +668,132 @@ section { width: 100%; }
   .cta-box { padding: 48px 28px; }
   .footer-top { grid-template-columns: 1fr; }
 }
+
+/* ═══════════════════════════════════════════
+   FAQ SECTION
+   ═══════════════════════════════════════════ */
+.faq-section { padding: var(--section-pad) 0; background: var(--off-white); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; }
+.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+.faq-item:hover { box-shadow: 0 2px 12px rgba(45,41,51,0.06); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: none; cursor: pointer; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--charcoal); text-align: left; transition: color 0.2s ease; }
+.faq-q:hover, .faq-q[aria-expanded="true"] { color: var(--orange); }
+.faq-chevron { flex-shrink: 0; transition: transform 0.25s ease; color: var(--charcoal-50); }
+.faq-q[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); color: var(--orange); }
+.faq-a { padding: 0 24px 20px; border-top: 1px solid var(--border); }
+.faq-a p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding-top: 16px; }
 </style>
   <script src="nav-loader.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://rosettabrands.co.uk/fulfilment.html",
+      "url": "https://rosettabrands.co.uk/fulfilment.html",
+      "name": "Fulfilment & Logistics | Amazon VaaS | Rosetta Brands",
+      "description": "One weekly order. One fulfilment centre. Zero headaches. Rosetta Brands turns Amazon's complex fulfilment requirements into a simple weekly cycle for FMCG brands.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://rosettabrands.co.uk",
+        "name": "Rosetta Brands"
+      },
+      "breadcrumb": {
+        "@id": "https://rosettabrands.co.uk/fulfilment.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rosettabrands.co.uk/fulfilment.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rosettabrands.co.uk/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fulfilment & Logistics",
+          "item": "https://rosettabrands.co.uk/fulfilment.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Fulfilment & Logistics",
+      "description": "Rosetta Brands manages the full Amazon fulfilment cycle for FMCG brands — one weekly purchase order, one collection point, consolidated to a single Amazon fulfilment centre using Amazon's own freight network.",
+      "serviceType": "Amazon Fulfilment Management",
+      "url": "https://rosettabrands.co.uk/fulfilment.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk"
+      },
+      "areaServed": [
+        "GB",
+        "IE",
+        "DE",
+        "AU"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Rosetta Brands simplify Amazon fulfilment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We consolidate everything into a single weekly cycle. Amazon places one purchase order each week, we generate shipping labels and confirmation, arrange collection from your warehouse via Amazon Freight, and handle all compliance, prep, and last-mile delivery. You ship once a week to one location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Rosetta Brands use Amazon's own freight network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We use Amazon Freight to collect directly from your warehouse, which means your stock moves through Amazon's own logistics infrastructure. This reduces handling, improves delivery reliability, and keeps fulfilment costs lower than third-party 3PL alternatives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many Amazon fulfilment centres do I need to manage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just one. Rosetta Brands consolidates all your orders to a single Amazon fulfilment centre, regardless of how many centres Amazon ultimately distributes to. The complexity of Amazon's 31-centre network is invisible to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens with Amazon chargebacks and prep charges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chargebacks and prep charges are one of the biggest margin drains for Amazon vendors. Our fulfilment process is built around Amazon's exact compliance requirements, significantly reducing the frequency of chargebacks. Where disputes arise, we handle them on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to change my warehouse or logistics setup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We work with your existing warehouse and dispatch operations. Amazon Freight collects from you directly. The only change is that you ship on a weekly cycle rather than managing multiple purchase orders and destinations yourself."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -1253,6 +1377,65 @@ section { width: 100%; }
 </section>
 
 </main>
+
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-tag orange">Common Questions</div>
+      <h2 class="section-title">Everything you need to know</h2>
+      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How does Rosetta Brands simplify Amazon fulfilment?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>We consolidate everything into a single weekly cycle. Amazon places one purchase order each week, we generate shipping labels and confirmation, arrange collection from your warehouse via Amazon Freight, and handle all compliance, prep, and last-mile delivery. You ship once a week to one location.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Does Rosetta Brands use Amazon's own freight network?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Yes. We use Amazon Freight to collect directly from your warehouse, which means your stock moves through Amazon's own logistics infrastructure. This reduces handling, improves delivery reliability, and keeps fulfilment costs lower than third-party 3PL alternatives.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How many Amazon fulfilment centres do I need to manage?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Just one. Rosetta Brands consolidates all your orders to a single Amazon fulfilment centre, regardless of how many centres Amazon ultimately distributes to. The complexity of Amazon's 31-centre network is invisible to you.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What happens with Amazon chargebacks and prep charges?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Chargebacks and prep charges are one of the biggest margin drains for Amazon vendors. Our fulfilment process is built around Amazon's exact compliance requirements, significantly reducing the frequency of chargebacks. Where disputes arise, we handle them on your behalf.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Do I need to change my warehouse or logistics setup?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>No. We work with your existing warehouse and dispatch operations. Amazon Freight collects from you directly. The only change is that you ship on a weekly cycle rather than managing multiple purchase orders and destinations yourself.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <div id="footer-placeholder"></div>
 </body>

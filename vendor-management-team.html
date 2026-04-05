@@ -512,8 +512,132 @@ section { width: 100%; }
   .cta-box { padding: 48px 28px; }
   .footer-top { grid-template-columns: 1fr; }
 }
+
+/* ═══════════════════════════════════════════
+   FAQ SECTION
+   ═══════════════════════════════════════════ */
+.faq-section { padding: var(--section-pad) 0; background: var(--off-white); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; }
+.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+.faq-item:hover { box-shadow: 0 2px 12px rgba(45,41,51,0.06); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: none; cursor: pointer; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--charcoal); text-align: left; transition: color 0.2s ease; }
+.faq-q:hover, .faq-q[aria-expanded="true"] { color: var(--orange); }
+.faq-chevron { flex-shrink: 0; transition: transform 0.25s ease; color: var(--charcoal-50); }
+.faq-q[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); color: var(--orange); }
+.faq-a { padding: 0 24px 20px; border-top: 1px solid var(--border); }
+.faq-a p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding-top: 16px; }
 </style>
   <script src="nav-loader.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://rosettabrands.co.uk/vendor-management-team.html",
+      "url": "https://rosettabrands.co.uk/vendor-management-team.html",
+      "name": "Vendor Management Team | Amazon VaaS | Rosetta Brands",
+      "description": "Seven specialist roles. One partnership. Instead of building an Amazon vendor management team in-house, Rosetta's cross-functional team becomes yours from day one.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://rosettabrands.co.uk",
+        "name": "Rosetta Brands"
+      },
+      "breadcrumb": {
+        "@id": "https://rosettabrands.co.uk/vendor-management-team.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rosettabrands.co.uk/vendor-management-team.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rosettabrands.co.uk/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vendor Management Team",
+          "item": "https://rosettabrands.co.uk/vendor-management-team.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Vendor Management Team",
+      "description": "Rosetta Brands provides a fully integrated seven-person Amazon vendor management team as a service — including client manager, advertising manager, creative designer, onboarding specialist, finance manager, orders coordinator, and partnerships lead.",
+      "serviceType": "Amazon Vendor Team Management",
+      "url": "https://rosettabrands.co.uk/vendor-management-team.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk"
+      },
+      "areaServed": [
+        "GB",
+        "IE",
+        "DE",
+        "AU"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What specialists are included in the Vendor Management Team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every Rosetta Brands partnership includes seven dedicated roles: a Client Manager who owns your account relationship; an Advertising Manager running your Amazon PPC; a Creative Designer for content and imagery; an Onboarding and Technical Specialist; a Finance Manager handling deductions and reconciliation; an Orders Coordinator managing weekly purchase orders; and a Partnerships Lead developing your Amazon commercial relationships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these dedicated individuals or shared resources?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each specialist is dedicated to their function but works across a carefully managed portfolio of brands. You get genuine specialist expertise — not an account manager wearing multiple hats. Your Client Manager is your single point of contact and coordinates the full team on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this compare to hiring an in-house Amazon team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Building these seven roles in-house would cost upwards of £350,000 to £500,000 in annual salaries alone, plus recruitment, training, management overhead, and time to build institutional knowledge. Through Rosetta Brands, you access the same depth of expertise immediately, with costs tied to your commercial performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the team communicate with us day-to-day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your Client Manager is your primary contact for day-to-day communication, weekly performance reviews, and strategic planning. Specialist team members join calls when their area is the focus. You have visibility across everything through our client portal, including live analytics, order status, and advertising performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a team member leaves Rosetta Brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our team structure is designed for resilience. Each function has internal depth and documented processes, so transitions do not create gaps in your account management. The institutional expertise stays with Rosetta Brands."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -1101,6 +1225,65 @@ section { width: 100%; }
 </section>
 
 </main>
+
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-tag orange">Common Questions</div>
+      <h2 class="section-title">Everything you need to know</h2>
+      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What specialists are included in the Vendor Management Team?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Every Rosetta Brands partnership includes seven dedicated roles: a Client Manager who owns your account relationship; an Advertising Manager running your Amazon PPC; a Creative Designer for content and imagery; an Onboarding and Technical Specialist; a Finance Manager handling deductions and reconciliation; an Orders Coordinator managing weekly purchase orders; and a Partnerships Lead developing your Amazon commercial relationships.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Are these dedicated individuals or shared resources?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Each specialist is dedicated to their function but works across a carefully managed portfolio of brands. You get genuine specialist expertise — not an account manager wearing multiple hats. Your Client Manager is your single point of contact and coordinates the full team on your behalf.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How does this compare to hiring an in-house Amazon team?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Building these seven roles in-house would cost upwards of £350,000 to £500,000 in annual salaries alone, plus recruitment, training, management overhead, and time to build institutional knowledge. Through Rosetta Brands, you access the same depth of expertise immediately, with costs tied to your commercial performance.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How does the team communicate with us day-to-day?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Your Client Manager is your primary contact for day-to-day communication, weekly performance reviews, and strategic planning. Specialist team members join calls when their area is the focus. You have visibility across everything through our client portal, including live analytics, order status, and advertising performance.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What happens if a team member leaves Rosetta Brands?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Our team structure is designed for resilience. Each function has internal depth and documented processes, so transitions do not create gaps in your account management. The institutional expertise stays with Rosetta Brands.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <div id="footer-placeholder"></div>
 </body>

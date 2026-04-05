@@ -691,8 +691,140 @@
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* ═══════════════════════════════════════════
+   FAQ SECTION
+   ═══════════════════════════════════════════ */
+.faq-section { padding: var(--section-pad) 0; background: var(--off-white); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; }
+.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s ease; }
+.faq-item:hover { box-shadow: 0 2px 12px rgba(45,41,51,0.06); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: none; cursor: pointer; font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--charcoal); text-align: left; transition: color 0.2s ease; }
+.faq-q:hover, .faq-q[aria-expanded="true"] { color: var(--orange); }
+.faq-chevron { flex-shrink: 0; transition: transform 0.25s ease; color: var(--charcoal-50); }
+.faq-q[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); color: var(--orange); }
+.faq-a { padding: 0 24px 20px; border-top: 1px solid var(--border); }
+.faq-a p { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding-top: 16px; }
 </style>
   <script src="nav-loader.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://rosettabrands.co.uk/vendor-access.html",
+      "url": "https://rosettabrands.co.uk/vendor-access.html",
+      "name": "Vendor Access & Prime | Amazon VaaS | Rosetta Brands",
+      "description": "Unlock enterprise-grade Amazon vendor status through Rosetta Brands. Prime badge, fulfilment, advertising and full compliance — without building the infrastructure yourself.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://rosettabrands.co.uk",
+        "name": "Rosetta Brands"
+      },
+      "breadcrumb": {
+        "@id": "https://rosettabrands.co.uk/vendor-access.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://rosettabrands.co.uk/vendor-access.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://rosettabrands.co.uk/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vendor Access & Prime",
+          "item": "https://rosettabrands.co.uk/vendor-access.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Vendor Access & Prime",
+      "description": "Rosetta Brands provides FMCG brands with enterprise-grade Amazon vendor status, Prime badge access, and the full infrastructure of a managed vendor account — without building it in-house.",
+      "serviceType": "Amazon Vendor-as-a-Service",
+      "url": "https://rosettabrands.co.uk/vendor-access.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk"
+      },
+      "areaServed": [
+        "GB",
+        "IE",
+        "DE",
+        "AU"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Vendor-as-a-Service (VaaS)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vendor-as-a-Service means Rosetta Brands operates as your Amazon vendor. We hold the vendor account, manage the relationship with Amazon, handle compliance and fulfilment, and share in your growth. You get enterprise-grade vendor infrastructure without the overhead of building or running it yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need my own Amazon vendor account to work with Rosetta Brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Rosetta Brands provides the vendor account infrastructure. You benefit from our established vendor relationships, Prime badge access, and Amazon compliance framework from day one — without needing your own vendor account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which markets does Rosetta Brands operate in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We currently operate across the UK, Ireland, Germany, and Australia. Our vendor infrastructure is active in all four markets, allowing brands to expand internationally without managing separate vendor relationships in each territory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What product categories does Rosetta Brands work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We specialise in FMCG categories on Amazon, including Grocery & Gourmet, Beer, Wine & Spirits, Health & Personal Care, Pet Supplies, Home & Household, and Garden & Outdoor. If you are an FMCG brand, we likely have deep experience in your category."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does onboarding take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most brands are fully onboarded and live on Amazon within 4 to 8 weeks. This includes account setup, catalogue migration, compliance checks, content optimisation, and first purchase order processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Rosetta Brands alongside my existing Amazon Seller account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many of our partner brands transition from Seller to Vendor through us, while others run both in parallel during the transition period. We will advise on the right approach based on your current setup and growth objectives."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -1293,6 +1425,74 @@
 <!-- ═══════════════════════════════════════════
      JAVASCRIPT
      ═══════════════════════════════════════════ -->
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-tag orange">Common Questions</div>
+      <h2 class="section-title">Everything you need to know</h2>
+      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What is Vendor-as-a-Service (VaaS)?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Vendor-as-a-Service means Rosetta Brands operates as your Amazon vendor. We hold the vendor account, manage the relationship with Amazon, handle compliance and fulfilment, and share in your growth. You get enterprise-grade vendor infrastructure without the overhead of building or running it yourself.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Do I need my own Amazon vendor account to work with Rosetta Brands?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>No. Rosetta Brands provides the vendor account infrastructure. You benefit from our established vendor relationships, Prime badge access, and Amazon compliance framework from day one — without needing your own vendor account.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Which markets does Rosetta Brands operate in?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>We currently operate across the UK, Ireland, Germany, and Australia. Our vendor infrastructure is active in all four markets, allowing brands to expand internationally without managing separate vendor relationships in each territory.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            What product categories does Rosetta Brands work with?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>We specialise in FMCG categories on Amazon, including Grocery & Gourmet, Beer, Wine & Spirits, Health & Personal Care, Pet Supplies, Home & Household, and Garden & Outdoor. If you are an FMCG brand, we likely have deep experience in your category.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            How long does onboarding take?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Most brands are fully onboarded and live on Amazon within 4 to 8 weeks. This includes account setup, catalogue migration, compliance checks, content optimisation, and first purchase order processing.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Can I use Rosetta Brands alongside my existing Amazon Seller account?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Yes. Many of our partner brands transition from Seller to Vendor through us, while others run both in parallel during the transition period. We will advise on the right approach based on your current setup and growth objectives.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
 <div id="footer-placeholder"></div>
 </body>
 </html>
