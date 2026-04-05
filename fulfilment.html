@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+
 /* ═══════════════════════════════════════════
    DESIGN SYSTEM  -  Rosetta Brands
    ═══════════════════════════════════════════ */
@@ -62,61 +63,6 @@ a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
 
 .skip-link { position: absolute; top: -100px; left: 16px; z-index: 9999; padding: 8px 16px; background: var(--orange); color: white; border-radius: 4px; font-size: 14px; font-weight: 600; }
 .skip-link:focus { top: 16px; }
-
-/* ═══ NAV ═══ */
-.nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); transition: box-shadow 0.2s ease; }
-.nav.scrolled { box-shadow: 0 2px 20px rgba(45,41,51,0.08); }
-.nav-inner { max-width: var(--container-max); margin: 0 auto; padding: 0 32px; height: 100%; display: flex; align-items: center; gap: 0; }
-.nav-logo { display: flex; align-items: center; margin-right: auto; }
-.nav-logo img { height: 28px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 2px; }
-.nav-link { display: flex; align-items: center; gap: 4px; padding: 8px 14px; font-size: 14px; font-weight: 500; color: var(--charcoal-70); border-radius: 8px; cursor: pointer; transition: all 0.15s ease; background: none; border: none; font-family: var(--font-body); white-space: nowrap; }
-.nav-link:hover, .nav-link.active { color: var(--charcoal); background: var(--charcoal-05); }
-.nav-link .chevron { width: 12px; height: 12px; transition: transform 0.2s ease; }
-.nav-link:hover .chevron { transform: rotate(180deg); }
-.nav-actions { display: flex; align-items: center; gap: 8px; margin-left: 16px; }
-
-/* Buttons */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 10px 20px; border-radius: 10px; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; }
-.btn-primary { background: var(--charcoal); color: white; }
-.btn-primary:hover { background: rgba(45,41,51,0.85); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(45,41,51,0.2); }
-.btn-secondary { background: var(--charcoal-05); color: var(--charcoal); border: 1px solid var(--border); }
-.btn-secondary:hover { background: var(--charcoal-10); }
-.btn-ghost { background: transparent; color: var(--charcoal); border: 1px solid var(--border); }
-.btn-ghost:hover { background: var(--charcoal-05); }
-.btn svg { width: 16px; height: 16px; }
-.btn-lg { padding: 13px 26px; font-size: 15px; border-radius: 12px; }
-.btn-sm { padding: 7px 14px; font-size: 13px; border-radius: 8px; }
-
-/* Mega Menu */
-.mega-wrapper { position: relative; }
-.mega-menu { position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: white; border: 1px solid var(--border); border-radius: 20px; padding: 24px; box-shadow: 0 20px 60px rgba(45,41,51,0.12); width: 820px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; opacity: 0; visibility: hidden; transition: all 0.2s ease; pointer-events: none; z-index: 100; }
-.mega-menu.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-.mega-col-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; padding: 0 10px; }
-.mega-col-label.orange { color: var(--orange); }
-.mega-col-label.pink { color: var(--pink); }
-.mega-col-label.purple { color: var(--purple); }
-.mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border-radius: 12px; transition: background 0.15s ease; cursor: pointer; }
-.mega-item:hover { background: var(--off-white); }
-.mega-item.active { background: var(--orange-light); }
-.mega-item-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
-.mega-item-icon.orange-bg { background: var(--orange); }
-.mega-item-icon.pink-bg { background: var(--pink); }
-.mega-item-icon.purple-bg { background: var(--purple); }
-.mega-item-text h4 { font-size: 13px; font-weight: 600; color: var(--charcoal); line-height: 1.3; margin-bottom: 2px; }
-.mega-item-text p { font-size: 12px; color: var(--text-secondary); line-height: 1.4; }
-
-/* Hamburger */
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.2s ease; }
-
-/* Mobile Nav */
-.mobile-nav { position: fixed; inset: 0; background: white; z-index: 999; transform: translateX(100%); transition: transform 0.3s ease; padding: var(--nav-height) 24px 40px; overflow-y: auto; }
-.mobile-nav.open { transform: translateX(0); }
-.mobile-nav-links { display: flex; flex-direction: column; gap: 4px; margin-top: 24px; }
-.mobile-nav-link { display: block; padding: 14px 16px; font-size: 16px; font-weight: 500; border-radius: 12px; }
-.mobile-nav-link:hover { background: var(--off-white); }
-.mobile-nav-actions { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
 
 /* ═══ SECTIONS ═══ */
 section { width: 100%; }
@@ -823,6 +769,7 @@ section { width: 100%; }
   .cta-box { padding: 48px 28px; }
   .footer-top { grid-template-columns: 1fr; }
 }
+
 </style>
   <script src="nav-loader.js" defer></script>
 </head>
