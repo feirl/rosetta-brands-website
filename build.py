@@ -45,8 +45,9 @@ def main():
     nav_raw    = open('_nav.html',    encoding='utf-8').read()
     footer_raw = open('_footer.html', encoding='utf-8').read()
 
-    # Strip the <style> block from _nav.html — it's already in rosetta.css
-    nav_fragment    = strip_style_tags(nav_raw)
+    # Keep the <style> block from _nav.html — it contains nav-specific CSS
+    # that is NOT duplicated in rosetta.css (mega menu, nav bar, etc.)
+    nav_fragment    = nav_raw.strip()
     footer_fragment = footer_raw.strip()
 
     # Wrap with the inlined marker so nav-loader.js can detect it
@@ -82,15 +83,6 @@ def main():
             count=1,
             flags=re.DOTALL
         )
-
-        # 3. Add preload hint for rosetta.css if not already present
-        if 'rel="preload"' not in html and 'rosetta.css' in html:
-            html = html.replace(
-                '<link rel="stylesheet" href="rosetta.css">',
-                '<link rel="preload" href="rosetta.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">\n'
-                '<noscript><link rel="stylesheet" href="rosetta.css"></noscript>',
-                1
-            )
 
         open(page, 'w', encoding='utf-8').write(html)
         delta = len(html) - original_len
