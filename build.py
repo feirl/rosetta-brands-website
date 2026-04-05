@@ -23,6 +23,39 @@ Revert with: git checkout -- *.html
 import re
 import os
 
+
+def replace_placeholder_div(html, div_id, replacement):
+    """
+    Find <div id="div_id" ...> and replace the *entire* element (including all
+    nested children) with `replacement`.  Uses depth-counting so nested <div>s
+    inside the placeholder don't confuse the match — unlike a lazy regex.
+    """
+    # Locate the opening tag
+    m = re.search(r'<div\s+id="' + re.escape(div_id) + r'"[^>]*>', html)
+    if not m:
+        return html          # placeholder not found — nothing to do
+
+    start = m.start()
+    pos   = m.end()
+    depth = 1
+
+    while pos < len(html) and depth > 0:
+        next_open  = html.find('<div',  pos)
+        next_close = html.find('</div>', pos)
+
+        if next_close == -1:
+            break            # malformed HTML — bail out
+
+        if next_open != -1 and next_open < next_close:
+            depth += 1
+            pos = next_open + 4   # skip past '<div'
+        else:
+            depth -= 1
+            end = next_close + 6  # len('</div>') = 6
+            pos = end
+
+    return html[:start] + replacement + html[end:]
+
 PAGES = [
     'index.html',
     'amazon-vendors.html',
@@ -66,23 +99,11 @@ def main():
         html = open(page, encoding='utf-8').read()
         original_len = len(html)
 
-        # 1. Replace nav placeholder
-        html = re.sub(
-            r'<div\s+id="nav-placeholder"[^>]*>.*?</div>',
-            nav_inlined,
-            html,
-            count=1,
-            flags=re.DOTALL
-        )
+        # 1. Replace nav placeholder (depth-aware — handles nested divs correctly)
+        html = replace_placeholder_div(html, 'nav-placeholder', nav_inlined)
 
-        # 2. Replace footer placeholder
-        html = re.sub(
-            r'<div\s+id="footer-placeholder"[^>]*>.*?</div>',
-            footer_inlined,
-            html,
-            count=1,
-            flags=re.DOTALL
-        )
+        # 2. Replace footer placeholder (depth-aware)
+        html = replace_placeholder_div(html, 'footer-placeholder', footer_inlined)
 
         open(page, 'w', encoding='utf-8').write(html)
         delta = len(html) - original_len
