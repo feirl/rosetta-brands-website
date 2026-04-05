@@ -22,7 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="rosetta.css">
+<link rel="preload" href="rosetta.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="rosetta.css"></noscript>
 <style>
 /* ═══════════════════════════════════════════
    HERO
@@ -892,7 +893,295 @@
   <script src="nav-loader.js" defer></script>
 </head>
 <body>
-<div id="nav-placeholder"></div>
+<div id="nav-placeholder" data-inlined="true">
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="logo-dark-2026.png" alt="Rosetta Brands" style="height:52px;width:auto;">
+    </a>
+
+    <ul class="nav-links">
+      <li class="nav-link" data-menu="product">
+        Services
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+      <li class="nav-link" data-menu="solutions">
+        Solutions
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+      <li class="nav-link">Pricing</li>
+      <li class="nav-link">Why Rosetta Brands</li>
+      <li class="nav-link" data-menu="resources">
+        Resources
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm">Schedule a Call</button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mega-menu" id="menu-product">
+  <div class="mega-menu-inner product-menu">
+    <div>
+      <div class="mega-col-label orange">Vendor-as-a-Service</div>
+      <a href="vendor-access.html" class="mega-item">
+        <div class="mega-item-icon orange-bg">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
+        </div>
+        <div class="mega-item-text">
+          <h4>Vendor Access & Prime</h4>
+          <p>Enterprise-grade vendor status from day one</p>
+        </div>
+      </a>
+      <a href="fulfilment.html" class="mega-item">
+        <div class="mega-item-icon orange-bg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="mega-item-text">
+          <h4>Fulfilment &amp; Logistics</h4>
+          <p>One warehouse, zero headaches</p>
+        </div>
+      </a>
+      <a href="vendor-management-team.html" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Vendor Management Team</h4>
+          <p>A dedicated cross-functional team behind your brand</p>
+        </div>
+      </a>
+      <div class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Compliance & Escalation</h4>
+          <p>Direct ABS access and proactive account protection</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>International Expansion</h4>
+          <p>UK, Ireland, Germany, Australia & pan-EU</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Exclusive Amazon Programs</h4>
+          <p>Subscribe & Save, Amazon Business, Freight & more</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mega-col-label pink">Growth Marketing</div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Advertising</h4>
+          <p>AI-powered campaigns with real-time performance visibility</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Brand Store</h4>
+          <p>A branded destination on Amazon</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>A+ Content</h4>
+          <p>Enhanced listings that convert</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="mega-item-text">
+          <h4>KFI & Lifestyle Images</h4>
+          <p>Professional imagery that sells</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Product Launch</h4>
+          <p>Listing to best-seller lifecycle</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mega-col-label purple">Platform</div>
+      <div class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Order Automation</h4>
+          <p>PO to shipped product, fully automated</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Client Portal</h4>
+          <p>One place for your Amazon relationship</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Listing Health & Optimisation</h4>
+          <p>Buy box monitoring, suppressions, and proactive fixes</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Analytics & Forecasting</h4>
+          <p>Intelligence from 958+ FMCG brands</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Reporting & Analytics</h4>
+          <p>Insights that drive decisions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mega-menu" id="menu-solutions">
+  <div class="mega-menu-inner solutions-menu">
+    <div>
+      <div class="mega-col-label orange">Solutions For...</div>
+      <a href="amazon-sellers.html" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Sellers</h4>
+          <p>Upgrade from Seller Central to vendor access and scale</p>
+        </div>
+      </a>
+      <a href="amazon-vendors.html" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><path d="M9 22v-4h6v4"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Vendors</h4>
+          <p>Optimise your vendor account and recover lost margin</p>
+        </div>
+      </a>
+      <a href="new-to-amazon.html" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <div class="mega-item-text">
+          <h4>New to Amazon</h4>
+          <p>A consultative entry point into Amazon's vendor ecosystem</p>
+        </div>
+      </a>
+      <a href="amazon-agencies.html" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Agencies</h4>
+          <p>Refer clients to a vendor solution and retain your relationship</p>
+        </div>
+      </a>
+    </div>
+    <div>
+      <div class="mega-col-label pink">Scaling FMCG on Amazon</div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Grocery & Gourmet</h4>
+          <p>Ambient grocery, speciality foods, snacks</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l-1 7c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4L8 2z"/><line x1="12" y1="13" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Beer, Wine & Spirits</h4>
+          <p>Alcohol brands with compliance expertise</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Health & Personal Care</h4>
+          <p>Wellness, supplements, personal care</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="8" cy="6" rx="2" ry="2.5"/><ellipse cx="16" cy="6" rx="2" ry="2.5"/><ellipse cx="5" cy="11" rx="2" ry="2.5"/><ellipse cx="19" cy="11" rx="2" ry="2.5"/><path d="M12 19c-2 0-4-1.5-5-3 1-2 3-3 5-3s4 1 5 3c-1 1.5-3 3-5 3z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Pet Supplies</h4>
+          <p>Pet food, treats, and accessories</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Home & Household</h4>
+          <p>Cleaning, essentials, household brands</p>
+        </div>
+      </div>
+      <div class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2C6.5 2 2 6.5 2 12"/><path d="M12 2c5.5 0 10 4.5 10 10"/><path d="M7 9l5-7 5 7"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Garden & Outdoor</h4>
+          <p>Outdoor living, gardening, and seasonal brands</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mega-menu" id="menu-resources">
+  <div class="mega-menu-inner resources-menu">
+    <div class="mega-item">
+      <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      <div class="mega-item-text">
+        <h4>Case Studies</h4>
+        <p>Real brand transformation stories</p>
+      </div>
+    </div>
+    <div class="mega-item">
+      <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+      <div class="mega-item-text">
+        <h4>Insights & Blog</h4>
+        <p>Guides, analysis, and Amazon intelligence</p>
+      </div>
+    </div>
+    <div class="mega-item">
+      <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="mega-item-text">
+        <h4>FAQ</h4>
+        <p>Common questions about Vendor-as-a-Service</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a class="mobile-nav-link" href="#">Services</a>
+  <a class="mobile-nav-link" href="#">Solutions</a>
+  <a class="mobile-nav-link" href="#">Pricing</a>
+  <a class="mobile-nav-link" href="#">Why Rosetta Brands</a>
+  <a class="mobile-nav-link" href="#">Resources</a>
+  <div class="mobile-nav-divider"></div>
+  <div class="mobile-nav-cta">
+    <button class="btn btn-primary">
+      Schedule a Call
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+</div>
 
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -1375,21 +1664,21 @@
     <div class="cert-strip-label">Official Amazon Partnerships &amp; Certifications</div>
     <div class="cert-grid">
       <div class="cert-item fade-in">
-        <img src="img/badges/amazon-vendor-central.png" alt="Amazon Vendor Central">
+        <img src="img/badges/amazon-vendor-central.png" alt="Amazon Vendor Central" loading="lazy">
         <div class="cert-item-text">
           <strong>Vendor Central Access</strong>
           <span>Enterprise vendor infrastructure</span>
         </div>
       </div>
       <div class="cert-item fade-in fade-in-delay-1">
-        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Ads Certified">
+        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Ads Certified" loading="lazy">
         <div class="cert-item-text">
           <strong>Amazon Ads Certified</strong>
           <span>Certified advertising partner</span>
         </div>
       </div>
       <div class="cert-item fade-in fade-in-delay-2">
-        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner">
+        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner" loading="lazy">
         <div class="cert-item-text">
           <strong>Amazon Freight Partner</strong>
           <span>Direct logistics partnership</span>
@@ -1426,6 +1715,121 @@
 <!-- ═══════════════════════════════════════════
      JAVASCRIPT
      ═══════════════════════════════════════════ -->
-<div id="footer-placeholder"></div>
+<div id="footer-placeholder" data-inlined="true">
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <img src="logo-light-2026.png" alt="Rosetta Brands" style="height:36px;width:auto;display:block;margin-bottom:16px;">
+        <p>The UK's only Vendor-as-a-Service for FMCG brands on Amazon. Rosetta Brands helps ambitious brands access enterprise-grade vendor infrastructure and scale profitably.</p>
+
+        <!-- Social icons -->
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="https://www.linkedin.com/company/rosettabrands" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://twitter.com/rosettabrands" target="_blank" rel="noopener" aria-label="Twitter / X" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rosettabrands" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+
+        <!-- Ecologi badge -->
+        <a href="https://ecologi.com/rosettabrands?r=60509516165a4a001c634cca" target="_blank" rel="noopener" aria-label="View our Ecologi profile" style="display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:10px 14px;border-radius:10px;background:rgba(74,192,120,0.12);border:1px solid rgba(74,192,120,0.3);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(74,192,120,0.2)'" onmouseout="this.style.background='rgba(74,192,120,0.12)'">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8 2 4 5.5 4 10c0 2.5 1.2 4.7 3 6.2V20h10v-3.8c1.8-1.5 3-3.7 3-6.2 0-4.5-4-8-8-8z" fill="#4ac078"/>
+            <path d="M12 2c0 0 2 4 2 8s-2 8-2 8" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M12 10c-2-2-4-2-6-1" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M12 10c2-2 4-2 6-1" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div style="line-height:1.3;">
+            <div style="font-size:11px;font-weight:700;color:#4ac078;letter-spacing:0.04em;text-transform:uppercase;">Ecologi Member</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.7);">5,000+ trees planted</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Vendor-as-a-Service</h5>
+        <ul>
+          <li><a href="vendor-access.html">Vendor Access &amp; Prime</a></li>
+          <li><a href="fulfilment.html">Fulfilment &amp; Logistics</a></li>
+          <li><a href="vendor-management-team.html">Vendor Management Team</a></li>
+          <li><a href="#">Compliance &amp; Escalation</a></li>
+          <li><a href="#">International Expansion</a></li>
+          <li><a href="#">Exclusive Amazon Programs</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Growth Marketing</h5>
+        <ul>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Brand Store</a></li>
+          <li><a href="#">A+ Content</a></li>
+          <li><a href="#">KFI &amp; Lifestyle Images</a></li>
+          <li><a href="#">Product Launch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="#">Order Automation</a></li>
+          <li><a href="#">Client Portal</a></li>
+          <li><a href="#">Listing Health &amp; Optimisation</a></li>
+          <li><a href="#">Analytics &amp; Forecasting</a></li>
+          <li><a href="#">Reporting &amp; Analytics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions For&hellip;</h5>
+        <ul>
+          <li><a href="amazon-sellers.html">Amazon Sellers</a></li>
+          <li><a href="amazon-vendors.html">Amazon Vendors</a></li>
+          <li><a href="new-to-amazon.html">New to Amazon</a></li>
+          <li><a href="amazon-agencies.html">Amazon Agencies</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Scaling FMCG on Amazon</h5>
+        <ul>
+          <li><a href="#">Grocery &amp; Gourmet</a></li>
+          <li><a href="#">Beer, Wine &amp; Spirits</a></li>
+          <li><a href="#">Health &amp; Personal Care</a></li>
+          <li><a href="#">Pet Supplies</a></li>
+          <li><a href="#">Home &amp; Household</a></li>
+          <li><a href="#">Garden &amp; Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Insights &amp; Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Company</h5>
+        <ul>
+          <li><a href="why-rosetta-brands.html">Why Rosetta Brands</a></li>
+          <li><a href="#">About Rosetta Brands</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Schedule a Call</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rosetta Brands. All rights reserved.</span>
+      <span>Lancashire, UK &middot; Australia &middot; Germany</span>
+    </div>
+  </div>
+</footer>
+</div>
 </body>
 </html>

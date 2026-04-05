@@ -1,17 +1,23 @@
 /**
  * nav-loader.js — Rosetta Brands
- * Fetches _nav.html and _footer.html, injects them, wires all nav behaviour,
- * and sets the active mega-menu item based on the current page.
  *
- * The fade-in observer is intentionally decoupled from the fetch so that
- * page content is always visible — including on file:// for local preview.
- * For full nav/footer locally, serve via: python3 -m http.server
+ * Two modes:
+ *   INLINED  (production) — build.py has already stamped nav + footer HTML
+ *     directly into the page. We detect data-inlined="true" on the placeholder
+ *     div and skip all fetch() calls, going straight to initNav().
+ *     Result: zero extra network requests, nav is visible on first paint.
+ *
+ *   FETCH  (development / local) — placeholders are empty divs. We fetch
+ *     _nav.html and _footer.html as before. Requires a local HTTP server:
+ *     python3 -m http.server
+ *
+ * The fade-in observer always runs independently of both modes.
  */
 (function () {
 
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  // ── 1. Fade-in — always runs, regardless of fetch success ─────────────────
+  // ── 1. Fade-in observer — always runs ────────────────────────────────────
   function initFadeIn() {
     var els = document.querySelectorAll('.fade-in');
     if (!els.length) return;
@@ -29,31 +35,47 @@
     initFadeIn();
   }
 
-  // ── 2. Inject nav ──────────────────────────────────────────────────────────
-  fetch('_nav.html')
-    .then(function (r) { return r.text(); })
-    .then(function (html) {
-      var ph = document.getElementById('nav-placeholder');
-      if (ph) { ph.outerHTML = html; } else { document.body.insertAdjacentHTML('afterbegin', html); }
+  // ── 2. Nav init ────────────────────────────────────────────────────────────
+  var navPh    = document.getElementById('nav-placeholder');
+  var footerPh = document.getElementById('footer-placeholder');
+
+  var navIsInlined    = navPh    && navPh.dataset.inlined    === 'true';
+  var footerIsInlined = footerPh && footerPh.dataset.inlined === 'true';
+
+  if (navIsInlined) {
+    // ── INLINED mode: nav already in DOM, just wire it up ──────────────────
+    document.addEventListener('DOMContentLoaded', function () {
       setActiveItem(currentPage);
       initNav();
-    })
-    .catch(function (e) {
-      console.warn('[nav-loader] _nav.html not loaded (file:// restriction or network error).', e);
     });
+  } else {
+    // ── FETCH mode: dev / file:// fallback ─────────────────────────────────
+    fetch('_nav.html')
+      .then(function (r) { return r.text(); })
+      .then(function (html) {
+        if (navPh) { navPh.outerHTML = html; }
+        else { document.body.insertAdjacentHTML('afterbegin', html); }
+        setActiveItem(currentPage);
+        initNav();
+      })
+      .catch(function (e) {
+        console.warn('[nav-loader] _nav.html not loaded (file:// or network error).', e);
+      });
+  }
 
-  // ── 3. Inject footer ───────────────────────────────────────────────────────
-  fetch('_footer.html')
-    .then(function (r) { return r.text(); })
-    .then(function (html) {
-      var ph = document.getElementById('footer-placeholder');
-      if (ph) { ph.outerHTML = html; } else { document.body.insertAdjacentHTML('beforeend', html); }
-    })
-    .catch(function (e) {
-      console.warn('[nav-loader] _footer.html not loaded (file:// restriction or network error).', e);
-    });
+  if (!footerIsInlined) {
+    fetch('_footer.html')
+      .then(function (r) { return r.text(); })
+      .then(function (html) {
+        if (footerPh) { footerPh.outerHTML = html; }
+        else { document.body.insertAdjacentHTML('beforeend', html); }
+      })
+      .catch(function (e) {
+        console.warn('[nav-loader] _footer.html not loaded (file:// or network error).', e);
+      });
+  }
 
-  // ── 4. Mark the current page active in the mega menu ──────────────────────
+  // ── 3. Mark current page active in mega menu ──────────────────────────────
   function setActiveItem(page) {
     document.querySelectorAll('a.mega-item[href]').forEach(function (a) {
       if (a.getAttribute('href').split('/').pop() === page) {
@@ -62,10 +84,9 @@
     });
   }
 
-  // ── 5. Nav interaction (runs after nav HTML is in the DOM) ────────────────
+  // ── 4. Nav interaction ────────────────────────────────────────────────────
   function initNav() {
 
-    // Scroll shadow on nav bar
     var navEl = document.getElementById('nav');
     if (navEl) {
       window.addEventListener('scroll', function () {
@@ -73,7 +94,6 @@
       }, { passive: true });
     }
 
-    // Mega menu open/close via data-menu triggers
     var menuTriggers = document.querySelectorAll('[data-menu]');
     var menus        = document.querySelectorAll('.mega-menu');
     var closeTimeout = null;
@@ -101,14 +121,12 @@
       menu.addEventListener('mouseleave', scheduleClose);
     });
 
-    // Close on outside click
     document.addEventListener('click', function (e) {
       if (!e.target.closest('[data-menu]') && !e.target.closest('.mega-menu')) {
         menus.forEach(function (m) { m.classList.remove('active'); });
       }
     });
 
-    // Hamburger / mobile nav
     var hamburger = document.getElementById('hamburger-btn');
     var mobileNav = document.getElementById('mobile-nav');
     if (hamburger && mobileNav) {
