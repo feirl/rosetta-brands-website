@@ -17,7 +17,28 @@
 
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  // ── 1. Fade-in observer — always runs ────────────────────────────────────
+  // ── 1. FAQ accordion — always runs ───────────────────────────────────────
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        var answer   = btn.nextElementSibling;
+        btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        if (answer) {
+          if (expanded) { answer.setAttribute('hidden', ''); }
+          else          { answer.removeAttribute('hidden'); }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+  } else {
+    initFAQ();
+  }
+
+  // ── 3. Fade-in observer — always runs ────────────────────────────────────
   function initFadeIn() {
     var els = document.querySelectorAll('.fade-in');
     if (!els.length) return;
@@ -35,7 +56,7 @@
     initFadeIn();
   }
 
-  // ── 2. Nav init ────────────────────────────────────────────────────────────
+  // ── 4. Nav init ────────────────────────────────────────────────────────────
   var navPh    = document.getElementById('nav-placeholder');
   var footerPh = document.getElementById('footer-placeholder');
 
@@ -75,7 +96,7 @@
       });
   }
 
-  // ── 3. Mark current page active in mega menu ──────────────────────────────
+  // ── 5. Mark current page active in mega menu ──────────────────────────────
   function setActiveItem(page) {
     document.querySelectorAll('a.mega-item[href]').forEach(function (a) {
       if (a.getAttribute('href').split('/').pop() === page) {
@@ -84,7 +105,7 @@
     });
   }
 
-  // ── 4. Nav interaction ────────────────────────────────────────────────────
+  // ── 6. Nav interaction ────────────────────────────────────────────────────
   function initNav() {
 
     var navEl = document.getElementById('nav');
