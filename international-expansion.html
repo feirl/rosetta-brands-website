@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vendor Access & Prime | Amazon Vendor-As-A-Service | Rosetta Brands</title>
-<meta name="description" content="Unlock enterprise-grade Amazon vendor status through Rosetta Brands. Prime badge, fulfilment, advertising and full compliance - without building the infrastructure yourself.">
-<meta name="keywords" content="Amazon vendor service UK, Vendor-As-A-Service, FMCG Amazon vendor, Amazon vendor management UK, Vendor-As-A-Service Amazon, Amazon Prime badge FMCG, Amazon vendor account, managed vendor service">
-<link rel="canonical" href="https://rosettabrands.co.uk/vendor-access.html">
-<meta property="og:title" content="Vendor Access &amp; Prime | Rosetta Brands">
-<meta property="og:description" content="Unlock enterprise-grade Amazon vendor status through Rosetta Brands. Prime badge, fulfilment, advertising and full compliance - without building the infras">
+<title>International Expansion | Amazon EU &amp; Ireland | Rosetta Brands</title>
+<meta name="description" content="Expand your brand across nine Amazon EU marketplaces through one vendor relationship. Ireland, Germany, France and beyond - without the compliance complexity.">
+<meta name="keywords" content="Amazon EU expansion UK, Pan-European FBA UK brands, Amazon Ireland UK seller, Amazon.ie UK vendor, Amazon Germany UK brand, post-Brexit Amazon EU, Amazon international expansion FMCG, EU VAT Amazon UK">
+<link rel="canonical" href="https://rosettabrands.co.uk/international-expansion.html">
+<meta property="og:title" content="International Expansion | Amazon EU &amp; Ireland | Rosetta Brands">
+<meta property="og:description" content="Nine Amazon EU marketplaces. One vendor relationship. No separate accounts, no local teams, no VAT headaches.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/vendor-access.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/international-expansion.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vendor Access &amp; Prime | Rosetta Brands">
-<meta name="twitter:description" content="Unlock enterprise-grade Amazon vendor status through Rosetta Brands. Prime badge, fulfilment, advertising and full compliance - without building the infras">
+<meta name="twitter:title" content="International Expansion | Rosetta Brands">
+<meta name="twitter:description" content="Nine Amazon EU marketplaces. One vendor relationship. No separate accounts, no local teams, no VAT headaches.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="index, follow">
-<meta name="ai-content-declaration" content="This page describes Rosetta Brands' Vendor-As-A-Service offering. Key topics: Amazon vendor management, Prime badge access, FMCG fulfilment, vendor management team, compliance, exclusive Amazon programs.">
+<meta name="ai-content-declaration" content="This page describes Rosetta Brands' International Expansion service for UK FMCG brands on Amazon. Key topics: Pan-European FBA, Amazon.ie Ireland opportunity, EU VAT registration, GPSR compliance, post-Brexit Amazon expansion, Amazon Germany, Amazon France.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -117,14 +117,11 @@
   gap: 16px;
 }
 
-/* Hero visual - styled card */
-.hero-visual {
-  position: relative;
-  z-index: 1;
-}
+/* ── Hero Visual: EU Market Card ─────────── */
 
-/* Dashboard visual card */
-.vaas-card {
+.hero-visual { position: relative; z-index: 1; }
+
+.eu-card {
   background: var(--charcoal);
   border-radius: 20px;
   padding: 28px 28px 24px;
@@ -138,7 +135,7 @@
   transition: transform 0.7s cubic-bezier(0.23,1,0.32,1), box-shadow 0.7s ease;
 }
 
-.vaas-card:hover {
+.eu-card:hover {
   transform: perspective(1200px) rotateY(0deg) rotateX(0deg);
   box-shadow:
     0 48px 96px rgba(45,41,51,0.28),
@@ -146,8 +143,7 @@
     inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
-/* Live pill */
-.hv-live-pill {
+.eu-live-pill {
   position: absolute;
   top: -14px;
   right: 24px;
@@ -161,37 +157,32 @@
   align-items: center;
   gap: 6px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.14);
-  letter-spacing: 0.1px;
 }
 
-.hv-live-dot {
-  width: 8px;
-  height: 8px;
+.eu-live-dot {
+  width: 8px; height: 8px;
   border-radius: 50%;
   background: #22c55e;
-  position: relative;
   flex-shrink: 0;
+  position: relative;
 }
 
-.hv-live-dot::after {
-  content: \'\';
+.eu-live-dot::after {
+  content: '';
   position: absolute;
-  top: -4px;
-  left: -4px;
-  width: 16px;
-  height: 16px;
+  top: -4px; left: -4px;
+  width: 16px; height: 16px;
   border-radius: 50%;
   background: rgba(34,197,94,0.3);
-  animation: hv-pulse 1.8s ease-out infinite;
+  animation: eu-pulse 1.8s ease-out infinite;
 }
 
-@keyframes hv-pulse {
+@keyframes eu-pulse {
   0%   { transform: scale(0.4); opacity: 1; }
   100% { transform: scale(1.6); opacity: 0; }
 }
 
-/* Badge row */
-.hv-badge-row {
+.eu-card-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -200,133 +191,118 @@
   border-bottom: 1px solid rgba(255,255,255,0.09);
 }
 
-.hv-bs-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: #f17d02;
-  color: white;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 11px;
-  border-radius: 6px;
-  letter-spacing: 0.2px;
-  margin-bottom: 6px;
-}
-
-.hv-bs-star { font-size: 11px; line-height: 1; }
-
-.hv-bs-category {
-  font-size: 11px;
-  color: rgba(255,255,255,0.42);
-  padding-left: 1px;
-}
-
-.hv-rank-box { text-align: right; }
-
-.hv-rank-arrow {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--purple);
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-
-.hv-rank-sub {
-  font-size: 10px;
-  color: rgba(255,255,255,0.38);
-  margin-top: 3px;
-}
-
-/* Chart */
-.hv-chart-wrap { margin-bottom: 18px; }
-
-.hv-chart-meta {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.hv-chart-caption {
+.eu-card-label {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: rgba(255,255,255,0.38);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
-.hv-chart-headline {
+.eu-card-title {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 17px;
   font-weight: 800;
   color: white;
-  letter-spacing: -0.5px;
-  line-height: 1;
+  letter-spacing: -0.3px;
 }
 
-.hv-chart-headline span {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: var(--font-body);
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0;
-}
-
-.hv-chart-period {
+.eu-gmv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(241,125,2,0.2);
+  color: var(--orange);
   font-size: 11px;
-  color: rgba(255,255,255,0.35);
-  padding-bottom: 2px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
-.hv-chart-svg {
-  width: 100%;
-  height: 88px;
-  display: block;
-  overflow: visible;
-}
-
-.hv-chart-axis {
+.eu-market-list {
   display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  color: rgba(255,255,255,0.28);
-  letter-spacing: 0.2px;
-  margin-top: 6px;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
-/* Metrics */
-.hv-metrics {
+.eu-market-row {
   display: flex;
   align-items: center;
-  padding-top: 18px;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+
+.eu-market-row.featured {
+  background: rgba(241,125,2,0.1);
+  border-color: rgba(241,125,2,0.25);
+}
+
+.eu-market-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  width: 28px;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+}
+
+.eu-market-row.featured .eu-market-code { color: var(--orange); }
+
+.eu-market-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  flex: 1;
+}
+
+.eu-market-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.eu-market-tag.new { background: rgba(34,197,94,0.15); color: #4ade80; }
+.eu-market-tag.largest { background: rgba(241,125,2,0.2); color: var(--orange); }
+.eu-market-tag.active { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+.eu-market-tag.gateway { background: rgba(127,134,193,0.2); color: #a5b4fc; }
+
+.eu-card-metrics {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
   border-top: 1px solid rgba(255,255,255,0.09);
 }
 
-.hv-metric { flex: 1; text-align: center; }
+.eu-card-metric { flex: 1; text-align: center; }
 
-.hv-metric-num {
+.eu-card-metric-num {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
   color: white;
   letter-spacing: -0.3px;
   line-height: 1;
+  margin-bottom: 3px;
 }
 
-.hv-metric-lbl {
+.eu-card-metric-lbl {
   font-size: 10px;
   color: rgba(255,255,255,0.38);
-  margin-top: 4px;
-  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.hv-metric-sep {
+.eu-card-metric-sep {
   width: 1px;
-  height: 32px;
+  height: 28px;
   background: rgba(255,255,255,0.09);
-  flex-shrink: 0;
 }
 
 /* ═══════════════════════════════════════════
@@ -376,6 +352,19 @@
 }
 
 .pain-card p { font-size: 15px; line-height: 1.65; color: var(--text-secondary); }
+
+.pain-penalty {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--orange-light);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 14px;
+}
 
 /* ═══════════════════════════════════════════
    HOW IT WORKS  -  Alternating 2-col blocks
@@ -467,90 +456,349 @@
   margin-bottom: 20px;
 }
 
-.how-flow {
+/* Visual: Ireland gateway card */
+.ireland-card { display: flex; flex-direction: column; gap: 0; }
+
+.ireland-launch-banner {
+  background: linear-gradient(135deg, rgba(241,125,2,0.08), rgba(241,125,2,0.04));
+  border: 1px solid rgba(241,125,2,0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: center;
+  gap: 14px;
 }
 
-.how-flow-step {
+.ireland-flag-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--orange-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+
+.ireland-launch-text .ireland-launch-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+.ireland-launch-text .ireland-launch-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ireland-reason-list { display: flex; flex-direction: column; gap: 10px; }
+
+.ireland-reason {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px dashed var(--border);
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
 }
-.how-flow-step:last-child { border-bottom: none; }
 
-.how-flow-num {
+.ireland-reason-icon {
   width: 28px; height: 28px;
-  border-radius: 8px;
-  background: var(--orange);
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 800;
+  border-radius: 6px;
+  background: var(--orange-light);
+  color: var(--orange);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.how-flow-text strong {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
+.ireland-reason-title {
+  font-size: 13px;
+  font-weight: 700;
   color: var(--charcoal);
-  margin-bottom: 2px;
-}
-.how-flow-text span { font-size: 13px; color: var(--text-secondary); }
-
-.how-stat-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  margin-bottom: 1px;
 }
 
-.how-stat {
-  background: var(--off-white);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-}
-.how-stat-num {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--charcoal);
-  letter-spacing: -0.5px;
-  margin-bottom: 4px;
-}
-.how-stat-label { font-size: 12px; color: var(--text-secondary); }
-
-.program-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.ireland-reason-sub {
+  font-size: 12px;
+  color: var(--text-secondary);
 }
 
-.program-item {
+/* Visual: Pan-EU flow diagram */
+.pan-eu-flow { display: flex; flex-direction: column; gap: 0; }
+
+.pan-eu-origin {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  background: var(--charcoal);
+  color: white;
   border-radius: 10px;
-  background: var(--off-white);
-  border: 1px solid var(--border);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+
+.pan-eu-origin-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pan-eu-origin-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 2px;
+}
+
+.pan-eu-origin-title {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
+  color: white;
+}
+
+.pan-eu-arrow-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--charcoal-50);
+}
+
+.pan-eu-markets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.pan-eu-market {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
+}
+
+.pan-eu-market-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+.pan-eu-market-name {
+  font-size: 13px;
+  font-weight: 600;
   color: var(--charcoal);
 }
 
-.program-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--orange);
+.pan-eu-market-domain {
+  font-size: 11px;
+  color: var(--charcoal-50);
+  margin-left: auto;
+}
+
+.pan-eu-saving-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* Visual: compliance wall checklist */
+.compliance-wall { display: flex; flex-direction: column; gap: 10px; }
+
+.cw-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.cw-item.handled {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+}
+
+.cw-item.handled:hover {
+  border-color: rgba(241,125,2,0.2);
+  background: rgba(241,125,2,0.03);
+}
+
+.cw-icon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
+.cw-icon.done { background: rgba(34,197,94,0.12); color: #22c55e; }
+.cw-icon.rb { background: var(--orange); color: white; }
+
+.cw-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--charcoal);
+  flex: 1;
+}
+
+.cw-owner {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.cw-owner.rb { background: var(--orange-light); color: var(--orange); }
+.cw-owner.client { background: rgba(45,41,51,0.06); color: var(--charcoal-50); }
+
+/* Visual: performance stats panel */
+.perf-panel { display: flex; flex-direction: column; gap: 12px; }
+
+.perf-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
+  transition: all 0.2s ease;
+}
+
+.perf-stat:hover { border-color: var(--orange); box-shadow: 0 4px 16px rgba(241,125,2,0.08); }
+
+.perf-stat-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--orange-light);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.perf-stat-num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.perf-stat-num span { color: var(--orange); }
+
+.perf-stat-label { font-size: 12px; color: var(--text-secondary); }
+
+/* ═══════════════════════════════════════════
+   MARKETPLACE GRID  -  Dark section
+   ═══════════════════════════════════════════ */
+
+.markets-section {
+  padding: var(--section-pad) 0;
+  background: var(--charcoal);
+  color: var(--white);
+}
+
+.markets-section .section-title { color: var(--white); }
+.markets-section .section-subtitle { color: rgba(255,255,255,0.6); }
+.markets-section .section-tag.orange { color: var(--orange); }
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.market-tile {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 22px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.market-tile:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(241,125,2,0.3);
+}
+
+.market-tile.featured {
+  background: rgba(241,125,2,0.1);
+  border-color: rgba(241,125,2,0.3);
+}
+
+.market-tile-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.market-tile-badge.new { background: rgba(34,197,94,0.2); color: #4ade80; }
+.market-tile-badge.largest { background: rgba(241,125,2,0.25); color: var(--orange); }
+.market-tile-badge.gateway { background: rgba(127,134,193,0.2); color: #a5b4fc; }
+
+.market-tile-domain {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: rgba(255,255,255,0.9);
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.market-tile.featured .market-tile-domain { color: var(--orange); }
+
+.market-tile-country {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+}
+
+.market-tile-note {
+  font-size: 12px;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.5;
+}
+
+.market-tile.featured .market-tile-note { color: rgba(255,255,255,0.55); }
+
+/* ═══════════════════════════════════════════
+   METRICS STRIP
+   ═══════════════════════════════════════════ */
+
+/* Reused from rosetta.css */
 
 /* ═══════════════════════════════════════════
    PROOF SECTION
@@ -597,19 +845,6 @@
   gap: 12px;
 }
 
-.proof-avatar {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: var(--orange);
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-}
-
 .proof-name { font-size: 15px; font-weight: 700; color: var(--charcoal); }
 .proof-role { font-size: 13px; color: var(--text-secondary); }
 
@@ -626,20 +861,6 @@
 }
 .proof-stat-item:hover { border-color: var(--orange); box-shadow: 0 4px 20px rgba(241,125,2,0.1); }
 
-.proof-client-logo {
-  height: 32px;
-  width: auto;
-  display: block;
-  border-radius: 4px;
-  filter: grayscale(100%);
-  opacity: 0.55;
-  transition: filter 0.35s ease, opacity 0.35s ease;
-}
-.proof-quote-block:hover .proof-client-logo {
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
 .proof-stat-icon {
   width: 44px; height: 44px;
   border-radius: 12px;
@@ -653,45 +874,90 @@
 
 .proof-stat-num {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
-  letter-spacing: -0.5px;
   color: var(--charcoal);
+  letter-spacing: -0.5px;
   margin-bottom: 2px;
 }
-.proof-stat-label { font-size: 14px; color: var(--text-secondary); }
+.proof-stat-num span { color: var(--orange); }
+
+.proof-stat-label { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+/* ═══════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════ */
+
+.faq-section {
+  padding: var(--section-pad) 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-align: left;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--orange); }
+
+.faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--charcoal-50);
+}
+.faq-q[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+
+.faq-a { padding: 0 16px 20px; }
+.faq-a p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
 
 /* ═══════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  :root { --section-pad: 72px; }
-  .hero-2col { grid-template-columns: 1fr; gap: 48px; }
-  .page-hero h1 { font-size: 36px; }
-  .section-title { font-size: 32px; }
+  .hero-2col { grid-template-columns: 1fr; }
+  .hero-2col .hero-visual { display: none; }
   .pain-grid { grid-template-columns: 1fr; }
   .how-block { grid-template-columns: 1fr; gap: 40px; }
   .how-block.reverse { direction: ltr; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .markets-grid { grid-template-columns: repeat(2, 1fr); }
   .proof-inner { grid-template-columns: 1fr; }
-  .related-grid { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .mega-menu-inner.product-menu { grid-template-columns: 1fr; }
-  .mega-menu-inner.solutions-menu { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .nav-links { display: none; }
-  .nav-login { display: none; }
-  .page-hero h1 { font-size: 30px; }
+@media (max-width: 640px) {
+  .page-hero { padding: 100px 0 64px; }
+  .page-hero h1 { font-size: 32px; }
+  .markets-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
-  .cta-actions { flex-direction: column; align-items: center; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
 </style>
   <script src="nav-loader.js" defer></script>
 <script type="application/ld+json">
@@ -700,10 +966,10 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/vendor-access.html",
-      "url": "https://rosettabrands.co.uk/vendor-access.html",
-      "name": "Vendor Access & Prime | Amazon Vendor-As-A-Service | Rosetta Brands",
-      "description": "Unlock enterprise-grade Amazon vendor status through Rosetta Brands. Prime badge, fulfilment, advertising and full compliance - without building the infrastructure yourself.",
+      "@id": "https://rosettabrands.co.uk/international-expansion.html",
+      "url": "https://rosettabrands.co.uk/international-expansion.html",
+      "name": "International Expansion | Amazon EU & Ireland | Rosetta Brands",
+      "description": "Expand your UK FMCG brand across nine Amazon EU marketplaces through one vendor relationship. Ireland, Germany, France and beyond - without the compliance complexity.",
       "inLanguage": "en-GB",
       "isPartOf": {
         "@type": "WebSite",
@@ -711,100 +977,63 @@
         "name": "Rosetta Brands"
       },
       "breadcrumb": {
-        "@id": "https://rosettabrands.co.uk/vendor-access.html#breadcrumb"
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/" },
+          { "@type": "ListItem", "position": 3, "name": "International Expansion", "item": "https://rosettabrands.co.uk/international-expansion.html" }
+        ]
       }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/vendor-access.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://rosettabrands.co.uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://rosettabrands.co.uk/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Vendor Access & Prime",
-          "item": "https://rosettabrands.co.uk/vendor-access.html"
-        }
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Vendor Access & Prime",
-      "description": "Rosetta Brands provides FMCG brands with enterprise-grade Amazon vendor status, Prime badge access, and the full infrastructure of a managed vendor account - without building it in-house.",
-      "serviceType": "Amazon Vendor-As-A-Service",
-      "url": "https://rosettabrands.co.uk/vendor-access.html",
-      "provider": {
-        "@type": "Organization",
-        "name": "Rosetta Brands",
-        "url": "https://rosettabrands.co.uk"
-      },
-      "areaServed": [
-        "GB",
-        "IE",
-        "DE",
-        "AU"
-      ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Vendor-As-A-Service (Vendor-As-A-Service)?",
+          "name": "How does Rosetta Brands expand UK brands onto Amazon EU marketplaces?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Vendor-As-A-Service means Rosetta Brands operates as your Amazon vendor. We hold the vendor account, manage the relationship with Amazon, handle compliance and fulfilment, and share in your growth. You get enterprise-grade vendor infrastructure without the overhead of building or running it yourself."
+            "text": "Because Rosetta Brands is already the vendor of record on Amazon, expanding to EU marketplaces means adding those markets to an existing vendor relationship - not creating new accounts, new contracts, or new infrastructure. We manage the Vendor Manager conversations to activate EU access, coordinate VAT registrations and GPSR compliance, set up Pan-European FBA where appropriate, and handle listing localisation into German, French, Spanish and Italian. Your brand gets EU presence without the operational overhead."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need my own Amazon vendor account to work with Rosetta Brands?",
+          "name": "What is Pan-European FBA and why does it matter for UK brands post-Brexit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Rosetta Brands provides the vendor account infrastructure. You benefit from our established vendor relationships, Prime badge access, and Amazon compliance framework from day one - without needing your own vendor account."
+            "text": "Pan-European FBA (Pan-EU) allows a single pallet shipped to one EU Amazon fulfilment centre to make products Prime-eligible across seven countries simultaneously - Germany, France, Italy, Spain, Poland, Netherlands, and Belgium. It can reduce fulfilment fees by up to 53% compared to shipping each country individually. Post-Brexit, UK brands cannot use UK FBA warehouses as the distribution hub - inventory must go directly into an EU fulfilment centre. Rosetta Brands handles the logistics routing and inventory strategy to make this work efficiently."
           }
         },
         {
           "@type": "Question",
-          "name": "Which markets does Rosetta Brands operate in?",
+          "name": "Why is Ireland a good starting point for UK brands expanding to the EU on Amazon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We currently operate across the UK, Ireland, Germany, and Australia. Our vendor infrastructure is active in all four markets, allowing brands to expand internationally without managing separate vendor relationships in each territory."
+            "text": "Amazon.ie launched in March 2025 and is still in its early stages - category positions are far less competed than on Amazon.de or Amazon.fr. Ireland is an English-language market, which eliminates translation costs and local-language customer service requirements. VAT registration in Ireland provides a legitimate EU VAT number, which serves as the foundation for wider EU expansion. Rosetta Brands' AVS relationships can unlock Amazon.ie vendor access, which is not automatically granted and requires a Vendor Manager conversation."
           }
         },
         {
           "@type": "Question",
-          "name": "What product categories does Rosetta Brands work with?",
+          "name": "What compliance requirements do UK brands need for selling on Amazon EU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We specialise in FMCG categories on Amazon, including Grocery & Gourmet, Beer, Wine & Spirits, Health & Personal Care, Pet Supplies, Home & Household, and Garden & Outdoor. If you are an FMCG brand, we likely have deep experience in your category."
+            "text": "UK brands selling into the EU via Amazon face several requirements: VAT registration in each country where Amazon stores Pan-EU inventory (mandatory); an EU EORI number for importing goods into the EU; GPSR (General Product Safety Regulation) compliance requiring an EU-based Responsible Person; an EU trademark via EUIPO for Brand Registry enrolment (UK trademarks are no longer valid in the EU automatically post-Brexit); and fiscal representation in France, Spain, Italy and Poland for non-EU companies. Rosetta Brands coordinates all of these through trusted advisors and manages the timeline."
           }
         },
         {
           "@type": "Question",
-          "name": "How long does onboarding take?",
+          "name": "Which Amazon EU marketplace should a UK brand enter first?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most brands are fully onboarded and live on Amazon within 4 to 8 weeks. This includes account setup, catalogue migration, compliance checks, content optimisation, and first purchase order processing."
+            "text": "It depends on the product category, but Germany (Amazon.de) is the most common first move - it generated $45.9 billion in 2025 and is the largest EU Amazon market. Ireland (Amazon.ie) is the lowest-friction entry given the shared language and brand-new marketplace. France is strong for food and FMCG. Rosetta Brands conducts a market prioritisation analysis before any expansion - looking at category competition density, pricing headroom, and margin potential per market to sequence entry correctly."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I use Rosetta Brands alongside my existing Amazon Seller account?",
+          "name": "Does Rosetta Brands handle listing translations for EU marketplaces?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Many of our partner brands transition from Seller to Vendor through us, while others run both in parallel during the transition period. We will advise on the right approach based on your current setup and growth objectives."
+            "text": "Yes. Rosetta Brands manages listing localisation for all EU marketplaces including German, French, Spanish and Italian translations of product titles, bullet points, A+ content and backend search terms. Translation is done with category-specific accuracy - not generic machine translation - to ensure listings perform competitively in each market. We also manage EU Brand Registry enrolment once an EUIPO trademark is in place."
           }
         }
       ]
@@ -814,6 +1043,7 @@
 </script>
 </head>
 <body>
+
 <div id="nav-placeholder" data-inlined="true">
 <style>
 /* ═══════════════════════════════════════════
@@ -1491,6 +1721,9 @@ a {
   </div>
 </div>
 </div>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <main id="main-content">
 
 <!-- ═══════════════════════════════════════════
@@ -1508,15 +1741,14 @@ a {
         </nav>
 
         <div class="hero-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
-          Vendor Access &amp; Prime
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          International Expansion
         </div>
 
-        <h1>We don't manage your Amazon account. <span>We are it.</span></h1>
+        <h1>Nine EU markets. <span>One vendor relationship.</span></h1>
 
         <p class="hero-sub">
-          Your products sold and fulfilled through our established Amazon vendor relationship.
-          Enterprise-grade access, operational infrastructure, and a dedicated team - one partnership, shared success.
+          UK brands are leaving €150 billion on the table. Nine Amazon EU marketplaces, 500 million consumers, and - post-Brexit - less competition than at any point in the last five years. Rosetta Brands removes every barrier between your brand and European growth.
         </p>
 
         <div class="hero-actions">
@@ -1529,78 +1761,78 @@ a {
       </div>
 
       <div class="hero-visual fade-in fade-in-delay-2">
-        <div class="vaas-card">
+        <div class="eu-card">
 
-          <!-- Live indicator pill -->
-          <div class="hv-live-pill">
-            <span class="hv-live-dot"></span>
-            Live dashboard
+          <div class="eu-live-pill">
+            <span class="eu-live-dot"></span>
+            9 markets active
           </div>
 
-          <!-- Best Seller badge row -->
-          <div class="hv-badge-row">
+          <div class="eu-card-header">
             <div>
-              <div class="hv-bs-badge">
-                <span class="hv-bs-star">★</span>
-                #1 Best Seller
-              </div>
-              <div class="hv-bs-category">Sports Nutrition · Amazon UK</div>
+              <div class="eu-card-label">EU Market Coverage</div>
+              <div class="eu-card-title">Rosetta Brands EU Network</div>
             </div>
-            <div class="hv-rank-box">
-              <div class="hv-rank-arrow">↑47</div>
-              <div class="hv-rank-sub">positions</div>
+            <div class="eu-gmv-badge">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              €150B+ GMV
             </div>
           </div>
 
-          <!-- Growth chart -->
-          <div class="hv-chart-wrap">
-            <div class="hv-chart-meta">
-              <div>
-                <div class="hv-chart-caption">Revenue growth</div>
-                <div class="hv-chart-headline">+558% <span>year on year</span></div>
-              </div>
-              <div class="hv-chart-period">12 months</div>
+          <div class="eu-market-list">
+
+            <div class="eu-market-row featured">
+              <span class="eu-market-code">.ie</span>
+              <span class="eu-market-name">Ireland</span>
+              <span class="eu-market-tag gateway">Gateway</span>
             </div>
-            <svg class="hv-chart-svg" viewBox="0 0 300 88" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="hvcGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#f17d02" stop-opacity="0.25"/>
-                  <stop offset="100%" stop-color="#f17d02" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="hvcLine" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#f17d02" stop-opacity="0.5"/>
-                  <stop offset="100%" stop-color="#f17d02" stop-opacity="1"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,80 C30,78 55,72 85,62 C115,52 140,42 170,28 C200,14 240,6 300,2 L300,88 L0,88 Z" fill="url(#hvcGrad)"/>
-              <path d="M0,80 C30,78 55,72 85,62 C115,52 140,42 170,28 C200,14 240,6 300,2" stroke="url(#hvcLine)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="85" cy="62" r="3.5" fill="#f17d02" fill-opacity="0.7"/>
-              <circle cx="170" cy="28" r="3.5" fill="#f17d02" fill-opacity="0.85"/>
-              <circle cx="300" cy="2" r="5" fill="#f17d02"/>
-              <circle cx="300" cy="2" r="9" fill="none" stroke="#f17d02" stroke-opacity="0.3" stroke-width="1.5"/>
-              <line x1="85" y1="62" x2="85" y2="88" stroke="#f17d02" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
-              <line x1="170" y1="28" x2="170" y2="88" stroke="#f17d02" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
-            </svg>
-            <div class="hv-chart-axis">
-              <span>Jan</span><span>Apr</span><span>Jul</span><span>Oct</span><span>Now</span>
+
+            <div class="eu-market-row featured">
+              <span class="eu-market-code">.de</span>
+              <span class="eu-market-name">Germany</span>
+              <span class="eu-market-tag largest">Largest EU</span>
             </div>
+
+            <div class="eu-market-row">
+              <span class="eu-market-code">.fr</span>
+              <span class="eu-market-name">France</span>
+              <span class="eu-market-tag active">Active</span>
+            </div>
+
+            <div class="eu-market-row">
+              <span class="eu-market-code">.es</span>
+              <span class="eu-market-name">Spain</span>
+              <span class="eu-market-tag active">Active</span>
+            </div>
+
+            <div class="eu-market-row">
+              <span class="eu-market-code">.it</span>
+              <span class="eu-market-name">Italy</span>
+              <span class="eu-market-tag active">Active</span>
+            </div>
+
+            <div class="eu-market-row">
+              <span class="eu-market-code">.nl</span>
+              <span class="eu-market-name">Netherlands</span>
+              <span class="eu-market-tag new">Pan-EU</span>
+            </div>
+
           </div>
 
-          <!-- Platform metrics -->
-          <div class="hv-metrics">
-            <div class="hv-metric">
-              <div class="hv-metric-num">7.4×</div>
-              <div class="hv-metric-lbl">ROAS</div>
+          <div class="eu-card-metrics">
+            <div class="eu-card-metric">
+              <div class="eu-card-metric-num">500M</div>
+              <div class="eu-card-metric-lbl">EU Consumers</div>
             </div>
-            <div class="hv-metric-sep"></div>
-            <div class="hv-metric">
-              <div class="hv-metric-num">£900K</div>
-              <div class="hv-metric-lbl">Annual revenue</div>
+            <div class="eu-card-metric-sep"></div>
+            <div class="eu-card-metric">
+              <div class="eu-card-metric-num">53%</div>
+              <div class="eu-card-metric-lbl">Fee savings</div>
             </div>
-            <div class="hv-metric-sep"></div>
-            <div class="hv-metric">
-              <div class="hv-metric-num">4</div>
-              <div class="hv-metric-lbl">Markets active</div>
+            <div class="eu-card-metric-sep"></div>
+            <div class="eu-card-metric">
+              <div class="eu-card-metric-num">+30%</div>
+              <div class="eu-card-metric-lbl">Sales uplift</div>
             </div>
           </div>
 
@@ -1618,212 +1850,451 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">The Problem</div>
-      <h2 class="section-title">Amazon is complex. Most brands are going it alone.</h2>
+      <h2 class="section-title">Most UK brands want to expand. They stop at the complexity.</h2>
       <p class="section-subtitle">
-        The UK FMCG brands growing fastest on Amazon aren't doing it with a standard agency. They've changed the model entirely.
+        Post-Brexit EU expansion is genuinely complicated. But the brands that have done it report far less competition and significantly better margins than the UK market. The barrier is operational - and it's entirely removable.
       </p>
     </div>
 
     <div class="pain-grid">
       <div class="pain-card fade-in">
         <div class="pain-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <h3>Locked out of vendor status</h3>
+        <h3>The compliance stack is formidable</h3>
         <p>
-          Amazon vendor accounts are rare, established, and structurally hard to obtain. Most FMCG brands are stuck on Seller Central, missing the Prime badge, EDI ordering, and the commercial leverage that comes with vendor relationships.
+          EU VAT registration in up to seven countries. An EORI number. Fiscal representation in France, Spain, Italy and Poland. A GPSR Responsible Person. An EU trademark filed separately from your UK registration. Each one is solvable. Together they look like a full-time job.
         </p>
+        <div class="pain-penalty">5+ registrations before you sell a unit</div>
       </div>
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3>Chargebacks and compliance costs</h3>
+        <h3>The first-mover window is closing</h3>
         <p>
-          Amazon's compliance rules are strict and constantly changing. Chargebacks, shortages, and listing suppressions eat into margins. Without dedicated compliance expertise and direct AVS access, brands spend more time firefighting than growing.
+          EU Amazon category positions are less competed right now than at any point since Brexit. Many UK brands hesitated; many EU brands retreated from the UK. The brands entering Europe in 2025-2026 will own their categories. The ones that wait will pay a premium to catch up.
         </p>
+        <div class="pain-penalty">Competition rising year on year</div>
       </div>
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
         </div>
-        <h3>Misaligned agency incentives</h3>
+        <h3>Amazon Vendor EU access is not self-serve</h3>
         <p>
-          Most Amazon agencies charge a retainer whether you grow or not. Their success and your success aren't the same thing. You want a partner whose revenue goes up only when yours does - not one billing you while results plateau.
+          Unlike Seller Central, expanding to EU Vendor Central marketplaces requires a Vendor Manager conversation - including Amazon.ie, which launched in March 2025. Access is not guaranteed. It depends on your relationship with Amazon's internal teams. That relationship is what Rosetta Brands brings.
         </p>
+        <div class="pain-penalty">Access via Vendor Manager only</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     HOW IT WORKS
+     HOW WE HANDLE IT
      ═══════════════════════════════════════════ -->
-<section class="how-section">
+<section class="how-section" id="how-it-works">
   <div class="container">
     <div class="section-header center fade-in">
-      <div class="section-tag orange">How It Works</div>
-      <h2 class="section-title">Everything included. One partnership.</h2>
+      <div class="section-tag orange">How We Do It</div>
+      <h2 class="section-title">A clear path. Market by market.</h2>
       <p class="section-subtitle">
-        Vendor-As-A-Service isn't a service layer on top of your Amazon account. It replaces it.
-        Your products are bought and sold through our vendor relationship.
+        International expansion through Rosetta Brands follows a sequenced, managed process - starting with the lowest-friction entry point and building methodically toward full EU presence.
       </p>
     </div>
 
-    <!-- Block 1: Vendor Access -->
+    <!-- Block 1: Ireland gateway -->
     <div class="how-block">
       <div class="how-text fade-in">
-        <div class="how-num">01 - Vendor Access &amp; Prime</div>
-        <h3>Enterprise vendor infrastructure from day one</h3>
+        <div class="how-num">01 - The Ireland Gateway</div>
+        <h3>Start in English. Start in the EU.</h3>
         <p>
-          Rosetta Brands holds an established Amazon vendor account - the kind brands can't easily get on their own.
-          When you partner with us, your products are listed and sold through our vendor relationship,
-          giving you instant access to the full suite of our vendor benefits.
+          Amazon.ie launched on 18 March 2025. It is the most natural starting point for any UK brand entering the EU - English language, EU jurisdiction, a Dublin fulfilment centre already in place, and category positions that are still largely unclaimed. Getting in now means building authority before the market matures.
         </p>
         <ul class="how-bullets">
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Prime badge on every product from day one
+            English-language listings - no translation cost, no localisation overhead
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            EDI-based order processing every Monday
+            Irish VAT registration provides an EU VAT number - the foundation for wider expansion
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Straightforward shipment to a single Amazon FC
+            Amazon.ie vendor access requires a Vendor Manager conversation - Rosetta Brands manages this
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Zero chargebacks, returns, or variable fees
+            First-mover advantage in most FMCG categories - Amazon.ie is barely a year old
           </li>
         </ul>
       </div>
       <div class="how-visual fade-in fade-in-delay-1">
-        <div class="how-visual-label">Weekly vendor cycle</div>
-        <div class="how-flow">
-          <div class="how-flow-step">
-            <div class="how-flow-num">1</div>
-            <div class="how-flow-text">
-              <strong>Amazon places PO each Monday</strong>
-              <span>Orders arrive through our vendor account and are forwarded on</span>
+        <div class="how-visual-label">Why Ireland first</div>
+        <div class="ireland-card">
+          <div class="ireland-launch-banner">
+            <div class="ireland-flag-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="ireland-launch-text">
+              <div class="ireland-launch-title">Amazon.ie - Launched 18 March 2025</div>
+              <div class="ireland-launch-sub">200M products &middot; One-day delivery &middot; Full Prime</div>
             </div>
           </div>
-          <div class="how-flow-step">
-            <div class="how-flow-num">2</div>
-            <div class="how-flow-text">
-              <strong>Automated order processing and label creation</strong>
-              <span>Our inhouse platform allows you to accept orders and receive shipping labels instantly</span>
+          <div class="ireland-reason-list">
+            <div class="ireland-reason">
+              <div class="ireland-reason-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <div>
+                <div class="ireland-reason-title">English-language market</div>
+                <div class="ireland-reason-sub">No translation overhead, same customer service language</div>
+              </div>
             </div>
-          </div>
-          <div class="how-flow-step">
-            <div class="how-flow-num">3</div>
-            <div class="how-flow-text">
-              <strong>You ship to one Amazon FC</strong>
-              <span>No split orders, no multiple delivery locations - straightforward and simple</span>
+            <div class="ireland-reason">
+              <div class="ireland-reason-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="ireland-reason-title">EU jurisdiction and VAT foundation</div>
+                <div class="ireland-reason-sub">Irish VAT number unlocks wider EU expansion</div>
+              </div>
             </div>
-          </div>
-          <div class="how-flow-step">
-            <div class="how-flow-num">4</div>
-            <div class="how-flow-text">
-              <strong>Amazon delivers your product to its customers</strong>
-              <span>Prime shipping, customer returns and service - all managed by Amazon</span>
+            <div class="ireland-reason">
+              <div class="ireland-reason-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <div class="ireland-reason-title">First-mover category advantage</div>
+                <div class="ireland-reason-sub">Marketplace launched March 2025 - most niches are open</div>
+              </div>
             </div>
-          </div>
-          <div class="how-flow-step">
-            <div class="how-flow-num">5</div>
-            <div class="how-flow-text">
-              <strong>You get paid</strong>
-              <span>On receipt of a POD - reconciliation, disputes and chargebacks handled by us</span>
+            <div class="ireland-reason">
+              <div class="ireland-reason-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </div>
+              <div>
+                <div class="ireland-reason-title">Dublin fulfilment centre operational</div>
+                <div class="ireland-reason-sub">Prime-eligible delivery - no cross-border fulfilment required</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Block 2: Vendor Management Team -->
+    <!-- Block 2: Pan-EU FBA -->
     <div class="how-block reverse">
       <div class="how-text fade-in">
-        <div class="how-num">02 - Vendor Management Team</div>
-        <h3>A dedicated team who know your brand inside out</h3>
+        <div class="how-num">02 - Pan-European FBA</div>
+        <h3>One pallet. Seven countries. All Prime.</h3>
         <p>
-          You get a cross-functional team assigned to your account - not a shared inbox and a revolving door of junior account managers.
-          Your team handles every aspect of your Amazon operation and speaks directly with Amazon on your behalf.
+          Pan-EU FBA is Amazon's flagship multi-market fulfilment programme. Ship inventory to one EU fulfilment centre and Amazon automatically redistributes it across Germany, France, Italy, Spain, Poland, Netherlands and Belgium - every product instantly Prime-eligible across all seven markets from a single shipment.
         </p>
         <ul class="how-bullets">
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Dedicated account lead with 15+ years Amazon experience
+            Up to 53% reduction in fulfilment fees vs. individual country shipping
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Direct AVS (Amazon Vendor Support) relationship
+            30% average sales uplift from borderless Prime eligibility
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Proactive compliance and escalation management
+            15-25% margin improvement - Rosetta Brands handles logistics routing
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Weekly performance reviews via your client manager
+            Post-Brexit: UK inventory cannot serve Pan-EU - EU entry must go direct into EU fulfilment
           </li>
         </ul>
       </div>
       <div class="how-visual fade-in fade-in-delay-1">
-        <div class="how-visual-label">Your dedicated team</div>
-        <div class="program-list">
-          <div class="program-item"><span class="program-dot"></span> Dedicated Client Manager</div>
-          <div class="program-item"><span class="program-dot"></span> Dedicated Advertiser</div>
-          <div class="program-item"><span class="program-dot"></span> Onboarding Team</div>
-          <div class="program-item"><span class="program-dot"></span> Technical Support Team</div>
-          <div class="program-item"><span class="program-dot"></span> Finance Support Team</div>
-          <div class="program-item"><span class="program-dot"></span> Order Support Team</div>
-          <div class="program-item"><span class="program-dot"></span> Delivery &amp; Logistics Support Team</div>
+        <div class="how-visual-label">Pan-EU FBA - how it flows</div>
+        <div class="pan-eu-flow">
+          <div class="pan-eu-origin">
+            <div class="pan-eu-origin-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            </div>
+            <div>
+              <div class="pan-eu-origin-label">Single shipment</div>
+              <div class="pan-eu-origin-title">One pallet into one EU fulfilment centre</div>
+            </div>
+          </div>
+          <div class="pan-eu-arrow-row">
+            <svg width="18" height="24" viewBox="0 0 18 24" fill="none"><path d="M9 2v16M3 13l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="pan-eu-markets">
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">Germany</span>
+              <span class="pan-eu-market-domain">.de</span>
+            </div>
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">France</span>
+              <span class="pan-eu-market-domain">.fr</span>
+            </div>
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">Italy</span>
+              <span class="pan-eu-market-domain">.it</span>
+            </div>
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">Spain</span>
+              <span class="pan-eu-market-domain">.es</span>
+            </div>
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">Poland</span>
+              <span class="pan-eu-market-domain">.pl</span>
+            </div>
+            <div class="pan-eu-market">
+              <span class="pan-eu-market-dot"></span>
+              <span class="pan-eu-market-name">Netherlands</span>
+              <span class="pan-eu-market-domain">.nl</span>
+            </div>
+          </div>
+          <div class="pan-eu-saving-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            All 7 markets - Prime-eligible - from one inbound shipment
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Block 3: Exclusive Programs -->
+    <!-- Block 3: Compliance wall -->
     <div class="how-block">
       <div class="how-text fade-in">
-        <div class="how-num">03 - Exclusive Amazon Programs</div>
-        <h3>Programs and marketplaces you simply can't access anywhere else</h3>
+        <div class="how-num">03 - Compliance &amp; Registration</div>
+        <h3>The compliance wall, dismantled before you hit it.</h3>
         <p>
-          Rosetta Brands participates in exclusive Amazon programs and marketplaces that are unavailable to standard sellers
-          or most agencies. These aren't perks - they're structural competitive advantages that compound over time.
+          The reason most UK brands stall on EU expansion is the registration sequence. VAT in up to seven countries, fiscal representatives jointly liable for your obligations, GPSR Responsible Person requirements, a separate EU EORI number, and an EUIPO trademark for Brand Registry. Rosetta Brands coordinates every element through trusted advisors and manages the timeline so nothing blocks launch.
         </p>
         <ul class="how-bullets">
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Access requires an established vendor relationship
+            EU VAT registration coordinated - starting with one country, scaling as markets open
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Structural advantages that cannot be bought or replicated
+            GPSR Responsible Person connected - EU regulatory contact appointed
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            Brands consistently rank Top 10 - often Top 5 - in category
+            EUIPO trademark coordinated for EU Brand Registry enrolment
           </li>
           <li>
             <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            All programs and marketplaces active for every partner brand
+            Fiscal representation arranged in France, Spain, Italy and Poland
           </li>
         </ul>
       </div>
       <div class="how-visual fade-in fade-in-delay-1">
-        <div class="how-visual-label">Active programs</div>
-        <div class="program-list">
-          <div class="program-item"><span class="program-dot"></span> Amazon Subscribe &amp; Save</div>
-          <div class="program-item"><span class="program-dot"></span> Amazon Business</div>
-          <div class="program-item"><span class="program-dot"></span> Pallet Ordering Programme</div>
-          <div class="program-item"><span class="program-dot"></span> Amazon Fresh</div>
-          <div class="program-item"><span class="program-dot"></span> Amazon Freight</div>
-          <div class="program-item"><span class="program-dot"></span> UK, Ireland, Germany &amp; Australia</div>
+        <div class="how-visual-label">Who handles what</div>
+        <div class="compliance-wall">
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">EU VAT registrations (per country)</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">EU EORI number</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">GPSR Responsible Person (EU)</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">Fiscal representation (FR, ES, IT, PL)</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">EUIPO trademark &amp; EU Brand Registry</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon rb">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="cw-label">Listing localisation (DE, FR, ES, IT)</span>
+            <span class="cw-owner rb">Rosetta Brands</span>
+          </div>
+          <div class="cw-item handled">
+            <div class="cw-icon done">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="cw-label">Your exposure to EU admin</span>
+            <span class="cw-owner client">None</span>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Block 4: Ongoing performance -->
+    <div class="how-block reverse">
+      <div class="how-text fade-in">
+        <div class="how-num">04 - Ongoing EU Performance</div>
+        <h3>The same service. Across every market you're in.</h3>
+        <p>
+          Once a brand is live on EU marketplaces, Rosetta Brands manages performance exactly as we do on the UK - advertising strategy, Buy Box management, pricing optimisation, content, and availability. The difference is that EU market dynamics differ by country, and we account for that in how each market is run.
+        </p>
+        <ul class="how-bullets">
+          <li>
+            <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Sponsored Ads management per marketplace - localised keyword strategy
+          </li>
+          <li>
+            <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Buy Box strategy adapted to local pricing and competition dynamics
+          </li>
+          <li>
+            <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Availability monitoring and restocking signals per country
+          </li>
+          <li>
+            <span class="how-bullet-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            A+ content and listing updates maintained across all active markets
+          </li>
+        </ul>
+      </div>
+      <div class="how-visual fade-in fade-in-delay-1">
+        <div class="how-visual-label">What Pan-EU expansion delivers</div>
+        <div class="perf-panel">
+          <div class="perf-stat">
+            <div class="perf-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div>
+              <div class="perf-stat-num">+30<span>%</span></div>
+              <div class="perf-stat-label">Average sales uplift from Pan-EU Prime eligibility</div>
+            </div>
+          </div>
+          <div class="perf-stat">
+            <div class="perf-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div>
+              <div class="perf-stat-num">53<span>%</span></div>
+              <div class="perf-stat-label">Maximum fulfilment fee reduction via Pan-EU vs. individual country shipping</div>
+            </div>
+          </div>
+          <div class="perf-stat">
+            <div class="perf-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <div class="perf-stat-num">€1.2<span>M</span></div>
+              <div class="perf-stat-label">Additional revenue from Pan-EU - documented €4M brand case study, single pallet deployment</div>
+            </div>
+          </div>
+          <div class="perf-stat">
+            <div class="perf-stat-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            </div>
+            <div>
+              <div class="perf-stat-num">9<span>x</span></div>
+              <div class="perf-stat-label">Revenue growth over four years - documented Pan-EU migration case study</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NINE MARKETPLACES GRID
+     ═══════════════════════════════════════════ -->
+<section class="markets-section">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-tag orange">The Full Market Picture</div>
+      <h2 class="section-title" style="color:var(--white);">Nine marketplaces.<br>One vendor relationship.</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.6);margin:0 auto;">
+        Every Amazon EU marketplace is accessible through Rosetta Brands. We prioritise entry by market size, category competition, and margin potential - and we scale methodically rather than launching everywhere at once.
+      </p>
+    </div>
+
+    <div class="markets-grid fade-in">
+
+      <div class="market-tile featured">
+        <span class="market-tile-badge gateway">Start here</span>
+        <div class="market-tile-domain">.ie</div>
+        <div class="market-tile-country">Ireland</div>
+        <div class="market-tile-note">Launched March 2025. English-language. EU jurisdiction. First-mover advantage still wide open across FMCG categories.</div>
+      </div>
+
+      <div class="market-tile featured">
+        <span class="market-tile-badge largest">Largest EU</span>
+        <div class="market-tile-domain">.de</div>
+        <div class="market-tile-country">Germany</div>
+        <div class="market-tile-note">$45.9 billion in 2025. Generates more Amazon revenue than Canada and Mexico combined. The category positions are there for brands that move now.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.fr</div>
+        <div class="market-tile-country">France</div>
+        <div class="market-tile-note">Second-largest EU market. Strong FMCG and grocery demand. High average basket value for premium brands.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.es</div>
+        <div class="market-tile-country">Spain</div>
+        <div class="market-tile-note">Fast-growing market with lower competition intensity than Germany or France. Well-suited to value and lifestyle categories.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.it</div>
+        <div class="market-tile-country">Italy</div>
+        <div class="market-tile-note">High basket values. Strong consumer appetite for premium and artisan positioning in food, health and beauty.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.nl</div>
+        <div class="market-tile-country">Netherlands</div>
+        <div class="market-tile-note">Added to Pan-EU core in June 2025. Serves as a logistics hub for Northern Europe. High-spending, English-comfortable consumer base.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.se</div>
+        <div class="market-tile-country">Sweden</div>
+        <div class="market-tile-note">Highest per-capita online spend in the Nordics. Premium-aligned consumer base with strong category openings in health and sustainability.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.pl</div>
+        <div class="market-tile-country">Poland</div>
+        <div class="market-tile-note">Fastest-growing Amazon EU market by percentage. Amazon fulfilment centre already active. Category competition significantly lower than western markets.</div>
+      </div>
+
+      <div class="market-tile">
+        <div class="market-tile-domain">.be</div>
+        <div class="market-tile-country">Belgium</div>
+        <div class="market-tile-note">Smaller market, included in Pan-EU at no additional fulfilment cost. Bilingual consumer base (French and Dutch). Good entry for brands already active in France.</div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -1832,25 +2303,22 @@ a {
      ═══════════════════════════════════════════ -->
 <section class="metrics-strip">
   <div class="container">
-    <div class="section-header center fade-in" style="margin-bottom:40px;">
-      <div class="section-tag orange">Proven Results</div>
-    </div>
     <div class="metrics-grid">
       <div class="metric-item fade-in">
-        <div class="metric-num"><span>£</span>100M+</div>
-        <div class="metric-label">Generated for partner brands</div>
+        <div class="metric-num">€150<span>B+</span></div>
+        <div class="metric-label">Amazon EU annual GMV</div>
       </div>
       <div class="metric-item fade-in fade-in-delay-1">
-        <div class="metric-num">958<span>+</span></div>
-        <div class="metric-label">FMCG brands actively managed</div>
+        <div class="metric-num">500<span>M</span></div>
+        <div class="metric-label">EU consumers across 9 marketplaces</div>
       </div>
       <div class="metric-item fade-in fade-in-delay-2">
-        <div class="metric-num">500<span>+</span></div>
-        <div class="metric-label">Amazon's Choice awards earned</div>
+        <div class="metric-num">53<span>%</span></div>
+        <div class="metric-label">Max fulfilment fee reduction via Pan-EU FBA</div>
       </div>
       <div class="metric-item fade-in fade-in-delay-3">
-        <div class="metric-num">4</div>
-        <div class="metric-label">Markets: UK, Ireland, Germany, Australia</div>
+        <div class="metric-num">+30<span>%</span></div>
+        <div class="metric-label">Average sales uplift from Pan-EU Prime eligibility</div>
       </div>
     </div>
   </div>
@@ -1862,192 +2330,105 @@ a {
 <section class="proof-section">
   <div class="container">
     <div class="proof-inner">
-      <div class="fade-in">
-        <div class="proof-quote-block">
-          <div class="proof-quote-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          </div>
-          <p class="proof-quote">
-            "Where I believe you really stand out is the approach you have with making the process simple for my internal teams. Order, shipping, delivery - this has made a huge difference, and we are finding this process a lot more straightforward and cost efficient."
-          </p>
-          <div class="proof-attribution" style="flex-direction:column;align-items:flex-start;gap:12px;">
-            <div>
-              <div class="proof-name">Head of Sales</div>
-              <div class="proof-role">Specialty coffee brand, UK Amazon vendor</div>
-            </div>
-          </div>
+
+      <div class="proof-quote-block fade-in">
+        <div class="proof-quote-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <p class="proof-quote">
+          "The EU expansion itself presented as a massive potential for further growth - even larger than what we had achieved in the UK. We couldn't have moved as fast without someone who understood the Amazon relationship and the compliance requirements at the same time."
+        </p>
+        <div class="proof-attribution" style="flex-direction:column;align-items:flex-start;gap:4px;">
+          <div class="proof-name">Head of E-Commerce</div>
+          <div class="proof-role">Premium health and nutrition brand, Amazon UK and EU vendor</div>
         </div>
       </div>
 
       <div class="proof-stats fade-in fade-in-delay-1">
         <div class="proof-stat-item">
           <div class="proof-stat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
           <div>
-            <div class="proof-stat-num">+119%</div>
-            <div class="proof-stat-label">YoY growth for a protein bar brand in their first full year (Jan '25 vs Jan '26)</div>
+            <div class="proof-stat-num">€4<span>M</span> → €5.2<span>M</span></div>
+            <div class="proof-stat-label">Brand added €1.2M in revenue via Pan-EU FBA from a single pallet deployment into one EU fulfilment centre</div>
           </div>
         </div>
         <div class="proof-stat-item">
           <div class="proof-stat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           </div>
           <div>
-            <div class="proof-stat-num">+361%</div>
-            <div class="proof-stat-label">Annual growth for a health food brand - from £245K to £900K run rate in one year</div>
+            <div class="proof-stat-num">9<span>x</span></div>
+            <div class="proof-stat-label">Revenue growth over four years documented in a Pan-EU migration case study - TACOS cut from 20% to 11%, ROAS improved from under 2.0 to 2.8</div>
           </div>
         </div>
         <div class="proof-stat-item">
           <div class="proof-stat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <div class="proof-stat-num">7.4x</div>
-            <div class="proof-stat-label">Return on ad spend (ROAS) achieved for a snack brand scaling through Vendor-As-A-Service</div>
+            <div class="proof-stat-num">3 <span style="font-size:16px;font-weight:600;">days</span></div>
+            <div class="proof-stat-label">Amazon's European Expansion Accelerator completes account setup, translations and listing activation across all EU stores in three business days</div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     ALSO IN VAAS
-     ═══════════════════════════════════════════ -->
-<section class="related-section" style="background:var(--off-white);border-top:1px solid var(--border);">
-  <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag orange">Also in Vendor-As-A-Service</div>
-      <h2 class="section-title">Five more components included in every partnership</h2>
-      <p class="section-subtitle">Vendor Access &amp; Prime is the foundation. These are the other components that come with it.</p>
-    </div>
-    <div class="related-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;">
-      <a href="fulfilment.html" class="related-card fade-in">
-        <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        </div>
-        <h3>Fulfilment &amp; Logistics</h3>
-        <p>One weekly order, one fulfilment centre, automated labels, and optional Amazon Freight collection from your warehouse.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </a>
-      <a href="vendor-management-team.html" class="related-card fade-in fade-in-delay-1">
-        <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Vendor Management Team</h3>
-        <p>Seven dedicated roles behind your brand. Client Manager, Advertiser, Finance, Onboarding, Technical, Orders, and Logistics Support.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </a>
-      <a href="compliance-escalation.html" class="related-card fade-in fade-in-delay-2">
-        <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <h3>Compliance &amp; Escalation</h3>
-        <p>Direct AVS access, chargeback dispute management, GSCOP compliance monitoring, and proactive account protection.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </a>
-      <a href="international-expansion.html" class="related-card fade-in fade-in-delay-1">
-        <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>International Expansion</h3>
-        <p>UK, Ireland, Germany, Australia and pan-EU through one vendor relationship. No separate accounts, no local teams required.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </a>
-      <a href="#" class="related-card fade-in fade-in-delay-2">
-        <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h3>Exclusive Amazon Programmes</h3>
-        <p>Subscribe &amp; Save, Amazon Business, Pallet Ordering, Amazon Fresh, Amazon Freight, and international marketplaces.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     RELATED CAPABILITIES
+     RELATED SERVICES
      ═══════════════════════════════════════════ -->
 <section class="related-section">
   <div class="container">
     <div class="section-header center fade-in">
-      <div class="section-tag orange">Complete the picture</div>
-      <h2 class="section-title">Our partner brands can super-accelerate their growth and Amazon presence via our Growth Marketing, Platform and Pricing &amp; Partnership model.</h2>
-      <p class="section-subtitle">
-        Partner brands can add Growth Marketing and Platform capabilities to drive further growth.
-      </p>
+      <div class="section-tag orange">Vendor-As-A-Service</div>
+      <h2 class="section-title">The full picture</h2>
+      <p class="section-subtitle">International Expansion is one part of the Vendor-As-A-Service model. Here's what else is included.</p>
     </div>
-
-    <div class="related-grid">
-      <a href="growth-marketing.html" class="related-card fade-in">
-        <div class="related-card-icon pink-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    <div class="related-grid fade-in" style="grid-template-columns:repeat(3,1fr);gap:20px;">
+      <a href="vendor-access.html" class="related-card">
+        <div class="related-card-icon blue-bg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
         </div>
-        <h3>Growth Marketing</h3>
-        <p>Specialist marketing that takes your brand presence, content, and advertising to the next level. Advertising, A+ Content, Brand Store, and product launch services.</p>
-        <div class="related-card-link">
-          Explore Growth Marketing
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <h4>Vendor Access &amp; Prime</h4>
+        <p>Full Amazon Vendor Central setup and Prime eligibility for brands without a direct Amazon vendor relationship.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-
-      <a href="platform.html" class="related-card fade-in fade-in-delay-1">
+      <a href="fulfilment.html" class="related-card fade-in fade-in-delay-1">
+        <div class="related-card-icon green-bg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h4>Fulfilment &amp; Logistics</h4>
+        <p>End-to-end inbound management, FBA prep, stock forecasting and delivery compliance - so Amazon never runs out of your product.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+      <a href="vendor-management-team.html" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon purple-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3>Platform</h3>
-        <p>Purpose-built technology powering your vendor account - from automated order management to live analytics, listing health monitoring, and detailed performance reporting.</p>
-        <div class="related-card-link">
-          Explore Platform
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <h4>Vendor Management Team</h4>
+        <p>A dedicated client manager embedded in your brand - handling the day-to-day Amazon relationship so you never need to.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-
-      <a href="pricing.html" class="related-card fade-in fade-in-delay-2">
+      <a href="compliance-escalation.html" class="related-card fade-in">
         <div class="related-card-icon orange-bg">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Pricing &amp; Partnership Model</h3>
-        <p>Outcome-based pricing - our success fee only kicks in when you grow beyond your target. Understand exactly how the commercial model works before you commit.</p>
-        <div class="related-card-link">
-          See Pricing
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <h4>Compliance &amp; Escalation</h4>
+        <p>Amazon chargebacks, shortage claims and FMCG regulatory compliance absorbed by Rosetta Brands. The liability falls on us.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     CERTIFICATION STRIP
-     ═══════════════════════════════════════════ -->
-<section class="cert-strip">
-  <div class="container">
-    <div class="cert-strip-label">Official Amazon Partnerships &amp; Certifications</div>
-    <div class="cert-grid">
-      <div class="cert-item fade-in">
-        <img src="img/badges/amazon-vendor-central.png" alt="Amazon Vendor Central" loading="lazy">
-        <div class="cert-item-text">
-          <strong>Vendor Central Access</strong>
-          <span>Enterprise vendor infrastructure</span>
+      <a href="#" class="related-card fade-in fade-in-delay-1">
+        <div class="related-card-icon orange-bg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-      </div>
-      <div class="cert-item fade-in fade-in-delay-1">
-        <img src="img/badges/amazon-verified-partner.png" alt="Amazon Ads Certified" loading="lazy">
-        <div class="cert-item-text">
-          <strong>Amazon Ads Certified</strong>
-          <span>Certified advertising partner</span>
-        </div>
-      </div>
-      <div class="cert-item fade-in fade-in-delay-2">
-        <img src="img/badges/amazon-freight-badge.png" alt="Amazon Freight Partner" loading="lazy">
-        <div class="cert-item-text">
-          <strong>Amazon Freight Partner</strong>
-          <span>Direct logistics partnership</span>
-        </div>
-      </div>
+        <h4>Exclusive Amazon Programmes</h4>
+        <p>Subscribe &amp; Save, Amazon Business, Pallet Ordering, Amazon Fresh, Amazon Freight, and international marketplace programmes.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
     </div>
   </div>
 </section>
@@ -2058,10 +2439,9 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box">
-      <h2 class="cta-title fade-in">Ready to access vendor infrastructure?</h2>
+      <h2 class="cta-title fade-in">The window is open. It won't be forever.</h2>
       <p class="cta-text fade-in fade-in-delay-1">
-        We work with UK FMCG brands with £5M+ revenue who want to scale profitably on Amazon.
-        Let's explore whether Vendor-As-A-Service is right for your brand.
+        EU Amazon category positions available to UK brands right now will not be available in two years. Talk to Rosetta Brands about which markets make sense for your product, and what entry looks like in practice.
       </p>
       <div class="cta-actions fade-in fade-in-delay-2">
         <button class="btn btn-primary btn-lg">
@@ -2070,7 +2450,7 @@ a {
         </button>
         <button class="btn btn-secondary btn-lg">View Pricing</button>
       </div>
-      <p class="cta-note">No commitment required &middot; Tailored to your brand &middot; Response within 24 hours</p>
+      <p class="cta-note">No commitment required &middot; FMCG brands only &middot; Response within 24 hours</p>
     </div>
   </div>
 </section>
@@ -2078,72 +2458,70 @@ a {
 </main>
 
 <!-- ═══════════════════════════════════════════
-     JAVASCRIPT
+     FAQ SECTION
      ═══════════════════════════════════════════ -->
-
-<!-- FAQ SECTION -->
 <section class="faq-section">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Everything you need to know</h2>
-      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
+      <h2 class="section-title">International expansion - answered</h2>
+      <p class="section-subtitle">Questions specific to EU expansion through Rosetta Brands. For broader questions about how Vendor-As-A-Service works, visit our <a href="index.html#faq" style="color:var(--orange);font-weight:600;">FAQ page</a>.</p>
     </div>
     <div class="faq-list">
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            What is Vendor-As-A-Service (Vendor-As-A-Service)?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>Vendor-As-A-Service means Rosetta Brands operates as your Amazon vendor. We hold the vendor account, manage the relationship with Amazon, handle compliance and fulfilment, and share in your growth. You get enterprise-grade vendor infrastructure without the overhead of building or running it yourself.</p>
-          </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          How does Rosetta Brands expand UK brands onto Amazon EU marketplaces?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Because Rosetta Brands is already the vendor of record on Amazon, expanding to EU marketplaces means adding those markets to an existing vendor relationship - not building new accounts, new contracts, or new infrastructure from scratch. We manage the Vendor Manager conversations to activate EU access, coordinate VAT registrations and GPSR compliance, set up Pan-European FBA where appropriate, and handle listing localisation. Your brand gets EU presence without the operational overhead.</p>
         </div>
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            Do I need my own Amazon vendor account to work with Rosetta Brands?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>No. Rosetta Brands provides the vendor account infrastructure. You benefit from our established vendor relationships, Prime badge access, and Amazon compliance framework from day one - without needing your own vendor account.</p>
-          </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          What is Pan-European FBA and why does it matter for UK brands post-Brexit?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Pan-European FBA allows a single pallet shipped to one EU Amazon fulfilment centre to make products Prime-eligible across seven countries simultaneously - Germany, France, Italy, Spain, Poland, Netherlands and Belgium. It can reduce fulfilment fees by up to 53% compared to shipping each country individually, and brands typically see a 30% sales uplift from Prime eligibility across all seven markets. Post-Brexit, UK brands cannot use UK FBA warehouses as the Pan-EU distribution hub - inventory must go directly into an EU fulfilment centre. Rosetta Brands handles the logistics routing and inventory strategy.</p>
         </div>
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            Which markets does Rosetta Brands operate in?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>We currently operate across the UK, Ireland, Germany, and Australia. Our vendor infrastructure is active in all four markets, allowing brands to expand internationally without managing separate vendor relationships in each territory.</p>
-          </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          Why is Ireland a good starting point for UK brands expanding to Amazon EU?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Amazon.ie launched in March 2025 and is still in its early stages - category positions are far less competed than on Amazon.de or Amazon.fr. Ireland is English-language, which eliminates translation costs and local-language customer service requirements entirely. VAT registration in Ireland provides a legitimate EU VAT number, which serves as the foundation for wider EU expansion. Crucially, Amazon.ie vendor access is not automatically granted to UK vendors - it requires a Vendor Manager conversation. Rosetta Brands' AVS relationships make this conversation possible.</p>
         </div>
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            What product categories does Rosetta Brands work with?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>We specialise in FMCG categories on Amazon, including Grocery & Gourmet, Beer, Wine & Spirits, Health & Personal Care, Pet Supplies, Home & Household, and Garden & Outdoor. If you are an FMCG brand, we likely have deep experience in your category.</p>
-          </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          What compliance requirements apply to UK brands selling on Amazon EU?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>UK brands selling into the EU via Amazon need: VAT registration in each country where Amazon stores Pan-EU inventory; an EU EORI number for importing goods into the EU; GPSR (General Product Safety Regulation) compliance requiring an EU-based Responsible Person; an EU trademark via EUIPO for Brand Registry enrolment (UK trademarks are no longer automatically valid in the EU post-Brexit); and fiscal representation in France, Spain, Italy and Poland for non-EU companies. Rosetta Brands coordinates all of these through trusted advisors and manages the timeline so nothing blocks your launch date.</p>
         </div>
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            How long does onboarding take?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>Most brands are fully onboarded and live on Amazon within 4 to 8 weeks. This includes account setup, catalogue migration, compliance checks, content optimisation, and first purchase order processing.</p>
-          </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          Which Amazon EU marketplace should a UK brand enter first?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>It depends on the product category, but Ireland (Amazon.ie) is the lowest-friction entry for most UK brands - same language, EU jurisdiction, and category positions that are largely still open. Germany (Amazon.de) is the most commercially significant at $45.9 billion in 2025 - the largest EU Amazon market - and is often the second move. France is strong for food and FMCG. Rosetta Brands conducts a market prioritisation analysis before any expansion - looking at category competition density, pricing headroom and margin potential per market to sequence entry correctly.</p>
         </div>
-        <div class="faq-item fade-in">
-          <button class="faq-q" aria-expanded="false">
-            Can I use Rosetta Brands alongside my existing Amazon Seller account?
-            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-a" hidden>
-            <p>Yes. Many of our partner brands transition from Seller to Vendor through us, while others run both in parallel during the transition period. We will advise on the right approach based on your current setup and growth objectives.</p>
-          </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button class="faq-q" aria-expanded="false">
+          Does Rosetta Brands handle listing translations for EU marketplaces?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Yes. Rosetta Brands manages listing localisation for all EU marketplaces including German, French, Spanish and Italian translations of product titles, bullet points, A+ content and backend search terms. Translation is category-specific - not generic machine translation - to ensure listings perform competitively in each market. We also manage EU Brand Registry enrolment and A+ content builds for each active market once an EUIPO trademark is in place.</p>
         </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2264,5 +2642,6 @@ a {
   </div>
 </footer>
 </div>
+
 </body>
 </html>
