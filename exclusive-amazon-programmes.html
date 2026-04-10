@@ -952,6 +952,23 @@
   .hero-actions { flex-direction: column; align-items: flex-start; }
 }
 
+/* Centred 5-card VaaS related grid */
+.related-grid-vaas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.related-grid-vaas .related-card {
+  flex: 0 1 calc(33.333% - 14px);
+  min-width: 240px;
+}
+@media (max-width: 1024px) {
+  .related-grid-vaas .related-card { flex: 0 1 calc(50% - 10px); }
+}
+@media (max-width: 768px) {
+  .related-grid-vaas .related-card { flex: 0 1 100%; }
+}
 </style>
   <script src="nav-loader.js" defer></script>
 <script type="application/ld+json">
@@ -1501,7 +1518,7 @@ a {
         <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <div class="mega-item-text">
           <h4>International Expansion</h4>
-          <p>Ireland, Germany, France and pan-EU through one vendor relationship</p>
+          <p>Ireland, Germany, France and PAN-EU through one vendor relationship</p>
         </div>
       </a>
       <a href="exclusive-amazon-programmes.html" class="mega-item">
@@ -1539,7 +1556,7 @@ a {
       <div class="mega-item">
         <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
         <div class="mega-item-text">
-          <h4>KFI & Lifestyle Images</h4>
+          <h4>Key Feature Images & Lifestyle</h4>
           <p>Professional imagery that sells</p>
         </div>
       </div>
@@ -1573,13 +1590,6 @@ a {
         <div class="mega-item-text">
           <h4>Listing Health & Optimisation</h4>
           <p>Buy box monitoring, suppressions, and proactive fixes</p>
-        </div>
-      </div>
-      <div class="mega-item">
-        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
-        <div class="mega-item-text">
-          <h4>Analytics & Forecasting</h4>
-          <p>Intelligence from 958+ FMCG brands</p>
         </div>
       </div>
       <div class="mega-item">
@@ -2408,7 +2418,7 @@ a {
       <h2 class="section-title">The full picture</h2>
       <p class="section-subtitle">Exclusive Amazon Programmes is one component of the Vendor-As-A-Service model. Here's what else is included.</p>
     </div>
-    <div class="related-grid fade-in" style="grid-template-columns:repeat(3,1fr);gap:20px;">
+    <div class="related-grid related-grid-vaas fade-in">
       <a href="vendor-access.html" class="related-card">
         <div class="related-card-icon blue-bg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
@@ -2446,7 +2456,7 @@ a {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <h4>International Expansion</h4>
-        <p>Ireland, Germany, France and pan-EU through one vendor relationship. No separate accounts, no local teams required.</p>
+        <p>Ireland, Germany, France and PAN-EU through one vendor relationship. No separate accounts, no local teams required.</p>
         <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
     </div>
@@ -2461,7 +2471,8 @@ a {
     <div class="cta-box">
       <h2 class="cta-title fade-in">These programmes are already available to your brand.</h2>
       <p class="cta-text fade-in fade-in-delay-1">
-        Subscribe &amp; Save, Amazon Business, Prime Day, Vine, Fresh and more - none of them require anything to be built. They just need to be activated and managed. Talk to Rosetta Brands about which programmes apply to your category and what the revenue impact looks like.
+        We work with UK FMCG brands who want to scale profitably on Amazon.
+Let's explore whether Vendor-As-A-Service is right for your brand.
       </p>
       <div class="cta-actions fade-in fade-in-delay-2">
         <button class="btn btn-primary btn-lg">
@@ -2598,7 +2609,7 @@ a {
           <li><a href="#">Advertising</a></li>
           <li><a href="#">Brand Store</a></li>
           <li><a href="#">A+ Content</a></li>
-          <li><a href="#">KFI &amp; Lifestyle Images</a></li>
+          <li><a href="#">Key Feature Images &amp; Lifestyle</a></li>
           <li><a href="#">Product Launch</a></li>
         </ul>
       </div>
@@ -2609,7 +2620,6 @@ a {
           <li><a href="#">Order Automation</a></li>
           <li><a href="#">Client Portal</a></li>
           <li><a href="#">Listing Health &amp; Optimisation</a></li>
-          <li><a href="#">Analytics &amp; Forecasting</a></li>
           <li><a href="#">Reporting &amp; Analytics</a></li>
         </ul>
       </div>

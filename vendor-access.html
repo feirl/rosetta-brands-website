@@ -390,7 +390,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 88px;
 }
 
@@ -691,6 +691,24 @@
   .metrics-grid { grid-template-columns: 1fr 1fr; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+/* Centred 5-card VaaS related grid */
+.related-grid-vaas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.related-grid-vaas .related-card {
+  flex: 0 1 calc(33.333% - 14px);
+  min-width: 240px;
+}
+@media (max-width: 1024px) {
+  .related-grid-vaas .related-card { flex: 0 1 calc(50% - 10px); }
+}
+@media (max-width: 768px) {
+  .related-grid-vaas .related-card { flex: 0 1 100%; }
 }
 </style>
   <script src="nav-loader.js" defer></script>
@@ -1277,7 +1295,7 @@ a {
         <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <div class="mega-item-text">
           <h4>International Expansion</h4>
-          <p>Ireland, Germany, France and pan-EU through one vendor relationship</p>
+          <p>Ireland, Germany, France and PAN-EU through one vendor relationship</p>
         </div>
       </a>
       <a href="exclusive-amazon-programmes.html" class="mega-item">
@@ -1315,7 +1333,7 @@ a {
       <div class="mega-item">
         <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
         <div class="mega-item-text">
-          <h4>KFI & Lifestyle Images</h4>
+          <h4>Key Feature Images & Lifestyle</h4>
           <p>Professional imagery that sells</p>
         </div>
       </div>
@@ -1349,13 +1367,6 @@ a {
         <div class="mega-item-text">
           <h4>Listing Health & Optimisation</h4>
           <p>Buy box monitoring, suppressions, and proactive fixes</p>
-        </div>
-      </div>
-      <div class="mega-item">
-        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
-        <div class="mega-item-text">
-          <h4>Analytics & Forecasting</h4>
-          <p>Intelligence from 958+ FMCG brands</p>
         </div>
       </div>
       <div class="mega-item">
@@ -1834,7 +1845,8 @@ a {
   <div class="container">
     <div class="section-header center fade-in" style="margin-bottom:40px;">
       <div class="section-tag orange">Proven Results</div>
-      <p style="color:var(--text-secondary);font-size:15px;margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;">Scale without compromise. Rosetta Brands operates across hundreds of brands through a proprietary platform and 15+ years of vendor operations — without reducing the quality of execution for a single one.</p>
+      <h2 class="section-title" style="margin-top:16px;">Performance that scales. Results that speak for themselves.</h2>
+      <p style="color:var(--text-secondary);font-size:15px;font-weight:400;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto;">Scale without compromise. Rosetta Brands operates across hundreds of brands through a proprietary platform and 15+ years of vendor operations, without reducing the quality of execution for a single one.</p>
     </div>
     <div class="metrics-grid">
       <div class="metric-item fade-in">
@@ -1923,7 +1935,7 @@ a {
       <h2 class="section-title">Five more components included in every partnership</h2>
       <p class="section-subtitle">Vendor Access &amp; Prime is the foundation. These are the other components that come with it.</p>
     </div>
-    <div class="related-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;">
+    <div class="related-grid related-grid-vaas">
       <a href="fulfilment.html" class="related-card fade-in">
         <div class="related-card-icon orange-bg">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
@@ -1953,7 +1965,7 @@ a {
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <h3>International Expansion</h3>
-        <p>UK, Ireland, Germany, Australia and pan-EU through one vendor relationship. No separate accounts, no local teams required.</p>
+        <p>UK, Ireland, Germany, Australia and PAN-EU through one vendor relationship. No separate accounts, no local teams required.</p>
         <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
       <a href="exclusive-amazon-programmes.html" class="related-card fade-in fade-in-delay-2">
@@ -1975,9 +1987,9 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">Complete the picture</div>
-      <h2 class="section-title">Our partner brands can super-accelerate their growth and Amazon presence via our Growth Marketing, Platform and Pricing &amp; Partnership model.</h2>
+      <h2 class="section-title">Vendor As A Service is just the foundation</h2>
       <p class="section-subtitle">
-        Partner brands can add Growth Marketing and Platform capabilities to drive further growth.
+        Our partner brands can super accelerate their growth and Amazon presence via our Growth Marketing, Platform and Pricing &amp; Partnership model.
       </p>
     </div>
 
@@ -2061,7 +2073,7 @@ a {
     <div class="cta-box">
       <h2 class="cta-title fade-in">Ready to access vendor infrastructure?</h2>
       <p class="cta-text fade-in fade-in-delay-1">
-        We work with UK FMCG brands with £5M+ revenue who want to scale profitably on Amazon.
+        We work with UK FMCG brands who want to scale profitably on Amazon.
         Let's explore whether Vendor-As-A-Service is right for your brand.
       </p>
       <div class="cta-actions fade-in fade-in-delay-2">
@@ -2201,7 +2213,7 @@ a {
           <li><a href="#">Advertising</a></li>
           <li><a href="#">Brand Store</a></li>
           <li><a href="#">A+ Content</a></li>
-          <li><a href="#">KFI &amp; Lifestyle Images</a></li>
+          <li><a href="#">Key Feature Images &amp; Lifestyle</a></li>
           <li><a href="#">Product Launch</a></li>
         </ul>
       </div>
@@ -2212,7 +2224,6 @@ a {
           <li><a href="#">Order Automation</a></li>
           <li><a href="#">Client Portal</a></li>
           <li><a href="#">Listing Health &amp; Optimisation</a></li>
-          <li><a href="#">Analytics &amp; Forecasting</a></li>
           <li><a href="#">Reporting &amp; Analytics</a></li>
         </ul>
       </div>
