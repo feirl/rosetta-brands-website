@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Advertising Management | AI-Powered Campaigns | Rosetta Brands</title>
-<meta name="description" content="Amazon advertising management for FMCG vendors. Sponsored Products, Brands, Display, and DSP with real-time performance dashboards. TACoS-first strategy that grows organic rank alongside paid sales.">
-<meta name="keywords" content="Amazon advertising management, Amazon PPC management UK, FMCG Amazon advertising, TACoS optimisation, Amazon DSP, Sponsored Products management, Amazon advertising agency">
-<link rel="canonical" href="https://rosettabrands.co.uk/advertising.html">
-<meta property="og:title" content="Amazon Advertising Management | Rosetta Brands">
-<meta property="og:description" content="AI-powered Amazon advertising with real-time performance visibility. TACoS-first strategy, full DSP access, and live dashboards for FMCG vendors.">
+<title>Amazon Brand Store Design | Branded Storefront | Rosetta Brands</title>
+<meta name="description" content="Custom Amazon Brand Store design for FMCG vendors. A branded shopping destination that converts Sponsored Brands traffic, tells your brand story, and keeps shoppers off competitor pages.">
+<meta name="keywords" content="Amazon Brand Store design UK, Amazon storefront FMCG, Amazon Brand Store agency, Amazon vendor storefront, Amazon Brand Registry storefront">
+<link rel="canonical" href="https://rosettabrands.co.uk/brand-store.html">
+<meta property="og:title" content="Amazon Brand Store Design | Rosetta Brands">
+<meta property="og:description" content="Custom Amazon Brand Stores for FMCG vendors. Designed to convert Sponsored Brands traffic, tell your brand story, and keep shoppers in your world.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/advertising.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/brand-store.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon Advertising Management | Rosetta Brands">
-<meta name="twitter:description" content="AI-powered Amazon advertising with real-time performance visibility.">
+<meta name="twitter:title" content="Amazon Brand Store Design | Rosetta Brands">
+<meta name="twitter:description" content="Custom Amazon Brand Stores designed to convert Sponsored Brands traffic and showcase your full range.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -88,148 +88,128 @@ section { width: 100%; }
 }
 .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-/* Campaign dashboard card */
-.campaign-card {
+/* Brand Store preview card */
+.store-card {
   background: var(--charcoal);
   border-radius: 20px;
-  padding: 28px 28px 24px;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
-.campaign-card::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 140px; height: 140px;
-  border-radius: 50%;
-  background: rgba(225,82,134,0.12);
-}
-.campaign-card-label {
+.store-card-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 18px;
+  gap: 0;
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
-.live-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #4ade80;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 2px rgba(74,222,128,0.25);
-  animation: pulse-live 2s ease infinite;
-}
-@keyframes pulse-live {
-  0%,100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-.campaign-formats {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 22px;
-  flex-wrap: wrap;
-}
-.campaign-format {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 4px 10px;
-  border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.7);
-}
-.campaign-format.active {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: white;
-}
-
-.campaign-metrics-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.campaign-metric {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  padding: 12px 14px;
-}
-.campaign-metric-label {
-  font-size: 10px;
-  color: rgba(255,255,255,0.38);
+.store-card-nav::-webkit-scrollbar { display: none; }
+.store-nav-tab {
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.4);
+  padding: 12px 14px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: default;
+}
+.store-nav-tab.active {
+  color: white;
+  border-bottom-color: var(--pink);
+}
+.store-card-body { padding: 20px 20px 0; }
+.store-hero-banner {
+  background: linear-gradient(135deg, rgba(225,82,134,0.25) 0%, rgba(127,134,193,0.20) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.store-hero-banner::before {
+  content: '';
+  position: absolute;
+  right: -20px; top: -20px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(225,82,134,0.15);
+}
+.store-hero-brand {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
   margin-bottom: 4px;
 }
-.campaign-metric-value {
+.store-hero-tagline {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+}
+.store-hero-tagline span { color: var(--pink); }
+.store-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.store-product-tile {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 10px 8px;
+  text-align: center;
+}
+.store-product-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  margin: 0 auto 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+}
+.store-product-name {
+  font-size: 9px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.3;
+}
+.store-product-stars {
+  font-size: 9px;
+  color: #fbbf24;
+  margin-top: 3px;
+}
+.store-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 14px 0 20px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.store-metric { text-align: center; }
+.store-metric-num {
+  font-family: var(--font-display);
+  font-size: 18px;
   font-weight: 800;
   color: white;
   letter-spacing: -0.3px;
   line-height: 1;
 }
-.campaign-metric-delta {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 10px;
-  font-weight: 600;
-  margin-top: 4px;
-}
-.delta-up { color: #4ade80; }
-.delta-down { color: #f87171; }
-
-.campaign-bar-row {
-  margin-bottom: 10px;
-}
-.campaign-bar-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 5px;
-}
-.campaign-bar-label span:last-child { color: rgba(255,255,255,0.7); font-weight: 600; }
-.campaign-bar-track {
-  height: 5px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 3px;
-  overflow: hidden;
-}
-.campaign-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  background: var(--pink);
-}
-
-.campaign-card-footer {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 8px;
-}
-.campaign-footer-stat { text-align: center; }
-.campaign-footer-num {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -0.3px;
-}
-.campaign-footer-lbl {
+.store-metric-num span { color: var(--pink); }
+.store-metric-lbl {
   font-size: 10px;
   color: rgba(255,255,255,0.35);
-  margin-top: 2px;
+  margin-top: 3px;
   line-height: 1.3;
 }
 
@@ -433,113 +413,75 @@ section { width: 100%; }
 .proof-stat-num span { color: var(--pink); }
 .proof-stat-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
 
-/* ═══ TACOS EXPLAINER ═══ */
-.tacos-section { background: var(--white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.tacos-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.tacos-text .section-tag { display: inline-flex; }
-.tacos-text h2 {
+/* ═══ WHAT'S IN THE BUILD ═══ */
+.included-section { background: var(--white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
+.included-layout { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
+.included-text .section-tag { text-align: left; display: inline-flex; }
+.included-text h2 {
   font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 36px);
+  font-size: clamp(26px, 2.5vw, 34px);
   font-weight: 700;
   color: var(--charcoal);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
-.tacos-text h2 span { color: var(--pink); }
-.tacos-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
-.tacos-formula {
+.included-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
+.included-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pink-light);
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 13px;
+  border-radius: 8px;
+  border: 1px solid var(--pink-mid);
+}
+.included-pill svg { width: 12px; height: 12px; }
+.included-groups { display: flex; flex-direction: column; gap: 20px; }
+.included-group {
   background: var(--off-white);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 24px;
+  border-radius: 16px;
+  padding: 24px;
 }
-.tacos-formula-label {
-  font-size: 10px;
+.included-group-title {
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--charcoal-50);
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
-.tacos-formula-eq {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
+.included-list { display: flex; flex-direction: column; gap: 10px; }
+.included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
   color: var(--charcoal);
   line-height: 1.5;
 }
-.tacos-formula-eq em { color: var(--pink); font-style: normal; }
-.tacos-visual { display: flex; flex-direction: column; gap: 16px; }
-.flywheel-card {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 22px;
-}
-.flywheel-card h4 {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 10px;
-}
-.flywheel-steps { display: flex; flex-direction: column; gap: 0; }
-.flywheel-step {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--charcoal);
-}
-.flywheel-step:last-child { border-bottom: none; }
-.flywheel-arrow {
-  width: 22px;
-  height: 22px;
+.included-item-icon {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: var(--pink);
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 11px;
-  font-weight: 700;
+  margin-top: 2px;
 }
-.benchmark-card {
-  background: var(--charcoal);
-  border-radius: 14px;
-  padding: 20px 22px;
-}
-.benchmark-card h4 {
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 14px;
-}
-.benchmark-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  font-size: 13px;
-}
-.benchmark-row:last-child { border-bottom: none; }
-.benchmark-metric { color: rgba(255,255,255,0.55); }
-.benchmark-value { font-weight: 700; color: white; }
-.benchmark-value.good { color: #4ade80; }
+.included-item-icon svg { width: 10px; height: 10px; color: white; }
+.included-item-text strong { font-weight: 600; }
+.included-item-text span { display: block; font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
 
 /* ═══ QUOTE ═══ */
 .quote-section { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.quote-box {
-  max-width: 840px;
-  margin: 0 auto;
-  text-align: center;
-}
+.quote-box { max-width: 840px; margin: 0 auto; text-align: center; }
 .quote-mark {
   font-family: var(--font-display);
   font-size: 80px;
@@ -558,11 +500,7 @@ section { width: 100%; }
   letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
-.quote-attribution {
-  font-size: 13px;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
+.quote-attribution { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
 .quote-attribution strong { color: var(--charcoal); }
 
 /* ═══ CTA ═══ */
@@ -580,12 +518,7 @@ section { width: 100%; }
 
 /* ═══ RELATED ═══ */
 .related-section { padding: var(--section-pad) 0; }
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 48px;
-}
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
 .related-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -597,11 +530,7 @@ section { width: 100%; }
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   cursor: pointer;
 }
-.related-card:hover {
-  border-color: var(--pink);
-  box-shadow: 0 4px 24px rgba(225,82,134,0.10);
-  transform: translateY(-2px);
-}
+.related-card:hover { border-color: var(--pink); box-shadow: 0 4px 24px rgba(225,82,134,0.10); transform: translateY(-2px); }
 .related-card-icon {
   width: 40px; height: 40px;
   border-radius: 10px;
@@ -611,53 +540,13 @@ section { width: 100%; }
   align-items: center;
   justify-content: center;
 }
-.related-card h3 {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.3;
-}
-.related-card p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  flex: 1;
-}
-.related-card-link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--pink);
-  margin-top: 4px;
-}
+.related-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
+.related-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
+.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--pink); margin-top: 4px; }
 .related-card-link svg { width: 14px; height: 14px; }
-
-/* Coming soon card style */
-.related-card.coming-soon {
-  opacity: 0.6;
-  cursor: default;
-}
-.related-card.coming-soon:hover {
-  border-color: var(--border);
-  box-shadow: none;
-  transform: none;
-}
-.coming-badge {
-  display: inline-flex;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: var(--charcoal-05);
-  color: var(--charcoal-50);
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-top: 2px;
-  align-self: flex-start;
-}
+.related-card.coming-soon { opacity: 0.6; cursor: default; }
+.related-card.coming-soon:hover { border-color: var(--border); box-shadow: none; transform: none; }
+.coming-badge { display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--charcoal-05); color: var(--charcoal-50); padding: 3px 8px; border-radius: 4px; margin-top: 2px; align-self: flex-start; }
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
@@ -667,7 +556,7 @@ section { width: 100%; }
   .hiw-layout { grid-template-columns: 1fr; gap: 40px; }
   .hiw-text { position: static; }
   .proof-inner { grid-template-columns: 1fr; gap: 48px; }
-  .tacos-layout { grid-template-columns: 1fr; gap: 40px; }
+  .included-layout { grid-template-columns: 1fr; gap: 40px; }
   .pain-grid { grid-template-columns: 1fr 1fr; }
   .related-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -689,109 +578,78 @@ section { width: 100%; }
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/advertising.html",
-      "url": "https://rosettabrands.co.uk/advertising.html",
-      "name": "Amazon Advertising Management | AI-Powered Campaigns | Rosetta Brands",
-      "description": "Amazon advertising management for FMCG vendors. Sponsored Products, Brands, Display, and DSP with real-time performance dashboards. TACoS-first strategy that grows organic rank alongside paid sales.",
+      "@id": "https://rosettabrands.co.uk/brand-store.html",
+      "url": "https://rosettabrands.co.uk/brand-store.html",
+      "name": "Amazon Brand Store Design | Branded Storefront | Rosetta Brands",
+      "description": "Custom Amazon Brand Store design for FMCG vendors. A branded shopping destination that converts Sponsored Brands traffic, tells your brand story, and keeps shoppers off competitor pages.",
       "inLanguage": "en-GB",
       "isPartOf": {
         "@type": "WebSite",
         "url": "https://rosettabrands.co.uk",
         "name": "Rosetta Brands"
       },
-      "breadcrumb": {
-        "@id": "https://rosettabrands.co.uk/advertising.html#breadcrumb"
-      }
+      "breadcrumb": { "@id": "https://rosettabrands.co.uk/brand-store.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/advertising.html#breadcrumb",
+      "@id": "https://rosettabrands.co.uk/brand-store.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://rosettabrands.co.uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://rosettabrands.co.uk/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Growth Marketing",
-          "item": "https://rosettabrands.co.uk/#growth-marketing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Advertising",
-          "item": "https://rosettabrands.co.uk/advertising.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Growth Marketing", "item": "https://rosettabrands.co.uk/#growth-marketing" },
+        { "@type": "ListItem", "position": 4, "name": "Brand Store", "item": "https://rosettabrands.co.uk/brand-store.html" }
       ]
     },
     {
       "@type": "Service",
-      "name": "Amazon Advertising Management",
-      "description": "Rosetta Brands manages the full Amazon advertising stack for FMCG vendor brands - from Sponsored Products and Sponsored Brands to Demand Side Platform and Streaming TV. TACoS-first strategy, real-time performance dashboards, and AI-powered campaign optimisation.",
-      "serviceType": "Amazon Advertising Management",
-      "url": "https://rosettabrands.co.uk/advertising.html",
-      "provider": {
-        "@type": "Organization",
-        "name": "Rosetta Brands",
-        "url": "https://rosettabrands.co.uk"
-      },
-      "areaServed": [
-        "GB",
-        "IE",
-        "DE",
-        "AU"
-      ]
+      "name": "Amazon Brand Store Design",
+      "description": "Rosetta Brands designs and maintains custom Amazon Brand Stores for FMCG vendor brands, creating branded shopping destinations that convert Sponsored Brands traffic, showcase the full product range, and keep shoppers away from competitor listings.",
+      "serviceType": "Amazon Brand Store Design",
+      "url": "https://rosettabrands.co.uk/brand-store.html",
+      "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
+      "areaServed": ["GB", "IE", "DE", "AU"]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is TACoS and why does Rosetta Brands use it instead of ACoS?",
+          "name": "What is an Amazon Brand Store?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "TACoS stands for Total Advertising Cost of Sale and is calculated as ad spend divided by total revenue, including organic sales. ACoS only measures ad spend against paid sales, which ignores the most important benefit of advertising on Amazon: its impact on organic rank. A well-structured campaign that improves keyword ranking drives organic sales that don't appear in your ACoS at all. For FMCG brands, we target a TACoS of 6 to 10 percent as the right benchmark for sustainable, profitable growth."
+            "text": "An Amazon Brand Store is a dedicated, multi-page branded storefront within Amazon. It gives your brand a home on the platform - separate from the standard product listing pages - where you can present your full product range, share your brand story, and create a shopping experience free from competitor advertising. Brand Stores are accessible via the byline on your product pages, via Sponsored Brands ads, and via a direct Amazon URL for your brand."
           }
         },
         {
           "@type": "Question",
-          "name": "Do Rosetta Brands clients get access to Amazon DSP advertising?",
+          "name": "Do I need to advertise to have a Brand Store?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. As a vendor rather than a seller, Rosetta Brands partner brands have access to the full Amazon DSP suite - including display retargeting, video, Streaming TV ads, and programmatic audiences built from Amazon's first-party shopping data. DSP access is typically restricted for sellers but is available to vendors, which is one of the significant advantages of the Rosetta Brands model."
+            "text": "No. Creating and maintaining a Brand Store is free. However, the primary driver of traffic to a Brand Store is Sponsored Brands advertising - running ads that link to your Store rather than individual product pages. A well-designed Brand Store without advertising will receive some organic traffic via product page bylines, but the full value is realised when it works in tandem with an active Sponsored Brands campaign strategy."
           }
         },
         {
           "@type": "Question",
-          "name": "How do we track advertising performance?",
+          "name": "How does a Brand Store affect advertising performance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every Rosetta Brands partner brand has access to a live performance dashboard showing advertising spend, TACoS, ROAS, impression share, and budget pacing in real time. You no longer need to wait for a weekly report or ask your account manager what is happening. The dashboard updates continuously so you always have full visibility of where your budget is going and what it is delivering."
+            "text": "Sending Sponsored Brands traffic to a Brand Store rather than a product page gives shoppers the opportunity to browse your full range, increasing basket size and the likelihood of a multi-product purchase. It also removes the competitor ads that appear on product detail pages. Amazon's own data shows that stores with 3 or more pages achieve 83 percent higher shopper dwell time and 32 percent higher attributed sales per visitor compared to single-page stores."
           }
         },
         {
           "@type": "Question",
-          "name": "How much should we be spending on advertising?",
+          "name": "How often does a Brand Store need to be updated?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The right advertising budget depends on your category, your organic rank maturity, and your growth stage. For established FMCG brands, advertising spend typically runs at 8 to 15 percent of revenue. For brands in growth mode or launching new products, it may be higher in the short term as campaigns build keyword history and organic rank. Rosetta Brands models the right investment level for each brand as part of onboarding, and reviews this quarterly as performance evolves."
+            "text": "Amazon's data shows that stores updated within the past 90 days see up to 35 percent higher attributed sales per visitor compared to stale stores. At a minimum, Brand Stores should be refreshed quarterly - more frequently around key retail moments like Q4, new product launches, or seasonal campaigns. Rosetta Brands manages these updates as part of an ongoing relationship, not as a one-off project."
           }
         },
         {
           "@type": "Question",
-          "name": "What ad formats does Rosetta Brands manage?",
+          "name": "What does the Rosetta Brands Brand Store build include?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rosetta Brands manages the full Amazon advertising stack: Sponsored Products for keyword-level catalogue coverage, Sponsored Brands for brand awareness and Store traffic, Sponsored Display for product page retargeting and category conquest, and DSP for programmatic display, video, Streaming TV ads, and off-Amazon retargeting. The mix is calibrated to each brand's goals and category dynamics."
+            "text": "The Rosetta Brands Brand Store build includes strategic page architecture, full design and build within Amazon's Store Builder, homepage with brand hero and featured categories, product range pages, lifestyle and brand story sections, mobile optimisation, and analytics configuration. The build is guided by your brand guidelines and designed to convert Sponsored Brands traffic specifically."
           }
         }
       ]
@@ -1487,14 +1345,14 @@ a {
         </nav>
 
         <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Advertising
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Brand Store
         </div>
 
-        <h1>Amazon advertising.<br><span>Finally under control.</span></h1>
+        <h1>Your brand's home<br><span>on Amazon.</span></h1>
 
         <p class="hero-sub">
-          Most FMCG brands are spending on Amazon advertising without knowing whether it is working. Budget runs out mid-month, ACoS climbs, organic rank stays flat. We take over the full advertising stack, optimise for TACoS rather than vanity metrics, and give you real-time visibility into every pound spent.
+          Every time a shopper clicks a competitor's ad on your product page, you lose them. A Brand Store removes that risk entirely — giving you a branded destination where your full range is front and centre, competitor ads are gone, and every click stays in your world.
         </p>
 
         <div class="hero-actions">
@@ -1506,82 +1364,56 @@ a {
         </div>
       </div>
 
-      <!-- Campaign Dashboard Card -->
-      <div class="campaign-card fade-in fade-in-delay-2" aria-hidden="true">
-        <div class="campaign-card-label">
-          <span class="live-dot"></span>
-          Live campaign performance
+      <!-- Brand Store Preview Card -->
+      <div class="store-card fade-in fade-in-delay-2" aria-hidden="true">
+        <div class="store-card-nav">
+          <span class="store-nav-tab active">Home</span>
+          <span class="store-nav-tab">Our Range</span>
+          <span class="store-nav-tab">New In</span>
+          <span class="store-nav-tab">Best Sellers</span>
+          <span class="store-nav-tab">Our Story</span>
         </div>
-
-        <div class="campaign-formats">
-          <span class="campaign-format active">SP</span>
-          <span class="campaign-format active">SB</span>
-          <span class="campaign-format active">SD</span>
-          <span class="campaign-format active">DSP</span>
-          <span class="campaign-format">STV</span>
-        </div>
-
-        <div class="campaign-metrics-grid">
-          <div class="campaign-metric">
-            <div class="campaign-metric-label">TACoS</div>
-            <div class="campaign-metric-value">11.2%</div>
-            <div class="campaign-metric-delta delta-down">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-              from 20.1%
+        <div class="store-card-body">
+          <div class="store-hero-banner">
+            <div class="store-hero-brand">Your brand</div>
+            <div class="store-hero-tagline">Quality you can<br><span>taste the difference.</span></div>
+          </div>
+          <div class="store-product-grid">
+            <div class="store-product-tile">
+              <div class="store-product-img">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/></svg>
+              </div>
+              <div class="store-product-name">Hero SKU</div>
+              <div class="store-product-stars">★★★★★</div>
+            </div>
+            <div class="store-product-tile">
+              <div class="store-product-img">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="store-product-name">Multipack</div>
+              <div class="store-product-stars">★★★★★</div>
+            </div>
+            <div class="store-product-tile">
+              <div class="store-product-img">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <div class="store-product-name">New Launch</div>
+              <div class="store-product-stars">★★★★☆</div>
             </div>
           </div>
-          <div class="campaign-metric">
-            <div class="campaign-metric-label">ROAS</div>
-            <div class="campaign-metric-value">2.8x</div>
-            <div class="campaign-metric-delta delta-up">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-              from 1.9x
+          <div class="store-metrics">
+            <div class="store-metric">
+              <div class="store-metric-num"><span>5</span></div>
+              <div class="store-metric-lbl">Store pages</div>
             </div>
-          </div>
-        </div>
-
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Organic share of revenue</span>
-            <span>68%</span>
-          </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:68%"></div>
-          </div>
-        </div>
-
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Budget pacing (month)</span>
-            <span>On track</span>
-          </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:54%"></div>
-          </div>
-        </div>
-
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Top keyword rank: category</span>
-            <span>#1</span>
-          </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:100%"></div>
-          </div>
-        </div>
-
-        <div class="campaign-card-footer">
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">4</div>
-            <div class="campaign-footer-lbl">Ad formats active</div>
-          </div>
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">847</div>
-            <div class="campaign-footer-lbl">Keywords managed</div>
-          </div>
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">Live</div>
-            <div class="campaign-footer-lbl">Dashboard access</div>
+            <div class="store-metric">
+              <div class="store-metric-num">82<span>s</span></div>
+              <div class="store-metric-lbl">Avg dwell time</div>
+            </div>
+            <div class="store-metric">
+              <div class="store-metric-num">3.<span>2</span></div>
+              <div class="store-metric-lbl">Pages per visit</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1594,49 +1426,49 @@ a {
 <section class="challenges">
   <div class="container">
     <div class="section-header fade-in">
-      <div class="section-tag">What we see from most brands</div>
-      <h2>Amazon advertising is the most <em style="font-style:italic;color:var(--pink);">misunderstood</em> cost in FMCG</h2>
-      <p>Most brands are spending money on Amazon advertising before they truly understand how it works. And the platform isn't designed to make it easy to find out.</p>
+      <div class="section-tag">The problem with the default</div>
+      <h2>Without a Brand Store, your <em style="font-style:italic;color:var(--pink);">advertising spend works against you</em></h2>
+      <p>Most brands send Sponsored Brands traffic to a product detail page. That page is covered in competitor ads. Every pound spent bringing a shopper in is at risk the moment they arrive.</p>
     </div>
     <div class="pain-grid">
       <div class="pain-card fade-in">
         <div class="pain-number">01</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         </div>
-        <h3>Budget runs out mid-month with no visibility</h3>
-        <p>The most common complaint we hear from new partners is exactly this: advertising spend disappears without clear reporting on what it delivered. No ROAS breakdown. No TACoS tracking. No sense of whether the spend was working at all. You top it up and hope for the best.</p>
+        <h3>Sponsored Brands clicks land on competitor-filled pages</h3>
+        <p>A product detail page is Amazon's page, not yours. Competitor ads run in the sponsored section below your listing, in the "customers also bought" rail, and throughout the page. You paid to bring the shopper in; Amazon's algorithm sends them away. A Brand Store removes all of that — the only products visible are yours.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-number">02</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3>Optimising ACoS while organic rank stays flat</h3>
-        <p>ACoS tells you the ratio of ad spend to ad-driven revenue. It tells you nothing about whether your advertising is lifting organic rank, which is where the long-term value lives. Many brands achieve a "good" ACoS while organic sales stagnate, missing the compounding flywheel that advertising is supposed to build.</p>
+        <h3>No brand story, no cross-sell, no range discovery</h3>
+        <p>A product page sells one product. A Brand Store sells your brand. Shoppers who arrive via a Sponsored Brands ad and land in your Store can browse your full range, discover complementary products, and increase basket size. For FMCG brands with multiple SKUs, a well-structured Store can meaningfully increase average order value on every campaign click.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-number">03</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Poor campaign structure burning budget on the wrong terms</h3>
-        <p>Broad match keywords with no negative lists, auto campaigns running unchecked, sponsored brand ads pointing to product pages instead of a Brand Store. The default campaign structure that most brands start with is rarely optimised for FMCG, where conversion rates and basket sizes require a fundamentally different approach.</p>
+        <h3>Stale stores with no seasonal presence are a missed opportunity</h3>
+        <p>Amazon's own data shows that stores updated within the past 90 days achieve up to 35 percent higher attributed sales per visitor compared to stale ones. Brands that refresh their Store for Q4, for a new product launch, or for a key seasonal moment consistently outperform those running the same Store they built two years ago.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW WE DO IT ═══ -->
+<!-- ═══ HOW WE BUILD IT ═══ -->
 <section class="how-it-works">
   <div class="container">
     <div class="hiw-layout">
       <div class="hiw-text fade-in">
         <div class="section-tag">Our approach</div>
-        <h2>The full advertising stack, structured for FMCG</h2>
-        <p>We manage every Amazon ad format available to vendors, from keyword-level Sponsored Products campaigns through to programmatic DSP and Streaming TV. Every campaign is structured to compound: building organic rank, reducing reliance on paid traffic over time, and improving profitability as the brand matures on Amazon.</p>
+        <h2>Built to convert, not just to look good</h2>
+        <p>Most Brand Stores are designed once and forgotten. Ours are built with performance in mind from the outset: structured to convert Sponsored Brands traffic, designed around mobile-first behaviour, and maintained with regular updates that keep Amazon's algorithms and your shoppers engaged.</p>
         <div class="hiw-note">
-          <strong>TACoS is our north star.</strong> We target a TACoS of 6 to 10 percent for established FMCG brands - a figure that accounts for both paid and organic sales. When organic rank improves, TACoS naturally falls without reducing spend, which is the outcome a well-run campaign is designed to deliver.
+          <strong>Depth matters.</strong> Amazon's data is unambiguous: stores with 3 or more pages achieve 83 percent higher shopper dwell time and 32 percent higher attributed sales per visitor than single-page stores. Every Brand Store we build starts with the right page architecture.
         </div>
       </div>
 
@@ -1644,36 +1476,35 @@ a {
 
         <div class="hiw-step fade-in">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Sponsored Products &amp; Brands</div>
-            <h3>Keyword coverage that compounds over time</h3>
-            <p>We build a structured keyword architecture for every product: exact match campaigns for proven converters, phrase match for discovery, and tightly controlled auto campaigns for ongoing keyword harvesting. Every search term report is reviewed weekly. Winners get promoted, wasted spend gets cut. Over time, the campaign structure reflects exactly how Amazon shoppers in your category actually search.</p>
+            <div class="hiw-step-fn">Strategy &amp; architecture</div>
+            <h3>Page structure designed around how shoppers actually browse</h3>
+            <p>Before a pixel is designed, we define the Store architecture: how many pages, which product categories, how to group your range for maximum cross-sell, and where the brand story lives. For FMCG brands, this typically means a homepage with featured products, two to three range category pages, a best sellers section, and a brand story page. Every navigation decision is made with dwell time and pages-per-visit in mind.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Exact &amp; phrase match</span>
-              <span class="hiw-step-tag">Auto harvesting</span>
-              <span class="hiw-step-tag">Negative keyword lists</span>
-              <span class="hiw-step-tag">Bid optimisation</span>
-              <span class="hiw-step-tag">Share of voice tracking</span>
+              <span class="hiw-step-tag">Page hierarchy</span>
+              <span class="hiw-step-tag">Category mapping</span>
+              <span class="hiw-step-tag">Cross-sell structure</span>
+              <span class="hiw-step-tag">Navigation design</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Sponsored Display &amp; DSP</div>
-            <h3>Reach shoppers beyond your own product pages</h3>
-            <p>As a vendor, Rosetta Brands partner brands access the full Amazon DSP suite. That means retargeting shoppers who viewed your products but didn't convert, running display campaigns on competitor product pages, and reaching Amazon audiences across third-party sites. Streaming TV ads place your brand in front of Prime Video viewers. These formats are unavailable to sellers and represent a significant competitive advantage for vendors.</p>
+            <div class="hiw-step-fn">Design &amp; build</div>
+            <h3>On-brand creative, built natively for Amazon's Store Builder</h3>
+            <p>Our creative designer builds the full Store within Amazon's native Store Builder tool, using your brand guidelines to ensure the Store feels like a genuine extension of your brand - not a generic Amazon template. Hero banners, lifestyle imagery sections, product grids, and brand story tiles are all designed for both mobile and desktop simultaneously. With 77 percent of Amazon traffic coming from mobile, mobile optimisation is never an afterthought.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">DSP retargeting</span>
-              <span class="hiw-step-tag">Competitor conquest</span>
-              <span class="hiw-step-tag">Programmatic display</span>
-              <span class="hiw-step-tag">Streaming TV ads</span>
-              <span class="hiw-step-tag">Off-Amazon audiences</span>
+              <span class="hiw-step-tag">Brand-guided design</span>
+              <span class="hiw-step-tag">Mobile-first build</span>
+              <span class="hiw-step-tag">Hero banner creative</span>
+              <span class="hiw-step-tag">Lifestyle imagery</span>
+              <span class="hiw-step-tag">Product grid tiles</span>
             </div>
           </div>
         </div>
@@ -1683,49 +1514,49 @@ a {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">TACoS optimisation</div>
-            <h3>The metric that actually measures advertising health</h3>
-            <p>We report on TACoS, not just ACoS. Every campaign is designed to improve organic keyword ranking as a primary outcome - with paid sales as the mechanism, not the end goal. For FMCG brands with strong conversion rates (typically 30 to 35 percent on Amazon), this flywheel effect compounds quickly. A brand ranking on page one for their hero keywords organically is a brand that can reduce ad spend without losing revenue.</p>
+            <div class="hiw-step-fn">Advertising integration</div>
+            <h3>Wired directly into your Sponsored Brands campaigns</h3>
+            <p>A Brand Store without advertising traffic is a shop with no footfall. We connect your Store directly to your Sponsored Brands campaign strategy, routing ad traffic to the Store homepage or to specific category pages depending on the campaign intent. Product-specific Sponsored Brands ads can point to the relevant category page within your Store, increasing the relevance of the landing experience and improving conversion.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">TACoS tracking</span>
-              <span class="hiw-step-tag">Organic rank monitoring</span>
-              <span class="hiw-step-tag">Keyword rank history</span>
-              <span class="hiw-step-tag">ROAS by campaign type</span>
+              <span class="hiw-step-tag">Sponsored Brands routing</span>
+              <span class="hiw-step-tag">Campaign-to-page matching</span>
+              <span class="hiw-step-tag">Source tag tracking</span>
+              <span class="hiw-step-tag">Traffic attribution</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">AI-powered optimisation</div>
-            <h3>Faster iteration with machine learning in the loop</h3>
-            <p>Amazon's Performance+ campaign type uses machine learning to improve targeting and reduce cost per acquisition across Sponsored and DSP campaigns. We use these tools where they add value, layered over a human-reviewed campaign architecture that ensures your brand safety and category positioning are never compromised by automated decisions. The result is faster optimisation cycles without losing strategic control.</p>
+            <div class="hiw-step-fn">Ongoing updates</div>
+            <h3>Seasonal refreshes and new product integration</h3>
+            <p>A Brand Store is not a one-time build. We refresh your Store for key seasonal moments (Q4 gifting, summer, key trade dates), integrate new product launches, and update hero creative to align with your current campaign calendar. These updates are not just cosmetic: Amazon's data consistently shows that stores refreshed within 90 days outperform stale ones by 11 to 35 percent across repeat visitors and attributed sales per visit.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Performance+ campaigns</span>
-              <span class="hiw-step-tag">Dayparting</span>
-              <span class="hiw-step-tag">Rule-based automation</span>
-              <span class="hiw-step-tag">Weekly human review</span>
+              <span class="hiw-step-tag">Q4 seasonal refresh</span>
+              <span class="hiw-step-tag">New product integration</span>
+              <span class="hiw-step-tag">Campaign alignment</span>
+              <span class="hiw-step-tag">90-day update cycle</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Live performance dashboard</div>
-            <h3>Real-time visibility into every pound you spend</h3>
-            <p>Every Rosetta Brands partner brand has access to a live advertising dashboard. TACoS, ROAS, impression share, budget pacing, keyword ranking - all updating in real time. No more waiting for a weekly CSV. No more wondering whether your budget is going to last the month. You have the same view of your advertising that we do, at all times.</p>
+            <div class="hiw-step-fn">Analytics &amp; optimisation</div>
+            <h3>Section-level insights that tell you exactly what is working</h3>
+            <p>Amazon now provides section-level analytics within the Brand Store Insights dashboard, showing dwell time, bounce rate, and pages-per-visit broken down by individual Store sections. We use this data to continuously refine the Store: moving high-performing product tiles, adjusting navigation, and identifying which sections drive the most engagement. Your Brand Store improves over time, not just at launch.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Real-time spend tracking</span>
-              <span class="hiw-step-tag">TACoS &amp; ROAS by ASIN</span>
-              <span class="hiw-step-tag">Budget pacing alerts</span>
-              <span class="hiw-step-tag">Keyword rank history</span>
-              <span class="hiw-step-tag">Campaign-level breakdowns</span>
+              <span class="hiw-step-tag">Dwell time tracking</span>
+              <span class="hiw-step-tag">Bounce rate analysis</span>
+              <span class="hiw-step-tag">Section-level insights</span>
+              <span class="hiw-step-tag">Pages-per-visit</span>
+              <span class="hiw-step-tag">Conversion optimisation</span>
             </div>
           </div>
         </div>
@@ -1740,90 +1571,83 @@ a {
   <div class="container">
     <div class="proof-inner">
       <div class="proof-text fade-in">
-        <div class="section-tag">Performance that scales</div>
-        <h2>From <span>20% TACoS</span> to 11%. From under 2.0 ROAS to 2.8.</h2>
-        <p>These are results from a single brand partnership over 18 months. We inherited campaigns with no negative keyword lists, broad match burns, and no DSP activity. We rebuilt the architecture from scratch, introduced TACoS reporting, and activated DSP retargeting. Organic rank improved. Paid reliance fell. Revenue grew.</p>
-        <p>This is not a one-off result. It is the outcome of a structured, disciplined approach to Amazon advertising applied consistently across a brand's full product catalogue.</p>
+        <div class="section-tag">What the data shows</div>
+        <h2>The numbers behind <span>a well-built Store</span></h2>
+        <p>Amazon publishes performance benchmarks for Brand Stores, and the data consistently makes the same point: depth, freshness, and advertising integration all compound into meaningfully better outcomes for brands that invest properly in their Store.</p>
+        <p>For Rosetta Brands partners, the Brand Store sits at the centre of the advertising strategy. It is where Sponsored Brands traffic lands, where new shoppers discover your range, and where repeat buyers find products beyond their usual purchase.</p>
       </div>
       <div class="proof-stats fade-in fade-in-delay-1">
         <div class="proof-stat">
-          <div class="proof-stat-num"><span>20%</span> → 11%</div>
-          <div class="proof-stat-label">TACoS reduction over 18 months</div>
+          <div class="proof-stat-num"><span>83%</span></div>
+          <div class="proof-stat-label">Higher dwell time for stores with 3+ pages vs single-page stores</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num">1.9 → <span>2.8x</span></div>
-          <div class="proof-stat-label">ROAS improvement across all campaigns</div>
+          <div class="proof-stat-num"><span>35%</span></div>
+          <div class="proof-stat-label">Higher attributed sales per visitor when store is updated within 90 days</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num"><span>9x</span></div>
-          <div class="proof-stat-label">Annual revenue growth over 4 years as a Rosetta Brands partner</div>
+          <div class="proof-stat-num"><span>+388%</span></div>
+          <div class="proof-stat-label">Annual revenue growth achieved by a Rosetta Brands partner brand with a Brand Store at launch</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TACOS EXPLAINER ═══ -->
-<section class="tacos-section">
+<!-- ═══ WHAT'S INCLUDED ═══ -->
+<section class="included-section">
   <div class="container">
-    <div class="tacos-layout">
-      <div class="tacos-text fade-in">
-        <div class="section-tag">Understanding the metric</div>
-        <h2>Why <span>TACoS</span> is the only advertising metric that matters for FMCG</h2>
-        <p>ACoS measures ad spend as a percentage of revenue generated by ads alone. If you sell £1,000 through ads and spend £200 to do it, ACoS is 20 percent. It sounds useful until you realise it ignores the most important outcome of advertising on Amazon: organic rank improvement.</p>
-        <p>When your ad campaigns push a keyword ranking from page three to page one, the resulting organic sales are invisible in ACoS. TACoS captures the full picture: ad spend as a percentage of total revenue, including organic. A falling TACoS alongside stable or growing revenue tells you that advertising is working exactly as it should.</p>
-        <div class="tacos-formula">
-          <div class="tacos-formula-label">TACoS formula</div>
-          <div class="tacos-formula-eq">
-            TACoS = <em>Ad Spend</em> / <em>Total Revenue</em> (paid + organic)
-            <br><br>
-            Target for FMCG: <em>6% to 10%</em>
-          </div>
+    <div class="included-layout">
+      <div class="included-text fade-in">
+        <div class="section-tag">What you get</div>
+        <h2>Everything in the build</h2>
+        <p>The Brand Store build is a complete project delivered by our creative designer, guided by your brand guidelines and built to Amazon's technical specifications. It is designed to work from day one alongside your Sponsored Brands campaigns.</p>
+        <div class="included-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          £2,000 one-time build fee
         </div>
       </div>
-      <div class="tacos-visual fade-in fade-in-delay-1">
-        <div class="flywheel-card">
-          <h4>The advertising flywheel</h4>
-          <div class="flywheel-steps">
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">1</div>
-              Ads drive purchases on target keywords
+      <div class="included-groups fade-in fade-in-delay-1">
+        <div class="included-group">
+          <div class="included-group-title">Store design &amp; build</div>
+          <div class="included-list">
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Homepage with brand hero and featured range</strong><span>Full-width hero banner, featured product tiles, and brand statement section</span></div>
             </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">2</div>
-              Purchase velocity improves keyword ranking
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Up to 5 product category pages</strong><span>Category-specific pages structured for cross-sell and range discovery</span></div>
             </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">3</div>
-              Higher rank drives more organic traffic
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Brand story page</strong><span>Lifestyle imagery and brand narrative to build trust and affinity at the point of consideration</span></div>
             </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">4</div>
-              Organic sales grow - TACoS falls
-            </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">5</div>
-              Reinvest savings in new keywords and markets
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Mobile-first design throughout</strong><span>Simultaneous desktop and mobile optimisation across every page</span></div>
             </div>
           </div>
         </div>
-        <div class="benchmark-card">
-          <h4>FMCG benchmarks on Amazon</h4>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Target TACoS range</span>
-            <span class="benchmark-value good">6% to 10%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Typical ACoS (FMCG)</span>
-            <span class="benchmark-value">15% to 25%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">FMCG conversion rate</span>
-            <span class="benchmark-value">30% to 35%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Subscribe &amp; Save uplift to LTV</span>
-            <span class="benchmark-value good">2x to 4x</span>
+        <div class="included-group">
+          <div class="included-group-title">Integration &amp; configuration</div>
+          <div class="included-list">
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Sponsored Brands campaign routing</strong><span>Ad traffic directed to relevant Store pages rather than product detail pages</span></div>
+            </div>
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Source tag configuration</strong><span>Traffic attribution set up across all ad types and external sources</span></div>
+            </div>
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>Brand Store Insights dashboard setup</strong><span>Dwell time, bounce rate, and pages-per-visit monitoring from day one</span></div>
+            </div>
+            <div class="included-item">
+              <div class="included-item-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg></div>
+              <div class="included-item-text"><strong>First seasonal refresh included</strong><span>One Store update within 90 days of launch to capture the freshness uplift</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1836,8 +1660,8 @@ a {
   <div class="container">
     <div class="quote-box fade-in">
       <span class="quote-mark">"</span>
-      <p class="quote-text">Before working with Rosetta Brands, I genuinely didn't understand how our advertising was performing. It just ran out and we topped it up. Now we have a live dashboard and a team who can explain exactly what every campaign is doing and why.</p>
-      <p class="quote-attribution">Founder, FMCG brand, Amazon UK</p>
+      <p class="quote-text">We launched the Brand Store alongside our advertising campaigns and saw an immediate uplift in basket size. Shoppers were discovering products they didn't even know we made. That cross-sell just doesn't happen on a product page.</p>
+      <p class="quote-attribution">Head of E-commerce, FMCG brand, Amazon UK</p>
     </div>
   </div>
 </section>
@@ -1847,24 +1671,24 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag" style="color:var(--pink);">Also in Growth Marketing</div>
-      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">Advertising is one part of the growth picture</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">Great advertising performance depends on great creative and content. Growth Marketing covers the full stack.</p>
+      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">A Brand Store works hardest alongside great content</h2>
+      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">The Store is the destination. A+ Content and strong imagery are what convert shoppers once they're there.</p>
     </div>
     <div class="related-grid" style="margin-top:48px;">
-      <a href="brand-store.html" class="related-card coming-soon fade-in">
+      <a href="advertising.html" class="related-card fade-in">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <h3>Brand Store</h3>
-        <p>A fully designed Amazon Brand Store that converts Sponsored Brand traffic, supports seasonal campaigns, and tells your brand story at the point of purchase.</p>
-        <span class="coming-badge">Coming soon</span>
+        <h3>Advertising</h3>
+        <p>Sponsored Brands campaigns send qualified traffic directly to your Store. The two services compound each other — without advertising, the Store gets limited footfall.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </a>
       <a href="aplus-content.html" class="related-card coming-soon fade-in fade-in-delay-1">
         <div class="related-card-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
         </div>
         <h3>A+ Content</h3>
-        <p>Premium A+ and A+ Premium modules that raise conversion rates, reduce returns, and reinforce brand positioning at the product detail page level.</p>
+        <p>Premium A+ modules on your product pages that convert Store visitors who click through to individual listings.</p>
         <span class="coming-badge">Coming soon</span>
       </a>
       <a href="key-feature-images.html" class="related-card coming-soon fade-in fade-in-delay-2">
@@ -1872,26 +1696,8 @@ a {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
         <h3>Key Feature Images &amp; Lifestyle</h3>
-        <p>High-converting product imagery and lifestyle photography built specifically for Amazon's image carousel, designed to stop the scroll and drive the click.</p>
+        <p>The imagery inside your Store and on your product pages. High-converting hero shots and lifestyle photography built for Amazon's image carousel.</p>
         <span class="coming-badge">Coming soon</span>
-      </a>
-    </div>
-    <div class="related-grid" style="margin-top:20px;grid-template-columns:1fr 1fr;max-width:680px;margin-left:auto;margin-right:auto;">
-      <a href="product-launch.html" class="related-card coming-soon fade-in">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-        </div>
-        <h3>Product Launch</h3>
-        <p>Coordinated launch campaigns covering advertising, content, promotional pricing, and vine reviews to give new ASINs the best possible start.</p>
-        <span class="coming-badge">Coming soon</span>
-      </a>
-      <a href="vendor-access.html" class="related-card fade-in fade-in-delay-1">
-        <div class="related-card-icon" style="background:rgba(241,125,2,0.10);color:var(--orange);">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
-        </div>
-        <h3>Vendor Access &amp; Prime</h3>
-        <p>Advertising works best on a foundation of Prime status, Buy Box control, and full vendor infrastructure. See how it all fits together.</p>
-        <div class="related-card-link" style="color:var(--orange);">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </a>
     </div>
   </div>
@@ -1901,7 +1707,7 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box fade-in">
-      <h2 class="cta-title">Stop guessing. Start growing.</h2>
+      <h2 class="cta-title">Give your brand a home on Amazon.</h2>
       <p class="cta-text">
         We work with UK FMCG brands who want to scale profitably on Amazon. Let's explore whether Vendor-As-A-Service is right for your brand.
       </p>
@@ -1924,53 +1730,53 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Common questions about Amazon advertising</h2>
+      <h2 class="section-title">Common questions about Amazon Brand Stores</h2>
       <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--pink);font-weight:600;">FAQ page</a>.</p>
     </div>
     <div class="faq-list">
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What is TACoS and why does Rosetta Brands use it instead of ACoS?
+          What is an Amazon Brand Store?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>TACoS stands for Total Advertising Cost of Sale and is calculated as ad spend divided by total revenue, including organic sales. ACoS only measures ad spend against paid sales, which ignores the most important benefit of advertising on Amazon: its impact on organic rank. A well-structured campaign that improves keyword ranking drives organic sales that don't appear in your ACoS at all. For FMCG brands, we target a TACoS of 6 to 10 percent as the right benchmark for sustainable, profitable growth.</p>
+          <p>An Amazon Brand Store is a dedicated, multi-page branded storefront within Amazon. It gives your brand a home on the platform — separate from standard product listing pages — where you can present your full product range, share your brand story, and create a shopping experience free from competitor advertising. Brand Stores are accessible via the byline on your product pages, via Sponsored Brands ads, and via a direct Amazon URL for your brand.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          Do Rosetta Brands clients get access to Amazon DSP advertising?
+          Do I need to advertise to have a Brand Store?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Yes. As a vendor rather than a seller, Rosetta Brands partner brands have access to the full Amazon DSP suite - including display retargeting, video, Streaming TV ads, and programmatic audiences built from Amazon's first-party shopping data. DSP access is typically restricted for sellers but is available to vendors, which is one of the significant advantages of the Rosetta Brands model.</p>
+          <p>No. Creating and maintaining a Brand Store is free. However, the primary driver of traffic to a Brand Store is Sponsored Brands advertising — running ads that link to your Store rather than individual product pages. A well-designed Brand Store without advertising will receive some organic traffic via product page bylines, but the full value is realised when it works in tandem with an active Sponsored Brands campaign strategy.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How do we track advertising performance in real time?
+          How does a Brand Store affect advertising performance?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Every Rosetta Brands partner brand has access to a live performance dashboard showing advertising spend, TACoS, ROAS, impression share, and budget pacing in real time. You no longer need to wait for a weekly report or ask your account manager what is happening. The dashboard updates continuously so you always have full visibility of where your budget is going and what it is delivering.</p>
+          <p>Sending Sponsored Brands traffic to a Brand Store rather than a product page gives shoppers the opportunity to browse your full range, increasing basket size and the likelihood of a multi-product purchase. It also removes the competitor ads that appear on product detail pages. Amazon's own data shows that stores with 3 or more pages achieve 83 percent higher shopper dwell time and 32 percent higher attributed sales per visitor compared to single-page stores.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How much should we be spending on advertising?
+          How often does a Brand Store need to be updated?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>The right advertising budget depends on your category, your organic rank maturity, and your growth stage. For established FMCG brands, advertising spend typically runs at 8 to 15 percent of revenue. For brands in a growth phase or launching new products, it may be higher in the short term as campaigns build keyword history and organic rank. Rosetta Brands models the right investment level for each brand as part of onboarding, and reviews this quarterly as performance evolves.</p>
+          <p>Amazon's data shows that stores updated within the past 90 days see up to 35 percent higher attributed sales per visitor compared to stale stores. At a minimum, Brand Stores should be refreshed quarterly — more frequently around key retail moments like Q4, new product launches, or seasonal campaigns. Rosetta Brands manages these updates as part of an ongoing relationship, not as a one-off project.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What ad formats does Rosetta Brands manage?
+          What does the Rosetta Brands Brand Store build include?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Rosetta Brands manages the full Amazon advertising stack: Sponsored Products for keyword-level catalogue coverage, Sponsored Brands for brand awareness and Store traffic, Sponsored Display for product page retargeting and category conquest, and DSP for programmatic display, video, Streaming TV ads, and off-Amazon retargeting. The mix is calibrated to each brand's goals and category dynamics.</p>
+          <p>The Rosetta Brands Brand Store build includes strategic page architecture, full design and build within Amazon's Store Builder, a homepage with brand hero and featured categories, up to five product range pages, a brand story section, mobile optimisation, Sponsored Brands campaign routing, source tag configuration, and Brand Store Insights dashboard setup. The first seasonal refresh within 90 days is also included.</p>
         </div>
       </div>
     </div>
