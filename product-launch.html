@@ -438,6 +438,9 @@ section { width: 100%; }
 .related-card.coming-soon:hover { border-color: var(--border); box-shadow: none; transform: none; }
 .coming-badge { display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--charcoal-05); color: var(--charcoal-50); padding: 3px 8px; border-radius: 4px; margin-top: 2px; align-self: flex-start; }
 
+/* Ensure hidden attribute always works regardless of CSS resets */
+[hidden] { display: none !important; }
+
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
   :root { --section-pad: 72px; }
@@ -1679,6 +1682,29 @@ a {
     </div>
   </div>
 </section>
+
+<script>
+// Self-contained FAQ accordion — does not rely on nav-loader.js timing
+(function () {
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+      var panel = btn.nextElementSibling;
+      // Ensure initial state
+      if (panel) panel.style.display = 'none';
+      btn.addEventListener('click', function () {
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        if (panel) panel.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+  } else {
+    initFAQ();
+  }
+})();
+</script>
 
 <div id="footer-placeholder" data-inlined="true">
 <footer class="footer" role="contentinfo">
