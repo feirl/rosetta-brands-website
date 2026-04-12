@@ -69,6 +69,7 @@ PAGES = [
     'advertising.html',
     'brand-store.html',
     'aplus-content.html',
+    'key-feature-images.html',
 ]
 
 def strip_style_tags(fragment):
