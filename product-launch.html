@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands</title>
-<meta name="description" content="Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.">
-<meta name="keywords" content="Amazon A+ Content design UK, enhanced brand content FMCG, Amazon EBC agency, A+ Premium Content, Amazon listing optimisation, product detail page conversion">
-<link rel="canonical" href="https://rosettabrands.co.uk/aplus-content.html">
-<meta property="og:title" content="Amazon A+ Content | Rosetta Brands">
-<meta property="og:description" content="Enhanced Amazon product listings built to convert. Brand storytelling, comparison charts, and Premium A+ modules for FMCG vendors.">
+<title>Amazon Product Launch | Listing to Best-Seller Lifecycle | Rosetta Brands</title>
+<meta name="description" content="Amazon product launch strategy for FMCG vendors. Category analysis, launch-ready listings, phased ad investment, and ongoing optimisation — from zero to best-seller.">
+<meta name="keywords" content="Amazon product launch UK, FMCG Amazon launch strategy, new product launch Amazon, listing to best-seller, Amazon ranking strategy, Amazon vendor launch agency">
+<link rel="canonical" href="https://rosettabrands.co.uk/product-launch.html">
+<meta property="og:title" content="Amazon Product Launch | Rosetta Brands">
+<meta property="og:description" content="From listing to best-seller. Full-lifecycle launch management for FMCG brands — strategy, content, advertising, and sustained growth on Amazon.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/aplus-content.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/product-launch.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon A+ Content | Rosetta Brands">
-<meta name="twitter:description" content="Enhanced Amazon product listings built to convert for FMCG vendors.">
+<meta name="twitter:title" content="Amazon Product Launch | Rosetta Brands">
+<meta name="twitter:description" content="Launch-ready listings, phased advertising, and sustained growth for FMCG vendors on Amazon.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -87,14 +87,14 @@ section { width: 100%; }
 }
 .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-/* A+ Content preview card */
-.aplus-card {
+/* Launch Lifecycle Card */
+.launch-card {
   background: var(--charcoal);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 }
-.aplus-card::before {
+.launch-card::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
@@ -103,10 +103,10 @@ section { width: 100%; }
   background: rgba(225,82,134,0.10);
   pointer-events: none;
 }
-.aplus-card-header {
+.launch-card-header {
   padding: 20px 20px 0;
 }
-.aplus-card-label {
+.launch-card-label {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -115,142 +115,161 @@ section { width: 100%; }
   margin-bottom: 16px;
 }
 
-/* Brand story strip */
-.aplus-brand-strip {
-  background: linear-gradient(90deg, rgba(225,82,134,0.20) 0%, rgba(127,134,193,0.15) 100%);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+/* Phase tracker */
+.launch-phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
 }
-.aplus-brand-logo {
-  width: 32px; height: 32px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: rgba(255,255,255,0.5);
+.launch-phase {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 10px 8px;
+  text-align: center;
 }
-.aplus-brand-text { flex: 1; }
-.aplus-brand-name {
-  font-size: 11px;
-  font-weight: 700;
-  color: white;
-  line-height: 1.2;
+.launch-phase.active {
+  background: rgba(225,82,134,0.15);
+  border-color: rgba(225,82,134,0.35);
 }
-.aplus-brand-tagline {
-  font-size: 10px;
-  color: rgba(255,255,255,0.4);
-  margin-top: 1px;
+.launch-phase.done {
+  background: rgba(74,222,128,0.08);
+  border-color: rgba(74,222,128,0.20);
 }
-.aplus-brand-badge {
+.launch-phase-num {
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--pink);
-  background: var(--pink-light);
-  padding: 3px 7px;
-  border-radius: 4px;
-  border: 1px solid var(--pink-mid);
-  flex-shrink: 0;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 4px;
 }
+.launch-phase.active .launch-phase-num { color: var(--pink); }
+.launch-phase.done .launch-phase-num { color: #4ade80; }
+.launch-phase-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.3;
+}
+.launch-phase.active .launch-phase-name { color: white; }
+.launch-phase.done .launch-phase-name { color: rgba(255,255,255,0.55); }
+.launch-phase-check {
+  font-size: 12px;
+  margin-top: 4px;
+  color: rgba(255,255,255,0.15);
+}
+.launch-phase.done .launch-phase-check { color: #4ade80; }
+.launch-phase.active .launch-phase-check { color: var(--pink); }
 
-/* Lifestyle image block */
-.aplus-lifestyle {
+/* Growth chart */
+.launch-chart {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 10px;
   padding: 14px;
   margin-bottom: 12px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
 }
-.aplus-lifestyle-img {
-  width: 64px; height: 64px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.07);
-  flex-shrink: 0;
+.launch-chart-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.25);
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
-.aplus-lifestyle-text { flex: 1; }
-.aplus-lifestyle-title {
-  font-family: var(--font-display);
-  font-size: 12px;
+.launch-chart-title {
+  font-size: 10px;
   font-weight: 700;
-  color: white;
-  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
 }
-.aplus-lifestyle-desc {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  line-height: 1.5;
-}
-
-/* Comparison chart */
-.aplus-compare {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 0;
-}
-.aplus-compare-header {
-  display: grid;
-  grid-template-columns: 1fr repeat(3, 64px);
-  gap: 0;
-  padding: 8px 14px;
-  background: rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.aplus-compare-hcell {
+.launch-chart-badge {
   font-size: 9px;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  color: #4ade80;
+  background: rgba(74,222,128,0.10);
+  border: 1px solid rgba(74,222,128,0.20);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.launch-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 56px;
+}
+.launch-bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: rgba(255,255,255,0.08);
+  min-height: 4px;
+  transition: height 0.3s;
+}
+.launch-bar.highlight { background: var(--pink); opacity: 0.85; }
+.launch-bar.peak { background: var(--pink); }
+.launch-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+.launch-bar-label {
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  flex: 1;
   text-align: center;
 }
-.aplus-compare-hcell:first-child { text-align: left; color: rgba(255,255,255,0.5); }
-.aplus-compare-hcell.ours { color: var(--pink); }
-.aplus-compare-row {
-  display: grid;
-  grid-template-columns: 1fr repeat(3, 64px);
-  gap: 0;
-  padding: 7px 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+.launch-bar-label.current { color: rgba(225,82,134,0.8); font-weight: 700; }
+
+/* Milestone row */
+.launch-milestones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
 }
-.aplus-compare-row:last-child { border-bottom: none; }
-.aplus-compare-cell {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
+.launch-milestone {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
 }
-.aplus-compare-cell:first-child { text-align: left; justify-content: flex-start; color: rgba(255,255,255,0.6); font-size: 10px; }
-.check-yes { color: #4ade80; font-size: 13px; }
-.check-no { color: rgba(255,255,255,0.2); font-size: 13px; }
+.launch-milestone-icon {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  background: var(--pink-light);
+  border: 1px solid var(--pink-mid);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--pink);
+  font-size: 11px;
+}
+.launch-milestone-text {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.launch-milestone-val {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+}
 
-.aplus-card-footer {
+.launch-card-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   padding: 14px 20px;
   border-top: 1px solid rgba(255,255,255,0.07);
 }
-.aplus-footer-stat { text-align: center; }
-.aplus-footer-num {
+.launch-footer-stat { text-align: center; }
+.launch-footer-num {
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 800;
@@ -258,8 +277,8 @@ section { width: 100%; }
   letter-spacing: -0.3px;
   line-height: 1;
 }
-.aplus-footer-num span { color: var(--pink); }
-.aplus-footer-lbl {
+.launch-footer-num span { color: var(--pink); }
+.launch-footer-lbl {
   font-size: 10px;
   color: rgba(255,255,255,0.35);
   margin-top: 3px;
@@ -448,30 +467,30 @@ section { width: 100%; }
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/aplus-content.html",
-      "url": "https://rosettabrands.co.uk/aplus-content.html",
-      "name": "Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands",
-      "description": "Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.",
+      "@id": "https://rosettabrands.co.uk/product-launch.html",
+      "url": "https://rosettabrands.co.uk/product-launch.html",
+      "name": "Amazon Product Launch | Listing to Best-Seller Lifecycle | Rosetta Brands",
+      "description": "Amazon product launch strategy for FMCG vendors. Category analysis, launch-ready listings, phased ad investment, and ongoing optimisation — from zero to best-seller.",
       "inLanguage": "en-GB",
       "isPartOf": { "@type": "WebSite", "url": "https://rosettabrands.co.uk", "name": "Rosetta Brands" },
-      "breadcrumb": { "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb" }
+      "breadcrumb": { "@id": "https://rosettabrands.co.uk/product-launch.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb",
+      "@id": "https://rosettabrands.co.uk/product-launch.html#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
         { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
         { "@type": "ListItem", "position": 3, "name": "Growth Marketing", "item": "https://rosettabrands.co.uk/#growth-marketing" },
-        { "@type": "ListItem", "position": 4, "name": "A+ Content", "item": "https://rosettabrands.co.uk/aplus-content.html" }
+        { "@type": "ListItem", "position": 4, "name": "Product Launch", "item": "https://rosettabrands.co.uk/product-launch.html" }
       ]
     },
     {
       "@type": "Service",
-      "name": "Amazon A+ Content Design",
-      "description": "Rosetta Brands designs Amazon A+ Content for FMCG vendor brands — enhanced product listings with brand storytelling, lifestyle imagery, comparison charts, and Premium A+ modules that address purchase objections and convert browsers into buyers.",
-      "serviceType": "Amazon A+ Content Design",
-      "url": "https://rosettabrands.co.uk/aplus-content.html",
+      "name": "Amazon Product Launch Strategy",
+      "description": "Rosetta Brands manages the full Amazon product launch lifecycle for FMCG vendors — from market and category analysis through launch-ready listing build, phased advertising investment, organic rank building, and sustained optimisation including Subscribe & Save, seasonal planning, and new product development support.",
+      "serviceType": "Amazon Product Launch Management",
+      "url": "https://rosettabrands.co.uk/product-launch.html",
       "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
       "areaServed": ["GB", "IE", "DE", "AU"]
     },
@@ -480,42 +499,42 @@ section { width: 100%; }
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Amazon A+ Content?",
+          "name": "How long does it take to see results from a new Amazon launch?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the 'From the manufacturer' section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent."
+            "text": "Most brands start generating meaningful sales within the first 4 to 8 weeks of a well-structured launch, with category ranking momentum building over the following three to six months. The fastest results come when a listing is fully optimised — content, images, A+ Content, Brand Store — before advertising spend is activated. Launching ads into an incomplete listing is one of the most common and costly mistakes brands make. In our experience, brands that launch with a complete content stack and a phased advertising ramp consistently outperform brands that launch quickly with a standard listing and try to fix content later."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the difference between Basic A+ and Premium A+ Content?",
+          "name": "Do you work with brands that already have Amazon listings?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic."
+            "text": "Yes — in fact many of our engagements begin with existing listings that are underperforming. Whether a brand has been live for six months with flat sales or has a fragmented presence with inconsistent content, we apply the same structured approach: audit the listing against best practice, identify the gaps, rebuild where necessary, and activate growth from a stronger foundation. The launch methodology is the same whether we are starting from zero or from an established ASIN."
           }
         },
         {
           "@type": "Question",
-          "name": "Does A+ Content affect search ranking on Amazon?",
+          "name": "What is included in a product launch engagement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement."
+            "text": "A product launch engagement covers the full lifecycle: market and category analysis to identify the optimal entry point, a launch-ready listing build including title, bullets, backend keywords, A+ Content, Brand Store, and key feature images, brand registry and channel control to protect pricing and suppress rogue resellers, a phased advertising strategy aligned to review build and organic rank signals, and ongoing optimisation covering Subscribe and Save enrolment, seasonal planning, promotional support, and new product development guidance. Everything is managed through our Vendor Central model, giving us direct control over the account rather than operating at arm's length."
           }
         },
         {
           "@type": "Question",
-          "name": "What should A+ Content include for FMCG brands?",
+          "name": "How do you approach category research and positioning?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery that shows the product in context, a comparison chart featuring the full product range, a brand story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift."
+            "text": "Before any listing is built, we map the category structure on Amazon — which subcategories carry the most relevant search traffic, which top-ten ASINs are winning and why, where the gaps are, and what price points and review thresholds a new brand needs to compete. This analysis shapes the ASIN structure, the title and keyword strategy, and the phasing of ad investment. Getting the category entry point wrong is a difficult mistake to recover from, so we invest heavily in this stage before any spend is committed."
           }
         },
         {
           "@type": "Question",
-          "name": "How does A+ Content work alongside a Brand Store and advertising?",
+          "name": "Can you manage Subscribe & Save, Amazon B2B, and new product launches after the initial go-live?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey."
+            "text": "Yes — ongoing optimisation is a core part of what we do after launch. Once a product is established and generating consistent sales velocity, we enrol eligible ASINs into Subscribe and Save to build repeat purchase and predictable revenue. Where relevant, we also activate Amazon Business listings for B2B buyers, integrate with Amazon Fresh for applicable grocery categories, and provide new product development support guided by the demand and gap signals we see in the category. The launch is the beginning of the engagement, not the end of it."
           }
         }
       ]
@@ -1211,94 +1230,118 @@ a {
         </nav>
 
         <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          A+ Content
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Product Launch
         </div>
 
-        <h1>Answer every question<br><span>before it gets asked.</span></h1>
+        <h1>From listing to <span>best-seller</span> — we manage the full product lifecycle.</h1>
 
         <p class="hero-sub">
-          Most FMCG listings lose sales not because the product is wrong, but because the page leaves too many questions unanswered. A+ Content is your chance to address every purchase objection — with lifestyle imagery, brand storytelling, and comparison modules that convert browsers into buyers.
+          Getting a product live on Amazon is the easy part. Getting it found, ranked, and growing is where the real work happens. We manage the full launch lifecycle — from category analysis and listing build through to phased advertising, organic ranking, and long-term channel growth.
         </p>
 
         <div class="hero-actions">
           <button class="btn btn-lg btn-cta-primary">
-            Schedule a Call
+            Plan Your Launch
             <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
         </div>
       </div>
 
-      <!-- A+ Content Preview Card -->
-      <div class="aplus-card fade-in fade-in-delay-2" aria-hidden="true">
-        <div class="aplus-card-header">
-          <div class="aplus-card-label">A+ Content preview</div>
+      <!-- Launch Lifecycle Card -->
+      <div class="launch-card fade-in fade-in-delay-2" aria-hidden="true">
+        <div class="launch-card-header">
+          <div class="launch-card-label">Launch lifecycle tracker</div>
 
-          <!-- Brand Story strip -->
-          <div class="aplus-brand-strip">
-            <div class="aplus-brand-logo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <!-- Phase indicators -->
+          <div class="launch-phases">
+            <div class="launch-phase done">
+              <div class="launch-phase-num">01</div>
+              <div class="launch-phase-name">Pre-Launch</div>
+              <div class="launch-phase-check">✓</div>
             </div>
-            <div class="aplus-brand-text">
-              <div class="aplus-brand-name">Your Brand Story</div>
-              <div class="aplus-brand-tagline">Crafted with care since 2014</div>
+            <div class="launch-phase done">
+              <div class="launch-phase-num">02</div>
+              <div class="launch-phase-name">Go Live</div>
+              <div class="launch-phase-check">✓</div>
             </div>
-            <span class="aplus-brand-badge">Brand Story</span>
+            <div class="launch-phase active">
+              <div class="launch-phase-num">03</div>
+              <div class="launch-phase-name">Growth</div>
+              <div class="launch-phase-check">↑</div>
+            </div>
+            <div class="launch-phase">
+              <div class="launch-phase-num">04</div>
+              <div class="launch-phase-name">Scale</div>
+              <div class="launch-phase-check">·</div>
+            </div>
           </div>
 
-          <!-- Lifestyle image block -->
-          <div class="aplus-lifestyle">
-            <div class="aplus-lifestyle-img">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <!-- Growth bars chart -->
+          <div class="launch-chart">
+            <div class="launch-chart-header">
+              <div class="launch-chart-title">Monthly Revenue Trajectory</div>
+              <div class="launch-chart-badge">↑ 388% YoY</div>
             </div>
-            <div class="aplus-lifestyle-text">
-              <div class="aplus-lifestyle-title">Why our quality stands apart</div>
-              <div class="aplus-lifestyle-desc">Premium ingredients, sourced responsibly. Every batch tested before it leaves our facility.</div>
+            <div class="launch-bars">
+              <div class="launch-bar" style="height:8%"></div>
+              <div class="launch-bar" style="height:14%"></div>
+              <div class="launch-bar" style="height:20%"></div>
+              <div class="launch-bar" style="height:28%"></div>
+              <div class="launch-bar highlight" style="height:38%"></div>
+              <div class="launch-bar highlight" style="height:52%"></div>
+              <div class="launch-bar highlight" style="height:65%"></div>
+              <div class="launch-bar highlight" style="height:74%"></div>
+              <div class="launch-bar highlight" style="height:84%"></div>
+              <div class="launch-bar peak" style="height:100%"></div>
+            </div>
+            <div class="launch-bar-labels">
+              <div class="launch-bar-label">M1</div>
+              <div class="launch-bar-label">M2</div>
+              <div class="launch-bar-label">M3</div>
+              <div class="launch-bar-label">M4</div>
+              <div class="launch-bar-label">M5</div>
+              <div class="launch-bar-label">M6</div>
+              <div class="launch-bar-label">M7</div>
+              <div class="launch-bar-label">M8</div>
+              <div class="launch-bar-label">M9</div>
+              <div class="launch-bar-label current">M10</div>
             </div>
           </div>
 
-          <!-- Comparison chart -->
-          <div class="aplus-compare">
-            <div class="aplus-compare-header">
-              <div class="aplus-compare-hcell">Feature</div>
-              <div class="aplus-compare-hcell ours">Ours</div>
-              <div class="aplus-compare-hcell">Var. 2</div>
-              <div class="aplus-compare-hcell">Var. 3</div>
+          <!-- Milestone rows -->
+          <div class="launch-milestones">
+            <div class="launch-milestone">
+              <div class="launch-milestone-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="launch-milestone-text">Category ranking achieved</div>
+              <div class="launch-milestone-val">#1</div>
             </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">No artificial additives</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-            </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">Subscribe &amp; Save</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-            </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">Amazon Business</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
+            <div class="launch-milestone">
+              <div class="launch-milestone-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="launch-milestone-text">Subscribe &amp; Save enrolled</div>
+              <div class="launch-milestone-val">Active</div>
             </div>
           </div>
+
         </div>
 
-        <div class="aplus-card-footer">
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num">Up to <span>20%</span></div>
-            <div class="aplus-footer-lbl">Sales uplift, Premium A+</div>
+        <div class="launch-card-footer">
+          <div class="launch-footer-stat">
+            <div class="launch-footer-num"><span>+388%</span></div>
+            <div class="launch-footer-lbl">Annual growth</div>
           </div>
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num"><span>5</span> modules</div>
-            <div class="aplus-footer-lbl">Per product page</div>
+          <div class="launch-footer-stat">
+            <div class="launch-footer-num"><span>4</span> phases</div>
+            <div class="launch-footer-lbl">Full lifecycle</div>
           </div>
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num"><span>0</span> returns</div>
-            <div class="aplus-footer-lbl">Surprise purchases</div>
+          <div class="launch-footer-stat">
+            <div class="launch-footer-num"><span>#1</span></div>
+            <div class="launch-footer-lbl">Category ranking</div>
           </div>
         </div>
       </div>
@@ -1312,8 +1355,8 @@ a {
   <div class="container">
     <div class="section-header fade-in">
       <div class="section-tag">What's at stake</div>
-      <h2>A standard listing is a <em style="font-style:italic;color:var(--pink);">missed opportunity</em> at every price point</h2>
-      <p>For FMCG brands selling on Amazon, the product detail page is the moment of decision. Most brands hand that moment to a wall of text and hope for the best.</p>
+      <h2>Most launches fail quietly — <em style="font-style:italic;color:var(--pink);">not with a bang</em></h2>
+      <p>The gap between a product that lists and a product that sells is wider than most brands expect. These are the problems that kill launches before they find momentum.</p>
     </div>
     <div class="pain-grid">
       <div class="pain-card fade-in">
@@ -1321,24 +1364,48 @@ a {
         <div class="pain-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <h3>Unanswered objections send shoppers to a competitor</h3>
-        <p>On Amazon, the shopper who does not buy does not leave empty-handed — they add a competitor's product to cart instead. For FMCG brands, conversion rates of 30 to 35 percent are achievable, but only when the listing gives shoppers enough information to act. Every unanswered question about ingredients, usage, or quality is a sale lost to the brand below yours on the page.</p>
+        <h3>Starting from zero with no data, reviews, or ranking signals</h3>
+        <p>Amazon's algorithm is self-reinforcing — it rewards products that already sell. A new ASIN has no sales history, no reviews, and no keyword ranking to trade on. Without a structured approach to building early velocity, a new product simply disappears into the category, invisible to organic traffic and too expensive to sustain on ads alone.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-number">02</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M21 9H3M21 15H3M12 3v18"/></svg>
         </div>
-        <h3>Standard listings break on mobile — where most shoppers are</h3>
-        <p>Over 70 percent of Amazon traffic is mobile. A bullet-point product description that reads clearly on desktop becomes a wall of text on a phone screen. Text baked into images becomes unreadable when scaled down. Most brands have never checked what their listing actually looks like on the device their customers are using. The answer is rarely encouraging.</p>
+        <h3>Wrong category entry kills organic visibility before launch</h3>
+        <p>Amazon's browse tree structure is not intuitive. Choosing the wrong parent category or subcategory means your product never appears in the keyword pools that shoppers actually search. Brands routinely list in the obvious place rather than the optimal place — and then wonder why organic rank never moves despite ad spend. Getting category positioning right before go-live is one of the highest-leverage decisions in a launch.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-number">03</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <h3>Generic listings do not build brand equity — they erode it</h3>
-        <p>A product detail page with a white background photo and a five-bullet description signals nothing about why your brand is different. For premium FMCG brands, a generic listing actively undermines the perception you have built everywhere else. The listing is not just where sales are won or lost — it is where brand equity is tested at the precise moment a shopper is deciding whether to trust you.</p>
+        <h3>Running ads into an incomplete listing is expensive and demoralising</h3>
+        <p>Activating PPC before the content stack is complete — titles not keyword-optimised, images not compliant, A+ Content missing, no reviews — is one of the most common and costly mistakes in an Amazon launch. Traffic arrives and does not convert. Ad spend climbs. Return on spend falls. The listing loses rank signals from poor conversion, making subsequent ranking harder and costlier to recover.</p>
+      </div>
+      <div class="pain-card fade-in">
+        <div class="pain-number">04</div>
+        <div class="pain-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Resellers and rogue listings undercut your price before you establish control</h3>
+        <p>Without active brand registry management, third-party sellers can list against your ASIN at lower prices, win the Buy Box before you have established pricing integrity, and erode the retail price point you have set. This is particularly damaging in the first 90 days of a launch when the algorithm is forming its first impressions of your product's price, conversion, and buyer satisfaction metrics.</p>
+      </div>
+      <div class="pain-card fade-in fade-in-delay-1">
+        <div class="pain-number">05</div>
+        <div class="pain-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>A good first month with no follow-through is just an expensive experiment</h3>
+        <p>Many brands invest in a launch and then leave the listing to run itself. Without ongoing listing optimisation, seasonal promotional support, Subscribe and Save enrolment, and new product development guidance, an initial spike in sales typically plateaus and then declines as competitors outpace you. Sustained Amazon growth requires continuous iteration — the launch is the beginning, not the end of the strategy.</p>
+      </div>
+      <div class="pain-card fade-in fade-in-delay-2">
+        <div class="pain-number">06</div>
+        <div class="pain-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>No visibility into what the category actually rewards</h3>
+        <p>Without forensic category analysis, brands launch blind — unaware which keywords drive the most purchase-ready traffic, which competitor ASINs are winning and why, what review threshold makes a product credible in their category, or what pricing strategy balances margin and volume. Guessing at these variables is expensive. Understanding them before the first pound of ad spend is committed is how you launch with confidence instead of hope.</p>
       </div>
     </div>
   </div>
@@ -1350,10 +1417,10 @@ a {
     <div class="hiw-layout">
       <div class="hiw-text fade-in">
         <div class="section-tag">Our approach</div>
-        <h2>Strategy first. Design second.</h2>
-        <p>The most common mistake with A+ Content is treating it as a design project. It is not. It is a conversion problem. We begin by identifying the specific objections that are stopping your shoppers from buying, then build content that addresses those objections directly — in the format, order, and visual language that works for your category.</p>
+        <h2>Commercial input before launch — not cleanup after.</h2>
+        <p>Every brand we launch goes through the same five-phase methodology. We do not cut corners on the pre-launch work because the first 90 days on Amazon form a data record that the algorithm uses to set your baseline rank — and a weak baseline is expensive to recover from.</p>
         <div class="hiw-note">
-          <strong>Premium A+ where eligible.</strong> For brands with an existing A+ catalogue and a published Brand Story, we unlock Premium A+ modules — including full-width video, interactive image hotspots, and enhanced comparison charts. Amazon's own data puts the uplift at up to 20 percent for Premium versus 8 percent for Basic.
+          <strong>Managed through our Vendor Central account.</strong> Rather than advising from the outside, we manage your Amazon presence directly — giving us real-time control over listings, content, pricing, and advertising without the lag or limitations of an advisory relationship.
         </div>
       </div>
 
@@ -1364,84 +1431,84 @@ a {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Objection analysis</div>
-            <h3>Finding what is stopping shoppers from buying</h3>
-            <p>Before a single module is designed, we review the customer Q&A, one and two star reviews, and competitor listing weaknesses for your category. This reveals the specific questions shoppers are asking that your current listing is not answering. Ingredients, portion size, taste, quality provenance, usage occasion — the objections vary by category but the principle is the same: content that does not address the real questions does not convert.</p>
+            <div class="hiw-step-fn">Phase 01</div>
+            <h3>Market &amp; category analysis</h3>
+            <p>Before a single listing is built, we map the category: which subcategories carry the most relevant search demand, which competitor ASINs are winning and why, what price points and review volumes a new brand must clear to compete, and where the genuine gaps are. This shapes everything that follows — ASIN structure, title strategy, keyword targeting, and advertising phasing.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Review mining</span>
-              <span class="hiw-step-tag">Q&amp;A analysis</span>
-              <span class="hiw-step-tag">Competitor benchmarking</span>
-              <span class="hiw-step-tag">Category research</span>
+              <span class="hiw-step-tag">Category mapping</span>
+              <span class="hiw-step-tag">Competitor analysis</span>
+              <span class="hiw-step-tag">Demand sizing</span>
+              <span class="hiw-step-tag">Gap identification</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Brand Story module</div>
-            <h3>The first thing shoppers see, above your A+ Content</h3>
-            <p>The Brand Story module sits directly above your A+ Content on every product page and is the only section that appears on all your listings simultaneously. It introduces your brand — who you are, why you exist, what makes you different — and includes a direct link to your Brand Store. For FMCG brands building long-term loyalty, the Brand Story module is the most efficient brand-building real estate on Amazon: one build, every product page, always on.</p>
+            <div class="hiw-step-fn">Phase 02</div>
+            <h3>Listing build &amp; launch-ready content</h3>
+            <p>We build every element of a launch-ready listing before go-live — keyword-optimised title and bullet points, backend search terms, A+ Content modules, Brand Store, and key feature images that meet Amazon's compliance requirements and conversion best practice. Launching with a complete content stack means ad spend converts from day one, not after a content catch-up phase.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Brand identity module</span>
-              <span class="hiw-step-tag">Values &amp; provenance</span>
-              <span class="hiw-step-tag">Store link integration</span>
-              <span class="hiw-step-tag">All ASINs simultaneously</span>
+              <span class="hiw-step-tag">Title &amp; bullets</span>
+              <span class="hiw-step-tag">A+ Content</span>
+              <span class="hiw-step-tag">Brand Store</span>
+              <span class="hiw-step-tag">Key feature images</span>
+              <span class="hiw-step-tag">Backend keywords</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hiw-step fade-in fade-in-delay-1">
+          <div class="hiw-step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hiw-step-body">
+            <div class="hiw-step-fn">Phase 03</div>
+            <h3>Brand registry &amp; channel control</h3>
+            <p>Before launch, we secure brand registry, lock down pricing integrity, and suppress any rogue or third-party sellers that could undercut your price or damage your listing. Buy Box control, ASIN authority, and pricing consistency are established before traffic arrives — protecting the conversion data the algorithm will use to set your initial rank baseline.</p>
+            <div class="hiw-step-tags">
+              <span class="hiw-step-tag">Brand registry</span>
+              <span class="hiw-step-tag">Pricing integrity</span>
+              <span class="hiw-step-tag">Buy Box control</span>
+              <span class="hiw-step-tag">Reseller suppression</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hiw-step fade-in fade-in-delay-1">
+          <div class="hiw-step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="hiw-step-body">
+            <div class="hiw-step-fn">Phase 04</div>
+            <h3>Phased advertising &amp; organic rank building</h3>
+            <p>Advertising investment is introduced in phases — structured to build early sales velocity and keyword relevance signals rather than chasing impressions before the listing is ready to convert. Ad spend scales as organic rank improves, review count builds credibility, and conversion rate stabilises. This approach builds a self-reinforcing growth loop rather than permanent ad dependency.</p>
+            <div class="hiw-step-tags">
+              <span class="hiw-step-tag">Sponsored Products</span>
+              <span class="hiw-step-tag">Keyword ranking</span>
+              <span class="hiw-step-tag">Review strategy</span>
+              <span class="hiw-step-tag">Phased ad scaling</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-2">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Lifestyle &amp; feature modules</div>
-            <h3>Imagery and copy that does the work a bullet list cannot</h3>
-            <p>Each A+ module is designed to address a specific objection or reinforce a specific brand value. A lifestyle image showing the product in its natural usage context answers the "what is this actually like?" question that no amount of product specification can. A feature highlight block with iconography addresses the "what makes this worth the price?" objection. Every module earns its place by doing a specific conversion job.</p>
+            <div class="hiw-step-fn">Phase 05</div>
+            <h3>Ongoing optimisation, NPD &amp; seasonal growth</h3>
+            <p>After launch, we manage continuous listing optimisation, Subscribe and Save enrolment and management, Amazon Business listing activation, seasonal promotional planning, and new product development support guided by live category demand signals. The launch establishes the channel. Ongoing management is what turns a channel into a sustainable, growing revenue stream.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Lifestyle imagery</span>
-              <span class="hiw-step-tag">Feature highlight tiles</span>
-              <span class="hiw-step-tag">Ingredient callouts</span>
-              <span class="hiw-step-tag">Usage occasion shots</span>
-              <span class="hiw-step-tag">Quality credentials</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Comparison chart</div>
-            <h3>The cross-sell module that grows basket size</h3>
-            <p>The comparison chart module lets you place up to six of your own products side by side across up to twelve attributes. For FMCG brands with multiple SKUs — different flavours, sizes, formats, or use cases — a well-built comparison chart does two things: it helps shoppers find the right product for them, and it introduces them to products they did not know you made. In Premium A+, the chart is shoppable, with Add to Cart buttons for each product in the grid.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Up to 6 products</span>
-              <span class="hiw-step-tag">12 attribute rows</span>
-              <span class="hiw-step-tag">Shoppable (Premium A+)</span>
-              <span class="hiw-step-tag">Range discovery</span>
-              <span class="hiw-step-tag">Basket size uplift</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in fade-in-delay-1">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Mobile-first execution</div>
-            <h3>Designed for the screen where your customers actually shop</h3>
-            <p>Every module is designed and reviewed at mobile dimensions before it is finalised. Text within images is kept large enough to read on a 375px screen. Layouts are tested for how they stack on portrait mobile. Images are specified at the right aspect ratio for both desktop and mobile rendering without cropping. The majority of your shoppers will never see your A+ Content on a desktop — so we build for the device they are actually using.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Mobile dimension testing</span>
-              <span class="hiw-step-tag">Readable image text</span>
-              <span class="hiw-step-tag">Stacking layout review</span>
-              <span class="hiw-step-tag">Correct aspect ratios</span>
+              <span class="hiw-step-tag">Subscribe &amp; Save</span>
+              <span class="hiw-step-tag">Amazon B2B</span>
+              <span class="hiw-step-tag">Seasonal planning</span>
+              <span class="hiw-step-tag">NPD support</span>
+              <span class="hiw-step-tag">Listing health</span>
             </div>
           </div>
         </div>
@@ -1456,23 +1523,22 @@ a {
   <div class="container">
     <div class="proof-inner">
       <div class="proof-text fade-in">
-        <div class="section-tag">What the data shows</div>
-        <h2>Amazon's own numbers. <span>Not ours.</span></h2>
-        <p>The conversion uplift figures for A+ Content come from Amazon's own published data, not agency estimates. What varies is how much of that potential is realised — and that depends almost entirely on the quality of the strategy behind the content.</p>
-        <p>Generic A+ Content built without an objection-handling strategy typically delivers 3 to 5 percent improvement. Content built specifically to address the questions shoppers in your category are asking — with mobile-first execution, comparison charts, and a Brand Story that builds trust — regularly delivers the upper range and beyond.</p>
+        <div class="section-tag">Proven results</div>
+        <h2>From zero to <span>best-seller</span> — the numbers speak for themselves.</h2>
+        <p>Our launch methodology has taken brands from no Amazon presence at all to top-ten category rankings, sustained six-figure monthly revenue, and category dominance — in as little as twelve months. Across every client, the pattern is the same: structured pre-launch, disciplined content, phased ad investment, sustained optimisation.</p>
       </div>
       <div class="proof-stats fade-in fade-in-delay-1">
         <div class="proof-stat">
-          <div class="proof-stat-num">Up to <span>20%</span></div>
-          <div class="proof-stat-label">Sales uplift from Premium A+ Content — Amazon's published figure</div>
+          <div class="proof-stat-num">+<span>2,430</span>%</div>
+          <div class="proof-stat-label">Best growth delivered across a launch engagement</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num">Up to <span>8%</span></div>
-          <div class="proof-stat-label">Sales uplift from Basic A+ Content for any brand-registered vendor</div>
+          <div class="proof-stat-num"><span>#1</span></div>
+          <div class="proof-stat-label">Category rankings achieved across multiple clients</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num"><span>+388%</span></div>
-          <div class="proof-stat-label">Annual revenue growth for a Rosetta Brands partner brand with a full content build at launch</div>
+          <div class="proof-stat-num"><span>0</span> → £288K</div>
+          <div class="proof-stat-label">Revenue in 12 months from a standing start</div>
         </div>
       </div>
     </div>
@@ -1484,45 +1550,49 @@ a {
   <div class="container">
     <div class="quote-box fade-in">
       <span class="quote-mark">"</span>
-      <p class="quote-text">Our listings looked fine to us — we'd spent months on the photography. But once Rosetta rebuilt the A+ Content around the questions our customers were actually asking, conversion went up meaningfully within the first month. We hadn't realised how much the page was failing to answer.</p>
-      <p class="quote-attribution">Founder, premium food brand, Amazon UK</p>
+      <p class="quote-text">We had never sold on Amazon before. Rosetta built everything from scratch — the listing, the content, the advertising strategy. Within twelve months we were in the top ten in our category and our Amazon channel had become our fastest-growing revenue stream.</p>
+      <p class="quote-attribution"><strong>Founder</strong> — UK Consumer Goods Brand</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ RELATED ═══ -->
+<!-- ═══ RELATED SERVICES ═══ -->
 <section class="related-section" style="background:var(--off-white); border-top: 1px solid var(--border);">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag" style="color:var(--pink);">Also in Growth Marketing</div>
-      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">A+ Content converts shoppers. These bring them in.</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">The listing is where the decision is made. Advertising and the Brand Store are what drive shoppers there in the first place.</p>
+    <div class="section-header fade-in">
+      <div class="section-tag">Keep exploring</div>
+      <h2>The full Growth Marketing stack</h2>
+      <p>Product Launch works best when the full content and advertising ecosystem is in place from day one.</p>
     </div>
-    <div class="related-grid" style="margin-top:48px;">
+    <div class="related-grid">
+
       <a href="advertising.html" class="related-card fade-in">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3>Advertising</h3>
-        <p>Sponsored Products campaigns drive shoppers to your product pages. A+ Content converts them once they arrive. The two compound each other.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Advertising &amp; PPC</h3>
+        <p>Performance-led Amazon advertising strategy — Sponsored Products, Brands, and Display — structured to build organic rank while keeping ACoS in check.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
-      <a href="brand-store.html" class="related-card fade-in fade-in-delay-1">
+
+      <a href="aplus-content.html" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <h3>Brand Store</h3>
-        <p>The Brand Story module within A+ Content links directly to your Store. Shoppers who want to explore further land in a competitor-free environment where your full range is on display.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>A+ Content</h3>
+        <p>Enhanced product listings with brand storytelling, lifestyle imagery, and comparison modules that answer purchase objections and lift conversion rate.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
+
       <a href="key-feature-images.html" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
         <h3>Key Feature Images &amp; Lifestyle</h3>
-        <p>The hero images in your listing carousel. The lifestyle imagery inside your A+ modules. The two services share creative assets and are most powerful when built together.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <p>A fully optimised 7-image stack — main hero image, KFIs, lifestyle, and infographics — built to Amazon specification and designed to stop the scroll.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
+
     </div>
   </div>
 </section>
@@ -1531,78 +1601,81 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box fade-in">
-      <h2 class="cta-title">Turn your listings into your best sales tool.</h2>
-      <p class="cta-text">
-        We work with UK FMCG brands who want to scale profitably on Amazon. Let's explore whether Vendor-As-A-Service is right for your brand.
-      </p>
+      <h2 class="cta-title">Ready to launch the right way?</h2>
+      <p class="cta-text">Tell us about your product and your category. We'll show you exactly how we would approach the launch — and what results a structured methodology typically delivers.</p>
       <div class="cta-actions">
         <button class="btn btn-lg btn-cta-primary">
-          Schedule a Call
+          Plan Your Launch
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <a href="pricing.html" class="btn btn-lg btn-cta-ghost">View Pricing</a>
       </div>
-      <p class="cta-note">No commitment required <span>&middot;</span> Tailored to your brand <span>&middot;</span> Response within 24 hours</p>
+      <p class="cta-note">Success-fee model <span>·</span> No long-term lock-in <span>·</span> Vendor Central managed</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ═══ FAQ ═══ -->
+<!-- ═══ FAQ (outside main) ═══ -->
 <section class="faq-section">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Common questions about Amazon A+ Content</h2>
-      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--pink);font-weight:600;">FAQ page</a>.</p>
+    <div class="section-header fade-in" style="margin-bottom:40px;">
+      <div class="section-tag">FAQ</div>
+      <h2>Common questions about Product Launch</h2>
     </div>
     <div class="faq-list">
+
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What is Amazon A+ Content?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          How long does it take to see results from a new Amazon launch?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the "From the manufacturer" section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent.</p>
+          <p>Most brands start generating meaningful sales within the first four to eight weeks of a well-structured launch, with category ranking momentum building over the following three to six months. The fastest results come when a listing is fully optimised — content, images, A+ Content, Brand Store — before advertising spend is activated. Brands that launch with a complete content stack and a phased advertising ramp consistently outperform brands that launch quickly with a standard listing and try to fix content later. The first 90 days form a data record that Amazon uses to set your baseline ranking — getting that period right is where we invest the most effort.</p>
         </div>
       </div>
+
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What is the difference between Basic A+ and Premium A+ Content?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          Do you work with brands that already have Amazon listings?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats up to 1,464 pixels wide. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon's data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic.</p>
+          <p>Yes — many of our engagements begin with existing listings that are underperforming. Whether a brand has been live for six months with flat sales or has a fragmented presence with inconsistent content, we apply the same structured approach: audit the listing against best practice, identify the gaps, rebuild where necessary, and activate growth from a stronger foundation. The methodology is identical whether we are starting from zero or from an established ASIN — the pre-work phase simply looks different.</p>
         </div>
       </div>
+
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          Does A+ Content affect search ranking on Amazon?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          What is included in a product launch engagement?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement.</p>
+          <p>A product launch engagement covers the full lifecycle: market and category analysis to identify the optimal entry point; a launch-ready listing build including title, bullets, backend keywords, A+ Content, Brand Store, and key feature images; brand registry and channel control to protect pricing and suppress rogue resellers; a phased advertising strategy aligned to review build and organic rank signals; and ongoing optimisation covering Subscribe and Save enrolment, seasonal planning, promotional support, and new product development guidance. Everything is managed through our Vendor Central account, giving us direct control over the listing rather than operating at arm's length.</p>
         </div>
       </div>
+
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What should A+ Content include for FMCG brands?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          How do you approach category research and positioning?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery showing the product in context, a comparison chart featuring the full product range, a Brand Story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift.</p>
+          <p>Before any listing is built, we map the category structure on Amazon — which subcategories carry the most relevant search traffic, which top-ten ASINs are winning and why, where the gaps are, and what price points and review thresholds a new brand needs to compete. This analysis shapes the ASIN structure, the title and keyword strategy, and the phasing of ad investment. Getting the category entry point wrong is a difficult and expensive mistake to recover from, so we invest heavily in this stage before any spend is committed.</p>
         </div>
       </div>
+
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How does A+ Content work alongside a Brand Store and advertising?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          Can you manage Subscribe &amp; Save, Amazon B2B, and new product launches after initial go-live?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey.</p>
+          <p>Yes — ongoing optimisation is a core part of what we do after launch. Once a product is established and generating consistent sales velocity, we enrol eligible ASINs into Subscribe and Save to build repeat purchase and predictable revenue. Where relevant, we also activate Amazon Business listings for B2B buyers, integrate with Amazon Fresh for applicable grocery categories, and provide new product development support guided by the demand and gap signals we observe in the category day to day. The launch is the beginning of the engagement, not the end of it.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1722,6 +1795,6 @@ a {
   </div>
 </footer>
 </div>
-
+<script src="nav-loader.js"></script>
 </body>
 </html>
