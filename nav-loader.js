@@ -18,11 +18,15 @@
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   // ── 1. FAQ accordion — always runs ───────────────────────────────────────
+  // Guard: data-faq-init prevents duplicate listeners when this script is
+  // loaded more than once (deferred in <head> + inline at end of <body>).
   function initFAQ() {
     document.querySelectorAll('.faq-q').forEach(function (btn) {
+      if (btn.dataset.faqInit) return;          // already wired — skip
+      btn.dataset.faqInit = '1';
+      var answer = btn.nextElementSibling;
       btn.addEventListener('click', function () {
         var expanded = btn.getAttribute('aria-expanded') === 'true';
-        var answer   = btn.nextElementSibling;
         btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         if (answer) {
           if (expanded) { answer.setAttribute('hidden', ''); }

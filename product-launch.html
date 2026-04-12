@@ -1683,29 +1683,6 @@ a {
   </div>
 </section>
 
-<script>
-// Self-contained FAQ accordion — does not rely on nav-loader.js timing
-(function () {
-  function initFAQ() {
-    document.querySelectorAll('.faq-q').forEach(function (btn) {
-      var panel = btn.nextElementSibling;
-      // Ensure initial state
-      if (panel) panel.style.display = 'none';
-      btn.addEventListener('click', function () {
-        var isOpen = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-        if (panel) panel.style.display = isOpen ? 'none' : 'block';
-      });
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFAQ);
-  } else {
-    initFAQ();
-  }
-})();
-</script>
-
 <div id="footer-placeholder" data-inlined="true">
 <footer class="footer" role="contentinfo">
   <div class="container">
