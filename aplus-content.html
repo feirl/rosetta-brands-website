@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Advertising Management | AI-Powered Campaigns | Rosetta Brands</title>
-<meta name="description" content="Amazon advertising management for FMCG vendors. Sponsored Products, Brands, Display, and DSP with real-time performance dashboards. TACoS-first strategy that grows organic rank alongside paid sales.">
-<meta name="keywords" content="Amazon advertising management, Amazon PPC management UK, FMCG Amazon advertising, TACoS optimisation, Amazon DSP, Sponsored Products management, Amazon advertising agency">
-<link rel="canonical" href="https://rosettabrands.co.uk/advertising.html">
-<meta property="og:title" content="Amazon Advertising Management | Rosetta Brands">
-<meta property="og:description" content="AI-powered Amazon advertising with real-time performance visibility. TACoS-first strategy, full DSP access, and live dashboards for FMCG vendors.">
+<title>Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands</title>
+<meta name="description" content="Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.">
+<meta name="keywords" content="Amazon A+ Content design UK, enhanced brand content FMCG, Amazon EBC agency, A+ Premium Content, Amazon listing optimisation, product detail page conversion">
+<link rel="canonical" href="https://rosettabrands.co.uk/aplus-content.html">
+<meta property="og:title" content="Amazon A+ Content | Rosetta Brands">
+<meta property="og:description" content="Enhanced Amazon product listings built to convert. Brand storytelling, comparison charts, and Premium A+ modules for FMCG vendors.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/advertising.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/aplus-content.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon Advertising Management | Rosetta Brands">
-<meta name="twitter:description" content="AI-powered Amazon advertising with real-time performance visibility.">
+<meta name="twitter:title" content="Amazon A+ Content | Rosetta Brands">
+<meta name="twitter:description" content="Enhanced Amazon product listings built to convert for FMCG vendors.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -30,7 +30,6 @@
   --pink-mid:   rgba(225,82,134,0.20);
 }
 
-/* ═══ SECTIONS ═══ */
 section { width: 100%; }
 
 /* Hero */
@@ -88,148 +87,182 @@ section { width: 100%; }
 }
 .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-/* Campaign dashboard card */
-.campaign-card {
+/* A+ Content preview card */
+.aplus-card {
   background: var(--charcoal);
   border-radius: 20px;
-  padding: 28px 28px 24px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
-.campaign-card::before {
+.aplus-card::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
   width: 140px; height: 140px;
   border-radius: 50%;
-  background: rgba(225,82,134,0.12);
+  background: rgba(225,82,134,0.10);
+  pointer-events: none;
 }
-.campaign-card-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.aplus-card-header {
+  padding: 20px 20px 0;
+}
+.aplus-card-label {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 18px;
-}
-.live-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: #4ade80;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 2px rgba(74,222,128,0.25);
-  animation: pulse-live 2s ease infinite;
-}
-@keyframes pulse-live {
-  0%,100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-.campaign-formats {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 22px;
-  flex-wrap: wrap;
-}
-.campaign-format {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 4px 10px;
-  border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.7);
-}
-.campaign-format.active {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: white;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 16px;
 }
 
-.campaign-metrics-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.campaign-metric {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.07);
+/* Brand story strip */
+.aplus-brand-strip {
+  background: linear-gradient(90deg, rgba(225,82,134,0.20) 0%, rgba(127,134,193,0.15) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px;
   padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
 }
-.campaign-metric-label {
+.aplus-brand-logo {
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.5);
+}
+.aplus-brand-text { flex: 1; }
+.aplus-brand-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+.aplus-brand-tagline {
   font-size: 10px;
-  color: rgba(255,255,255,0.38);
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.4);
+  margin-top: 1px;
+}
+.aplus-brand-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--pink);
+  background: var(--pink-light);
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--pink-mid);
+  flex-shrink: 0;
+}
+
+/* Lifestyle image block */
+.aplus-lifestyle {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.aplus-lifestyle-img {
+  width: 64px; height: 64px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.25);
+}
+.aplus-lifestyle-text { flex: 1; }
+.aplus-lifestyle-title {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
   margin-bottom: 4px;
 }
-.campaign-metric-value {
+.aplus-lifestyle-desc {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+}
+
+/* Comparison chart */
+.aplus-compare {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.aplus-compare-header {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 64px);
+  gap: 0;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.aplus-compare-hcell {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+}
+.aplus-compare-hcell:first-child { text-align: left; color: rgba(255,255,255,0.5); }
+.aplus-compare-hcell.ours { color: var(--pink); }
+.aplus-compare-row {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 64px);
+  gap: 0;
+  padding: 7px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.aplus-compare-row:last-child { border-bottom: none; }
+.aplus-compare-cell {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aplus-compare-cell:first-child { text-align: left; justify-content: flex-start; color: rgba(255,255,255,0.6); font-size: 10px; }
+.check-yes { color: #4ade80; font-size: 13px; }
+.check-no { color: rgba(255,255,255,0.2); font-size: 13px; }
+
+.aplus-card-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.aplus-footer-stat { text-align: center; }
+.aplus-footer-num {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
   color: white;
   letter-spacing: -0.3px;
   line-height: 1;
 }
-.campaign-metric-delta {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 10px;
-  font-weight: 600;
-  margin-top: 4px;
-}
-.delta-up { color: #4ade80; }
-.delta-down { color: #f87171; }
-
-.campaign-bar-row {
-  margin-bottom: 10px;
-}
-.campaign-bar-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 5px;
-}
-.campaign-bar-label span:last-child { color: rgba(255,255,255,0.7); font-weight: 600; }
-.campaign-bar-track {
-  height: 5px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 3px;
-  overflow: hidden;
-}
-.campaign-bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  background: var(--pink);
-}
-
-.campaign-card-footer {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 8px;
-}
-.campaign-footer-stat { text-align: center; }
-.campaign-footer-num {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -0.3px;
-}
-.campaign-footer-lbl {
+.aplus-footer-num span { color: var(--pink); }
+.aplus-footer-lbl {
   font-size: 10px;
   color: rgba(255,255,255,0.35);
-  margin-top: 2px;
+  margin-top: 3px;
   line-height: 1.3;
 }
 
@@ -287,53 +320,17 @@ section { width: 100%; }
   height: 3px;
   background: var(--charcoal-10);
 }
-.pain-number {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--charcoal-50);
-  margin-bottom: 16px;
-}
-.pain-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--charcoal-05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  color: var(--charcoal);
-}
-.pain-card h3 {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-.pain-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
+.pain-number { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal-50); margin-bottom: 16px; }
+.pain-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--charcoal-05); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--charcoal); }
+.pain-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; line-height: 1.3; }
+.pain-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
 
 /* ═══ HOW IT WORKS ═══ */
 .how-it-works { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
 .hiw-layout { display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start; }
 .hiw-text { position: sticky; top: calc(var(--nav-height) + 32px); }
 .hiw-text .section-tag { text-align: left; display: inline-flex; }
-.hiw-text h2 {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 38px);
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-}
+.hiw-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .hiw-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; }
 .hiw-text .hiw-note {
   background: var(--pink-light);
@@ -359,210 +356,40 @@ section { width: 100%; }
 }
 .hiw-step:hover { border-color: var(--pink); box-shadow: 0 4px 20px rgba(225,82,134,0.08); }
 .hiw-step-icon {
-  width: 40px;
-  height: 40px;
+  width: 40px; height: 40px;
   border-radius: 10px;
   background: var(--pink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: white;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: white;
 }
 .hiw-step-icon svg { width: 18px; height: 18px; }
 .hiw-step-body { flex: 1; }
-.hiw-step-fn {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--pink);
-  margin-bottom: 4px;
-}
-.hiw-step-body h3 {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
+.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pink); margin-bottom: 4px; }
+.hiw-step-body h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
 .hiw-step-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .hiw-step-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.hiw-step-tag {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 9px;
-  border-radius: 5px;
-  background: var(--charcoal-05);
-  color: var(--charcoal-70);
-}
+.hiw-step-tag { font-size: 11px; font-weight: 600; padding: 4px 9px; border-radius: 5px; background: var(--charcoal-05); color: var(--charcoal-70); }
 
-/* ═══ PROOF SECTION ═══ */
+/* ═══ PROOF ═══ */
 .proof-section { background: var(--charcoal); padding: var(--section-pad) 0; }
-.proof-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
-}
+.proof-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .proof-text .section-tag { color: rgba(255,255,255,0.45); }
 .proof-text .section-tag::before { background: var(--pink); }
-.proof-text h2 {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 38px);
-  font-weight: 700;
-  color: white;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-}
+.proof-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .proof-text h2 span { color: var(--pink); }
 .proof-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
 .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .proof-stat { text-align: center; padding: 20px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
-.proof-stat-num {
-  font-family: var(--font-display);
-  font-size: 30px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -0.5px;
-  line-height: 1;
-  margin-bottom: 6px;
-}
+.proof-stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
 .proof-stat-num span { color: var(--pink); }
 .proof-stat-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
 
-/* ═══ TACOS EXPLAINER ═══ */
-.tacos-section { background: var(--white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.tacos-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.tacos-text .section-tag { display: inline-flex; }
-.tacos-text h2 {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-}
-.tacos-text h2 span { color: var(--pink); }
-.tacos-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
-.tacos-formula {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 24px;
-}
-.tacos-formula-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--charcoal-50);
-  margin-bottom: 10px;
-}
-.tacos-formula-eq {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.5;
-}
-.tacos-formula-eq em { color: var(--pink); font-style: normal; }
-.tacos-visual { display: flex; flex-direction: column; gap: 16px; }
-.flywheel-card {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 22px;
-}
-.flywheel-card h4 {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 10px;
-}
-.flywheel-steps { display: flex; flex-direction: column; gap: 0; }
-.flywheel-step {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--charcoal);
-}
-.flywheel-step:last-child { border-bottom: none; }
-.flywheel-arrow {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--pink);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 11px;
-  font-weight: 700;
-}
-.benchmark-card {
-  background: var(--charcoal);
-  border-radius: 14px;
-  padding: 20px 22px;
-}
-.benchmark-card h4 {
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 14px;
-}
-.benchmark-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  font-size: 13px;
-}
-.benchmark-row:last-child { border-bottom: none; }
-.benchmark-metric { color: rgba(255,255,255,0.55); }
-.benchmark-value { font-weight: 700; color: white; }
-.benchmark-value.good { color: #4ade80; }
-
 /* ═══ QUOTE ═══ */
 .quote-section { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.quote-box {
-  max-width: 840px;
-  margin: 0 auto;
-  text-align: center;
-}
-.quote-mark {
-  font-family: var(--font-display);
-  font-size: 80px;
-  color: var(--pink);
-  line-height: 0.7;
-  display: block;
-  margin-bottom: 24px;
-  opacity: 0.4;
-}
-.quote-text {
-  font-family: var(--font-display);
-  font-size: clamp(20px, 2.5vw, 27px);
-  font-weight: 500;
-  color: var(--charcoal);
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  margin-bottom: 20px;
-}
-.quote-attribution {
-  font-size: 13px;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
+.quote-box { max-width: 840px; margin: 0 auto; text-align: center; }
+.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--pink); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
+.quote-text { font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 27px); font-weight: 500; color: var(--charcoal); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 20px; }
+.quote-attribution { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
 .quote-attribution strong { color: var(--charcoal); }
 
 /* ═══ CTA ═══ */
@@ -580,84 +407,17 @@ section { width: 100%; }
 
 /* ═══ RELATED ═══ */
 .related-section { padding: var(--section-pad) 0; }
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 48px;
-}
-.related-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
-}
-.related-card:hover {
-  border-color: var(--pink);
-  box-shadow: 0 4px 24px rgba(225,82,134,0.10);
-  transform: translateY(-2px);
-}
-.related-card-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  background: var(--pink-light);
-  color: var(--pink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.related-card h3 {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.3;
-}
-.related-card p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  flex: 1;
-}
-.related-card-link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--pink);
-  margin-top: 4px;
-}
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.related-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
+.related-card:hover { border-color: var(--pink); box-shadow: 0 4px 24px rgba(225,82,134,0.10); transform: translateY(-2px); }
+.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--pink-light); color: var(--pink); display: flex; align-items: center; justify-content: center; }
+.related-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
+.related-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
+.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--pink); margin-top: 4px; }
 .related-card-link svg { width: 14px; height: 14px; }
-
-/* Coming soon card style */
-.related-card.coming-soon {
-  opacity: 0.6;
-  cursor: default;
-}
-.related-card.coming-soon:hover {
-  border-color: var(--border);
-  box-shadow: none;
-  transform: none;
-}
-.coming-badge {
-  display: inline-flex;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: var(--charcoal-05);
-  color: var(--charcoal-50);
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-top: 2px;
-  align-self: flex-start;
-}
+.related-card.coming-soon { opacity: 0.6; cursor: default; }
+.related-card.coming-soon:hover { border-color: var(--border); box-shadow: none; transform: none; }
+.coming-badge { display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--charcoal-05); color: var(--charcoal-50); padding: 3px 8px; border-radius: 4px; margin-top: 2px; align-self: flex-start; }
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
@@ -667,7 +427,6 @@ section { width: 100%; }
   .hiw-layout { grid-template-columns: 1fr; gap: 40px; }
   .hiw-text { position: static; }
   .proof-inner { grid-template-columns: 1fr; gap: 48px; }
-  .tacos-layout { grid-template-columns: 1fr; gap: 40px; }
   .pain-grid { grid-template-columns: 1fr 1fr; }
   .related-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -689,109 +448,74 @@ section { width: 100%; }
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/advertising.html",
-      "url": "https://rosettabrands.co.uk/advertising.html",
-      "name": "Amazon Advertising Management | AI-Powered Campaigns | Rosetta Brands",
-      "description": "Amazon advertising management for FMCG vendors. Sponsored Products, Brands, Display, and DSP with real-time performance dashboards. TACoS-first strategy that grows organic rank alongside paid sales.",
+      "@id": "https://rosettabrands.co.uk/aplus-content.html",
+      "url": "https://rosettabrands.co.uk/aplus-content.html",
+      "name": "Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands",
+      "description": "Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.",
       "inLanguage": "en-GB",
-      "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://rosettabrands.co.uk",
-        "name": "Rosetta Brands"
-      },
-      "breadcrumb": {
-        "@id": "https://rosettabrands.co.uk/advertising.html#breadcrumb"
-      }
+      "isPartOf": { "@type": "WebSite", "url": "https://rosettabrands.co.uk", "name": "Rosetta Brands" },
+      "breadcrumb": { "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/advertising.html#breadcrumb",
+      "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://rosettabrands.co.uk/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://rosettabrands.co.uk/#services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Growth Marketing",
-          "item": "https://rosettabrands.co.uk/#growth-marketing"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Advertising",
-          "item": "https://rosettabrands.co.uk/advertising.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Growth Marketing", "item": "https://rosettabrands.co.uk/#growth-marketing" },
+        { "@type": "ListItem", "position": 4, "name": "A+ Content", "item": "https://rosettabrands.co.uk/aplus-content.html" }
       ]
     },
     {
       "@type": "Service",
-      "name": "Amazon Advertising Management",
-      "description": "Rosetta Brands manages the full Amazon advertising stack for FMCG vendor brands - from Sponsored Products and Sponsored Brands to Demand Side Platform and Streaming TV. TACoS-first strategy, real-time performance dashboards, and AI-powered campaign optimisation.",
-      "serviceType": "Amazon Advertising Management",
-      "url": "https://rosettabrands.co.uk/advertising.html",
-      "provider": {
-        "@type": "Organization",
-        "name": "Rosetta Brands",
-        "url": "https://rosettabrands.co.uk"
-      },
-      "areaServed": [
-        "GB",
-        "IE",
-        "DE",
-        "AU"
-      ]
+      "name": "Amazon A+ Content Design",
+      "description": "Rosetta Brands designs Amazon A+ Content for FMCG vendor brands — enhanced product listings with brand storytelling, lifestyle imagery, comparison charts, and Premium A+ modules that address purchase objections and convert browsers into buyers.",
+      "serviceType": "Amazon A+ Content Design",
+      "url": "https://rosettabrands.co.uk/aplus-content.html",
+      "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
+      "areaServed": ["GB", "IE", "DE", "AU"]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is TACoS and why does Rosetta Brands use it instead of ACoS?",
+          "name": "What is Amazon A+ Content?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "TACoS stands for Total Advertising Cost of Sale and is calculated as ad spend divided by total revenue, including organic sales. ACoS only measures ad spend against paid sales, which ignores the most important benefit of advertising on Amazon: its impact on organic rank. A well-structured campaign that improves keyword ranking drives organic sales that don't appear in your ACoS at all. For FMCG brands, we target a TACoS of 6 to 10 percent as the right benchmark for sustainable, profitable growth."
+            "text": "Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the 'From the manufacturer' section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent."
           }
         },
         {
           "@type": "Question",
-          "name": "Do Rosetta Brands clients get access to Amazon DSP advertising?",
+          "name": "What is the difference between Basic A+ and Premium A+ Content?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. As a vendor rather than a seller, Rosetta Brands partner brands have access to the full Amazon DSP suite - including display retargeting, video, Streaming TV ads, and programmatic audiences built from Amazon's first-party shopping data. DSP access is typically restricted for sellers but is available to vendors, which is one of the significant advantages of the Rosetta Brands model."
+            "text": "Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic."
           }
         },
         {
           "@type": "Question",
-          "name": "How do we track advertising performance?",
+          "name": "Does A+ Content affect search ranking on Amazon?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every Rosetta Brands partner brand has access to a live performance dashboard showing advertising spend, TACoS, ROAS, impression share, and budget pacing in real time. You no longer need to wait for a weekly report or ask your account manager what is happening. The dashboard updates continuously so you always have full visibility of where your budget is going and what it is delivering."
+            "text": "A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement."
           }
         },
         {
           "@type": "Question",
-          "name": "How much should we be spending on advertising?",
+          "name": "What should A+ Content include for FMCG brands?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The right advertising budget depends on your category, your organic rank maturity, and your growth stage. For established FMCG brands, advertising spend typically runs at 8 to 15 percent of revenue. For brands in growth mode or launching new products, it may be higher in the short term as campaigns build keyword history and organic rank. Rosetta Brands models the right investment level for each brand as part of onboarding, and reviews this quarterly as performance evolves."
+            "text": "Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery that shows the product in context, a comparison chart featuring the full product range, a brand story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift."
           }
         },
         {
           "@type": "Question",
-          "name": "What ad formats does Rosetta Brands manage?",
+          "name": "How does A+ Content work alongside a Brand Store and advertising?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rosetta Brands manages the full Amazon advertising stack: Sponsored Products for keyword-level catalogue coverage, Sponsored Brands for brand awareness and Store traffic, Sponsored Display for product page retargeting and category conquest, and DSP for programmatic display, video, Streaming TV ads, and off-Amazon retargeting. The mix is calibrated to each brand's goals and category dynamics."
+            "text": "A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey."
           }
         }
       ]
@@ -1487,14 +1211,14 @@ a {
         </nav>
 
         <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Advertising
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          A+ Content
         </div>
 
-        <h1>Amazon advertising.<br><span>Finally under control.</span></h1>
+        <h1>Answer every question<br><span>before it gets asked.</span></h1>
 
         <p class="hero-sub">
-          Most FMCG brands are spending on Amazon advertising without knowing whether it is working. Budget runs out mid-month, ACoS climbs, organic rank stays flat. We take over the full advertising stack, optimise for TACoS rather than vanity metrics, and give you real-time visibility into every pound spent.
+          Most FMCG listings lose sales not because the product is wrong, but because the page leaves too many questions unanswered. A+ Content is your chance to address every purchase objection — with lifestyle imagery, brand storytelling, and comparison modules that convert browsers into buyers.
         </p>
 
         <div class="hero-actions">
@@ -1506,82 +1230,75 @@ a {
         </div>
       </div>
 
-      <!-- Campaign Dashboard Card -->
-      <div class="campaign-card fade-in fade-in-delay-2" aria-hidden="true">
-        <div class="campaign-card-label">
-          <span class="live-dot"></span>
-          Live campaign performance
-        </div>
+      <!-- A+ Content Preview Card -->
+      <div class="aplus-card fade-in fade-in-delay-2" aria-hidden="true">
+        <div class="aplus-card-header">
+          <div class="aplus-card-label">A+ Content preview</div>
 
-        <div class="campaign-formats">
-          <span class="campaign-format active">SP</span>
-          <span class="campaign-format active">SB</span>
-          <span class="campaign-format active">SD</span>
-          <span class="campaign-format active">DSP</span>
-          <span class="campaign-format">STV</span>
-        </div>
+          <!-- Brand Story strip -->
+          <div class="aplus-brand-strip">
+            <div class="aplus-brand-logo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <div class="aplus-brand-text">
+              <div class="aplus-brand-name">Your Brand Story</div>
+              <div class="aplus-brand-tagline">Crafted with care since 2014</div>
+            </div>
+            <span class="aplus-brand-badge">Brand Story</span>
+          </div>
 
-        <div class="campaign-metrics-grid">
-          <div class="campaign-metric">
-            <div class="campaign-metric-label">TACoS</div>
-            <div class="campaign-metric-value">11.2%</div>
-            <div class="campaign-metric-delta delta-down">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-              from 20.1%
+          <!-- Lifestyle image block -->
+          <div class="aplus-lifestyle">
+            <div class="aplus-lifestyle-img">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <div class="aplus-lifestyle-text">
+              <div class="aplus-lifestyle-title">Why our quality stands apart</div>
+              <div class="aplus-lifestyle-desc">Premium ingredients, sourced responsibly. Every batch tested before it leaves our facility.</div>
             </div>
           </div>
-          <div class="campaign-metric">
-            <div class="campaign-metric-label">ROAS</div>
-            <div class="campaign-metric-value">2.8x</div>
-            <div class="campaign-metric-delta delta-up">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-              from 1.9x
+
+          <!-- Comparison chart -->
+          <div class="aplus-compare">
+            <div class="aplus-compare-header">
+              <div class="aplus-compare-hcell">Feature</div>
+              <div class="aplus-compare-hcell ours">Ours</div>
+              <div class="aplus-compare-hcell">Var. 2</div>
+              <div class="aplus-compare-hcell">Var. 3</div>
+            </div>
+            <div class="aplus-compare-row">
+              <div class="aplus-compare-cell">No artificial additives</div>
+              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
+              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
+              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
+            </div>
+            <div class="aplus-compare-row">
+              <div class="aplus-compare-cell">Subscribe &amp; Save</div>
+              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
+              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
+              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
+            </div>
+            <div class="aplus-compare-row">
+              <div class="aplus-compare-cell">Amazon Business</div>
+              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
+              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
+              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
             </div>
           </div>
         </div>
 
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Organic share of revenue</span>
-            <span>68%</span>
+        <div class="aplus-card-footer">
+          <div class="aplus-footer-stat">
+            <div class="aplus-footer-num">Up to <span>20%</span></div>
+            <div class="aplus-footer-lbl">Sales uplift, Premium A+</div>
           </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:68%"></div>
+          <div class="aplus-footer-stat">
+            <div class="aplus-footer-num"><span>5</span> modules</div>
+            <div class="aplus-footer-lbl">Per product page</div>
           </div>
-        </div>
-
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Budget pacing (month)</span>
-            <span>On track</span>
-          </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:54%"></div>
-          </div>
-        </div>
-
-        <div class="campaign-bar-row">
-          <div class="campaign-bar-label">
-            <span>Top keyword rank: category</span>
-            <span>#1</span>
-          </div>
-          <div class="campaign-bar-track">
-            <div class="campaign-bar-fill" style="width:100%"></div>
-          </div>
-        </div>
-
-        <div class="campaign-card-footer">
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">4</div>
-            <div class="campaign-footer-lbl">Ad formats active</div>
-          </div>
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">847</div>
-            <div class="campaign-footer-lbl">Keywords managed</div>
-          </div>
-          <div class="campaign-footer-stat">
-            <div class="campaign-footer-num">Live</div>
-            <div class="campaign-footer-lbl">Dashboard access</div>
+          <div class="aplus-footer-stat">
+            <div class="aplus-footer-num"><span>0</span> returns</div>
+            <div class="aplus-footer-lbl">Surprise purchases</div>
           </div>
         </div>
       </div>
@@ -1594,9 +1311,9 @@ a {
 <section class="challenges">
   <div class="container">
     <div class="section-header fade-in">
-      <div class="section-tag">What we see from most brands</div>
-      <h2>Amazon advertising is the most <em style="font-style:italic;color:var(--pink);">misunderstood</em> cost in FMCG</h2>
-      <p>Most brands are spending money on Amazon advertising before they truly understand how it works. And the platform isn't designed to make it easy to find out.</p>
+      <div class="section-tag">What's at stake</div>
+      <h2>A standard listing is a <em style="font-style:italic;color:var(--pink);">missed opportunity</em> at every price point</h2>
+      <p>For FMCG brands selling on Amazon, the product detail page is the moment of decision. Most brands hand that moment to a wall of text and hope for the best.</p>
     </div>
     <div class="pain-grid">
       <div class="pain-card fade-in">
@@ -1604,24 +1321,24 @@ a {
         <div class="pain-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <h3>Budget runs out mid-month with no visibility</h3>
-        <p>The most common complaint we hear from new partners is exactly this: advertising spend disappears without clear reporting on what it delivered. No ROAS breakdown. No TACoS tracking. No sense of whether the spend was working at all. You top it up and hope for the best.</p>
+        <h3>Unanswered objections send shoppers to a competitor</h3>
+        <p>On Amazon, the shopper who does not buy does not leave empty-handed — they add a competitor's product to cart instead. For FMCG brands, conversion rates of 30 to 35 percent are achievable, but only when the listing gives shoppers enough information to act. Every unanswered question about ingredients, usage, or quality is a sale lost to the brand below yours on the page.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-number">02</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
         </div>
-        <h3>Optimising ACoS while organic rank stays flat</h3>
-        <p>ACoS tells you the ratio of ad spend to ad-driven revenue. It tells you nothing about whether your advertising is lifting organic rank, which is where the long-term value lives. Many brands achieve a "good" ACoS while organic sales stagnate, missing the compounding flywheel that advertising is supposed to build.</p>
+        <h3>Standard listings break on mobile — where most shoppers are</h3>
+        <p>Over 70 percent of Amazon traffic is mobile. A bullet-point product description that reads clearly on desktop becomes a wall of text on a phone screen. Text baked into images becomes unreadable when scaled down. Most brands have never checked what their listing actually looks like on the device their customers are using. The answer is rarely encouraging.</p>
       </div>
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-number">03</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
-        <h3>Poor campaign structure burning budget on the wrong terms</h3>
-        <p>Broad match keywords with no negative lists, auto campaigns running unchecked, sponsored brand ads pointing to product pages instead of a Brand Store. The default campaign structure that most brands start with is rarely optimised for FMCG, where conversion rates and basket sizes require a fundamentally different approach.</p>
+        <h3>Generic listings do not build brand equity — they erode it</h3>
+        <p>A product detail page with a white background photo and a five-bullet description signals nothing about why your brand is different. For premium FMCG brands, a generic listing actively undermines the perception you have built everywhere else. The listing is not just where sales are won or lost — it is where brand equity is tested at the precise moment a shopper is deciding whether to trust you.</p>
       </div>
     </div>
   </div>
@@ -1633,10 +1350,10 @@ a {
     <div class="hiw-layout">
       <div class="hiw-text fade-in">
         <div class="section-tag">Our approach</div>
-        <h2>The full advertising stack, structured for FMCG</h2>
-        <p>We manage every Amazon ad format available to vendors, from keyword-level Sponsored Products campaigns through to programmatic DSP and Streaming TV. Every campaign is structured to compound: building organic rank, reducing reliance on paid traffic over time, and improving profitability as the brand matures on Amazon.</p>
+        <h2>Strategy first. Design second.</h2>
+        <p>The most common mistake with A+ Content is treating it as a design project. It is not. It is a conversion problem. We begin by identifying the specific objections that are stopping your shoppers from buying, then build content that addresses those objections directly — in the format, order, and visual language that works for your category.</p>
         <div class="hiw-note">
-          <strong>TACoS is our north star.</strong> We target a TACoS of 6 to 10 percent for established FMCG brands - a figure that accounts for both paid and organic sales. When organic rank improves, TACoS naturally falls without reducing spend, which is the outcome a well-run campaign is designed to deliver.
+          <strong>Premium A+ where eligible.</strong> For brands with an existing A+ catalogue and a published Brand Story, we unlock Premium A+ modules — including full-width video, interactive image hotspots, and enhanced comparison charts. Amazon's own data puts the uplift at up to 20 percent for Premium versus 8 percent for Basic.
         </div>
       </div>
 
@@ -1647,85 +1364,84 @@ a {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Sponsored Products &amp; Brands</div>
-            <h3>Keyword coverage that compounds over time</h3>
-            <p>We build a structured keyword architecture for every product: exact match campaigns for proven converters, phrase match for discovery, and tightly controlled auto campaigns for ongoing keyword harvesting. Every search term report is reviewed weekly. Winners get promoted, wasted spend gets cut. Over time, the campaign structure reflects exactly how Amazon shoppers in your category actually search.</p>
+            <div class="hiw-step-fn">Objection analysis</div>
+            <h3>Finding what is stopping shoppers from buying</h3>
+            <p>Before a single module is designed, we review the customer Q&A, one and two star reviews, and competitor listing weaknesses for your category. This reveals the specific questions shoppers are asking that your current listing is not answering. Ingredients, portion size, taste, quality provenance, usage occasion — the objections vary by category but the principle is the same: content that does not address the real questions does not convert.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Exact &amp; phrase match</span>
-              <span class="hiw-step-tag">Auto harvesting</span>
-              <span class="hiw-step-tag">Negative keyword lists</span>
-              <span class="hiw-step-tag">Bid optimisation</span>
-              <span class="hiw-step-tag">Share of voice tracking</span>
+              <span class="hiw-step-tag">Review mining</span>
+              <span class="hiw-step-tag">Q&amp;A analysis</span>
+              <span class="hiw-step-tag">Competitor benchmarking</span>
+              <span class="hiw-step-tag">Category research</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Sponsored Display &amp; DSP</div>
-            <h3>Reach shoppers beyond your own product pages</h3>
-            <p>As a vendor, Rosetta Brands partner brands access the full Amazon DSP suite. That means retargeting shoppers who viewed your products but didn't convert, running display campaigns on competitor product pages, and reaching Amazon audiences across third-party sites. Streaming TV ads place your brand in front of Prime Video viewers. These formats are unavailable to sellers and represent a significant competitive advantage for vendors.</p>
+            <div class="hiw-step-fn">Brand Story module</div>
+            <h3>The first thing shoppers see, above your A+ Content</h3>
+            <p>The Brand Story module sits directly above your A+ Content on every product page and is the only section that appears on all your listings simultaneously. It introduces your brand — who you are, why you exist, what makes you different — and includes a direct link to your Brand Store. For FMCG brands building long-term loyalty, the Brand Story module is the most efficient brand-building real estate on Amazon: one build, every product page, always on.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">DSP retargeting</span>
-              <span class="hiw-step-tag">Competitor conquest</span>
-              <span class="hiw-step-tag">Programmatic display</span>
-              <span class="hiw-step-tag">Streaming TV ads</span>
-              <span class="hiw-step-tag">Off-Amazon audiences</span>
+              <span class="hiw-step-tag">Brand identity module</span>
+              <span class="hiw-step-tag">Values &amp; provenance</span>
+              <span class="hiw-step-tag">Store link integration</span>
+              <span class="hiw-step-tag">All ASINs simultaneously</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-2">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">TACoS optimisation</div>
-            <h3>The metric that actually measures advertising health</h3>
-            <p>We report on TACoS, not just ACoS. Every campaign is designed to improve organic keyword ranking as a primary outcome - with paid sales as the mechanism, not the end goal. For FMCG brands with strong conversion rates (typically 30 to 35 percent on Amazon), this flywheel effect compounds quickly. A brand ranking on page one for their hero keywords organically is a brand that can reduce ad spend without losing revenue.</p>
+            <div class="hiw-step-fn">Lifestyle &amp; feature modules</div>
+            <h3>Imagery and copy that does the work a bullet list cannot</h3>
+            <p>Each A+ module is designed to address a specific objection or reinforce a specific brand value. A lifestyle image showing the product in its natural usage context answers the "what is this actually like?" question that no amount of product specification can. A feature highlight block with iconography addresses the "what makes this worth the price?" objection. Every module earns its place by doing a specific conversion job.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">TACoS tracking</span>
-              <span class="hiw-step-tag">Organic rank monitoring</span>
-              <span class="hiw-step-tag">Keyword rank history</span>
-              <span class="hiw-step-tag">ROAS by campaign type</span>
+              <span class="hiw-step-tag">Lifestyle imagery</span>
+              <span class="hiw-step-tag">Feature highlight tiles</span>
+              <span class="hiw-step-tag">Ingredient callouts</span>
+              <span class="hiw-step-tag">Usage occasion shots</span>
+              <span class="hiw-step-tag">Quality credentials</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">AI-powered optimisation</div>
-            <h3>Faster iteration with machine learning in the loop</h3>
-            <p>Amazon's Performance+ campaign type uses machine learning to improve targeting and reduce cost per acquisition across Sponsored and DSP campaigns. We use these tools where they add value, layered over a human-reviewed campaign architecture that ensures your brand safety and category positioning are never compromised by automated decisions. The result is faster optimisation cycles without losing strategic control.</p>
+            <div class="hiw-step-fn">Comparison chart</div>
+            <h3>The cross-sell module that grows basket size</h3>
+            <p>The comparison chart module lets you place up to six of your own products side by side across up to twelve attributes. For FMCG brands with multiple SKUs — different flavours, sizes, formats, or use cases — a well-built comparison chart does two things: it helps shoppers find the right product for them, and it introduces them to products they did not know you made. In Premium A+, the chart is shoppable, with Add to Cart buttons for each product in the grid.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Performance+ campaigns</span>
-              <span class="hiw-step-tag">Dayparting</span>
-              <span class="hiw-step-tag">Rule-based automation</span>
-              <span class="hiw-step-tag">Weekly human review</span>
+              <span class="hiw-step-tag">Up to 6 products</span>
+              <span class="hiw-step-tag">12 attribute rows</span>
+              <span class="hiw-step-tag">Shoppable (Premium A+)</span>
+              <span class="hiw-step-tag">Range discovery</span>
+              <span class="hiw-step-tag">Basket size uplift</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Live performance dashboard</div>
-            <h3>Real-time visibility into every pound you spend</h3>
-            <p>Every Rosetta Brands partner brand has access to a live advertising dashboard. TACoS, ROAS, impression share, budget pacing, keyword ranking - all updating in real time. No more waiting for a weekly CSV. No more wondering whether your budget is going to last the month. You have the same view of your advertising that we do, at all times.</p>
+            <div class="hiw-step-fn">Mobile-first execution</div>
+            <h3>Designed for the screen where your customers actually shop</h3>
+            <p>Every module is designed and reviewed at mobile dimensions before it is finalised. Text within images is kept large enough to read on a 375px screen. Layouts are tested for how they stack on portrait mobile. Images are specified at the right aspect ratio for both desktop and mobile rendering without cropping. The majority of your shoppers will never see your A+ Content on a desktop — so we build for the device they are actually using.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Real-time spend tracking</span>
-              <span class="hiw-step-tag">TACoS &amp; ROAS by ASIN</span>
-              <span class="hiw-step-tag">Budget pacing alerts</span>
-              <span class="hiw-step-tag">Keyword rank history</span>
-              <span class="hiw-step-tag">Campaign-level breakdowns</span>
+              <span class="hiw-step-tag">Mobile dimension testing</span>
+              <span class="hiw-step-tag">Readable image text</span>
+              <span class="hiw-step-tag">Stacking layout review</span>
+              <span class="hiw-step-tag">Correct aspect ratios</span>
             </div>
           </div>
         </div>
@@ -1740,91 +1456,23 @@ a {
   <div class="container">
     <div class="proof-inner">
       <div class="proof-text fade-in">
-        <div class="section-tag">Performance that scales</div>
-        <h2>From <span>20% TACoS</span> to 11%. From under 2.0 ROAS to 2.8.</h2>
-        <p>These are results from a single brand partnership over 18 months. We inherited campaigns with no negative keyword lists, broad match burns, and no DSP activity. We rebuilt the architecture from scratch, introduced TACoS reporting, and activated DSP retargeting. Organic rank improved. Paid reliance fell. Revenue grew.</p>
-        <p>This is not a one-off result. It is the outcome of a structured, disciplined approach to Amazon advertising applied consistently across a brand's full product catalogue.</p>
+        <div class="section-tag">What the data shows</div>
+        <h2>Amazon's own numbers. <span>Not ours.</span></h2>
+        <p>The conversion uplift figures for A+ Content come from Amazon's own published data, not agency estimates. What varies is how much of that potential is realised — and that depends almost entirely on the quality of the strategy behind the content.</p>
+        <p>Generic A+ Content built without an objection-handling strategy typically delivers 3 to 5 percent improvement. Content built specifically to address the questions shoppers in your category are asking — with mobile-first execution, comparison charts, and a Brand Story that builds trust — regularly delivers the upper range and beyond.</p>
       </div>
       <div class="proof-stats fade-in fade-in-delay-1">
         <div class="proof-stat">
-          <div class="proof-stat-num"><span>20%</span> → 11%</div>
-          <div class="proof-stat-label">TACoS reduction over 18 months</div>
+          <div class="proof-stat-num">Up to <span>20%</span></div>
+          <div class="proof-stat-label">Sales uplift from Premium A+ Content — Amazon's published figure</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num">1.9 → <span>2.8x</span></div>
-          <div class="proof-stat-label">ROAS improvement across all campaigns</div>
+          <div class="proof-stat-num">Up to <span>8%</span></div>
+          <div class="proof-stat-label">Sales uplift from Basic A+ Content for any brand-registered vendor</div>
         </div>
         <div class="proof-stat">
-          <div class="proof-stat-num"><span>9x</span></div>
-          <div class="proof-stat-label">Annual revenue growth over 4 years as a Rosetta Brands partner</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TACOS EXPLAINER ═══ -->
-<section class="tacos-section">
-  <div class="container">
-    <div class="tacos-layout">
-      <div class="tacos-text fade-in">
-        <div class="section-tag">Understanding the metric</div>
-        <h2>Why <span>TACoS</span> is the only advertising metric that matters for FMCG</h2>
-        <p>ACoS measures ad spend as a percentage of revenue generated by ads alone. If you sell £1,000 through ads and spend £200 to do it, ACoS is 20 percent. It sounds useful until you realise it ignores the most important outcome of advertising on Amazon: organic rank improvement.</p>
-        <p>When your ad campaigns push a keyword ranking from page three to page one, the resulting organic sales are invisible in ACoS. TACoS captures the full picture: ad spend as a percentage of total revenue, including organic. A falling TACoS alongside stable or growing revenue tells you that advertising is working exactly as it should.</p>
-        <div class="tacos-formula">
-          <div class="tacos-formula-label">TACoS formula</div>
-          <div class="tacos-formula-eq">
-            TACoS = <em>Ad Spend</em> / <em>Total Revenue</em> (paid + organic)
-            <br><br>
-            Target for FMCG: <em>6% to 10%</em>
-          </div>
-        </div>
-      </div>
-      <div class="tacos-visual fade-in fade-in-delay-1">
-        <div class="flywheel-card">
-          <h4>The advertising flywheel</h4>
-          <div class="flywheel-steps">
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">1</div>
-              Ads drive purchases on target keywords
-            </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">2</div>
-              Purchase velocity improves keyword ranking
-            </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">3</div>
-              Higher rank drives more organic traffic
-            </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">4</div>
-              Organic sales grow - TACoS falls
-            </div>
-            <div class="flywheel-step">
-              <div class="flywheel-arrow">5</div>
-              Reinvest savings in new keywords and markets
-            </div>
-          </div>
-        </div>
-        <div class="benchmark-card">
-          <h4>FMCG benchmarks on Amazon</h4>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Target TACoS range</span>
-            <span class="benchmark-value good">6% to 10%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Typical ACoS (FMCG)</span>
-            <span class="benchmark-value">15% to 25%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">FMCG conversion rate</span>
-            <span class="benchmark-value">30% to 35%</span>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-metric">Subscribe &amp; Save uplift to LTV</span>
-            <span class="benchmark-value good">2x to 4x</span>
-          </div>
+          <div class="proof-stat-num"><span>+388%</span></div>
+          <div class="proof-stat-label">Annual revenue growth for a Rosetta Brands partner brand with a full content build at launch</div>
         </div>
       </div>
     </div>
@@ -1836,8 +1484,8 @@ a {
   <div class="container">
     <div class="quote-box fade-in">
       <span class="quote-mark">"</span>
-      <p class="quote-text">Before working with Rosetta Brands, I genuinely didn't understand how our advertising was performing. It just ran out and we topped it up. Now we have a live dashboard and a team who can explain exactly what every campaign is doing and why.</p>
-      <p class="quote-attribution">Founder, FMCG brand, Amazon UK</p>
+      <p class="quote-text">Our listings looked fine to us — we'd spent months on the photography. But once Rosetta rebuilt the A+ Content around the questions our customers were actually asking, conversion went up meaningfully within the first month. We hadn't realised how much the page was failing to answer.</p>
+      <p class="quote-attribution">Founder, premium food brand, Amazon UK</p>
     </div>
   </div>
 </section>
@@ -1847,51 +1495,33 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag" style="color:var(--pink);">Also in Growth Marketing</div>
-      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">Advertising is one part of the growth picture</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">Great advertising performance depends on great creative and content. Growth Marketing covers the full stack.</p>
+      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">A+ Content converts shoppers. These bring them in.</h2>
+      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">The listing is where the decision is made. Advertising and the Brand Store are what drive shoppers there in the first place.</p>
     </div>
     <div class="related-grid" style="margin-top:48px;">
-      <a href="brand-store.html" class="related-card coming-soon fade-in">
+      <a href="advertising.html" class="related-card fade-in">
+        <div class="related-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Advertising</h3>
+        <p>Sponsored Products campaigns drive shoppers to your product pages. A+ Content converts them once they arrive. The two compound each other.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      </a>
+      <a href="brand-store.html" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <h3>Brand Store</h3>
-        <p>A fully designed Amazon Brand Store that converts Sponsored Brand traffic, supports seasonal campaigns, and tells your brand story at the point of purchase.</p>
-        <span class="coming-badge">Coming soon</span>
-      </a>
-      <a href="aplus-content.html" class="related-card coming-soon fade-in fade-in-delay-1">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-        </div>
-        <h3>A+ Content</h3>
-        <p>Premium A+ and A+ Premium modules that raise conversion rates, reduce returns, and reinforce brand positioning at the product detail page level.</p>
-        <span class="coming-badge">Coming soon</span>
+        <p>The Brand Story module within A+ Content links directly to your Store. Shoppers who want to explore further land in a competitor-free environment where your full range is on display.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </a>
       <a href="key-feature-images.html" class="related-card coming-soon fade-in fade-in-delay-2">
         <div class="related-card-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         </div>
         <h3>Key Feature Images &amp; Lifestyle</h3>
-        <p>High-converting product imagery and lifestyle photography built specifically for Amazon's image carousel, designed to stop the scroll and drive the click.</p>
+        <p>The hero images in your listing carousel. The lifestyle imagery inside your A+ modules. The two services share creative assets and are most powerful when built together.</p>
         <span class="coming-badge">Coming soon</span>
-      </a>
-    </div>
-    <div class="related-grid" style="margin-top:20px;grid-template-columns:1fr 1fr;max-width:680px;margin-left:auto;margin-right:auto;">
-      <a href="product-launch.html" class="related-card coming-soon fade-in">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-        </div>
-        <h3>Product Launch</h3>
-        <p>Coordinated launch campaigns covering advertising, content, promotional pricing, and vine reviews to give new ASINs the best possible start.</p>
-        <span class="coming-badge">Coming soon</span>
-      </a>
-      <a href="vendor-access.html" class="related-card fade-in fade-in-delay-1">
-        <div class="related-card-icon" style="background:rgba(241,125,2,0.10);color:var(--orange);">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
-        </div>
-        <h3>Vendor Access &amp; Prime</h3>
-        <p>Advertising works best on a foundation of Prime status, Buy Box control, and full vendor infrastructure. See how it all fits together.</p>
-        <div class="related-card-link" style="color:var(--orange);">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </a>
     </div>
   </div>
@@ -1901,7 +1531,7 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box fade-in">
-      <h2 class="cta-title">Stop guessing. Start growing.</h2>
+      <h2 class="cta-title">Turn your listings into your best sales tool.</h2>
       <p class="cta-text">
         We work with UK FMCG brands who want to scale profitably on Amazon. Let's explore whether Vendor-As-A-Service is right for your brand.
       </p>
@@ -1924,53 +1554,53 @@ a {
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Common questions about Amazon advertising</h2>
+      <h2 class="section-title">Common questions about Amazon A+ Content</h2>
       <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--pink);font-weight:600;">FAQ page</a>.</p>
     </div>
     <div class="faq-list">
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What is TACoS and why does Rosetta Brands use it instead of ACoS?
+          What is Amazon A+ Content?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>TACoS stands for Total Advertising Cost of Sale and is calculated as ad spend divided by total revenue, including organic sales. ACoS only measures ad spend against paid sales, which ignores the most important benefit of advertising on Amazon: its impact on organic rank. A well-structured campaign that improves keyword ranking drives organic sales that don't appear in your ACoS at all. For FMCG brands, we target a TACoS of 6 to 10 percent as the right benchmark for sustainable, profitable growth.</p>
+          <p>Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the "From the manufacturer" section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          Do Rosetta Brands clients get access to Amazon DSP advertising?
+          What is the difference between Basic A+ and Premium A+ Content?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Yes. As a vendor rather than a seller, Rosetta Brands partner brands have access to the full Amazon DSP suite - including display retargeting, video, Streaming TV ads, and programmatic audiences built from Amazon's first-party shopping data. DSP access is typically restricted for sellers but is available to vendors, which is one of the significant advantages of the Rosetta Brands model.</p>
+          <p>Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats up to 1,464 pixels wide. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon's data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How do we track advertising performance in real time?
+          Does A+ Content affect search ranking on Amazon?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Every Rosetta Brands partner brand has access to a live performance dashboard showing advertising spend, TACoS, ROAS, impression share, and budget pacing in real time. You no longer need to wait for a weekly report or ask your account manager what is happening. The dashboard updates continuously so you always have full visibility of where your budget is going and what it is delivering.</p>
+          <p>A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How much should we be spending on advertising?
+          What should A+ Content include for FMCG brands?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>The right advertising budget depends on your category, your organic rank maturity, and your growth stage. For established FMCG brands, advertising spend typically runs at 8 to 15 percent of revenue. For brands in a growth phase or launching new products, it may be higher in the short term as campaigns build keyword history and organic rank. Rosetta Brands models the right investment level for each brand as part of onboarding, and reviews this quarterly as performance evolves.</p>
+          <p>Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery showing the product in context, a comparison chart featuring the full product range, a Brand Story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift.</p>
         </div>
       </div>
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          What ad formats does Rosetta Brands manage?
+          How does A+ Content work alongside a Brand Store and advertising?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
-          <p>Rosetta Brands manages the full Amazon advertising stack: Sponsored Products for keyword-level catalogue coverage, Sponsored Brands for brand awareness and Store traffic, Sponsored Display for product page retargeting and category conquest, and DSP for programmatic display, video, Streaming TV ads, and off-Amazon retargeting. The mix is calibrated to each brand's goals and category dynamics.</p>
+          <p>A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey.</p>
         </div>
       </div>
     </div>

@@ -68,6 +68,7 @@ PAGES = [
     'exclusive-amazon-programmes.html',
     'advertising.html',
     'brand-store.html',
+    'aplus-content.html',
 ]
 
 def strip_style_tags(fragment):
