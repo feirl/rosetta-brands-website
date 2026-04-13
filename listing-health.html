@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands</title>
-<meta name="description" content="Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.">
-<meta name="keywords" content="Amazon A+ Content design UK, enhanced brand content FMCG, Amazon EBC agency, A+ Premium Content, Amazon listing optimisation, product detail page conversion">
-<link rel="canonical" href="https://rosettabrands.co.uk/aplus-content.html">
-<meta property="og:title" content="Amazon A+ Content | Rosetta Brands">
-<meta property="og:description" content="Enhanced Amazon product listings built to convert. Brand storytelling, comparison charts, and Premium A+ modules for FMCG vendors.">
+<title>Listing Health &amp; Optimisation | Buy Box Monitoring &amp; ASIN Protection | Rosetta Brands</title>
+<meta name="description" content="Rosetta Brands' proprietary monitoring stack tracks Buy Box status, availability, pricing conflicts, and suppression risks across your entire ASIN catalogue — catching issues before they hit sales.">
+<meta name="keywords" content="Amazon Buy Box monitoring, ASIN health check, Amazon listing suppression fix, Buy Box recovery, Amazon Vendor catalogue health, FMCG Amazon listing optimisation">
+<link rel="canonical" href="https://rosettabrands.co.uk/listing-health.html">
+<meta property="og:title" content="Listing Health &amp; Optimisation | Rosetta Brands">
+<meta property="og:description" content="Every ASIN, monitored. Every issue, actioned. Rosetta's catalogue health technology keeps your listings protected around the clock.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/aplus-content.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/listing-health.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon A+ Content | Rosetta Brands">
-<meta name="twitter:description" content="Enhanced Amazon product listings built to convert for FMCG vendors.">
+<meta name="twitter:title" content="Listing Health &amp; Optimisation | Rosetta Brands">
+<meta name="twitter:description" content="Continuous Buy Box monitoring, suppression detection, and catalogue health management across your full ASIN range.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -24,10 +24,10 @@
 <link rel="stylesheet" href="rosetta.css">
 <style>
 
-/* ═══ PINK ACCENT OVERRIDES (Growth Marketing) ═══ */
+/* ═══ PURPLE ACCENT OVERRIDES (Platform) ═══ */
 :root {
-  --pink-light: rgba(225,82,134,0.10);
-  --pink-mid:   rgba(225,82,134,0.20);
+  --purple-light: rgba(127,134,193,0.10);
+  --purple-mid:   rgba(127,134,193,0.20);
 }
 
 section { width: 100%; }
@@ -40,7 +40,7 @@ section { width: 100%; }
 }
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 440px;
   gap: 64px;
   align-items: center;
 }
@@ -57,8 +57,8 @@ section { width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--pink-light);
-  color: var(--pink);
+  background: var(--purple-light);
+  color: var(--purple);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -77,7 +77,7 @@ section { width: 100%; }
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.page-hero h1 span { color: var(--pink); }
+.page-hero h1 span { color: var(--purple); }
 .hero-sub {
   font-size: 17px;
   color: var(--text-secondary);
@@ -87,183 +87,145 @@ section { width: 100%; }
 }
 .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-/* A+ Content preview card */
-.aplus-card {
+/* ═══ CATALOGUE MONITOR CARD ═══ */
+.monitor-card {
   background: var(--charcoal);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 }
-.aplus-card::before {
+.monitor-card::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
   width: 140px; height: 140px;
   border-radius: 50%;
-  background: rgba(225,82,134,0.10);
+  background: rgba(127,134,193,0.12);
   pointer-events: none;
 }
-.aplus-card-header {
-  padding: 20px 20px 0;
-}
-.aplus-card-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 16px;
-}
-
-/* Brand story strip */
-.aplus-brand-strip {
-  background: linear-gradient(90deg, rgba(225,82,134,0.20) 0%, rgba(127,134,193,0.15) 100%);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 12px 14px;
+.monitor-topbar {
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-.aplus-brand-logo {
-  width: 32px; height: 32px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.10);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: rgba(255,255,255,0.5);
-}
-.aplus-brand-text { flex: 1; }
-.aplus-brand-name {
+.monitor-brand {
   font-size: 11px;
   font-weight: 700;
-  color: white;
-  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
 }
-.aplus-brand-tagline {
-  font-size: 10px;
-  color: rgba(255,255,255,0.4);
-  margin-top: 1px;
-}
-.aplus-brand-badge {
+.monitor-live-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--pink);
-  background: var(--pink-light);
-  padding: 3px 7px;
+  color: #4ade80;
+  background: rgba(74,222,128,0.10);
+  border: 1px solid rgba(74,222,128,0.20);
+  padding: 3px 8px;
   border-radius: 4px;
-  border: 1px solid var(--pink-mid);
+}
+.monitor-live-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #4ade80;
   flex-shrink: 0;
 }
-
-/* Lifestyle image block */
-.aplus-lifestyle {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  padding: 14px;
-  margin-bottom: 12px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-.aplus-lifestyle-img {
-  width: 64px; height: 64px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.07);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.25);
-}
-.aplus-lifestyle-text { flex: 1; }
-.aplus-lifestyle-title {
-  font-family: var(--font-display);
-  font-size: 12px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 4px;
-}
-.aplus-lifestyle-desc {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  line-height: 1.5;
-}
-
-/* Comparison chart */
-.aplus-compare {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 0;
-}
-.aplus-compare-header {
+.monitor-col-headers {
   display: grid;
-  grid-template-columns: 1fr repeat(3, 64px);
+  grid-template-columns: 1fr 72px 74px 68px 66px;
+  padding: 10px 20px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   gap: 0;
-  padding: 8px 14px;
-  background: rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.aplus-compare-hcell {
+.monitor-col-hdr {
   font-size: 9px;
   font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.35);
-  text-align: center;
+  color: rgba(255,255,255,0.20);
 }
-.aplus-compare-hcell:first-child { text-align: left; color: rgba(255,255,255,0.5); }
-.aplus-compare-hcell.ours { color: var(--pink); }
-.aplus-compare-row {
+.monitor-rows {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.monitor-row {
   display: grid;
-  grid-template-columns: 1fr repeat(3, 64px);
+  grid-template-columns: 1fr 72px 74px 68px 66px;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 7px;
+  padding: 8px 10px;
   gap: 0;
-  padding: 7px 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
-.aplus-compare-row:last-child { border-bottom: none; }
-.aplus-compare-cell {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
+.monitor-asin {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+.m-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  white-space: nowrap;
+}
+.m-pill.ok  { background: rgba(74,222,128,0.12); color: #4ade80; }
+.m-pill.warn { background: rgba(255,180,30,0.12); color: rgba(255,180,30,0.9); }
+.m-pill.err  { background: rgba(248,113,113,0.12); color: #f87171; }
+.m-status {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+}
+.m-status.active   { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.25); }
+.m-status.flagged  { background: rgba(255,180,30,0.12); color: rgba(255,180,30,0.9); }
+.m-status.alert    { background: rgba(248,113,113,0.12); color: #f87171; }
+.monitor-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.aplus-compare-cell:first-child { text-align: left; justify-content: flex-start; color: rgba(255,255,255,0.6); font-size: 10px; }
-.check-yes { color: #4ade80; font-size: 13px; }
-.check-no { color: rgba(255,255,255,0.2); font-size: 13px; }
-
-.aplus-card-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  padding: 14px 20px;
+  justify-content: space-between;
+  padding: 10px 20px 14px;
   border-top: 1px solid rgba(255,255,255,0.07);
 }
-.aplus-footer-stat { text-align: center; }
-.aplus-footer-num {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 800;
-  color: white;
-  letter-spacing: -0.3px;
-  line-height: 1;
+.monitor-footer-stat {
+  font-size: 9px;
+  color: rgba(255,255,255,0.30);
+  letter-spacing: 0.03em;
 }
-.aplus-footer-num span { color: var(--pink); }
-.aplus-footer-lbl {
-  font-size: 10px;
-  color: rgba(255,255,255,0.35);
-  margin-top: 3px;
-  line-height: 1.3;
+.monitor-footer-stat strong { color: rgba(255,255,255,0.55); font-weight: 600; }
+.monitor-alert-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f87171;
+  background: rgba(248,113,113,0.10);
+  border: 1px solid rgba(248,113,113,0.18);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
 /* ═══ CHALLENGES ═══ */
@@ -285,7 +247,7 @@ section { width: 100%; }
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--pink);
+  background: var(--purple);
   border-radius: 2px;
 }
 .section-header h2 {
@@ -333,15 +295,15 @@ section { width: 100%; }
 .hiw-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .hiw-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; }
 .hiw-text .hiw-note {
-  background: var(--pink-light);
-  border: 1px solid var(--pink-mid);
+  background: var(--purple-light);
+  border: 1px solid var(--purple-mid);
   border-radius: 12px;
   padding: 14px 16px;
   font-size: 13px;
   color: var(--charcoal);
   line-height: 1.55;
 }
-.hiw-text .hiw-note strong { color: var(--pink); font-weight: 700; }
+.hiw-text .hiw-note strong { color: var(--purple); font-weight: 700; }
 
 .hiw-steps { display: flex; flex-direction: column; gap: 16px; }
 .hiw-step {
@@ -354,17 +316,17 @@ section { width: 100%; }
   align-items: flex-start;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.hiw-step:hover { border-color: var(--pink); box-shadow: 0 4px 20px rgba(225,82,134,0.08); }
+.hiw-step:hover { border-color: var(--purple); box-shadow: 0 4px 20px rgba(127,134,193,0.10); }
 .hiw-step-icon {
   width: 40px; height: 40px;
   border-radius: 10px;
-  background: var(--pink);
+  background: var(--purple);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0; color: white;
 }
 .hiw-step-icon svg { width: 18px; height: 18px; }
 .hiw-step-body { flex: 1; }
-.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pink); margin-bottom: 4px; }
+.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); margin-bottom: 4px; }
 .hiw-step-body h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
 .hiw-step-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .hiw-step-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -374,20 +336,20 @@ section { width: 100%; }
 .proof-section { background: var(--charcoal); padding: var(--section-pad) 0; }
 .proof-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .proof-text .section-tag { color: rgba(255,255,255,0.45); }
-.proof-text .section-tag::before { background: var(--pink); }
+.proof-text .section-tag::before { background: var(--purple); }
 .proof-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-.proof-text h2 span { color: var(--pink); }
+.proof-text h2 span { color: var(--purple); }
 .proof-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
 .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .proof-stat { text-align: center; padding: 20px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
 .proof-stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
-.proof-stat-num span { color: var(--pink); }
+.proof-stat-num span { color: var(--purple); }
 .proof-stat-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
 
 /* ═══ QUOTE ═══ */
 .quote-section { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
 .quote-box { max-width: 840px; margin: 0 auto; text-align: center; }
-.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--pink); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
+.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--purple); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
 .quote-text { font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 27px); font-weight: 500; color: var(--charcoal); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 20px; }
 .quote-attribution { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
 .quote-attribution strong { color: var(--charcoal); }
@@ -398,8 +360,8 @@ section { width: 100%; }
 .cta-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .cta-text { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto 32px; line-height: 1.65; }
 .cta-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.btn-cta-primary { background: var(--pink); color: white; }
-.btn-cta-primary:hover { background: #c73d72; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(225,82,134,0.35); }
+.btn-cta-primary { background: var(--purple); color: white; }
+.btn-cta-primary:hover { background: #6b72b5; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(127,134,193,0.35); }
 .btn-cta-ghost { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
 .btn-cta-ghost:hover { background: rgba(255,255,255,0.14); }
 .cta-note { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 20px; }
@@ -407,17 +369,20 @@ section { width: 100%; }
 
 /* ═══ RELATED ═══ */
 .related-section { padding: var(--section-pad) 0; }
-.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
 .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
-.related-card:hover { border-color: var(--pink); box-shadow: 0 4px 24px rgba(225,82,134,0.10); transform: translateY(-2px); }
-.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--pink-light); color: var(--pink); display: flex; align-items: center; justify-content: center; }
+.related-card:hover { border-color: var(--purple); box-shadow: 0 4px 24px rgba(127,134,193,0.10); transform: translateY(-2px); }
+.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--purple-light); color: var(--purple); display: flex; align-items: center; justify-content: center; }
 .related-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
 .related-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
-.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--pink); margin-top: 4px; }
+.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--purple); margin-top: 4px; }
 .related-card-link svg { width: 14px; height: 14px; }
 .related-card.coming-soon { opacity: 0.6; cursor: default; }
 .related-card.coming-soon:hover { border-color: var(--border); box-shadow: none; transform: none; }
 .coming-badge { display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--charcoal-05); color: var(--charcoal-50); padding: 3px 8px; border-radius: 4px; margin-top: 2px; align-self: flex-start; }
+
+/* ═══ FAQ ═══ */
+[hidden] { display: none !important; }
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
@@ -448,74 +413,73 @@ section { width: 100%; }
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/aplus-content.html",
-      "url": "https://rosettabrands.co.uk/aplus-content.html",
-      "name": "Amazon A+ Content | Enhanced Listings That Convert | Rosetta Brands",
-      "description": "Amazon A+ Content design for FMCG vendors. Enhanced product listings with brand storytelling, comparison charts, and Premium A+ modules that convert browsers into buyers.",
-      "inLanguage": "en-GB",
-      "isPartOf": { "@type": "WebSite", "url": "https://rosettabrands.co.uk", "name": "Rosetta Brands" },
-      "breadcrumb": { "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb" }
+      "@id": "https://rosettabrands.co.uk/listing-health.html",
+      "url": "https://rosettabrands.co.uk/listing-health.html",
+      "name": "Listing Health & Optimisation | Buy Box Monitoring & ASIN Protection | Rosetta Brands",
+      "description": "Rosetta Brands' proprietary monitoring stack tracks Buy Box status, availability, pricing conflicts, and suppression risks across your entire ASIN catalogue — catching issues before they hit sales.",
+      "isPartOf": { "@id": "https://rosettabrands.co.uk" },
+      "breadcrumb": { "@id": "https://rosettabrands.co.uk/listing-health.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/aplus-content.html#breadcrumb",
+      "@id": "https://rosettabrands.co.uk/listing-health.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk" },
         { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
-        { "@type": "ListItem", "position": 3, "name": "Growth Marketing", "item": "https://rosettabrands.co.uk/#growth-marketing" },
-        { "@type": "ListItem", "position": 4, "name": "A+ Content", "item": "https://rosettabrands.co.uk/aplus-content.html" }
+        { "@type": "ListItem", "position": 3, "name": "Platform", "item": "https://rosettabrands.co.uk/#platform" },
+        { "@type": "ListItem", "position": 4, "name": "Listing Health & Optimisation", "item": "https://rosettabrands.co.uk/listing-health.html" }
       ]
     },
     {
       "@type": "Service",
-      "name": "Amazon A+ Content Design",
-      "description": "Rosetta Brands designs Amazon A+ Content for FMCG vendor brands — enhanced product listings with brand storytelling, lifestyle imagery, comparison charts, and Premium A+ modules that address purchase objections and convert browsers into buyers.",
-      "serviceType": "Amazon A+ Content Design",
-      "url": "https://rosettabrands.co.uk/aplus-content.html",
+      "name": "Listing Health & Optimisation",
       "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
-      "areaServed": ["GB", "IE", "DE", "AU"]
+      "description": "Rosetta Brands' connected, purpose-built technology stack continuously monitors and optimises ASIN performance at scale — tracking Buy Box status, suppression risks, pricing conflicts, and postcode-level availability gaps with automated alerting and immediate action triggering.",
+      "serviceType": "Amazon Vendor Listing Health & ASIN Monitoring",
+      "url": "https://rosettabrands.co.uk/listing-health.html",
+      "areaServed": "United Kingdom"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Amazon A+ Content?",
+          "name": "How often does Rosetta monitor our ASINs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the 'From the manufacturer' section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent."
+            "text": "Our proprietary data extraction layer captures live signals at regular intervals, providing a near real-time view of catalogue health. The cadence is designed to detect issues quickly enough to take action before sales are meaningfully impacted — for most signal types, this means hourly captures. This is significantly more frequent than what Amazon's own Vendor Central alerts provide, and it runs continuously without manual intervention."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the difference between Basic A+ and Premium A+ Content?",
+          "name": "What types of issues does the monitoring detect?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic."
+            "text": "The monitoring stack covers the key performance drivers that most commonly impact ASIN sales: Buy Box status (won, lost, suppressed), product availability including postcode-level gaps, pricing anomalies and conflicts, listing suppression for any reason including compliance or data issues, and fulfilment status signals. When any of these move outside expected parameters, our system flags the issue and triggers the appropriate response."
           }
         },
         {
           "@type": "Question",
-          "name": "Does A+ Content affect search ranking on Amazon?",
+          "name": "How are issues resolved — automatically or by your team?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement."
+            "text": "It depends on the type of issue. Some actions can be triggered automatically through our automation platform — reducing the time between detection and resolution to minutes. Others require human judgement, and these are escalated directly into our team's workflow through our Interface CRM, where they are prioritised, tracked, and resolved with full transparency. The goal in every case is speed: catching issues before they accumulate and protecting sales performance."
           }
         },
         {
           "@type": "Question",
-          "name": "What should A+ Content include for FMCG brands?",
+          "name": "Do we get notified when a problem is found?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery that shows the product in context, a comparison chart featuring the full product range, a brand story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift."
+            "text": "Yes. Flagged issues surface through the client portal and via direct communication from your account team where action or awareness is needed. The level of notification is designed to be meaningful rather than overwhelming — you will not receive alerts for every signal change, but you will know promptly when something requires your attention or when a resolution has been completed on your behalf."
           }
         },
         {
           "@type": "Question",
-          "name": "How does A+ Content work alongside a Brand Store and advertising?",
+          "name": "Does listing health monitoring cover our full catalogue or just priority ASINs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey."
+            "text": "The monitoring covers your full ASIN catalogue as managed through Rosetta. There is no selection of priority SKUs — the system is designed to provide complete coverage. This matters because issues rarely appear only on your top-selling products, and an undetected problem on a secondary ASIN can grow into a meaningful revenue gap if left unresolved. All information is centralised in our cloud database, creating a single, consistent view of your entire catalogue's health."
           }
         }
       ]
@@ -525,6 +489,7 @@ section { width: 100%; }
 </script>
 </head>
 <body>
+
 <div id="nav-placeholder" data-inlined="true">
 <style>
 /* ═══════════════════════════════════════════
@@ -1198,113 +1163,95 @@ a {
 </div>
 </div>
 
-<main>
-
 <!-- ═══ HERO ═══ -->
 <section class="page-hero">
   <div class="container">
     <div class="hero-layout">
-
-      <div class="fade-in">
+      <!-- Left: copy -->
+      <div>
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-          <span>Services</span>
-          <svg viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span>Growth Marketing</span>
+          <a href="index.html" style="color:inherit;">Home</a>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2l4 4-4 4"/></svg>
+          <span>Platform</span>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2l4 4-4 4"/></svg>
+          <span style="color:var(--charcoal);">Listing Health &amp; Optimisation</span>
         </nav>
 
         <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          A+ Content
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/><circle cx="6" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
+          Platform
         </div>
 
-        <h1>Answer every question<br><span>before it gets asked.</span></h1>
+        <h1>Every ASIN, <span>monitored</span>.<br>Every issue, <span>actioned</span>.</h1>
 
-        <p class="hero-sub">
-          Most FMCG listings lose sales not because the product is wrong, but because the page leaves too many questions unanswered. A+ Content is your chance to address every purchase objection — with lifestyle imagery, brand storytelling, and comparison modules that convert browsers into buyers.
-        </p>
+        <p class="hero-sub">Rosetta's proprietary monitoring stack captures live signals across Buy Box status, availability, pricing conflicts, and suppression risks — across your entire catalogue, continuously.</p>
 
         <div class="hero-actions">
-          <button class="btn btn-lg btn-cta-primary">
-            Schedule a Call
-            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+          <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
+          <a href="pricing.html" class="btn btn-lg btn-secondary">Schedule a Call</a>
         </div>
       </div>
 
-      <!-- A+ Content Preview Card -->
-      <div class="aplus-card fade-in fade-in-delay-2" aria-hidden="true">
-        <div class="aplus-card-header">
-          <div class="aplus-card-label">A+ Content preview</div>
+      <!-- Right: catalogue monitor card -->
+      <div class="monitor-card">
+        <div class="monitor-topbar">
+          <span class="monitor-brand">Catalogue Monitor</span>
+          <span class="monitor-live-pill">
+            <span class="monitor-live-dot"></span>Live
+          </span>
+        </div>
 
-          <!-- Brand Story strip -->
-          <div class="aplus-brand-strip">
-            <div class="aplus-brand-logo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            </div>
-            <div class="aplus-brand-text">
-              <div class="aplus-brand-name">Your Brand Story</div>
-              <div class="aplus-brand-tagline">Crafted with care since 2014</div>
-            </div>
-            <span class="aplus-brand-badge">Brand Story</span>
+        <div class="monitor-col-headers">
+          <span class="monitor-col-hdr">ASIN</span>
+          <span class="monitor-col-hdr">Buy Box</span>
+          <span class="monitor-col-hdr">Availability</span>
+          <span class="monitor-col-hdr">Pricing</span>
+          <span class="monitor-col-hdr">Status</span>
+        </div>
+
+        <div class="monitor-rows">
+          <div class="monitor-row">
+            <span class="monitor-asin">B0CX12345K</span>
+            <span class="m-pill ok">✓ Won</span>
+            <span class="m-pill ok">✓ Stock</span>
+            <span class="m-pill ok">✓ OK</span>
+            <span class="m-status active">Active</span>
           </div>
-
-          <!-- Lifestyle image block -->
-          <div class="aplus-lifestyle">
-            <div class="aplus-lifestyle-img">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="aplus-lifestyle-text">
-              <div class="aplus-lifestyle-title">Why our quality stands apart</div>
-              <div class="aplus-lifestyle-desc">Premium ingredients, sourced responsibly. Every batch tested before it leaves our facility.</div>
-            </div>
+          <div class="monitor-row">
+            <span class="monitor-asin">B0DY67890M</span>
+            <span class="m-pill ok">✓ Won</span>
+            <span class="m-pill ok">✓ Stock</span>
+            <span class="m-pill warn">⚠ Conflict</span>
+            <span class="m-status flagged">Flagged</span>
           </div>
-
-          <!-- Comparison chart -->
-          <div class="aplus-compare">
-            <div class="aplus-compare-header">
-              <div class="aplus-compare-hcell">Feature</div>
-              <div class="aplus-compare-hcell ours">Ours</div>
-              <div class="aplus-compare-hcell">Var. 2</div>
-              <div class="aplus-compare-hcell">Var. 3</div>
-            </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">No artificial additives</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-            </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">Subscribe &amp; Save</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-            </div>
-            <div class="aplus-compare-row">
-              <div class="aplus-compare-cell">Amazon Business</div>
-              <div class="aplus-compare-cell"><span class="check-yes">✓</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-              <div class="aplus-compare-cell"><span class="check-no">—</span></div>
-            </div>
+          <div class="monitor-row">
+            <span class="monitor-asin">B0EZ11223N</span>
+            <span class="m-pill err">✗ Lost</span>
+            <span class="m-pill warn">⚠ Gap</span>
+            <span class="m-pill ok">✓ OK</span>
+            <span class="m-status alert">Alert</span>
+          </div>
+          <div class="monitor-row">
+            <span class="monitor-asin">B0FW44556P</span>
+            <span class="m-pill ok">✓ Won</span>
+            <span class="m-pill ok">✓ Stock</span>
+            <span class="m-pill ok">✓ OK</span>
+            <span class="m-status active">Active</span>
+          </div>
+          <div class="monitor-row">
+            <span class="monitor-asin">B0GX78901Q</span>
+            <span class="m-pill err">✗ Suppressed</span>
+            <span class="m-pill err">✗ Suppressed</span>
+            <span class="m-pill ok">✓ OK</span>
+            <span class="m-status alert">Alert</span>
           </div>
         </div>
 
-        <div class="aplus-card-footer">
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num">Up to <span>20%</span></div>
-            <div class="aplus-footer-lbl">Sales uplift, Premium A+</div>
-          </div>
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num"><span>5</span> modules</div>
-            <div class="aplus-footer-lbl">Per product page</div>
-          </div>
-          <div class="aplus-footer-stat">
-            <div class="aplus-footer-num"><span>0</span> returns</div>
-            <div class="aplus-footer-lbl">Surprise purchases</div>
-          </div>
+        <div class="monitor-footer">
+          <span class="monitor-footer-stat"><strong>47 ASINs</strong> · checked <strong>hourly</strong></span>
+          <span class="monitor-alert-pill">3 actions triggered</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1312,138 +1259,139 @@ a {
 <!-- ═══ CHALLENGES ═══ -->
 <section class="challenges">
   <div class="container">
-    <div class="section-header fade-in">
-      <div class="section-tag">What's at stake</div>
-      <h2>A standard listing is a <em style="font-style:italic;color:var(--pink);">missed opportunity</em> at every price point</h2>
-      <p>For FMCG brands selling on Amazon, the product detail page is the moment of decision. Most brands hand that moment to a wall of text and hope for the best.</p>
+    <div class="section-header">
+      <div class="section-tag">The Problem</div>
+      <h2>Listing issues cost more than you think</h2>
+      <p>Most Amazon Vendor brands find out about Buy Box losses, suppressions, and availability gaps after the damage is done — in the weekly sales report.</p>
     </div>
+
     <div class="pain-grid">
+
       <div class="pain-card fade-in">
         <div class="pain-number">01</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
-        <h3>Unanswered objections send shoppers to a competitor</h3>
-        <p>On Amazon, the shopper who does not buy does not leave empty-handed — they add a competitor's product to cart instead. For FMCG brands, conversion rates of 30 to 35 percent are achievable, but only when the listing gives shoppers enough information to act. Every unanswered question about ingredients, usage, or quality is a sale lost to the brand below yours on the page.</p>
+        <h3>Buy Box losses happen without warning</h3>
+        <p>By the time a sales dip surfaces in your reporting, the Buy Box may have been lost for hours or days. Amazon Vendor Central does not proactively alert you — it is your responsibility to notice, and most brands don't have the tooling to do so at pace.</p>
       </div>
+
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-number">02</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
         </div>
-        <h3>Standard listings break on mobile — where most shoppers are</h3>
-        <p>Over 70 percent of Amazon traffic is mobile. A bullet-point product description that reads clearly on desktop becomes a wall of text on a phone screen. Text baked into images becomes unreadable when scaled down. Most brands have never checked what their listing actually looks like on the device their customers are using. The answer is rarely encouraging.</p>
+        <h3>Suppressions stay live for days unnoticed</h3>
+        <p>A suppressed listing is invisible to shoppers — effectively switched off — yet it does not appear in your sales data until revenue drops. Compliance triggers, data quality issues, or content flags can suppress an ASIN with no notification to the brand.</p>
       </div>
+
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-number">03</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
-        <h3>Generic listings do not build brand equity — they erode it</h3>
-        <p>A product detail page with a white background photo and a five-bullet description signals nothing about why your brand is different. For premium FMCG brands, a generic listing actively undermines the perception you have built everywhere else. The listing is not just where sales are won or lost — it is where brand equity is tested at the precise moment a shopper is deciding whether to trust you.</p>
+        <h3>Regional availability gaps are invisible</h3>
+        <p>Postcode-level availability issues — where customers in specific regions cannot purchase your product — do not appear in standard Vendor Central reporting. These gaps compound silently, affecting sales velocity, rank, and customer experience without any visible trigger.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW WE DO IT ═══ -->
+<!-- ═══ HOW IT WORKS ═══ -->
 <section class="how-it-works">
   <div class="container">
     <div class="hiw-layout">
-      <div class="hiw-text fade-in">
-        <div class="section-tag">Our approach</div>
-        <h2>Strategy first. Design second.</h2>
-        <p>The most common mistake with A+ Content is treating it as a design project. It is not. It is a conversion problem. We begin by identifying the specific objections that are stopping your shoppers from buying, then build content that addresses those objections directly — in the format, order, and visual language that works for your category.</p>
+
+      <!-- Left: sticky text -->
+      <div class="hiw-text">
+        <div class="section-tag">How It Works</div>
+        <h2>A connected stack that monitors, detects, and acts</h2>
+        <p>Rosetta's listing health capability is not a dashboard you check — it is an active system that captures signals, identifies problems, and triggers responses without manual intervention.</p>
         <div class="hiw-note">
-          <strong>Premium A+ where eligible.</strong> For brands with an existing A+ catalogue and a published Brand Story, we unlock Premium A+ modules — including full-width video, interactive image hotspots, and enhanced comparison charts. Amazon's own data puts the uplift at up to 20 percent for Premium versus 8 percent for Basic.
+          <strong>Proactive, not reactive.</strong> The goal is to resolve issues before they reach your reporting — protecting sales performance rather than explaining why it dropped.
         </div>
       </div>
 
+      <!-- Right: steps -->
       <div class="hiw-steps">
 
         <div class="hiw-step fade-in">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Objection analysis</div>
-            <h3>Finding what is stopping shoppers from buying</h3>
-            <p>Before a single module is designed, we review the customer Q&A, one and two star reviews, and competitor listing weaknesses for your category. This reveals the specific questions shoppers are asking that your current listing is not answering. Ingredients, portion size, taste, quality provenance, usage occasion — the objections vary by category but the principle is the same: content that does not address the real questions does not convert.</p>
+            <div class="hiw-step-fn">Step 01</div>
+            <h3>Proprietary Data Extraction</h3>
+            <p>Our connected data layer captures live signals across the key performance drivers — Buy Box status, availability, pricing, and fulfilment — at regular intervals. This gives us a near real-time view of catalogue health across your entire ASIN range, without relying on Amazon's own delayed reporting.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Review mining</span>
-              <span class="hiw-step-tag">Q&amp;A analysis</span>
-              <span class="hiw-step-tag">Competitor benchmarking</span>
-              <span class="hiw-step-tag">Category research</span>
+              <span class="hiw-step-tag">Hourly cadence</span>
+              <span class="hiw-step-tag">All ASINs</span>
+              <span class="hiw-step-tag">4 signal types</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Brand Story module</div>
-            <h3>The first thing shoppers see, above your A+ Content</h3>
-            <p>The Brand Story module sits directly above your A+ Content on every product page and is the only section that appears on all your listings simultaneously. It introduces your brand — who you are, why you exist, what makes you different — and includes a direct link to your Brand Store. For FMCG brands building long-term loyalty, the Brand Story module is the most efficient brand-building real estate on Amazon: one build, every product page, always on.</p>
+            <div class="hiw-step-fn">Step 02</div>
+            <h3>Automated Anomaly Detection</h3>
+            <p>Captured data is processed through our automation platform, where rules and logic are applied to identify anomalies, performance drops, and compliance risks. The system knows what healthy looks like for your catalogue, and flags any deviation — large or small — for immediate review.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Brand identity module</span>
-              <span class="hiw-step-tag">Values &amp; provenance</span>
-              <span class="hiw-step-tag">Store link integration</span>
-              <span class="hiw-step-tag">All ASINs simultaneously</span>
+              <span class="hiw-step-tag">Rules-based logic</span>
+              <span class="hiw-step-tag">Suppression detection</span>
+              <span class="hiw-step-tag">Pricing conflicts</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-2">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Lifestyle &amp; feature modules</div>
-            <h3>Imagery and copy that does the work a bullet list cannot</h3>
-            <p>Each A+ module is designed to address a specific objection or reinforce a specific brand value. A lifestyle image showing the product in its natural usage context answers the "what is this actually like?" question that no amount of product specification can. A feature highlight block with iconography addresses the "what makes this worth the price?" objection. Every module earns its place by doing a specific conversion job.</p>
+            <div class="hiw-step-fn">Step 03</div>
+            <h3>Immediate Action Triggering</h3>
+            <p>When issues are identified — Buy Box suppression, pricing conflicts, or postcode-level availability gaps — actions are triggered immediately. Where possible, responses are automated. Where human judgement is needed, the issue escalates directly into our team's workflow with full context and priority assigned.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Lifestyle imagery</span>
-              <span class="hiw-step-tag">Feature highlight tiles</span>
-              <span class="hiw-step-tag">Ingredient callouts</span>
-              <span class="hiw-step-tag">Usage occasion shots</span>
-              <span class="hiw-step-tag">Quality credentials</span>
+              <span class="hiw-step-tag">Automated responses</span>
+              <span class="hiw-step-tag">Escalation pathways</span>
+              <span class="hiw-step-tag">Minimal downtime</span>
             </div>
           </div>
         </div>
 
-        <div class="hiw-step fade-in">
+        <div class="hiw-step fade-in fade-in-delay-3">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Comparison chart</div>
-            <h3>The cross-sell module that grows basket size</h3>
-            <p>The comparison chart module lets you place up to six of your own products side by side across up to twelve attributes. For FMCG brands with multiple SKUs — different flavours, sizes, formats, or use cases — a well-built comparison chart does two things: it helps shoppers find the right product for them, and it introduces them to products they did not know you made. In Premium A+, the chart is shoppable, with Add to Cart buttons for each product in the grid.</p>
+            <div class="hiw-step-fn">Step 04</div>
+            <h3>Centralised Data Layer</h3>
+            <p>All monitoring data is stored in our cloud-based database, creating a single, reliable source of truth for your catalogue. This consistency flows across reporting, analysis, and decision-making — and underpins the catalogue health view available through the Client Portal.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Up to 6 products</span>
-              <span class="hiw-step-tag">12 attribute rows</span>
-              <span class="hiw-step-tag">Shoppable (Premium A+)</span>
-              <span class="hiw-step-tag">Range discovery</span>
-              <span class="hiw-step-tag">Basket size uplift</span>
+              <span class="hiw-step-tag">Cloud database</span>
+              <span class="hiw-step-tag">Single source of truth</span>
+              <span class="hiw-step-tag">Portal connected</span>
             </div>
           </div>
         </div>
 
-        <div class="hiw-step fade-in fade-in-delay-1">
+        <div class="hiw-step fade-in fade-in-delay-3">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Mobile-first execution</div>
-            <h3>Designed for the screen where your customers actually shop</h3>
-            <p>Every module is designed and reviewed at mobile dimensions before it is finalised. Text within images is kept large enough to read on a 375px screen. Layouts are tested for how they stack on portrait mobile. Images are specified at the right aspect ratio for both desktop and mobile rendering without cropping. The majority of your shoppers will never see your A+ Content on a desktop — so we build for the device they are actually using.</p>
+            <div class="hiw-step-fn">Step 05</div>
+            <h3>Structured Workflow &amp; Client Visibility</h3>
+            <p>Through our Interface CRM, clients benefit from clear visibility into issue status and resolution progress. Issues are prioritised, tracked, and resolved efficiently — with full transparency. You always know what is happening with your listings and what actions have been taken.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Mobile dimension testing</span>
-              <span class="hiw-step-tag">Readable image text</span>
-              <span class="hiw-step-tag">Stacking layout review</span>
-              <span class="hiw-step-tag">Correct aspect ratios</span>
+              <span class="hiw-step-tag">CRM-managed workflow</span>
+              <span class="hiw-step-tag">Status transparency</span>
+              <span class="hiw-step-tag">Resolution tracking</span>
             </div>
           </div>
         </div>
@@ -1457,24 +1405,24 @@ a {
 <section class="proof-section">
   <div class="container">
     <div class="proof-inner">
-      <div class="proof-text fade-in">
-        <div class="section-tag">What the data shows</div>
-        <h2>Amazon's own numbers. <span>Not ours.</span></h2>
-        <p>The conversion uplift figures for A+ Content come from Amazon's own published data, not agency estimates. What varies is how much of that potential is realised — and that depends almost entirely on the quality of the strategy behind the content.</p>
-        <p>Generic A+ Content built without an objection-handling strategy typically delivers 3 to 5 percent improvement. Content built specifically to address the questions shoppers in your category are asking — with mobile-first execution, comparison charts, and a Brand Story that builds trust — regularly delivers the upper range and beyond.</p>
+      <div class="proof-text">
+        <div class="section-tag">The Numbers</div>
+        <h2>Catalogue health that <span>doesn't sleep</span></h2>
+        <p>Listing issues rarely announce themselves. The brands that protect their sales performance are the ones with monitoring infrastructure in place before something goes wrong — not the ones who look for answers after a bad week.</p>
+        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
       </div>
-      <div class="proof-stats fade-in fade-in-delay-1">
-        <div class="proof-stat">
-          <div class="proof-stat-num">Up to <span>20%</span></div>
-          <div class="proof-stat-label">Sales uplift from Premium A+ Content — Amazon's published figure</div>
+      <div class="proof-stats">
+        <div class="proof-stat fade-in">
+          <div class="proof-stat-num">1<span>hr</span></div>
+          <div class="proof-stat-label">Signal capture cadence — near real-time catalogue health</div>
         </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num">Up to <span>8%</span></div>
-          <div class="proof-stat-label">Sales uplift from Basic A+ Content for any brand-registered vendor</div>
+        <div class="proof-stat fade-in fade-in-delay-1">
+          <div class="proof-stat-num">100<span>%</span></div>
+          <div class="proof-stat-label">Full catalogue coverage — every ASIN, not just priority SKUs</div>
         </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num"><span>+388%</span></div>
-          <div class="proof-stat-label">Annual revenue growth for a Rosetta Brands partner brand with a full content build at launch</div>
+        <div class="proof-stat fade-in fade-in-delay-2">
+          <div class="proof-stat-num">0</div>
+          <div class="proof-stat-label">Manual checks required — the system monitors so you don't have to</div>
         </div>
       </div>
     </div>
@@ -1486,53 +1434,49 @@ a {
   <div class="container">
     <div class="quote-box fade-in">
       <span class="quote-mark">"</span>
-      <p class="quote-text">Our listings looked fine to us — we'd spent months on the photography. But once Rosetta rebuilt the A+ Content around the questions our customers were actually asking, conversion went up meaningfully within the first month. We hadn't realised how much the page was failing to answer.</p>
-      <p class="quote-attribution">Founder, premium food brand, Amazon UK</p>
+      <p class="quote-text">Listing issues used to catch us off guard. Now problems are picked up and resolved before we even know they've happened — the Buy Box is protected and the catalogue stays clean.</p>
+      <p class="quote-attribution"><strong>Sophie Smith</strong> — Rosetta Brands</p>
     </div>
   </div>
 </section>
 
 <!-- ═══ RELATED ═══ -->
-<section class="related-section" style="background:var(--off-white); border-top: 1px solid var(--border);">
+<section class="related-section">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag" style="color:var(--pink);">Also in Growth Marketing</div>
-      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">A+ Content converts shoppers. These bring them in.</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">The listing is where the decision is made. Advertising and the Brand Store are what drive shoppers there in the first place.</p>
+    <div class="section-header">
+      <div class="section-tag">Also on the Platform</div>
+      <h2>Monitoring is one piece of the stack</h2>
+      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">Listing health feeds directly into the broader Platform infrastructure — automation, analytics, and your client portal all connected.</p>
     </div>
     <div class="related-grid" style="margin-top:48px;">
-      <a href="advertising.html" class="related-card fade-in">
+
+      <a href="order-automation.html" class="related-card fade-in">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </div>
-        <h3>Advertising</h3>
-        <p>Sponsored Products campaigns drive shoppers to your product pages. A+ Content converts them once they arrive. The two compound each other.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Order Automation</h3>
+        <p>The operational backbone behind your Amazon Vendor account — from purchase order through to shipment and invoicing, fully automated and integrated with your existing systems.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="brand-store.html" class="related-card fade-in fade-in-delay-1">
+
+      <a href="client-portal.html" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3>Brand Store</h3>
-        <p>The Brand Story module within A+ Content links directly to your Store. Shoppers who want to explore further land in a competitor-free environment where your full range is on display.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Client Portal</h3>
+        <p>Listing health monitoring feeds directly into your portal's catalogue view. See which ASINs are healthy, which have active issues, and what actions have been taken — all in one place.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="key-feature-images.html" class="related-card fade-in fade-in-delay-2">
+
+      <div class="related-card coming-soon fade-in fade-in-delay-2">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
-        <h3>Key Feature Images &amp; Lifestyle</h3>
-        <p>The hero images in your listing carousel. The lifestyle imagery inside your A+ modules. The two services share creative assets and are most powerful when built together.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      </a>
-      <a href="product-launch.html" class="related-card fade-in fade-in-delay-3">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <h3>Product Launch</h3>
-        <p>A+ Content is built as part of every product launch. See how it fits into the full lifecycle from zero to best-seller category ranking.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      </a>
+        <h3>Reporting &amp; Analytics</h3>
+        <p>Full visibility across all Amazon Vendor data — retail analytics, proprietary forecasting, and category-level insights transformed into clear, actionable reporting for your team.</p>
+        <span class="coming-badge">Coming soon</span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1541,78 +1485,76 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box fade-in">
-      <h2 class="cta-title">Turn your listings into your best sales tool.</h2>
-      <p class="cta-text">
-        We work with UK FMCG brands who want to scale profitably on Amazon. Let's explore whether Vendor-As-A-Service is right for your brand.
-      </p>
+      <h2 class="cta-title">Stop finding out after the damage is done.</h2>
+      <p class="cta-text">Every hour a Buy Box is lost or a listing stays suppressed, sales are being missed. Rosetta's monitoring infrastructure keeps your catalogue protected — automatically, continuously, without manual effort.</p>
       <div class="cta-actions">
-        <button class="btn btn-lg btn-cta-primary">
-          Schedule a Call
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <a href="pricing.html" class="btn btn-lg btn-cta-ghost">View Pricing</a>
+        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
+        <a href="pricing.html" class="btn btn-lg btn-cta-ghost">Schedule a Call</a>
       </div>
-      <p class="cta-note">No commitment required <span>&middot;</span> Tailored to your brand <span>&middot;</span> Response within 24 hours</p>
+      <p class="cta-note">FMCG vendors only <span>·</span> UK market <span>·</span> Managed via Vendor Central</p>
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ═══ FAQ ═══ -->
-<section class="faq-section">
+<section style="background:var(--off-white);padding:var(--section-pad) 0;border-top:1px solid var(--border);">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Common questions about Amazon A+ Content</h2>
-      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--pink);font-weight:600;">FAQ page</a>.</p>
+    <div class="section-header" style="margin-bottom:48px;">
+      <div class="section-tag">FAQ</div>
+      <h2>Common questions</h2>
     </div>
-    <div class="faq-list">
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What is Amazon A+ Content?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Amazon A+ Content is a feature available to brand-registered vendors and sellers that allows them to replace the standard product description on a listing with rich multimedia content — lifestyle imagery, brand storytelling, comparison charts, video, and interactive modules. It appears in the "From the manufacturer" section of a product detail page and is designed to reduce purchase hesitation, answer customer questions, and increase conversion rate. Amazon's own data shows Basic A+ Content can increase sales by up to 8 percent and Premium A+ by up to 20 percent.</p>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          How often does Rosetta monitor our ASINs?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Our proprietary data extraction layer captures live signals at regular intervals, providing a near real-time view of catalogue health. The cadence is designed to detect issues quickly enough to act before sales are meaningfully impacted — for most signal types, this means hourly captures. This is significantly more frequent than Amazon's own Vendor Central alerts, and it runs continuously without manual intervention.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What is the difference between Basic A+ and Premium A+ Content?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Basic A+ Content allows up to 5 modules per product page from a set of standard image and text tiles. Premium A+ Content adds 19 further module types including full-width video, interactive image hotspots, enhanced comparison charts with Add to Cart buttons, and larger image formats up to 1,464 pixels wide. Premium A+ is available to eligible vendors and brand-registered sellers who have published a Brand Story and had at least 5 A+ Content projects approved in the past year. Amazon's data shows Premium A+ can deliver up to 20 percent sales uplift versus 8 percent for Basic.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          What types of issues does the monitoring detect?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          The monitoring stack covers the key performance drivers that most commonly affect ASIN sales: Buy Box status (won, lost, or suppressed), product availability including postcode-level gaps, pricing anomalies and conflicts, listing suppression for compliance or data reasons, and fulfilment status signals. When any of these move outside expected parameters, our system flags the issue and triggers the appropriate response.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          Does A+ Content affect search ranking on Amazon?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>A+ Content does not directly affect keyword ranking on Amazon. However, it has a significant indirect impact: better content reduces purchase hesitation, which improves conversion rate, which in turn improves sales velocity — a factor Amazon's algorithm does weight. Brands with strong A+ Content typically see better conversion rates, fewer returns, and higher review scores, all of which contribute to long-term ranking improvement.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          How are issues resolved — automatically or by your team?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          It depends on the issue type. Some actions can be triggered automatically through our automation platform — reducing the time between detection and resolution to minutes. Others require human judgement and are escalated directly into our team's workflow through our Interface CRM, where they are prioritised, tracked, and resolved with full transparency. The goal in every case is speed: catching issues before they accumulate and protecting sales performance.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What should A+ Content include for FMCG brands?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Effective A+ Content for FMCG brands addresses the specific objections that stop shoppers from purchasing — questions about ingredients, usage, portion size, taste, quality credentials, or how the product compares to alternatives. It should include lifestyle imagery showing the product in context, a comparison chart featuring the full product range, a Brand Story element that builds trust, and copy that is mobile-optimised and scannable. Generic brand content without a clear objection-handling strategy produces minimal uplift.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          Do we get notified when a problem is found?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Yes. Flagged issues surface through the Client Portal and via direct communication from your account team where action or awareness is needed. The level of notification is designed to be meaningful rather than overwhelming — you will not receive alerts for every signal change, but you will know promptly when something requires your attention, or when a resolution has been completed on your behalf.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          How does A+ Content work alongside a Brand Store and advertising?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>A+ Content, the Brand Store, and advertising work as an integrated content ecosystem on Amazon. Sponsored Brands ads drive shoppers to the Brand Store, where they browse the full range. When they click through to individual product pages, A+ Content is what converts them. The Brand Story module within A+ Content also links back to the Store, creating a loop that keeps shoppers within your brand world throughout their journey.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          Does monitoring cover our full catalogue or just priority ASINs?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          The monitoring covers your full ASIN catalogue as managed through Rosetta. There is no selection of priority SKUs — the system is designed to provide complete coverage. This matters because issues rarely appear only on your top-selling products, and an undetected problem on a secondary ASIN can grow into a meaningful revenue gap if left unresolved. All data is centralised in our cloud database, creating a single, consistent view of your entire catalogue's health.
         </div>
-      </div>
+      </details>
+
     </div>
   </div>
 </section>
@@ -1732,6 +1674,18 @@ a {
   </div>
 </footer>
 </div>
+
+<script>
+/* Fade-in on scroll */
+(function(){
+  const els = document.querySelectorAll('.fade-in');
+  if(!els.length) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
 
 </body>
 </html>
