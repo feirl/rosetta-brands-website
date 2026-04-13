@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Key Feature Images & Lifestyle Photography | Amazon Listings That Convert | Rosetta Brands</title>
-<meta name="description" content="Professional key feature images and lifestyle photography for Amazon listings. Amazon-compliant imagery built to convert for FMCG vendors and brands.">
-<meta name="keywords" content="Amazon key feature images UK, Amazon lifestyle photography FMCG, Amazon product photography agency, KFI Amazon, Amazon listing images, infographic images Amazon">
-<link rel="canonical" href="https://rosettabrands.co.uk/key-feature-images.html">
-<meta property="og:title" content="Key Feature Images & Lifestyle | Rosetta Brands">
-<meta property="og:description" content="Professional Amazon imagery that converts. Key feature images, lifestyle photography and infographics built for FMCG vendors.">
+<title>Reporting &amp; Analytics | Forecasting &amp; Amazon Vendor Insights | Rosetta Brands</title>
+<meta name="description" content="Rosetta Brands transforms Amazon Vendor data into clear, actionable insights — with proprietary forecasting models, external market intelligence, and a genuinely collaborative approach to strategy.">
+<meta name="keywords" content="Amazon Vendor reporting, Amazon Vendor analytics, FMCG Amazon forecasting, Amazon retail analytics, Amazon Vendor data insights, Amazon category intelligence UK">
+<link rel="canonical" href="https://rosettabrands.co.uk/reporting-analytics.html">
+<meta property="og:title" content="Reporting &amp; Analytics | Rosetta Brands">
+<meta property="og:description" content="Full visibility across all Amazon Vendor data — retail analytics, proprietary forecasting, and category-level insights delivered with genuine collaboration.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/key-feature-images.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/reporting-analytics.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Key Feature Images & Lifestyle | Rosetta Brands">
-<meta name="twitter:description" content="Amazon-compliant product imagery built to convert. Lifestyle photography, KFIs and infographics for FMCG vendors.">
+<meta name="twitter:title" content="Reporting &amp; Analytics | Rosetta Brands">
+<meta name="twitter:description" content="Amazon Vendor data, made actionable. Proprietary forecasting, category intelligence, and collaborative reporting built around your business.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -24,10 +24,10 @@
 <link rel="stylesheet" href="rosetta.css">
 <style>
 
-/* ═══ PINK ACCENT OVERRIDES (Growth Marketing) ═══ */
+/* ═══ PURPLE ACCENT OVERRIDES (Platform) ═══ */
 :root {
-  --pink-light: rgba(225,82,134,0.10);
-  --pink-mid:   rgba(225,82,134,0.20);
+  --purple-light: rgba(127,134,193,0.10);
+  --purple-mid:   rgba(127,134,193,0.20);
 }
 
 section { width: 100%; }
@@ -40,7 +40,7 @@ section { width: 100%; }
 }
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 440px;
   gap: 64px;
   align-items: center;
 }
@@ -57,8 +57,8 @@ section { width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--pink-light);
-  color: var(--pink);
+  background: var(--purple-light);
+  color: var(--purple);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -77,7 +77,7 @@ section { width: 100%; }
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.page-hero h1 span { color: var(--pink); }
+.page-hero h1 span { color: var(--purple); }
 .hero-sub {
   font-size: 17px;
   color: var(--text-secondary);
@@ -87,137 +87,251 @@ section { width: 100%; }
 }
 .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-/* ═══ IMAGE STACK CARD ═══ */
-.img-card {
+/* ═══ ANALYTICS REPORT CARD ═══ */
+.analytics-card {
   background: var(--charcoal);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 }
-.img-card::before {
+.analytics-card::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
   width: 140px; height: 140px;
   border-radius: 50%;
-  background: rgba(225,82,134,0.10);
+  background: rgba(127,134,193,0.12);
   pointer-events: none;
 }
-.img-card-header { padding: 20px 20px 0; }
-.img-card-label {
-  font-size: 10px; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255,255,255,0.35); margin-bottom: 16px;
+.analytics-topbar {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-/* Main image slot */
-.main-slot {
-  background: white; border-radius: 10px; height: 110px;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; margin-bottom: 10px; overflow: hidden;
+.analytics-brand {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
 }
-.main-slot-label {
-  position: absolute; top: 8px; left: 8px;
-  font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
-  color: rgba(0,0,0,0.35); background: rgba(0,0,0,0.06);
-  padding: 2px 6px; border-radius: 4px;
+.analytics-period-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: var(--purple-light);
+  border: 1px solid var(--purple-mid);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
-.main-slot-spec {
-  position: absolute; bottom: 7px; right: 8px;
-  font-size: 9px; font-weight: 600; color: rgba(0,0,0,0.25);
+
+/* Chart area */
+.chart-wrap {
+  padding: 16px 20px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-.main-slot-check {
-  position: absolute; top: 7px; right: 7px;
-  width: 18px; height: 18px; background: #4ade80;
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+.chart-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+  margin-bottom: 14px;
 }
-.main-slot-check svg { width: 10px; height: 10px; color: white; }
-.product-shape {
-  width: 44px; height: 68px;
-  background: linear-gradient(160deg, #e8e8e8 0%, #ccc 100%);
-  border-radius: 7px 7px 12px 12px;
-  position: relative;
-  box-shadow: 2px 4px 10px rgba(0,0,0,0.10);
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 72px;
 }
-.product-shape::before {
-  content: ''; position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
-  width: 16px; height: 10px; background: #c0c0c0; border-radius: 3px 3px 0 0;
+.chart-bar-group {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
 }
-.product-shape::after {
-  content: ''; position: absolute; top: 14px; left: 6px; right: 6px; height: 24px;
-  background: rgba(225,82,134,0.18); border-radius: 3px;
+.bar-actual {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: var(--purple);
+  opacity: 0.85;
+  min-height: 4px;
 }
-/* Slots grid */
-.slots-row {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 6px; margin-bottom: 10px;
+.bar-forecast {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  background: transparent;
+  border: 1px solid rgba(127,134,193,0.45);
+  border-bottom: none;
+  min-height: 4px;
 }
-.slot-thumb {
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px; padding: 8px 6px;
-  display: flex; flex-direction: column; align-items: center; gap: 5px;
+.bar-forecast.proj {
+  border-style: dashed;
+  background: rgba(127,134,193,0.08);
 }
-.slot-icon-wrap {
-  width: 28px; height: 28px; border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
+.chart-week-row {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
 }
-.slot-icon-wrap.angle { background: rgba(96,165,250,0.12); color: rgba(96,165,250,0.75); }
-.slot-icon-wrap.lifestyle { background: rgba(225,82,134,0.12); color: var(--pink); }
-.slot-icon-wrap.info { background: rgba(251,191,36,0.10); color: rgba(251,191,36,0.80); }
-.slot-icon-wrap.size { background: rgba(52,211,153,0.10); color: rgba(52,211,153,0.80); }
-.slot-icon-wrap svg { width: 13px; height: 13px; }
-.slot-name { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.30); text-align: center; line-height: 1.3; }
-/* Compliance */
-.compliance-pill {
-  display: flex; align-items: center; gap: 8px;
-  background: rgba(74,222,128,0.07); border: 1px solid rgba(74,222,128,0.15);
-  border-radius: 8px; padding: 7px 12px;
+.chart-week-lbl {
+  flex: 1;
+  text-align: center;
+  font-size: 8px;
+  color: rgba(255,255,255,0.18);
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
-.comp-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #4ade80; flex-shrink: 0;
-  animation: pulse-g 2s infinite;
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
 }
-@keyframes pulse-g { 0%,100%{opacity:1} 50%{opacity:0.35} }
-.comp-text { font-size: 10px; color: rgba(255,255,255,0.45); flex: 1; }
-.comp-text strong { color: rgba(74,222,128,0.9); font-weight: 700; }
-/* Card footer */
-.img-card-footer {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  padding: 14px 20px; border-top: 1px solid rgba(255,255,255,0.07); margin-top: 12px;
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: rgba(255,255,255,0.30);
+  font-weight: 600;
 }
-.img-footer-stat { text-align: center; }
-.img-footer-num {
-  font-family: var(--font-display); font-size: 17px; font-weight: 800;
-  color: white; letter-spacing: -0.3px; line-height: 1;
+.legend-dot-actual { width: 8px; height: 8px; border-radius: 2px; background: var(--purple); opacity: 0.85; }
+.legend-dot-forecast { width: 8px; height: 8px; border-radius: 2px; border: 1px solid rgba(127,134,193,0.45); background: transparent; }
+.legend-dot-proj { width: 8px; height: 8px; border-radius: 2px; border: 1px dashed rgba(127,134,193,0.45); background: rgba(127,134,193,0.08); }
+
+/* KPI row */
+.analytics-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-.img-footer-num span { color: var(--pink); }
-.img-footer-lbl { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 3px; line-height: 1.3; }
+.analytics-kpi {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 10px;
+}
+.analytics-kpi-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.analytics-kpi-value {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  line-height: 1;
+}
+.analytics-kpi-value span { color: var(--purple); }
+.analytics-kpi-delta {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #4ade80;
+  margin-top: 4px;
+}
+.analytics-kpi-delta.neutral { color: rgba(255,255,255,0.30); }
+
+/* Footer */
+.analytics-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 14px;
+}
+.analytics-footer-stat {
+  font-size: 9px;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.03em;
+}
+.analytics-footer-stat strong { color: rgba(255,255,255,0.55); font-weight: 600; }
+.report-ready-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4ade80;
+  background: rgba(74,222,128,0.10);
+  border: 1px solid rgba(74,222,128,0.20);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.report-ready-dot { width: 5px; height: 5px; border-radius: 50%; background: #4ade80; flex-shrink: 0; }
 
 /* ═══ CHALLENGES ═══ */
 .challenges { background: var(--white); padding: var(--section-pad) 0; }
 .section-header { text-align: center; margin-bottom: 56px; }
 .section-tag {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--text-secondary); margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
 }
 .section-tag::before {
-  content: ''; display: block; width: 20px; height: 2px;
-  background: var(--pink); border-radius: 2px;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--purple);
+  border-radius: 2px;
 }
 .section-header h2 {
-  font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px);
-  font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
 }
-.section-header p { font-size: 16px; color: var(--text-secondary); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+.section-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .pain-card {
-  background: var(--off-white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 28px; position: relative; overflow: hidden;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
 }
 .pain-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px; background: var(--charcoal-10);
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--charcoal-10);
 }
 .pain-number { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal-50); margin-bottom: 16px; }
 .pain-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--charcoal-05); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--charcoal); }
@@ -232,24 +346,38 @@ section { width: 100%; }
 .hiw-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .hiw-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; }
 .hiw-text .hiw-note {
-  background: var(--pink-light); border: 1px solid var(--pink-mid);
-  border-radius: 12px; padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.55;
+  background: var(--purple-light);
+  border: 1px solid var(--purple-mid);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--charcoal);
+  line-height: 1.55;
 }
-.hiw-text .hiw-note strong { color: var(--pink); font-weight: 700; }
+.hiw-text .hiw-note strong { color: var(--purple); font-weight: 700; }
+
 .hiw-steps { display: flex; flex-direction: column; gap: 16px; }
 .hiw-step {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 24px; display: flex; gap: 20px; align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.hiw-step:hover { border-color: var(--pink); box-shadow: 0 4px 20px rgba(225,82,134,0.08); }
+.hiw-step:hover { border-color: var(--purple); box-shadow: 0 4px 20px rgba(127,134,193,0.10); }
 .hiw-step-icon {
-  width: 40px; height: 40px; border-radius: 10px; background: var(--pink);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white;
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: white;
 }
 .hiw-step-icon svg { width: 18px; height: 18px; }
 .hiw-step-body { flex: 1; }
-.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pink); margin-bottom: 4px; }
+.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); margin-bottom: 4px; }
 .hiw-step-body h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
 .hiw-step-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .hiw-step-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -259,20 +387,20 @@ section { width: 100%; }
 .proof-section { background: var(--charcoal); padding: var(--section-pad) 0; }
 .proof-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 .proof-text .section-tag { color: rgba(255,255,255,0.45); }
-.proof-text .section-tag::before { background: var(--pink); }
+.proof-text .section-tag::before { background: var(--purple); }
 .proof-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-.proof-text h2 span { color: var(--pink); }
+.proof-text h2 span { color: var(--purple); }
 .proof-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
 .proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .proof-stat { text-align: center; padding: 20px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
 .proof-stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
-.proof-stat-num span { color: var(--pink); }
+.proof-stat-num span { color: var(--purple); }
 .proof-stat-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
 
 /* ═══ QUOTE ═══ */
 .quote-section { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
 .quote-box { max-width: 840px; margin: 0 auto; text-align: center; }
-.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--pink); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
+.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--purple); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
 .quote-text { font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 27px); font-weight: 500; color: var(--charcoal); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 20px; }
 .quote-attribution { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
 .quote-attribution strong { color: var(--charcoal); }
@@ -283,8 +411,8 @@ section { width: 100%; }
 .cta-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
 .cta-text { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto 32px; line-height: 1.65; }
 .cta-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.btn-cta-primary { background: var(--pink); color: white; }
-.btn-cta-primary:hover { background: #c73d72; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(225,82,134,0.35); }
+.btn-cta-primary { background: var(--purple); color: white; }
+.btn-cta-primary:hover { background: #6b72b5; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(127,134,193,0.35); }
 .btn-cta-ghost { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
 .btn-cta-ghost:hover { background: rgba(255,255,255,0.14); }
 .cta-note { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 20px; }
@@ -292,14 +420,17 @@ section { width: 100%; }
 
 /* ═══ RELATED ═══ */
 .related-section { padding: var(--section-pad) 0; }
-.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
 .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
-.related-card:hover { border-color: var(--pink); box-shadow: 0 4px 24px rgba(225,82,134,0.10); transform: translateY(-2px); }
-.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--pink-light); color: var(--pink); display: flex; align-items: center; justify-content: center; }
+.related-card:hover { border-color: var(--purple); box-shadow: 0 4px 24px rgba(127,134,193,0.10); transform: translateY(-2px); }
+.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--purple-light); color: var(--purple); display: flex; align-items: center; justify-content: center; }
 .related-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
 .related-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
-.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--pink); margin-top: 4px; }
+.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--purple); margin-top: 4px; }
 .related-card-link svg { width: 14px; height: 14px; }
+
+/* ═══ FAQ ═══ */
+[hidden] { display: none !important; }
 
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
@@ -330,50 +461,73 @@ section { width: 100%; }
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/key-feature-images.html",
-      "url": "https://rosettabrands.co.uk/key-feature-images.html",
-      "name": "Key Feature Images & Lifestyle Photography | Amazon Listings That Convert | Rosetta Brands",
-      "description": "Professional key feature images and lifestyle photography for Amazon listings. Amazon-compliant imagery built to convert for FMCG vendors and brands.",
-      "inLanguage": "en-GB",
-      "isPartOf": { "@type": "WebSite", "url": "https://rosettabrands.co.uk", "name": "Rosetta Brands" },
-      "breadcrumb": { "@id": "https://rosettabrands.co.uk/key-feature-images.html#breadcrumb" }
+      "@id": "https://rosettabrands.co.uk/reporting-analytics.html",
+      "url": "https://rosettabrands.co.uk/reporting-analytics.html",
+      "name": "Reporting & Analytics | Forecasting & Amazon Vendor Insights | Rosetta Brands",
+      "description": "Rosetta Brands transforms Amazon Vendor data into clear, actionable insights — with proprietary forecasting models, external market intelligence, and a genuinely collaborative approach to strategy.",
+      "isPartOf": { "@id": "https://rosettabrands.co.uk" },
+      "breadcrumb": { "@id": "https://rosettabrands.co.uk/reporting-analytics.html#breadcrumb" }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/key-feature-images.html#breadcrumb",
+      "@id": "https://rosettabrands.co.uk/reporting-analytics.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk/" },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk" },
         { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
-        { "@type": "ListItem", "position": 3, "name": "Growth Marketing", "item": "https://rosettabrands.co.uk/#growth-marketing" },
-        { "@type": "ListItem", "position": 4, "name": "Key Feature Images & Lifestyle", "item": "https://rosettabrands.co.uk/key-feature-images.html" }
+        { "@type": "ListItem", "position": 3, "name": "Platform", "item": "https://rosettabrands.co.uk/#platform" },
+        { "@type": "ListItem", "position": 4, "name": "Reporting & Analytics", "item": "https://rosettabrands.co.uk/reporting-analytics.html" }
       ]
     },
     {
       "@type": "Service",
-      "name": "Amazon Key Feature Images & Lifestyle Photography",
-      "description": "Rosetta Brands produces professional key feature images and lifestyle photography for Amazon FMCG vendors — seven fully optimised image slots, Amazon-compliant at every pixel, built to convert.",
-      "serviceType": "Amazon Product Photography",
-      "url": "https://rosettabrands.co.uk/key-feature-images.html",
+      "name": "Reporting & Analytics",
       "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
-      "areaServed": ["GB", "IE", "DE", "AU"]
+      "description": "Rosetta Brands provides full visibility across all Amazon Vendor data — transforming retail analytics and forecasting inputs into clear, actionable insights through proprietary forecasting models, external market intelligence, and close Amazon relationships.",
+      "serviceType": "Amazon Vendor Reporting & Analytics",
+      "url": "https://rosettabrands.co.uk/reporting-analytics.html",
+      "areaServed": "United Kingdom"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the difference between Key Feature Images and lifestyle photography?",
+          "name": "How is Rosetta's forecasting different from Amazon's standard projections?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Key Feature Images (KFIs) are infographic-style shots with text callouts, ingredient highlights, or benefit overlays. Lifestyle photography shows your product in a real-world setting in use. Both are essential: KFIs build the rational case; lifestyle shots create desire."
+            "text": "Amazon's standard projected orders are based on their own algorithms and often underestimate demand — particularly for growing brands or seasonal products. Rosetta's proprietary forecasting tools combine your historical actuals with advanced modelling to create forecasts that reflect the specific nuances of your business, product range, and growth trajectory. This leads to more accurate planning, better availability, and improved performance over time. We also integrate external data sources — including category trends and market signals — that Amazon's projections do not account for."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Amazon's Listing Media Score?",
+          "name": "How often do we receive reporting?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Amazon's Listing Media Score (LMS) measures the quality and completeness of your product imagery. Listings that fill all 7 image slots with varied content types score higher, contributing directly to search ranking, ad quality scores, and conversion rate."
+            "text": "Reporting cadence is built around your business rhythm. Most Rosetta clients receive regular reporting on a weekly or monthly basis, structured around the decisions and reviews that matter most. Data is available on an ongoing basis through the Client Portal, with structured reports delivered at agreed intervals. The goal is not to flood you with data, but to ensure every conversation with your team is informed by the clearest possible picture of your Amazon performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What external data sources does Rosetta incorporate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rosetta enhances Amazon Vendor data with external signals including category-level performance trends, wider e-commerce market data, and seasonal intelligence relevant to your product categories. This broader view ensures your strategy is not just reactive to what Amazon data shows, but informed by where the market is heading. It also helps contextualise your own performance — separating what is driven by your brand versus what is a category-wide movement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Amazon data does Rosetta have access to that we can't see ourselves?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rosetta's close working relationships with Amazon provide access to data points and insights not typically surfaced through standard Vendor Central access. This includes category-level benchmarking, retail intelligence shared through Amazon account relationships, and insights from programmes and tools that require an established vendor partnership to access. This gives Rosetta clients a more complete picture of their position and a genuine competitive edge in planning and strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the reporting just dashboards, or do we get proper analysis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rosetta's approach is deliberately collaborative rather than just self-service. While data is available through the Client Portal at any time, the reporting relationship involves genuine analysis — explaining what the numbers mean, what is driving changes, and what actions to take in response. We work alongside you as a strategic partner, not just a data supplier. The goal is to ensure every decision is informed, understood, and aligned with your commercial goals."
           }
         }
       ]
@@ -1057,122 +1211,120 @@ a {
 </div>
 </div>
 
-<main>
-
 <!-- ═══ HERO ═══ -->
 <section class="page-hero">
   <div class="container">
     <div class="hero-layout">
-
-      <div class="fade-in">
+      <!-- Left: copy -->
+      <div>
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-          <span>Services</span>
-          <svg viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span>Growth Marketing</span>
+          <a href="index.html" style="color:inherit;">Home</a>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2l4 4-4 4"/></svg>
+          <span>Platform</span>
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2l4 4-4 4"/></svg>
+          <span style="color:var(--charcoal);">Reporting &amp; Analytics</span>
         </nav>
 
         <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          Key Feature Images &amp; Lifestyle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Platform
         </div>
 
-        <h1>Your listing has <span>3 seconds</span><br>to win the click.</h1>
+        <h1>Data that <span>explains</span>.<br>Forecasts that <span>perform</span>.</h1>
 
-        <p class="hero-sub">
-          Professional key feature images and lifestyle photography built for Amazon's listing page. Seven fully optimised image slots, Amazon-compliant at every pixel — designed to convert, not just look good.
-        </p>
+        <p class="hero-sub">Rosetta transforms all Amazon Vendor data into clear, actionable insight — backed by proprietary forecasting models, external market intelligence, and a working relationship with Amazon that goes beyond the standard vendor dashboard.</p>
 
         <div class="hero-actions">
-          <button class="btn btn-lg btn-cta-primary">
-            Get a free image audit
-            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+          <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
+          <a href="pricing.html" class="btn btn-lg btn-secondary">Schedule a Call</a>
         </div>
       </div>
 
-      <!-- Image stack preview card -->
-      <div class="img-card fade-in fade-in-delay-2" aria-hidden="true">
-        <div class="img-card-header">
-          <div class="img-card-label">Amazon image stack &middot; 7 slots optimised</div>
+      <!-- Right: analytics report card -->
+      <div class="analytics-card">
+        <div class="analytics-topbar">
+          <span class="analytics-brand">Analytics Overview</span>
+          <span class="analytics-period-pill">Apr 2026</span>
+        </div>
 
-          <!-- Main image slot -->
-          <div class="main-slot">
-            <div class="main-slot-label">Slot 1 &middot; Main Image</div>
-            <div class="product-shape"></div>
-            <div class="main-slot-spec">2000 &times; 2000px</div>
-            <div class="main-slot-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="chart-wrap">
+          <div class="chart-label">Weekly Revenue — Actual vs Forecast</div>
+          <div class="chart-bars">
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:46px"></div>
+              <div class="bar-forecast"  style="height:44px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:54px"></div>
+              <div class="bar-forecast"  style="height:50px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:41px"></div>
+              <div class="bar-forecast"  style="height:46px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:62px"></div>
+              <div class="bar-forecast"  style="height:56px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:58px"></div>
+              <div class="bar-forecast"  style="height:55px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:70px"></div>
+              <div class="bar-forecast"  style="height:63px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:65px"></div>
+              <div class="bar-forecast"  style="height:68px"></div>
+            </div>
+            <div class="chart-bar-group">
+              <div class="bar-actual"    style="height:4px;opacity:0.15"></div>
+              <div class="bar-forecast proj" style="height:72px"></div>
             </div>
           </div>
-
-          <!-- Secondary slots row 1 -->
-          <div class="slots-row">
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap angle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-              </div>
-              <div class="slot-name">Angle<br>Slot 2</div>
-            </div>
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap angle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-              </div>
-              <div class="slot-name">Rear<br>Slot 3</div>
-            </div>
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap lifestyle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              </div>
-              <div class="slot-name">Lifestyle<br>Slot 4</div>
-            </div>
+          <div class="chart-week-row">
+            <span class="chart-week-lbl">W1</span>
+            <span class="chart-week-lbl">W2</span>
+            <span class="chart-week-lbl">W3</span>
+            <span class="chart-week-lbl">W4</span>
+            <span class="chart-week-lbl">W5</span>
+            <span class="chart-week-lbl">W6</span>
+            <span class="chart-week-lbl">W7</span>
+            <span class="chart-week-lbl">W8→</span>
           </div>
-
-          <!-- Secondary slots row 2 -->
-          <div class="slots-row">
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap lifestyle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <div class="slot-name">Lifestyle<br>Slot 5</div>
-            </div>
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap info">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/></svg>
-              </div>
-              <div class="slot-name">KFI<br>Slot 6</div>
-            </div>
-            <div class="slot-thumb">
-              <div class="slot-icon-wrap size">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3H3v18h18V3z"/><path d="M3 9h4M3 15h4M15 3v4M9 3v4"/></svg>
-              </div>
-              <div class="slot-name">Size Ref<br>Slot 7</div>
-            </div>
-          </div>
-
-          <!-- Compliance pill -->
-          <div class="compliance-pill">
-            <div class="comp-dot"></div>
-            <div class="comp-text"><strong>All 7 slots compliant</strong> &middot; RGB 255,255,255 &middot; 85%+ fill &middot; sRGB</div>
+          <div class="chart-legend">
+            <span class="chart-legend-item"><span class="legend-dot-actual"></span>Actual</span>
+            <span class="chart-legend-item"><span class="legend-dot-forecast"></span>Forecast</span>
+            <span class="chart-legend-item"><span class="legend-dot-proj"></span>Projection</span>
           </div>
         </div>
 
-        <div class="img-card-footer">
-          <div class="img-footer-stat">
-            <div class="img-footer-num"><span>+30</span>%</div>
-            <div class="img-footer-lbl">Engagement lift from lifestyle images</div>
+        <div class="analytics-kpi-row">
+          <div class="analytics-kpi">
+            <div class="analytics-kpi-label">Revenue YTD</div>
+            <div class="analytics-kpi-value">£2.4<span>M</span></div>
+            <div class="analytics-kpi-delta">↑ 34% YoY</div>
           </div>
-          <div class="img-footer-stat">
-            <div class="img-footer-num"><span>7</span>/7</div>
-            <div class="img-footer-lbl">Slots filled for max LMS score</div>
+          <div class="analytics-kpi">
+            <div class="analytics-kpi-label">Forecast Accuracy</div>
+            <div class="analytics-kpi-value">94<span>%</span></div>
+            <div class="analytics-kpi-delta neutral">vs Amazon baseline</div>
           </div>
-          <div class="img-footer-stat">
-            <div class="img-footer-num"><span>100</span>%</div>
-            <div class="img-footer-lbl">Brand-owned &mdash; yours to keep</div>
+          <div class="analytics-kpi">
+            <div class="analytics-kpi-label">Category Rank</div>
+            <div class="analytics-kpi-value">#<span>3</span></div>
+            <div class="analytics-kpi-delta">↑ 2 positions</div>
           </div>
+        </div>
+
+        <div class="analytics-card-footer">
+          <span class="analytics-footer-stat"><strong>Weekly</strong> reports · External category data</span>
+          <span class="report-ready-pill">
+            <span class="report-ready-dot"></span>Report ready
+          </span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1180,136 +1332,139 @@ a {
 <!-- ═══ CHALLENGES ═══ -->
 <section class="challenges">
   <div class="container">
-    <div class="section-header fade-in">
-      <div class="section-tag">What's at stake</div>
-      <h2>Poor imagery is a <em style="font-style:italic;color:var(--pink);">silent conversion killer</em> on every listing</h2>
-      <p>Most FMCG brands underestimate how much their product photography is costing them — in clicks, in conversions, and in suppressed listings.</p>
+    <div class="section-header">
+      <div class="section-tag">The Problem</div>
+      <h2>Data is not the same as insight</h2>
+      <p>Amazon Vendor generates a significant amount of data. Most FMCG brands receive it, struggle to interpret it, and end up making strategic decisions with an incomplete picture.</p>
     </div>
+
     <div class="pain-grid">
+
       <div class="pain-card fade-in">
         <div class="pain-number">01</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
         </div>
-        <h3>Non-compliant images get suppressed without warning</h3>
-        <p>Amazon's image standards are strict — wrong background colour, insufficient product fill, or low resolution under 1,000px can trigger automatic listing suppression. Most brands don't know until their sales drop. A single suppressed main image removes the Buy Box entirely until the issue is resolved.</p>
+        <h3>Amazon data is complex and hard to act on</h3>
+        <p>Vendor Central surfaces retail analytics, forecasting inputs, and operational data — but interpreting it meaningfully requires significant time and expertise. Most brands receive raw numbers and are left to draw their own conclusions, often without the context to do so accurately.</p>
       </div>
+
       <div class="pain-card fade-in fade-in-delay-1">
         <div class="pain-number">02</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3>Generic product shots leave sales on the table</h3>
-        <p>Shoppers spend 3–5 seconds deciding whether to click. A plain white-background product image tells them nothing about who it's for, how it's used, or why it's different. Your competitors' lifestyle shots are winning that decision every day — and their conversion rate reflects it.</p>
+        <h3>Standard forecasts underestimate your potential</h3>
+        <p>Amazon's projected orders are generated by their own algorithms and regularly fall short for growing brands or products with seasonal variation. Planning to Amazon's numbers means accepting a ceiling that was never calibrated to your business — leading to availability gaps and missed revenue.</p>
       </div>
+
       <div class="pain-card fade-in fade-in-delay-2">
         <div class="pain-number">03</div>
         <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
         </div>
-        <h3>Unfilled image slots drag down your Listing Media Score</h3>
-        <p>Amazon's Listing Media Score rewards brands that fill all 7 image slots with varied content types. Leaving slots empty — or filling them with near-duplicate angles — costs you ranking points and ad quality scores. There is no scenario where fewer images outperform more, assuming quality.</p>
+        <h3>You don't know what the market is doing</h3>
+        <p>Without external category data and market signals, your Amazon strategy operates in isolation. A flat week could be a brand issue, a category trend, or a seasonal shift — but without broader context, it is impossible to tell. Strategy built on internal data alone is always missing half the picture.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW WE DO IT ═══ -->
+<!-- ═══ HOW IT WORKS ═══ -->
 <section class="how-it-works">
   <div class="container">
     <div class="hiw-layout">
-      <div class="hiw-text fade-in">
-        <div class="section-tag">Our approach</div>
-        <h2>Seven slots. Seven jobs to do.</h2>
-        <p>Every image in your stack has a specific conversion objective. We plan each slot before a single image is produced — so there is no filler, no near-duplicate angles, and no guesswork about what each image is supposed to achieve.</p>
+
+      <!-- Left: sticky text -->
+      <div class="hiw-text">
+        <div class="section-tag">How It Works</div>
+        <h2>Every data source. One clear picture.</h2>
+        <p>Rosetta's analytics capability combines Amazon Vendor data, proprietary modelling, external market intelligence, and direct Amazon access into reporting that is genuinely useful — not just thorough.</p>
         <div class="hiw-note">
-          <strong>Assets you own for life.</strong> Everything we produce is brand-owned with full commercial rights. Your images work on Amazon today and across social, email, and retail packaging tomorrow — shot at 2,000px minimum so they're usable at any resolution.
+          <strong>Collaborative by design.</strong> We work alongside you — explaining what the numbers mean, what is driving them, and what to do about it. This is strategy partnership, not a data subscription.
         </div>
       </div>
 
+      <!-- Right: steps -->
       <div class="hiw-steps">
 
         <div class="hiw-step fade-in">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Compliance audit</div>
-            <h3>Finding what is failing before we build anything new</h3>
-            <p>Before we shoot anything, we audit your existing images against Amazon's current technical requirements: pure white RGB 255,255,255 background, 85%+ product fill, 2,000px minimum for zoom functionality, correct aspect ratio, and sRGB colour mode. We flag every non-compliant asset and establish exactly what needs replacing or creating from scratch.</p>
+            <div class="hiw-step-fn">Step 01</div>
+            <h3>Full Vendor Data Access</h3>
+            <p>Rosetta pulls all available Amazon Vendor data — retail analytics, forecasting inputs, traffic, conversion, availability, and operational signals — into a single, structured view. Nothing is left in Vendor Central for someone to remember to export. The data layer is comprehensive by default.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Background verification</span>
-              <span class="hiw-step-tag">Resolution check</span>
-              <span class="hiw-step-tag">Product fill measurement</span>
-              <span class="hiw-step-tag">Suppression risk audit</span>
+              <span class="hiw-step-tag">Retail analytics</span>
+              <span class="hiw-step-tag">Forecasting inputs</span>
+              <span class="hiw-step-tag">Operational data</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-1">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Image stack strategy</div>
-            <h3>Every slot mapped to a conversion objective before the brief is written</h3>
-            <p>We map each of the 7 image slots to a specific purpose: the main image that stops the scroll in search, the angles that build confidence, the lifestyle shots that create desire, the infographic that makes the rational case, the size reference that eliminates the final objection. Every slot is planned before any photography brief is issued.</p>
+            <div class="hiw-step-fn">Step 02</div>
+            <h3>Proprietary Forecasting Models</h3>
+            <p>Our forecasting tools go beyond Amazon's standard projections. By combining your historical actuals with advanced modelling, we produce forecasts that reflect the real nuances of your business — your product range, growth trajectory, and seasonal patterns. The result is more accurate planning, stronger availability, and better performance over time.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Slot planning</span>
-              <span class="hiw-step-tag">Conversion mapping</span>
-              <span class="hiw-step-tag">Category benchmarking</span>
-              <span class="hiw-step-tag">LMS optimisation</span>
+              <span class="hiw-step-tag">Historical actuals</span>
+              <span class="hiw-step-tag">Advanced modelling</span>
+              <span class="hiw-step-tag">Tailored to your brand</span>
             </div>
           </div>
         </div>
 
         <div class="hiw-step fade-in fade-in-delay-2">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Main image excellence</div>
-            <h3>The image that carries your entire click-through rate</h3>
-            <p>Your main image appears in search results, Sponsored Product ads, and every Amazon placement on the network. We ensure it is pixel-perfect — pure white background, product fully outside any packaging, correct fill, and sharp at 2,000px for zoom functionality. This single image carries your entire click-through rate, which is why we treat it as the most valuable asset in your stack.</p>
+            <div class="hiw-step-fn">Step 03</div>
+            <h3>External Market Intelligence</h3>
+            <p>We integrate external data sources — category-level performance trends, market signals, and wider e-commerce data — to give context that Amazon alone cannot provide. This ensures your strategy is informed by where the market is heading, not just where your brand has been. A flat week looks different when you know your whole category was down.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Pure white RGB 255,255,255</span>
-              <span class="hiw-step-tag">85%+ product fill</span>
-              <span class="hiw-step-tag">2,000px minimum</span>
-              <span class="hiw-step-tag">Zoom-ready</span>
+              <span class="hiw-step-tag">Category trends</span>
+              <span class="hiw-step-tag">Market signals</span>
+              <span class="hiw-step-tag">Seasonal context</span>
             </div>
           </div>
         </div>
 
-        <div class="hiw-step fade-in">
+        <div class="hiw-step fade-in fade-in-delay-3">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Key Feature Images &amp; infographics</div>
-            <h3>The images that make the rational case for buying</h3>
-            <p>Slots 5–6 are where we do our most impactful conversion work: infographic overlays highlighting 3–5 key benefits per SKU, ingredient and material callouts for FMCG products, certification badges (organic, non-GMO, cruelty-free), and mobile-first layouts that read clearly at 375px. We focus on outcomes over features — what the product does for the customer, not just what it contains.</p>
+            <div class="hiw-step-fn">Step 04</div>
+            <h3>Amazon Relationship Access</h3>
+            <p>Rosetta's close working relationship with Amazon provides access to insights and data points not typically available through standard Vendor Central access — including category benchmarking, retail intelligence, and insights from programmes that require an established vendor partnership. This gives Rosetta clients a more complete picture and a genuine competitive edge.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Benefit callouts</span>
-              <span class="hiw-step-tag">Ingredient highlights</span>
-              <span class="hiw-step-tag">Certification badges</span>
-              <span class="hiw-step-tag">Mobile-first text sizing</span>
+              <span class="hiw-step-tag">Category benchmarking</span>
+              <span class="hiw-step-tag">Retail intelligence</span>
+              <span class="hiw-step-tag">Programme access</span>
             </div>
           </div>
         </div>
 
-        <div class="hiw-step fade-in fade-in-delay-1">
+        <div class="hiw-step fade-in fade-in-delay-3">
           <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="hiw-step-body">
-            <div class="hiw-step-fn">Lifestyle photography brief</div>
-            <h3>Answering "is this for someone like me?" in under a second</h3>
-            <p>Lifestyle images answer the question shoppers are really asking before they buy. We create detailed photography briefs — covering setting, talent demographics, props, lighting, and in-use context — tailored to the specific FMCG category. Grocery products photographed in functioning kitchens. Health and beauty shown on real skin. Pet products with real animals in real homes. The brief is the product; the photography follows from it.</p>
+            <div class="hiw-step-fn">Step 05</div>
+            <h3>Collaborative Reporting &amp; Strategy</h3>
+            <p>Data and analysis are delivered through regular reporting — structured around your commercial calendar and the decisions that matter most. We work alongside you to explain what is driving performance, what the data recommends, and what actions to take. This is not a passive data delivery service — it is an active part of your Amazon strategy.</p>
             <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Setting &amp; context brief</span>
-              <span class="hiw-step-tag">Category-specific styling</span>
-              <span class="hiw-step-tag">In-use scenarios</span>
-              <span class="hiw-step-tag">Aspirational framing</span>
+              <span class="hiw-step-tag">Weekly reports</span>
+              <span class="hiw-step-tag">Strategic recommendations</span>
+              <span class="hiw-step-tag">Ongoing collaboration</span>
             </div>
           </div>
         </div>
@@ -1323,24 +1478,24 @@ a {
 <section class="proof-section">
   <div class="container">
     <div class="proof-inner">
-      <div class="proof-text fade-in">
-        <div class="section-tag">What the data shows</div>
-        <h2>The numbers behind <span>great imagery.</span></h2>
-        <p>The performance gap between a fully optimised 7-slot image stack and a sparse listing with 2–3 images is measurable. Amazon's own data on lifestyle engagement, the Listing Media Score impact on ranking, and the minimum zoom resolution are all published standards — not agency estimates.</p>
-        <p>What varies is how much of that potential is realised, and that depends almost entirely on the strategy behind each slot. Brands that treat imagery as a compliance exercise leave most of the available uplift on the table.</p>
+      <div class="proof-text">
+        <div class="section-tag">The Numbers</div>
+        <h2>Reporting that <span>changes decisions</span></h2>
+        <p>The brands that grow fastest on Amazon are not the ones with the most data — they are the ones who understand it best and act on it fastest. Rosetta's analytics infrastructure exists to close that gap.</p>
+        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
       </div>
-      <div class="proof-stats fade-in fade-in-delay-1">
-        <div class="proof-stat">
-          <div class="proof-stat-num">Up to <span>+30%</span></div>
-          <div class="proof-stat-label">Engagement lift from lifestyle images versus standard product shots</div>
+      <div class="proof-stats">
+        <div class="proof-stat fade-in">
+          <div class="proof-stat-num">All<span>.</span></div>
+          <div class="proof-stat-label">Vendor data captured — not just what Vendor Central surfaces by default</div>
         </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num"><span>7</span>/7</div>
-          <div class="proof-stat-label">Image slots filled to maximise Listing Media Score and ad quality</div>
+        <div class="proof-stat fade-in fade-in-delay-1">
+          <div class="proof-stat-num">+<span>3</span></div>
+          <div class="proof-stat-label">External data sources integrated beyond Amazon — category, market, and seasonal signals</div>
         </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num"><span>2,000</span>px</div>
-          <div class="proof-stat-label">Minimum we shoot at — the threshold for Amazon's full zoom function</div>
+        <div class="proof-stat fade-in fade-in-delay-2">
+          <div class="proof-stat-num">1<span>:1</span></div>
+          <div class="proof-stat-label">Collaborative reporting — analysis delivered with your team, not just to them</div>
         </div>
       </div>
     </div>
@@ -1352,53 +1507,49 @@ a {
   <div class="container">
     <div class="quote-box fade-in">
       <span class="quote-mark">"</span>
-      <p class="quote-text">Shoppers can't pick up your product. They can't smell it, feel the weight of it, or read the back of the pack in their own kitchen. Your images have to do all of that for them — in the time it takes to blink.</p>
-      <p class="quote-attribution">Rosetta Brands &mdash; Growth Marketing Team</p>
+      <p class="quote-text">The difference isn't just better numbers — it's understanding why they're moving and what to do about it. That's what Rosetta's reporting actually gives us.</p>
+      <p class="quote-attribution"><strong>Sophie Smith</strong> — Rosetta Brands</p>
     </div>
   </div>
 </section>
 
 <!-- ═══ RELATED ═══ -->
-<section class="related-section" style="background:var(--off-white); border-top: 1px solid var(--border);">
+<section class="related-section">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag" style="color:var(--pink);">Also in Growth Marketing</div>
-      <h2 class="section-title" style="font-family:var(--font-display);font-size:clamp(26px,2.8vw,34px);font-weight:700;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;">Great imagery works hardest inside a complete ecosystem.</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">Key feature images power your A+ Content modules, your Brand Store pages, and your Sponsored Brand creatives. Build everything together.</p>
+    <div class="section-header">
+      <div class="section-tag">Also on the Platform</div>
+      <h2>Analytics is the intelligence layer</h2>
+      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">The data that drives your reporting is generated by the operational stack underneath — automation, monitoring, and your client portal all feeding in.</p>
     </div>
     <div class="related-grid" style="margin-top:48px;">
-      <a href="aplus-content.html" class="related-card fade-in">
+
+      <a href="order-automation.html" class="related-card fade-in">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </div>
-        <h3>A+ Content</h3>
-        <p>Your lifestyle images feed directly into A+ Content modules. The two services share creative assets and are most powerful when built from the same brief and the same shoot.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Order Automation</h3>
+        <p>The operational backbone that generates the fulfilment and order data that flows into your analytics. Clean, automated data in means clean, reliable reporting out.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="brand-store.html" class="related-card fade-in fade-in-delay-1">
+
+      <a href="listing-health.html" class="related-card fade-in fade-in-delay-1">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         </div>
-        <h3>Brand Store</h3>
-        <p>A multi-page branded destination on Amazon that puts your imagery centre-stage — driving 83% higher dwell time and turning Sponsored Brand traffic into attributed sales.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Listing Health &amp; Optimisation</h3>
+        <p>ASIN-level health data — Buy Box status, suppression flags, pricing conflicts — feeds directly into catalogue analytics, giving your reporting full-catalogue context.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="advertising.html" class="related-card fade-in fade-in-delay-2">
+
+      <a href="client-portal.html" class="related-card fade-in fade-in-delay-2">
         <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <h3>Advertising</h3>
-        <p>Sponsored Products and Sponsored Brands campaigns use your main image and lifestyle shots as ad creative. Better imagery directly improves click-through rate and ROAS.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Client Portal</h3>
+        <p>The Reporting tab in your portal surfaces this data live — so you always have access to current performance between structured reports, without waiting for a scheduled call.</p>
+        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="product-launch.html" class="related-card fade-in fade-in-delay-3">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <h3>Product Launch</h3>
-        <p>Your full 7-image stack is built as part of every product launch. See how imagery fits into the lifecycle from listing to best-seller category ranking.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-      </a>
+
     </div>
   </div>
 </section>
@@ -1407,78 +1558,76 @@ a {
 <section class="cta-section">
   <div class="container">
     <div class="cta-box fade-in">
-      <h2 class="cta-title">See what your listings should look like.</h2>
-      <p class="cta-text">
-        We'll audit your current listing images for free — flagging compliance issues, missing slots, and conversion opportunities before we build a single asset.
-      </p>
+      <h2 class="cta-title">Stop guessing. Start knowing.</h2>
+      <p class="cta-text">Your Amazon Vendor data contains the answers. Rosetta provides the models, the context, and the collaboration to make those answers actually useful — on a regular basis, aligned with your business.</p>
       <div class="cta-actions">
-        <button class="btn btn-lg btn-cta-primary">
-          Get a free image audit
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <a href="pricing.html" class="btn btn-lg btn-cta-ghost">View Pricing</a>
+        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
+        <a href="pricing.html" class="btn btn-lg btn-cta-ghost">Schedule a Call</a>
       </div>
-      <p class="cta-note">No commitment required <span>&middot;</span> Tailored to your brand <span>&middot;</span> Response within 24 hours</p>
+      <p class="cta-note">FMCG vendors only <span>·</span> UK market <span>·</span> Managed via Vendor Central</p>
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ═══ FAQ ═══ -->
-<section class="faq-section">
+<section style="background:var(--off-white);padding:var(--section-pad) 0;border-top:1px solid var(--border);">
   <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-tag orange">Common Questions</div>
-      <h2 class="section-title">Common questions about Amazon product imagery</h2>
-      <p class="section-subtitle">Specific questions about this service. For broader questions about how Rosetta Brands works, visit our <a href="faq.html" style="color:var(--pink);font-weight:600;">FAQ page</a>.</p>
+    <div class="section-header" style="margin-bottom:48px;">
+      <div class="section-tag">FAQ</div>
+      <h2>Common questions</h2>
     </div>
-    <div class="faq-list">
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What is the difference between Key Feature Images and lifestyle photography?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Key Feature Images (KFIs) are infographic-style shots — your product on a clean background with text callouts, ingredient highlights, or benefit overlays that communicate specific product features visually. Lifestyle photography shows your product in a real-world setting, in use by a person or in a context that creates emotional resonance. Both are essential: KFIs build the rational case for buying; lifestyle shots create the desire to buy. We produce both as part of a complete 7-slot image stack strategy, planned before any brief is issued.</p>
+    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          How is Rosetta's forecasting different from Amazon's standard projections?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Amazon's standard projected orders are based on their own algorithms and often underestimate demand — particularly for growing brands or seasonal products. Rosetta's proprietary forecasting tools combine your historical actuals with advanced modelling to create forecasts that reflect the specific nuances of your business, product range, and growth trajectory. This leads to more accurate planning, better availability, and improved performance over time. We also integrate external data sources that Amazon's projections do not account for.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What are Amazon's rules about secondary images?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Your main image (Slot 1) has strict rules: pure white background (RGB 255,255,255), product outside packaging, no text or logos, and 85%+ product fill. Secondary images (Slots 2–7) are much more flexible — lifestyle backgrounds, text callouts, infographics, and props are all permitted. However, all images must accurately represent the product, meet the minimum 1,000px requirement (we shoot at 2,000px+), and stay within the 10 MB file size limit. For FMCG specifically, expiry dates and ingredient information must be clearly legible in at least one secondary image.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          How often do we receive reporting?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Reporting cadence is built around your business rhythm. Most Rosetta clients receive structured reporting on a weekly or monthly basis, aligned with the commercial decisions that matter most. Data is also available on an ongoing basis through the Client Portal, so you always have access to current performance between scheduled reports — without waiting for a call. The goal is not to flood you with data, but to ensure every conversation is informed by a clear picture of your Amazon performance.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          What is the Listing Media Score and why does it matter?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Amazon's Listing Media Score (LMS) measures the quality and completeness of your product imagery. Listings that fill all 7 image slots with varied content types — multiple angles, lifestyle shots, and infographics — score higher than sparse listings. A higher LMS contributes directly to your listing's search ranking, ad quality scores, and conversion rate. Brands with fewer than 7 images are leaving algorithmic ranking points on the table every day their listing is live. There is no scenario where fewer images outperform more, assuming the additional images are high quality.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          What external data sources does Rosetta incorporate?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Rosetta enhances Amazon Vendor data with external signals including category-level performance trends, wider e-commerce market data, and seasonal intelligence relevant to your product categories. This broader view ensures your strategy is not just reactive to Amazon data, but informed by where the market is heading. It also helps contextualise your own performance — separating what is driven by your brand from what is a category-wide movement.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          Can I use the images on other channels — social, email, retail?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Yes — and this is one of the most important reasons we position our imagery as brand-owned assets. Everything we produce is yours to keep and use across any channel with full commercial rights. Lifestyle shots work on Instagram and in email campaigns. Infographic images work in retail brochures and trade presentations. We shoot at 2,000px minimum — with Amazon's technical requirements as the floor, not the ceiling — so assets are high-resolution and usable far beyond the listing page.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          What Amazon data does Rosetta have access to that we can't see ourselves?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Rosetta's close working relationships with Amazon provide access to data points and insights not typically surfaced through standard Vendor Central access — including category-level benchmarking, retail intelligence shared through Amazon account relationships, and insights from programmes that require an established vendor partnership to access. This gives Rosetta clients a more complete picture and a genuine competitive edge in planning and strategy.
         </div>
-      </div>
-      <div class="faq-item fade-in">
-        <button class="faq-q" aria-expanded="false">
-          How does imagery connect to A+ Content, Brand Store, and advertising?
-          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" hidden>
-          <p>Imagery sits at the core of your entire Amazon content ecosystem. Your A+ Content uses the same lifestyle photography in its modules — meaning the two services share creative assets and are most powerful when built from the same brief. Your Brand Store pages are built around your hero imagery and lifestyle creative. Your Sponsored Brand ads pull from your main image and lifestyle shots, and better creative directly improves click-through rate and ROAS. When we produce your image stack, we plan it to serve all four channels simultaneously.</p>
+      </details>
+
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
+        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          Is the reporting just dashboards, or do we get proper analysis?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
+          Rosetta's approach is deliberately collaborative rather than just self-service. While data is available through the Client Portal at any time, the reporting relationship involves genuine analysis — explaining what the numbers mean, what is driving changes, and what actions to take in response. We work alongside you as a strategic partner, not just a data supplier. The goal is to ensure every decision is informed, understood, and aligned with your commercial goals.
         </div>
-      </div>
+      </details>
+
     </div>
   </div>
 </section>
@@ -1599,6 +1748,17 @@ a {
 </footer>
 </div>
 
+<script>
+/* Fade-in on scroll */
+(function(){
+  const els = document.querySelectorAll('.fade-in');
+  if(!els.length) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  els.forEach(el=>io.observe(el));
+})();
+</script>
 
 </body>
 </html>

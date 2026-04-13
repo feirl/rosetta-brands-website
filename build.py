@@ -74,6 +74,7 @@ PAGES = [
     'order-automation.html',
     'client-portal.html',
     'listing-health.html',
+    'reporting-analytics.html',
 ]
 
 def strip_style_tags(fragment):
