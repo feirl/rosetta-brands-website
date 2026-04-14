@@ -60,6 +60,7 @@ PAGES = [
     'index.html',
     'amazon-vendors.html',
     'amazon-sellers.html',
+    'new-to-amazon.html',
     'fulfilment.html',
     'pricing.html',
     'vendor-access.html',
