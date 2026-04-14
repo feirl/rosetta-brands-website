@@ -61,6 +61,7 @@ PAGES = [
     'amazon-vendors.html',
     'amazon-sellers.html',
     'new-to-amazon.html',
+    'amazon-agencies.html',
     'fulfilment.html',
     'pricing.html',
     'vendor-access.html',
