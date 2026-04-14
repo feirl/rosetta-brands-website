@@ -327,6 +327,62 @@
 .proof-outcome-text strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 2px; }
 .proof-outcome-text span { font-size: 13px; color: var(--text-secondary); }
 
+/* ═══ THREE PILLARS ═══ */
+.pillars-section { padding: var(--section-pad) 0; background: var(--off-white); border-top: 1px solid var(--border); }
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pillar-card:hover { box-shadow: 0 8px 32px rgba(45,41,51,0.08); transform: translateY(-2px); }
+.pillar-header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.pillar-header.ph-orange { background: var(--orange-light); }
+.pillar-header.ph-pink   { background: var(--pink-light); }
+.pillar-header.ph-purple { background: var(--purple-light); }
+.pillar-header-icon { width: 36px; height: 36px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
+.pillar-header-icon svg { width: 16px; height: 16px; }
+.ph-orange .pillar-header-icon { background: var(--orange); }
+.ph-pink   .pillar-header-icon { background: var(--pink); }
+.ph-purple .pillar-header-icon { background: var(--purple); }
+.pillar-name { font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.ph-orange .pillar-name { color: var(--orange); }
+.ph-pink   .pillar-name { color: var(--pink); }
+.ph-purple .pillar-name { color: var(--purple); }
+.pillar-body { padding: 24px; }
+.pillar-body h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; line-height: 1.25; }
+.pillar-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+.pillar-services { list-style: none; padding: 0 12px 20px; display: flex; flex-direction: column; gap: 2px; margin-top: auto; }
+.pillar-services a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.pillar-services a svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.3; transition: opacity 0.15s, transform 0.15s; }
+.ps-orange a:hover { background: var(--orange-light); color: var(--orange); }
+.ps-orange a:hover svg { opacity: 1; transform: translateX(2px); }
+.ps-pink a:hover { background: var(--pink-light); color: var(--pink); }
+.ps-pink a:hover svg { opacity: 1; transform: translateX(2px); }
+.ps-purple a:hover { background: var(--purple-light); color: var(--purple); }
+.ps-purple a:hover svg { opacity: 1; transform: translateX(2px); }
+
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 1024px) {
   :root { --section-pad: 72px; }
@@ -334,6 +390,7 @@
   .section-title { font-size: 32px; }
   .challenge-grid { grid-template-columns: 1fr; }
   .solution-map-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .proof-inner { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
@@ -1161,9 +1218,7 @@ a {
       </h1>
 
       <p class="hero-sub fade-in fade-in-delay-2">
-        Most FMCG brands with Amazon vendor accounts are leaving significant margin on the table.
-        Chargebacks, compliance complexity, underutilised programs, and operational drag
-        are costing you more than you realise.
+        Most FMCG brands with Amazon vendor accounts are leaving significant margin on the table — and significant growth opportunity untouched. Chargebacks, compliance gaps, underutilised programmes, and a lack of real-time visibility are costing you more than you realise.
       </p>
 
       <div class="hero-b-actions fade-in fade-in-delay-3">
@@ -1242,66 +1297,83 @@ a {
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SOLUTION MAPPING
+     THREE PILLARS
      ═══════════════════════════════════════════ -->
-<section class="solution-map-section" id="how-it-works">
+<section class="pillars-section" id="how-it-works">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-tag orange">How We Help</div>
-      <h2 class="section-title">Challenge mapped. Solution delivered.</h2>
+      <h2 class="section-title">The complete Amazon Vendor partner</h2>
       <p class="section-subtitle">
-        We don't just manage your vendor account. We become your Amazon vendor account. We take ownership of every aspect of it.
+        Rosetta operates across three integrated areas — running your vendor account, growing your brand on Amazon, and providing the technology that keeps everything visible and efficient.
       </p>
     </div>
 
-    <div class="solution-map-grid">
-      <div class="solution-map-card fade-in">
-        <div class="solution-map-challenge">Challenge 01 – Costs &amp; Cash Flow</div>
-        <h3 class="solution-map-title">No fees. Paid on delivery.</h3>
-        <p class="solution-map-desc">
-          Traditional vendor arrangements mean 90-day EOM payment terms, vendor fees, chargebacks, returns,
-          overstock, damage, prep, and late fees. With Rosetta Brands, that entire cost structure disappears.
-          You're paid in full on 45-day EOM on proof of delivery.
-        </p>
-        <ul class="solution-map-features">
-          <li><span class="smap-dot"></span> 100% of chargebacks absorbed by Rosetta Brands</li>
-          <li><span class="smap-dot"></span> No returns, overstock, damage, prep, or late fees</li>
-          <li><span class="smap-dot"></span> Paid in full – 45 days EOM on proof of delivery</li>
-          <li><span class="smap-dot"></span> No vendor fees or variable cost deductions</li>
+    <div class="pillars-grid">
+
+      <!-- ── PILLAR 1: Vendor-as-a-Service ── -->
+      <div class="pillar-card fade-in">
+        <div class="pillar-header ph-orange">
+          <div class="pillar-header-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="pillar-name">Vendor-as-a-Service</span>
+        </div>
+        <div class="pillar-body">
+          <h3>We run your vendor account</h3>
+          <p>Every operational challenge — chargebacks, compliance, fulfilment, terms negotiations, and exclusive programmes — handled by a dedicated cross-functional team with direct Amazon access.</p>
+        </div>
+        <ul class="pillar-services ps-orange">
+          <li><a href="vendor-access.html">Vendor Access &amp; Prime <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="fulfilment.html">Fulfilment &amp; Logistics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="vendor-management-team.html">Vendor Management Team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="compliance-escalation.html">Compliance &amp; Escalation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="international-expansion.html">International Expansion <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="exclusive-amazon-programmes.html">Exclusive Amazon Programmes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
         </ul>
       </div>
 
-      <div class="solution-map-card fade-in fade-in-delay-1">
-        <div class="solution-map-challenge">Challenge 02 – Logistics &amp; Operations</div>
-        <h3 class="solution-map-title">Simple. Predictable. Automated.</h3>
-        <p class="solution-map-desc">
-          Case pack ordering issues, intermittent POs, and manual processing across up to 31 fulfilment
-          centres creates constant operational chaos. We consolidate everything: weekly Monday POs,
-          automated shipping labels in minutes, delivery to a single FC.
-        </p>
-        <ul class="solution-map-features">
-          <li><span class="smap-dot"></span> Weekly Monday PO – predictable, never intermittent</li>
-          <li><span class="smap-dot"></span> Automated shipping labels generated in minutes</li>
-          <li><span class="smap-dot"></span> Single FC delivery – not 31 separate shipments</li>
-          <li><span class="smap-dot"></span> EDI &amp; labelling compliance fully managed</li>
+      <!-- ── PILLAR 2: Growth Marketing ── -->
+      <div class="pillar-card fade-in fade-in-delay-1">
+        <div class="pillar-header ph-pink">
+          <div class="pillar-header-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="pillar-name">Growth Marketing</span>
+        </div>
+        <div class="pillar-body">
+          <h3>We grow your brand on Amazon</h3>
+          <p>Advertising, creative, and content services that build presence, drive traffic, and convert it — from AI-powered campaigns to product launch strategy across your full catalogue.</p>
+        </div>
+        <ul class="pillar-services ps-pink">
+          <li><a href="advertising.html">Advertising <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="brand-store.html">Brand Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="aplus-content.html">A+ Content <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="key-feature-images.html">Key Feature Images &amp; Lifestyle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="product-launch.html">Product Launch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
         </ul>
       </div>
 
-      <div class="solution-map-card fade-in fade-in-delay-2">
-        <div class="solution-map-challenge">Challenge 03 – Expertise &amp; Growth</div>
-        <h3 class="solution-map-title">A full team. Not just a contact.</h3>
-        <p class="solution-map-desc">
-          Most brands rely on internal resource alone to manage their Amazon account. With Rosetta Brands,
-          you get a dedicated team across every function – from onboarding through to advertising,
-          technical management, and orders &amp; finance.
-        </p>
-        <ul class="solution-map-features">
-          <li><span class="smap-dot"></span> Dedicated Account Manager + Onboarding Team</li>
-          <li><span class="smap-dot"></span> Marketing, Advertising &amp; Technical specialists</li>
-          <li><span class="smap-dot"></span> Orders &amp; Finance team managing your account daily</li>
-          <li><span class="smap-dot"></span> Exclusive Amazon programs and marketplaces activated as standard</li>
+      <!-- ── PILLAR 3: Platform ── -->
+      <div class="pillar-card fade-in fade-in-delay-2">
+        <div class="pillar-header ph-purple">
+          <div class="pillar-header-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="pillar-name">Platform</span>
+        </div>
+        <div class="pillar-body">
+          <h3>We give you complete visibility</h3>
+          <p>Purpose-built technology that automates your operations, monitors your catalogue health, and surfaces live performance data — so nothing happens in your Amazon account without you knowing.</p>
+        </div>
+        <ul class="pillar-services ps-purple">
+          <li><a href="order-automation.html">Order Automation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="client-portal.html">Client Portal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="listing-health.html">Listing Health &amp; Optimisation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
+          <li><a href="reporting-analytics.html">Reporting &amp; Analytics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
@@ -1527,7 +1599,7 @@ a {
             <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a" hidden>
-            <p>Having vendor access is only the starting point. Most brands with vendor accounts are leaving significant margin on the table through chargebacks, poor compliance, unoptimised content, and missed promotional programmes. Rosetta Brands takes over the operational complexity so your vendor account performs at its full potential.</p>
+            <p>Having vendor access is only the starting point. Most FMCG brands with vendor accounts are leaving margin on the table through chargebacks and compliance gaps, leaving growth untouched through underutilised advertising and content, and operating without the real-time visibility needed to protect catalogue health. Rosetta Brands takes ownership across all three areas: the operational management of your vendor account, the growth marketing that builds your brand on Amazon, and the technology platform that keeps everything visible and efficient.</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -1546,6 +1618,15 @@ a {
           </button>
           <div class="faq-a" hidden>
             <p>Agencies manage your account on your behalf. Rosetta Brands operates as the vendor — we take ownership of the commercial relationship with Amazon, the compliance risk, and the fulfilment infrastructure. Our success fee model means our interests are fully aligned with yours.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-q" aria-expanded="false">
+            Does the Rosetta partnership include growth marketing and the technology platform as standard?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Yes. The Rosetta Brands partnership is a complete, integrated offer across three areas. Vendor-as-a-Service covers the operational running of your account. Growth Marketing covers advertising, A+ Content, Brand Store, and product launch. The Platform provides order automation, catalogue health monitoring, a client portal, and reporting. These three areas are designed to work together — your operational data feeds your reporting, your catalogue health monitoring informs your marketing, and your client portal gives you a live view of all of it. You get the full stack, not just one component of it.</p>
           </div>
         </div>
     </div>
