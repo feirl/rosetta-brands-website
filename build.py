@@ -59,6 +59,7 @@ def replace_placeholder_div(html, div_id, replacement):
 PAGES = [
     'index.html',
     'amazon-vendors.html',
+    'amazon-sellers.html',
     'fulfilment.html',
     'pricing.html',
     'vendor-access.html',
