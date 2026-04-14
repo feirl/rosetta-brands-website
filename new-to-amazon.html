@@ -1683,29 +1683,7 @@ a {
 </footer>
 </div>
 
-<script>
-(function(){
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const answer = item.querySelector('.faq-a');
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      document.querySelectorAll('.faq-q').forEach(b => {
-        b.setAttribute('aria-expanded', 'false');
-        b.closest('.faq-item').querySelector('.faq-a').hidden = true;
-      });
-      if (!isOpen) { btn.setAttribute('aria-expanded', 'true'); answer.hidden = false; }
-    });
-  });
-  const els = document.querySelectorAll('.fade-in');
-  if (els.length) {
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(el => io.observe(el));
-  }
-})();
-</script>
+<!-- nav-loader.js handles FAQ accordion and fade-in globally -->
 
 </body>
 </html>
