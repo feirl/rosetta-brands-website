@@ -162,6 +162,35 @@
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
     }
+
+    // Mobile accordion — click to expand/collapse sub-navs
+    document.querySelectorAll('.mobile-accordion-header').forEach(function (header) {
+      function toggleAccordion() {
+        var body   = document.getElementById(header.getAttribute('aria-controls'));
+        var isOpen = header.classList.contains('open');
+
+        // Close all open accordions first
+        document.querySelectorAll('.mobile-accordion-header.open').forEach(function (h) {
+          h.classList.remove('open');
+          h.setAttribute('aria-expanded', 'false');
+          var b = document.getElementById(h.getAttribute('aria-controls'));
+          if (b) b.classList.remove('open');
+        });
+
+        // Open this one (unless it was already open — toggle off)
+        if (!isOpen && body) {
+          header.classList.add('open');
+          header.setAttribute('aria-expanded', 'true');
+          body.classList.add('open');
+        }
+      }
+
+      header.addEventListener('click', toggleAccordion);
+      // Also support keyboard activation
+      header.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleAccordion(); }
+      });
+    });
   }
 
 })();

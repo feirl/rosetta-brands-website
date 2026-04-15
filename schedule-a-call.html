@@ -1,3 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule a Call — Rosetta Brands</title>
+  <meta name="description" content="Book a free 15-minute call with the Rosetta Brands team. No pitch. Just an honest conversation about your Amazon strategy.">
+  <link rel="stylesheet" href="rosetta.css">
+  <link rel="preload" href="rosetta.css" as="style">
+  <style>
+
+    /* ── Hero ──────────────────────────────────────────────────── */
+    .sched-hero {
+      padding: 128px 0 56px; /* 72px fixed nav + 56px visual gap */
+    }
+    .sched-hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(232,68,10,0.12);
+      border: 1px solid rgba(232,68,10,0.3);
+      color: var(--orange);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 56px;
+    }
+    .sched-hero-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+    .sched-hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 800;
+      color: var(--charcoal);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+    .sched-hero h1 span { color: var(--orange); }
+
+    /* ── Two-column body ───────────────────────────────────────── */
+    .sched-body {
+      background: var(--white);
+      padding: 0 0 96px;
+    }
+    .sched-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ── Left column ───────────────────────────────────────────── */
+    .sched-left { display: flex; flex-direction: column; gap: 56px; }
+
+    /* What we cover */
+    .sched-section-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .sched-cover-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .sched-cover-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .sched-cover-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(232,68,10,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--orange);
+    }
+    .sched-cover-item h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 0 0 4px;
+    }
+    .sched-cover-item p {
+      font-size: 14px;
+      color: var(--charcoal-60, #666);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* VOC quote */
+    .sched-quote {
+      background: var(--charcoal-05, #f5f5f3);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 12px 12px 0;
+      padding: 28px 32px;
+    }
+    .sched-quote blockquote {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+    .sched-quote cite {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--charcoal-60, #888);
+      font-family: var(--font-display);
+    }
+
+    /* Who you'll speak with */
+    .sched-team {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sched-team-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .sched-team-card {
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .sched-team-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .sched-team-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 0 0 2px;
+    }
+    .sched-team-card p {
+      font-size: 13px;
+      color: var(--charcoal-60, #888);
+      margin: 0;
+    }
+    .sched-team-card .sched-team-badge {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: rgba(232,68,10,0.08);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    /* Right-fit criteria */
+    .sched-fit {
+      background: var(--charcoal);
+      border-radius: 20px;
+      padding: 36px;
+    }
+    .sched-fit .sched-section-label { color: rgba(232,68,10,0.9); margin-bottom: 6px; }
+    .sched-fit h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 0 0 24px;
+    }
+    .sched-fit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      margin: 0 0 24px;
+      padding: 0;
+    }
+    .sched-fit-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+    .sched-fit-list li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(232,68,10,0.2);
+      border: 1px solid rgba(232,68,10,0.4);
+      flex-shrink: 0;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8l3 3 5-5' stroke='%23E8440A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: contain;
+    }
+    .sched-fit-note {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      margin: 0;
+    }
+
+    /* Stats strip */
+    .sched-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border, #e8e8e4);
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .sched-stat {
+      background: var(--white);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .sched-stat-number {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--charcoal);
+      letter-spacing: -0.03em;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .sched-stat-number span { color: var(--orange); }
+    .sched-stat-label {
+      font-size: 12px;
+      color: var(--charcoal-60, #888);
+      line-height: 1.4;
+    }
+
+    /* ── Right column — Calendly card ──────────────────────────── */
+    .sched-right { position: sticky; top: 100px; }
+
+    .sched-calendly-card {
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+    .sched-calendly-header {
+      background: var(--orange);
+      padding: 24px 28px;
+    }
+    .sched-calendly-header h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 0 0 4px;
+    }
+    .sched-calendly-header p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+    }
+    .sched-calendly-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .sched-meta-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+    .sched-meta-pill svg { opacity: 0.85; }
+
+    /* Calendly embed */
+    .sched-calendly-embed {
+      background: #fff;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sched-calendly-embed iframe {
+      width: 100%;
+      height: 580px;
+      border: none;
+      display: block;
+    }
+
+    /* Fallback placeholder (shown when no iframe src is set) */
+    .sched-calendly-placeholder {
+      padding: 48px 28px;
+      text-align: center;
+      display: none; /* hidden once Calendly src is set */
+    }
+    .sched-calendly-placeholder .placeholder-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(232,68,10,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--orange);
+    }
+    .sched-calendly-placeholder p {
+      font-size: 14px;
+      color: var(--charcoal-60, #888);
+      margin: 0;
+    }
+
+    /* ── Reassurance bar ───────────────────────────────────────── */
+    .sched-reassurance {
+      background: var(--charcoal-05, #f5f5f3);
+      border-top: 1px solid var(--border, #e8e8e4);
+      padding: 32px 0;
+    }
+    .sched-reassurance-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .sched-reassurance-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--charcoal-60, #888);
+      font-weight: 500;
+    }
+    .sched-reassurance-item svg { color: var(--orange); flex-shrink: 0; }
+
+    /* ── Mobile ────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .sched-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sched-right { position: static; }
+      .sched-team-cards { grid-template-columns: 1fr 1fr; }
+      .sched-stats { grid-template-columns: repeat(3, 1fr); }
+      .sched-hero { padding: 60px 0 52px; }
+    }
+    @media (max-width: 600px) {
+      .sched-team-cards { grid-template-columns: 1fr; }
+      .sched-stats { grid-template-columns: 1fr 1fr; }
+      .sched-stats .sched-stat:last-child {
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--border);
+      }
+      .sched-reassurance-inner { gap: 24px; flex-direction: column; align-items: flex-start; padding: 0 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder" data-inlined="true">
 <style>
 /* ═══════════════════════════════════════════
    RESET & BASE
@@ -802,3 +1191,295 @@ a {
     </a>
   </div>
 </div>
+</div>
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="sched-hero">
+    <div class="container">
+      <div class="sched-hero-pill">Free 15-Minute Strategy Call</div>
+      <h1>A straight conversation<br>about your <span>Amazon future.</span></h1>
+    </div>
+  </section>
+
+  <!-- ── Body ─────────────────────────────────────────────────── -->
+  <section class="sched-body">
+    <div class="container">
+      <div class="sched-grid">
+
+        <!-- LEFT COLUMN ─────────────────────────────────────── -->
+        <div class="sched-left">
+
+          <!-- What we cover -->
+          <div class="fade-in">
+            <div class="sched-section-label">What we cover on the call</div>
+            <ul class="sched-cover-list">
+              <li class="sched-cover-item">
+                <div class="sched-cover-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div>
+                  <h4>Where you are on Amazon right now</h4>
+                  <p>We'll look at your current setup — Seller Central or Vendor, revenue, what's working, what isn't — and where the ceiling is.</p>
+                </div>
+              </li>
+              <li class="sched-cover-item">
+                <div class="sched-cover-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
+                </div>
+                <div>
+                  <h4>Whether Vendor-as-a-Service is right for you</h4>
+                  <p>Our Top 20 UK Vendor account isn't right for every brand. We'll tell you plainly whether it makes sense for your category, size, and ambitions.</p>
+                </div>
+              </li>
+              <li class="sched-cover-item">
+                <div class="sched-cover-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h4>What Rosetta Brands would actually do for your brand</h4>
+                  <p>Not a generic deck — a specific conversation about your products, your category, and the levers we'd pull in the first 90 days.</p>
+                </div>
+              </li>
+              <li class="sched-cover-item">
+                <div class="sched-cover-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                  <h4>Next steps if it's a fit</h4>
+                  <p>And an honest answer if it isn't. We only take on brands where we know we can make a meaningful difference.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- VOC quote -->
+          <div class="sched-quote fade-in">
+            <blockquote>"The biggest thing Rosetta Brands brings to the table is the fact that they have the vendor account. That is incredibly rare and incredibly valuable."</blockquote>
+            <cite>Founder, UK Pet Supplies Brand</cite>
+          </div>
+
+          <!-- Right-fit criteria -->
+          <div class="sched-fit fade-in">
+            <div class="sched-section-label">Is this call right for you?</div>
+            <h3>We work best with brands like this</h3>
+            <ul class="sched-fit-list">
+              <li>UK FMCG brand with £5M+ in annual revenue</li>
+              <li>Currently selling on Amazon — or ready to start properly</li>
+              <li>Own your brand registry and hold your own stock</li>
+              <li>A commercial decision-maker on the call</li>
+              <li>Ambitious about growing on Amazon over the next 12 months</li>
+            </ul>
+            <p class="sched-fit-note">Not sure if that's you? Book anyway. The worst outcome is a useful conversation about your options on Amazon — from people who spend every day on it.</p>
+          </div>
+
+          <!-- Stats -->
+          <div class="sched-stats fade-in">
+            <div class="sched-stat">
+              <span class="sched-stat-number">£<span>100M</span>+</span>
+              <span class="sched-stat-label">GMV managed on Amazon</span>
+            </div>
+            <div class="sched-stat">
+              <span class="sched-stat-number"><span>957</span>+</span>
+              <span class="sched-stat-label">FMCG brands on account</span>
+            </div>
+            <div class="sched-stat">
+              <span class="sched-stat-number">Top <span>20</span></span>
+              <span class="sched-stat-label">UK Amazon Vendor</span>
+            </div>
+          </div>
+
+        </div><!-- /sched-left -->
+
+        <!-- RIGHT COLUMN — Calendly ──────────────────────────── -->
+        <div class="sched-right">
+          <div class="sched-calendly-card">
+            <div class="sched-calendly-header">
+              <h3>Book your free strategy call</h3>
+              <p>Pick a time that works for you</p>
+              <div class="sched-calendly-meta">
+                <div class="sched-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  15 minutes
+                </div>
+                <div class="sched-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07C7.13 17.03 4.97 14.87 3.12 12.2A19.79 19.79 0 0 1 .06 3.53 2 2 0 0 1 2.03 1.4h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.91 9a16 16 0 0 0 6 6l.38-.38a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 19.93 17z"/></svg>
+                  Phone or video
+                </div>
+                <div class="sched-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  No commitment
+                </div>
+              </div>
+            </div>
+
+            <!--
+              ═══════════════════════════════════════════════════
+              CALENDLY EMBED — swap in your Calendly URL below
+
+              Replace YOUR-CALENDLY-URL with your actual link, e.g.:
+              https://calendly.com/rosetta-brands/strategy-call
+
+              The iframe will auto-resize inside the card.
+              ═══════════════════════════════════════════════════
+            -->
+            <div class="sched-calendly-embed" id="calendly-embed">
+              <iframe
+                src="https://calendly.com/YOUR-CALENDLY-URL?embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a18&primary_color=E8440A"
+                title="Schedule a call with Rosetta Brands"
+                loading="lazy">
+              </iframe>
+            </div>
+
+          </div><!-- /sched-calendly-card -->
+
+          <!-- Trust note below card -->
+          <p style="font-size:13px;color:var(--charcoal-60,#888);text-align:center;margin-top:16px;line-height:1.5;">
+            We usually respond within one business day.<br>
+            Prefer email? <a href="mailto:hello@rosettabrands.co.uk" style="color:var(--orange);font-weight:600;">hello@rosettabrands.co.uk</a>
+          </p>
+
+        </div><!-- /sched-right -->
+
+      </div><!-- /sched-grid -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ── Reassurance bar ──────────────────────────────────────── -->
+  <div class="sched-reassurance">
+    <div class="container">
+      <div class="sched-reassurance-inner">
+        <div class="sched-reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          No hard sell. Ever.
+        </div>
+        <div class="sched-reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          15 minutes, no obligation
+        </div>
+        <div class="sched-reassurance-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Immediate value — even if we're not the right fit
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder" data-inlined="true">
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="index.html"><img src="logo-light-2026.png" alt="Rosetta Brands" style="height:36px;width:auto;display:block;margin-bottom:16px;"></a>
+        <p>The UK's only Vendor-as-a-Service for FMCG brands on Amazon. Rosetta Brands helps ambitious brands access enterprise-grade vendor infrastructure and scale profitably.</p>
+
+        <!-- Social icons -->
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="https://www.linkedin.com/company/rosettabrands" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://twitter.com/rosettabrands" target="_blank" rel="noopener" aria-label="Twitter / X" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rosettabrands" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.1)';this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+
+        <!-- Ecologi badge -->
+        <a href="https://ecologi.com/rosettabrands?r=60509516165a4a001c634cca" target="_blank" rel="noopener" aria-label="View our Ecologi profile" style="display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:10px 14px;border-radius:10px;background:rgba(74,192,120,0.12);border:1px solid rgba(74,192,120,0.3);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(74,192,120,0.2)'" onmouseout="this.style.background='rgba(74,192,120,0.12)'">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8 2 4 5.5 4 10c0 2.5 1.2 4.7 3 6.2V20h10v-3.8c1.8-1.5 3-3.7 3-6.2 0-4.5-4-8-8-8z" fill="#4ac078"/>
+            <path d="M12 2c0 0 2 4 2 8s-2 8-2 8" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M12 10c-2-2-4-2-6-1" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M12 10c2-2 4-2 6-1" stroke="#2d8a50" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div style="line-height:1.3;">
+            <div style="font-size:11px;font-weight:700;color:#4ac078;letter-spacing:0.04em;text-transform:uppercase;">Ecologi Member</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.7);">5,000+ trees planted</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Vendor-as-a-Service</h5>
+        <ul>
+          <li><a href="vendor-access.html">Vendor Access &amp; Prime</a></li>
+          <li><a href="fulfilment.html">Fulfilment &amp; Logistics</a></li>
+          <li><a href="vendor-management-team.html">Vendor Management Team</a></li>
+          <li><a href="compliance-escalation.html">Compliance &amp; Escalation</a></li>
+          <li><a href="international-expansion.html">International Expansion</a></li>
+          <li><a href="exclusive-amazon-programmes.html">Exclusive Amazon Programmes</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Growth Marketing</h5>
+        <ul>
+          <li><a href="advertising.html">Advertising</a></li>
+          <li><a href="brand-store.html">Brand Store</a></li>
+          <li><a href="aplus-content.html">A+ Content</a></li>
+          <li><a href="key-feature-images.html">Key Feature Images &amp; Lifestyle</a></li>
+          <li><a href="product-launch.html">Product Launch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="order-automation.html">Order Automation</a></li>
+          <li><a href="client-portal.html">Client Portal</a></li>
+          <li><a href="listing-health.html">Listing Health &amp; Optimisation</a></li>
+          <li><a href="reporting-analytics.html">Reporting &amp; Analytics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions For&hellip;</h5>
+        <ul>
+          <li><a href="amazon-sellers.html">Amazon Sellers</a></li>
+          <li><a href="amazon-vendors.html">Amazon Vendors</a></li>
+          <li><a href="new-to-amazon.html">New to Amazon</a></li>
+          <li><a href="amazon-agencies.html">Amazon Agencies</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Scaling FMCG on Amazon</h5>
+        <ul>
+          <li><a href="grocery-gourmet.html">Grocery &amp; Gourmet</a></li>
+          <li><a href="beer-wine-spirits.html">Beer, Wine &amp; Spirits</a></li>
+          <li><a href="health-personal-care.html">Health &amp; Personal Care</a></li>
+          <li><a href="pet-supplies.html">Pet Supplies</a></li>
+          <li><a href="home-household.html">Home &amp; Household</a></li>
+          <li><a href="#">Garden &amp; Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Insights &amp; Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Company</h5>
+        <ul>
+          <li><a href="why-rosetta-brands.html">Why Rosetta Brands</a></li>
+          <li><a href="#">About Rosetta Brands</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="schedule-a-call.html">Schedule a Call</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rosetta Brands. All rights reserved.</span>
+      <span>Lancashire, UK &middot; Australia &middot; Germany</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+  <script src="nav-loader.js"></script>
+</body>
+</html>

@@ -83,6 +83,9 @@ PAGES = [
     'client-portal.html',
     'listing-health.html',
     'reporting-analytics.html',
+    'why-rosetta-brands.html',
+    'garden-outdoor.html',
+    'schedule-a-call.html',
 ]
 
 def strip_style_tags(fragment):

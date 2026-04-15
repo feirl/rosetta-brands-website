@@ -1450,6 +1450,77 @@ a {
   padding: 14px 24px;
   border-radius: 12px;
 }
+
+/* ── Mobile accordion ──────────────────────────────────────────── */
+.mobile-accordion { border-radius: 10px; overflow: hidden; }
+.mobile-accordion-header {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.mobile-accordion-header:hover { background: var(--charcoal-05); color: var(--orange); }
+.mobile-accordion-header.open  { background: var(--charcoal-05); color: var(--orange); }
+.mobile-accordion-chevron { width: 16px; height: 16px; transition: transform 0.2s ease; flex-shrink: 0; }
+.mobile-accordion-header.open .mobile-accordion-chevron { transform: rotate(180deg); }
+.mobile-accordion-body {
+  display: none;
+  flex-direction: column;
+  padding: 0 8px 8px;
+  gap: 2px;
+}
+.mobile-accordion-body.open { display: flex; }
+.mobile-sub-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 12px 4px;
+  color: var(--charcoal-40, #aaa);
+}
+.mobile-sub-label.orange { color: var(--orange); }
+.mobile-sub-label.pink   { color: var(--pink); }
+.mobile-sub-label.purple { color: var(--purple); }
+.mobile-sub-link {
+  font-size: 14px;
+  color: var(--charcoal);
+  padding: 9px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.15s ease;
+}
+.mobile-sub-link:hover { background: var(--charcoal-05); color: var(--orange); }
+
+/* ═══════════════════════════════════════════
+   MOBILE NAV BREAKPOINTS
+   Canonical responsive behaviour for the top
+   nav. Lives here (not in page <style> blocks)
+   so it wins the cascade regardless of page
+   source order once build.py inlines this file.
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .nav-links  { display: none; }
+  .nav-login  { display: none; }
+  .hamburger  { display: flex; }
+  .nav-inner  { padding: 0 20px; }
+  .nav-logo img { height: 44px; }
+  .mega-menu  { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .nav-inner    { padding: 0 16px; }
+  .nav-logo img { height: 38px; }
+}
 </style>
 
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
@@ -1468,7 +1539,7 @@ a {
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </li>
       <li class="nav-link"><a href="pricing.html" style="color:inherit;text-decoration:none;">Pricing</a></li>
-      <li class="nav-link">Why Rosetta Brands</li>
+      <li class="nav-link"><a href="why-rosetta-brands.html" style="color:inherit;text-decoration:none;">Why Rosetta Brands</a></li>
       <li class="nav-link" data-menu="resources">
         Resources
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -1476,7 +1547,7 @@ a {
     </ul>
 
     <div class="nav-actions">
-      <button class="btn btn-primary btn-sm">Schedule a Call</button>
+      <a href="schedule-a-call.html" class="btn btn-primary btn-sm">Schedule a Call</a>
       <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -1681,13 +1752,13 @@ a {
           <p>Cleaning, essentials, household brands</p>
         </div>
       </a>
-      <div class="mega-item">
+      <a href="garden-outdoor.html" class="mega-item">
         <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2C6.5 2 2 6.5 2 12"/><path d="M12 2c5.5 0 10 4.5 10 10"/><path d="M7 9l5-7 5 7"/></svg></div>
         <div class="mega-item-text">
-          <h4>Garden & Outdoor</h4>
+          <h4>Garden &amp; Outdoor</h4>
           <p>Outdoor living, gardening, and seasonal brands</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -1719,17 +1790,80 @@ a {
 </div>
 
 <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-  <a class="mobile-nav-link" href="#">Services</a>
-  <a class="mobile-nav-link" href="#">Solutions</a>
+
+  <!-- Services accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-services">
+      Services
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-services">
+      <div class="mobile-sub-label orange">Vendor-as-a-Service</div>
+      <a class="mobile-sub-link" href="vendor-access.html">Vendor Access &amp; Prime</a>
+      <a class="mobile-sub-link" href="fulfilment.html">Fulfilment &amp; Logistics</a>
+      <a class="mobile-sub-link" href="vendor-management-team.html">Vendor Management Team</a>
+      <a class="mobile-sub-link" href="compliance-escalation.html">Compliance &amp; Escalation</a>
+      <a class="mobile-sub-link" href="international-expansion.html">International Expansion</a>
+      <a class="mobile-sub-link" href="exclusive-amazon-programmes.html">Exclusive Amazon Programmes</a>
+      <div class="mobile-sub-label pink">Growth Marketing</div>
+      <a class="mobile-sub-link" href="advertising.html">Advertising</a>
+      <a class="mobile-sub-link" href="brand-store.html">Brand Store</a>
+      <a class="mobile-sub-link" href="aplus-content.html">A+ Content</a>
+      <a class="mobile-sub-link" href="key-feature-images.html">Key Feature Images &amp; Lifestyle</a>
+      <a class="mobile-sub-link" href="product-launch.html">Product Launch</a>
+      <div class="mobile-sub-label purple">Platform</div>
+      <a class="mobile-sub-link" href="order-automation.html">Order Automation</a>
+      <a class="mobile-sub-link" href="client-portal.html">Client Portal</a>
+      <a class="mobile-sub-link" href="listing-health.html">Listing Health &amp; Optimisation</a>
+      <a class="mobile-sub-link" href="reporting-analytics.html">Reporting &amp; Analytics</a>
+    </div>
+  </div>
+
+  <!-- Solutions accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-solutions">
+      Solutions
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-solutions">
+      <div class="mobile-sub-label orange">Solutions For...</div>
+      <a class="mobile-sub-link" href="amazon-sellers.html">Amazon Sellers</a>
+      <a class="mobile-sub-link" href="amazon-vendors.html">Amazon Vendors</a>
+      <a class="mobile-sub-link" href="new-to-amazon.html">New to Amazon</a>
+      <a class="mobile-sub-link" href="amazon-agencies.html">Amazon Agencies</a>
+      <div class="mobile-sub-label pink">Scaling FMCG on Amazon</div>
+      <a class="mobile-sub-link" href="grocery-gourmet.html">Grocery &amp; Gourmet</a>
+      <a class="mobile-sub-link" href="beer-wine-spirits.html">Beer, Wine &amp; Spirits</a>
+      <a class="mobile-sub-link" href="health-personal-care.html">Health &amp; Personal Care</a>
+      <a class="mobile-sub-link" href="pet-supplies.html">Pet Supplies</a>
+      <a class="mobile-sub-link" href="home-household.html">Home &amp; Household</a>
+      <a class="mobile-sub-link" href="garden-outdoor.html">Garden &amp; Outdoor</a>
+    </div>
+  </div>
+
+  <!-- Direct links -->
   <a class="mobile-nav-link" href="pricing.html">Pricing</a>
-  <a class="mobile-nav-link" href="#">Why Rosetta Brands</a>
-  <a class="mobile-nav-link" href="#">Resources</a>
+  <a class="mobile-nav-link" href="why-rosetta-brands.html">Why Rosetta Brands</a>
+
+  <!-- Resources accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-resources">
+      Resources
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-resources">
+      <a class="mobile-sub-link" href="#">Case Studies</a>
+      <a class="mobile-sub-link" href="#">Insights &amp; Blog</a>
+      <a class="mobile-sub-link" href="#">FAQ</a>
+    </div>
+  </div>
+
   <div class="mobile-nav-divider"></div>
   <div class="mobile-nav-cta">
-    <button class="btn btn-primary">
+    <a href="schedule-a-call.html" class="btn btn-primary" style="text-decoration:none;justify-content:center;">
       Schedule a Call
       <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
+    </a>
   </div>
 </div>
 </div>
@@ -1764,10 +1898,10 @@ a {
         </p>
 
         <div class="hero-actions">
-          <button class="btn btn-primary btn-lg">
+          <a href="schedule-a-call.html" class="btn btn-primary btn-lg">
             Schedule a Call
             <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          </a>
           <button class="btn btn-secondary btn-lg">See How It Works</button>
         </div>
       </div>
@@ -2457,10 +2591,10 @@ a {
 Let's explore whether Vendor-As-A-Service is right for your brand.
       </p>
       <div class="cta-actions fade-in fade-in-delay-2">
-        <button class="btn btn-primary btn-lg">
+        <a href="schedule-a-call.html" class="btn btn-primary btn-lg">
           Schedule a Call
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
         <button class="btn btn-secondary btn-lg">View Pricing</button>
       </div>
       <p class="cta-note">No commitment required &middot; FMCG brands only &middot; Response within 24 hours</p>
@@ -2638,7 +2772,7 @@ Let's explore whether Vendor-As-A-Service is right for your brand.
           <li><a href="#">About Rosetta Brands</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#">Schedule a Call</a></li>
+          <li><a href="schedule-a-call.html">Schedule a Call</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms &amp; Conditions</a></li>
           <li><a href="#">Cookie Policy</a></li>
