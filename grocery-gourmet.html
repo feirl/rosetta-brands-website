@@ -30,7 +30,6 @@
   background: var(--off-white);
   position: relative;
   overflow: hidden;
-  text-align: center;
 }
 .page-hero-b::before {
   content: '';
@@ -50,14 +49,37 @@
   background: radial-gradient(circle, rgba(74,222,128,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
-.hero-b-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-cat-layout { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; position: relative; z-index: 1; }
+.hero-cat-copy { text-align: left; }
+.hero-cat-copy .hero-sub { max-width: none; margin-left: 0; margin-right: 0; }
+.hero-cat-copy .hero-b-actions { justify-content: flex-start; margin-bottom: 0; }
+
+/* Brand showcase placeholder */
+.hero-brand-showcase {
+  background: var(--white);
+  border-radius: 20px;
+  border: 2px dashed var(--border);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.brand-showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+.brand-ph-box { aspect-ratio: 2/1; background: var(--off-white); border: 1px dashed rgba(45,41,51,0.18); border-radius: 8px; }
+.brand-showcase-label { font-size: 12px; color: var(--charcoal-50); text-align: center; font-weight: 500; letter-spacing: 0.02em; }
+
 .hero-b-label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--charcoal-50); margin-bottom: 20px; }
 .hero-b-label span { color: var(--orange); font-weight: 700; }
 .page-hero-b h1 { font-family: var(--font-display); font-size: 50px; font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--charcoal); margin-bottom: 20px; }
 .page-hero-b h1 span { color: var(--orange); }
-.hero-sub { font-size: 18px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto; }
-.hero-b-actions { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 64px; }
-.hero-b-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; max-width: 620px; margin: 0 auto; }
+.hero-sub { font-size: 18px; line-height: 1.65; color: var(--text-secondary); margin-bottom: 40px; }
+.hero-b-actions { display: flex; align-items: center; gap: 16px; }
+.hero-b-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; max-width: 620px; margin: 56px auto 0; }
+
+/* Client logo placeholders */
+.client-logos-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 48px; }
+.client-logo-ph { width: 140px; height: 60px; background: var(--off-white); border: 1.5px dashed var(--border); border-radius: 10px; }
 .hero-b-stat { background: var(--off-white); padding: 24px; text-align: center; }
 .hero-b-stat-num { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; letter-spacing: -0.5px; }
 .hero-b-stat-num span { color: var(--orange); }
@@ -207,6 +229,10 @@
 @media (max-width: 1024px) {
   :root { --section-pad: 72px; }
   .page-hero-b h1 { font-size: 36px; }
+  .hero-cat-layout { grid-template-columns: 1fr; }
+  .hero-brand-showcase { display: none; }
+  .hero-cat-copy { text-align: center; }
+  .hero-cat-copy .hero-b-actions { justify-content: center; }
   .opp-grid { grid-template-columns: 1fr; }
   .challenge-grid { grid-template-columns: 1fr; }
   .approach-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -982,43 +1008,61 @@ a {
      ═══════════════════════════════════════════ -->
 <section class="page-hero-b">
   <div class="container">
-    <div class="hero-b-inner">
+    <div class="hero-cat-layout">
 
-      <div class="hero-b-label fade-in">
-        Scaling FMCG on Amazon
-        <span>&rsaquo; Grocery &amp; Gourmet</span>
-      </div>
-
-      <h1 class="fade-in fade-in-delay-1">
-        Amazon is the UK's fastest-growing<br>grocery channel. <span>Win it.</span>
-      </h1>
-
-      <p class="hero-sub fade-in fade-in-delay-2">
-        Groceries and household essentials now account for 1 in 3 units sold on Amazon UK — growing at twice the pace of every other category. Rosetta Brands has a proven track record scaling ambient grocery, speciality foods, and snack brands on Amazon Vendor, with category-specific expertise built across nearly a thousand FMCG brands.
-      </p>
-
-      <div class="hero-b-actions fade-in fade-in-delay-3">
-        <a href="pricing.html" class="btn btn-primary btn-lg">
-          Get a Free Category Review
-          <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#approach" class="btn btn-secondary btn-lg">See How We Help</a>
-      </div>
-
-      <div class="hero-b-stats fade-in fade-in-delay-3">
-        <div class="hero-b-stat">
-          <div class="hero-b-stat-num">1 in <span>3</span></div>
-          <div class="hero-b-stat-label">Amazon UK units are grocery or household essentials</div>
+      <!-- Left: copy -->
+      <div class="hero-cat-copy">
+        <div class="hero-b-label fade-in">
+          Scaling FMCG on Amazon
+          <span>&rsaquo; Grocery &amp; Gourmet</span>
         </div>
-        <div class="hero-b-stat">
-          <div class="hero-b-stat-num">20<span>%</span></div>
-          <div class="hero-b-stat-label">YoY growth in Amazon UK grocery delivery (2024)</div>
-        </div>
-        <div class="hero-b-stat">
-          <div class="hero-b-stat-num">958<span>+</span></div>
-          <div class="hero-b-stat-label">FMCG brands in the Rosetta portfolio</div>
+
+        <h1 class="fade-in fade-in-delay-1">
+          Amazon is the UK's fastest-growing<br>grocery channel. <span>Win it.</span>
+        </h1>
+
+        <p class="hero-sub fade-in fade-in-delay-2">
+          Groceries and household essentials now account for 1 in 3 units sold on Amazon UK — growing at twice the pace of every other category. Rosetta Brands has a proven track record scaling ambient grocery, speciality foods, and snack brands on Amazon Vendor, with category-specific expertise built across nearly a thousand FMCG brands.
+        </p>
+
+        <div class="hero-b-actions fade-in fade-in-delay-3">
+          <a href="pricing.html" class="btn btn-primary btn-lg">
+            Get a Free Category Review
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#approach" class="btn btn-secondary btn-lg">See How We Help</a>
         </div>
       </div>
+
+      <!-- Right: brand showcase placeholder -->
+      <div class="hero-brand-showcase fade-in fade-in-delay-2">
+        <div class="brand-showcase-grid">
+          <div class="brand-ph-box"></div>
+          <div class="brand-ph-box"></div>
+          <div class="brand-ph-box"></div>
+          <div class="brand-ph-box"></div>
+          <div class="brand-ph-box"></div>
+          <div class="brand-ph-box"></div>
+        </div>
+        <p class="brand-showcase-label">Our grocery &amp; gourmet brand partners</p>
+      </div>
+
+    </div>
+
+    <div class="hero-b-stats fade-in fade-in-delay-3">
+      <div class="hero-b-stat">
+        <div class="hero-b-stat-num">1 in <span>3</span></div>
+        <div class="hero-b-stat-label">Amazon UK units are grocery or household essentials</div>
+      </div>
+      <div class="hero-b-stat">
+        <div class="hero-b-stat-num">20<span>%</span></div>
+        <div class="hero-b-stat-label">YoY growth in Amazon UK grocery delivery (2024)</div>
+      </div>
+      <div class="hero-b-stat">
+        <div class="hero-b-stat-num">958<span>+</span></div>
+        <div class="hero-b-stat-label">FMCG brands in the Rosetta portfolio</div>
+      </div>
+    </div>
 
     </div>
   </div>
@@ -1251,28 +1295,28 @@ a {
       </p>
     </div>
 
-    <div class="client-brands-row fade-in">
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Cottage Delight</span>
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Bay Tree</span>
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Dundeis</span>
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Belvoir</span>
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Healthy Food Brands</span>
-      <span class="client-brand-chip"><span class="client-brand-dot"></span>Panjana</span>
+    <div class="client-logos-row fade-in">
+      <div class="client-logo-ph"></div>
+      <div class="client-logo-ph"></div>
+      <div class="client-logo-ph"></div>
+      <div class="client-logo-ph"></div>
+      <div class="client-logo-ph"></div>
+      <div class="client-logo-ph"></div>
     </div>
 
     <div class="quotes-grid">
       <div class="quote-card fade-in">
         <p class="quote-card-text">"The real big thing for me is just the proactivity. I want insights, not just data — if something's happening in my category, I want to know about it before it affects my numbers."</p>
         <div class="quote-card-attr">
-          <strong>James</strong>
-          Dundeis
+          <strong>Head of E-commerce</strong>
+          Speciality Food Brand
         </div>
       </div>
       <div class="quote-card fade-in fade-in-delay-1">
         <p class="quote-card-text">"I trust them implicitly. I believe in relationship, and I believe in being loyal to people and fair — Rosetta has always operated that way with us."</p>
         <div class="quote-card-attr">
-          <strong>Fiona</strong>
-          Healthy Food Brands
+          <strong>Commercial Director</strong>
+          Ambient Grocery Brand
         </div>
       </div>
     </div>
@@ -1313,8 +1357,8 @@ a {
         <p>International expansion is one of the most common conversations we have with established grocery brand partners. Through Rosetta's vendor infrastructure, UK grocery brands can access Amazon Germany, Ireland, and Australia through the same partnership model — same operational framework, same team, same commercial structure. No separate vendor accounts, no local teams, no new complexity.</p>
       </div>
       <div class="insight-box-stat">
-        <div class="insight-box-num">4</div>
-        <div class="insight-box-label">Markets accessible through one Rosetta partnership (UK, IE, DE, AU)</div>
+        <div class="insight-box-num">9</div>
+        <div class="insight-box-label">Amazon markets accessible through one Rosetta partnership (UK, IE, DE, FR, IT, ES, NL, PL, AU)</div>
       </div>
     </div>
 
@@ -1451,15 +1495,15 @@ a {
 <section class="faq-section">
   <div class="container">
     <div class="section-header center fade-in">
-      <div class="section-tag orange">Grocery &amp; Gourmet FAQ</div>
-      <h2 class="section-title">Category-specific questions</h2>
-      <p class="section-subtitle">Questions specific to ambient grocery, speciality foods, and snack brands on Amazon Vendor.</p>
+      <div class="section-tag orange">Things grocery brands ask us</div>
+      <h2 class="section-title">You probably have some of these</h2>
+      <p class="section-subtitle">If you're a food brand thinking about Amazon for the first time — or trying to make an existing presence work harder — these are the questions we hear most.</p>
     </div>
     <div class="faq-list">
 
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          Do you work with ambient grocery brands that also sell through major supermarkets?
+          We sell through Tesco, Sainsbury's and Ocado — will going on Amazon cause us problems?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
@@ -1469,7 +1513,7 @@ a {
 
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How does Rosetta handle HFSS compliance requirements on Amazon?
+          Some of our products are HFSS-qualifying. Does that limit what we can do on Amazon?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
@@ -1479,7 +1523,7 @@ a {
 
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          We're concerned Amazon will undercut our supermarket RRP — how do you manage that?
+          What stops Amazon from pricing our products below what Tesco charges?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
@@ -1489,7 +1533,7 @@ a {
 
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          Is Subscribe &amp; Save available for our grocery products, and how do you manage it?
+          Can we get Subscribe &amp; Save for our products — and is it actually worth it?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
@@ -1499,7 +1543,7 @@ a {
 
       <div class="faq-item fade-in">
         <button class="faq-q" aria-expanded="false">
-          How does case-pack fulfilment work for grocery products, and why does it matter?
+          How does sending stock to Amazon actually work — what do we physically need to do?
           <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-a" hidden>
