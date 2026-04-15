@@ -66,6 +66,7 @@ PAGES = [
     'beer-wine-spirits.html',
     'health-personal-care.html',
     'pet-supplies.html',
+    'home-household.html',
     'fulfilment.html',
     'pricing.html',
     'vendor-access.html',
