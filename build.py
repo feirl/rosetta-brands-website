@@ -64,6 +64,7 @@ PAGES = [
     'amazon-agencies.html',
     'grocery-gourmet.html',
     'beer-wine-spirits.html',
+    'health-personal-care.html',
     'fulfilment.html',
     'pricing.html',
     'vendor-access.html',
