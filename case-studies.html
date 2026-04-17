@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule a Call | Rosetta Brands</title>
-  <meta name="description" content="Book a free 15-minute call with the Rosetta Brands team. No pitch. Just an honest conversation about your Amazon strategy.">
+  <title>Case Studies | Rosetta Brands — Real Brand Transformations on Amazon</title>
+  <meta name="description" content="How UK FMCG brands across pet supplies, drinks, health food, confectionery and more have grown on Amazon through Rosetta Brands' Vendor-as-a-Service model.">
   <link rel="stylesheet" href="rosetta.css">
   <link rel="preload" href="rosetta.css" as="style">
   <style>
 
     /* ── Hero ──────────────────────────────────────────────────── */
-    .sched-hero {
-      padding: 128px 0 56px; /* 72px fixed nav + 56px visual gap */
+    .cs-hero {
+      padding: 128px 0 72px;
+      background: var(--off-white, #f8f7f4);
+      border-bottom: 1px solid var(--border, #e8e8e4);
     }
-    .sched-hero-pill {
+    .cs-hero-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(232,68,10,0.12);
-      border: 1px solid rgba(232,68,10,0.3);
+      background: rgba(232,68,10,0.08);
+      border: 1px solid rgba(232,68,10,0.25);
       color: var(--orange);
       font-family: var(--font-display);
       font-size: 11px;
@@ -27,359 +29,309 @@
       text-transform: uppercase;
       padding: 6px 14px;
       border-radius: 100px;
-      margin-bottom: 56px;
+      margin-bottom: 24px;
     }
-    .sched-hero-pill::before {
+    .cs-hero-pill::before {
       content: '';
       width: 6px;
       height: 6px;
       background: var(--orange);
       border-radius: 50%;
     }
-    .sched-hero h1 {
-      font-size: clamp(36px, 5vw, 58px);
+    .cs-hero h1 {
+      font-size: clamp(34px, 5vw, 54px);
       font-weight: 800;
       color: var(--charcoal);
       line-height: 1.1;
       letter-spacing: -0.03em;
+      margin: 0 0 20px;
+    }
+    .cs-hero h1 span { color: var(--orange); }
+    .cs-hero-sub {
+      font-size: 18px;
+      color: var(--charcoal-60, #666);
+      line-height: 1.6;
+      max-width: 560px;
       margin: 0;
     }
-    .sched-hero h1 span { color: var(--orange); }
 
-    /* ── Two-column body ───────────────────────────────────────── */
-    .sched-body {
+    /* ── Filter bar ────────────────────────────────────────────── */
+    .cs-filters {
       background: var(--white);
-      padding: 0 0 96px;
+      border-bottom: 1px solid var(--border, #e8e8e4);
+      padding: 20px 0;
+      position: sticky;
+      top: 72px;
+      z-index: 10;
     }
-    .sched-grid {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 64px;
-      align-items: start;
+    .cs-filter-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-
-    /* ── Left column ───────────────────────────────────────────── */
-    .sched-left { display: flex; flex-direction: column; gap: 56px; }
-
-    /* What we cover */
-    .sched-section-label {
+    .cs-filter-label {
       font-family: var(--font-display);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 20px;
+      color: var(--charcoal-40, #aaa);
+      margin-right: 4px;
     }
-    .sched-cover-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .sched-cover-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .sched-cover-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(232,68,10,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--orange);
-    }
-    .sched-cover-item h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin: 0 0 4px;
-    }
-    .sched-cover-item p {
-      font-size: 14px;
-      color: var(--charcoal-60, #666);
-      margin: 0;
-      line-height: 1.5;
-    }
-
-    /* VOC quote */
-    .sched-quote {
-      background: var(--charcoal-05, #f5f5f3);
-      border-left: 3px solid var(--orange);
-      border-radius: 0 12px 12px 0;
-      padding: 28px 32px;
-    }
-    .sched-quote blockquote {
-      font-size: 18px;
-      font-style: italic;
-      color: var(--charcoal);
-      line-height: 1.6;
-      margin: 0 0 16px;
-    }
-    .sched-quote cite {
+    .cs-filter-btn {
       font-size: 13px;
-      font-style: normal;
       font-weight: 600;
       color: var(--charcoal-60, #888);
-      font-family: var(--font-display);
+      background: var(--off-white, #f5f5f3);
+      border: 1px solid var(--border, #e8e8e4);
+      padding: 7px 14px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+    .cs-filter-btn:hover,
+    .cs-filter-btn.active {
+      background: rgba(232,68,10,0.08);
+      border-color: rgba(232,68,10,0.3);
+      color: var(--orange);
     }
 
-    /* Who you'll speak with */
-    .sched-team {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    /* ── Grid ──────────────────────────────────────────────────── */
+    .cs-body {
+      padding: 64px 0 96px;
+      background: var(--white);
     }
-    .sched-team-cards {
+    .cs-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
     }
-    .sched-team-card {
+
+    /* ── Story card ────────────────────────────────────────────── */
+    .cs-card {
       border: 1px solid var(--border, #e8e8e4);
-      border-radius: 16px;
-      padding: 24px;
+      border-radius: 20px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
-    .sched-team-photo {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top;
+    .cs-card:hover {
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
     }
-    .sched-team-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin: 0 0 2px;
+    .cs-card-top {
+      padding: 28px 28px 0;
     }
-    .sched-team-card p {
-      font-size: 13px;
-      color: var(--charcoal-60, #888);
-      margin: 0;
+    .cs-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
     }
-    .sched-team-card .sched-team-badge {
+    .cs-tag {
       font-family: var(--font-display);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--orange);
-      background: rgba(232,68,10,0.08);
       padding: 4px 10px;
       border-radius: 100px;
     }
-
-    /* Right-fit criteria */
-    .sched-fit {
-      background: var(--charcoal);
-      border-radius: 20px;
-      padding: 36px;
+    .cs-tag-category {
+      background: rgba(232,68,10,0.08);
+      color: var(--orange);
     }
-    .sched-fit .sched-section-label { color: rgba(232,68,10,0.9); margin-bottom: 6px; }
-    .sched-fit h3 {
+    .cs-tag-theme {
+      background: var(--off-white, #f5f5f3);
+      color: var(--charcoal-60, #888);
+      border: 1px solid var(--border, #e8e8e4);
+    }
+    .cs-card h2 {
       font-size: 20px;
       font-weight: 700;
-      color: var(--white);
-      margin: 0 0 24px;
+      color: var(--charcoal);
+      line-height: 1.25;
+      margin: 0 0 12px;
     }
-    .sched-fit-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      list-style: none;
-      margin: 0 0 24px;
-      padding: 0;
-    }
-    .sched-fit-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
+    .cs-card-challenge {
       font-size: 14px;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.5;
+      color: var(--charcoal-60, #666);
+      line-height: 1.6;
+      margin: 0 0 20px;
     }
-    .sched-fit-list li::before {
-      content: '';
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: rgba(232,68,10,0.2);
-      border: 1px solid rgba(232,68,10,0.4);
-      flex-shrink: 0;
-      margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8l3 3 5-5' stroke='%23E8440A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: contain;
+
+    /* Quote block */
+    .cs-quote {
+      margin: 0 28px;
+      background: var(--off-white, #f5f5f3);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
     }
-    .sched-fit-note {
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.5;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 16px;
+    .cs-quote blockquote {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin: 0 0 8px;
+    }
+    .cs-quote cite {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--charcoal-40, #aaa);
+      font-family: var(--font-display);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* What changed */
+    .cs-card-outcome {
+      padding: 20px 28px 0;
+      flex: 1;
+    }
+    .cs-outcome-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal-40, #aaa);
+      margin-bottom: 10px;
+    }
+    .cs-card-outcome p {
+      font-size: 14px;
+      color: var(--charcoal-60, #666);
+      line-height: 1.6;
       margin: 0;
     }
 
-    /* Stats strip */
-    .sched-stats {
+    /* Metrics */
+    .cs-metrics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border, #e8e8e4);
-      border: 1px solid var(--border, #e8e8e4);
-      border-radius: 16px;
-      overflow: hidden;
+      margin: 24px 0 0;
+      border-top: 1px solid var(--border, #e8e8e4);
     }
-    .sched-stat {
-      background: var(--white);
-      padding: 24px 20px;
+    .cs-metric {
+      background: var(--off-white, #f8f7f4);
+      padding: 16px;
       text-align: center;
     }
-    .sched-stat-number {
+    .cs-metric-value {
+      display: block;
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 800;
       color: var(--charcoal);
       letter-spacing: -0.03em;
-      display: block;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
-    .sched-stat-number span { color: var(--orange); }
-    .sched-stat-label {
-      font-size: 12px;
-      color: var(--charcoal-60, #888);
-      line-height: 1.4;
+    .cs-metric-value span { color: var(--orange); }
+    .cs-metric-label {
+      font-size: 11px;
+      color: var(--charcoal-40, #aaa);
+      line-height: 1.3;
     }
 
-    /* ── Right column, Calendly card ──────────────────────────── */
-    .sched-right { position: sticky; top: 100px; }
+    /* 2-metric variant */
+    .cs-metrics.two-col { grid-template-columns: repeat(2, 1fr); }
 
-    .sched-calendly-card {
-      border: 1px solid var(--border, #e8e8e4);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    /* ── Featured card (full width) ────────────────────────────── */
+    .cs-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
     }
-    .sched-calendly-header {
-      background: var(--orange);
-      padding: 24px 28px;
-    }
-    .sched-calendly-header h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin: 0 0 4px;
-    }
-    .sched-calendly-header p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.8);
-      margin: 0;
-    }
-    .sched-calendly-meta {
+    .cs-card.featured .cs-card-left {
+      flex: 1;
+      padding: 36px;
       display: flex;
-      gap: 16px;
-      margin-top: 14px;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .sched-meta-pill {
+    .cs-card.featured .cs-card-right {
+      width: 340px;
+      flex-shrink: 0;
+      background: var(--charcoal);
+      padding: 36px;
       display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 100px;
-      padding: 5px 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.9);
-      font-weight: 600;
-    }
-    .sched-meta-pill svg { opacity: 0.85; }
-
-    /* Calendly embed */
-    .sched-calendly-embed {
-      background: #fff;
-      min-height: 580px;
-      display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      gap: 24px;
     }
-    .sched-calendly-embed iframe {
-      width: 100%;
-      height: 580px;
+    .cs-card.featured .cs-card-top { padding: 0; }
+    .cs-card.featured .cs-quote {
+      margin: 0;
+      background: rgba(255,255,255,0.06);
+      border-left-color: var(--orange);
+    }
+    .cs-card.featured .cs-quote blockquote { color: rgba(255,255,255,0.9); }
+    .cs-card.featured .cs-quote cite { color: rgba(255,255,255,0.4); }
+    .cs-card.featured .cs-metrics {
+      background: none;
+      gap: 12px;
+      margin: 0;
       border: none;
-      display: block;
     }
+    .cs-card.featured .cs-metric {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .cs-card.featured .cs-metric-value { color: var(--white); }
+    .cs-card.featured .cs-metric-label { color: rgba(255,255,255,0.4); }
 
-    /* Fallback placeholder (shown when no iframe src is set) */
-    .sched-calendly-placeholder {
-      padding: 48px 28px;
+    /* ── Bottom CTA ────────────────────────────────────────────── */
+    .cs-cta {
+      background: var(--charcoal);
+      border-radius: 24px;
+      padding: 56px;
       text-align: center;
-      display: none; /* hidden once Calendly src is set */
+      margin-top: 32px;
     }
-    .sched-calendly-placeholder .placeholder-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(232,68,10,0.08);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      color: var(--orange);
+    .cs-cta-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(232,68,10,0.9);
+      margin-bottom: 16px;
     }
-    .sched-calendly-placeholder p {
-      font-size: 14px;
-      color: var(--charcoal-60, #888);
-      margin: 0;
+    .cs-cta h3 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      line-height: 1.15;
     }
-
-    /* ── Reassurance bar ───────────────────────────────────────── */
-    .sched-reassurance {
-      background: var(--charcoal-05, #f5f5f3);
-      border-top: 1px solid var(--border, #e8e8e4);
-      padding: 32px 0;
+    .cs-cta p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      margin: 0 auto 28px;
+      max-width: 440px;
+      line-height: 1.6;
     }
-    .sched-reassurance-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-    .sched-reassurance-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--charcoal-60, #888);
-      font-weight: 500;
-    }
-    .sched-reassurance-item svg { color: var(--orange); flex-shrink: 0; }
 
     /* ── Mobile ────────────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .sched-grid { grid-template-columns: 1fr; gap: 40px; }
-      .sched-right { position: static; }
-      .sched-team-cards { grid-template-columns: 1fr 1fr; }
-      .sched-stats { grid-template-columns: repeat(3, 1fr); }
-      .sched-hero { padding: 60px 0 52px; }
+      .cs-card.featured { flex-direction: column; }
+      .cs-card.featured .cs-card-right { width: 100%; }
+      .cs-card.featured .cs-metrics { grid-template-columns: repeat(3, 1fr); }
+      .cs-grid { grid-template-columns: 1fr; }
+      .cs-cta { padding: 40px 24px; }
     }
     @media (max-width: 600px) {
-      .sched-team-cards { grid-template-columns: 1fr; }
-      .sched-stats { grid-template-columns: 1fr 1fr; }
-      .sched-stats .sched-stat:last-child {
-        grid-column: 1 / -1;
-        border-top: 1px solid var(--border);
-      }
-      .sched-reassurance-inner { gap: 24px; flex-direction: column; align-items: flex-start; padding: 0 20px; }
+      .cs-hero { padding: 100px 0 48px; }
+      .cs-filters { top: 60px; }
+      .cs-card.featured .cs-metrics { grid-template-columns: 1fr 1fr; }
     }
 
   </style>
@@ -1194,175 +1146,306 @@ a {
 </div>
 
   <!-- ── Hero ─────────────────────────────────────────────────── -->
-  <section class="sched-hero">
+  <section class="cs-hero">
     <div class="container">
-      <div class="sched-hero-pill">Free 15-Minute Strategy Call</div>
-      <h1>A straight conversation<br>about your <span>Amazon future.</span></h1>
+      <div class="cs-hero-pill">Case Studies</div>
+      <h1>What happens when<br>FMCG brands <span>take Amazon seriously.</span></h1>
+      <p class="cs-hero-sub">Real stories from across our brand portfolio. Names withheld at the request of our partners, but every detail is real.</p>
     </div>
   </section>
 
-  <!-- ── Body ─────────────────────────────────────────────────── -->
-  <section class="sched-body">
+  <!-- ── Filter bar ───────────────────────────────────────────── -->
+  <div class="cs-filters">
     <div class="container">
-      <div class="sched-grid">
-
-        <!-- LEFT COLUMN ─────────────────────────────────────── -->
-        <div class="sched-left">
-
-          <!-- What we cover -->
-          <div class="fade-in">
-            <div class="sched-section-label">What we cover on the call</div>
-            <ul class="sched-cover-list">
-              <li class="sched-cover-item">
-                <div class="sched-cover-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                </div>
-                <div>
-                  <h4>Where you are on Amazon right now</h4>
-                  <p>We'll look at your current setup, Seller Central or Vendor, revenue, what's working, what isn't, and where the ceiling is.</p>
-                </div>
-              </li>
-              <li class="sched-cover-item">
-                <div class="sched-cover-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
-                </div>
-                <div>
-                  <h4>Whether Vendor-as-a-Service is right for you</h4>
-                  <p>Our Top 20 UK Vendor account isn't right for every brand. We'll tell you plainly whether it makes sense for your category, size, and ambitions.</p>
-                </div>
-              </li>
-              <li class="sched-cover-item">
-                <div class="sched-cover-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <div>
-                  <h4>What Rosetta Brands would actually do for your brand</h4>
-                  <p>Not a generic deck, a specific conversation about your products, your category, and the levers we'd pull in the first 90 days.</p>
-                </div>
-              </li>
-              <li class="sched-cover-item">
-                <div class="sched-cover-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-                <div>
-                  <h4>Next steps if it's a fit</h4>
-                  <p>And an honest answer if it isn't. We only take on brands where we know we can make a meaningful difference.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- VOC quote -->
-          <div class="sched-quote fade-in">
-            <blockquote>"The biggest thing Rosetta Brands brings to the table is the fact that they have the vendor account. That is incredibly rare and incredibly valuable."</blockquote>
-            <cite>Founder, UK Pet Supplies Brand</cite>
-          </div>
-
-          <!-- Right-fit criteria -->
-          <div class="sched-fit fade-in">
-            <div class="sched-section-label">Is this call right for you?</div>
-            <h3>We work best with brands like this</h3>
-            <ul class="sched-fit-list">
-              <li>UK FMCG brand with £5M+ in annual revenue</li>
-              <li>Currently selling on Amazon, or ready to start properly</li>
-              <li>Own your brand registry and hold your own stock</li>
-              <li>A commercial decision-maker on the call</li>
-              <li>Ambitious about growing on Amazon over the next 12 months</li>
-            </ul>
-            <p class="sched-fit-note">Not sure if that's you? Book anyway. The worst outcome is a useful conversation about your options on Amazon, from people who spend every day on it.</p>
-          </div>
-
-          <!-- Stats -->
-          <div class="sched-stats fade-in">
-            <div class="sched-stat">
-              <span class="sched-stat-number">£<span>100M</span>+</span>
-              <span class="sched-stat-label">GMV managed on Amazon</span>
-            </div>
-            <div class="sched-stat">
-              <span class="sched-stat-number"><span>957</span>+</span>
-              <span class="sched-stat-label">FMCG brands on account</span>
-            </div>
-            <div class="sched-stat">
-              <span class="sched-stat-number">Top <span>20</span></span>
-              <span class="sched-stat-label">UK Amazon Vendor</span>
-            </div>
-          </div>
-
-        </div><!-- /sched-left -->
-
-        <!-- RIGHT COLUMN, Calendly ──────────────────────────── -->
-        <div class="sched-right">
-          <div class="sched-calendly-card">
-            <div class="sched-calendly-header">
-              <h3>Book your free strategy call</h3>
-              <p>Pick a time that works for you</p>
-              <div class="sched-calendly-meta">
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                  15 minutes
-                </div>
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07C7.13 17.03 4.97 14.87 3.12 12.2A19.79 19.79 0 0 1 .06 3.53 2 2 0 0 1 2.03 1.4h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.91 9a16 16 0 0 0 6 6l.38-.38a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 19.93 17z"/></svg>
-                  Phone or video
-                </div>
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  No commitment
-                </div>
-              </div>
-            </div>
-
-            <!--
-              ═══════════════════════════════════════════════════
-              CALENDLY EMBED, swap in your Calendly URL below
-
-              Replace YOUR-CALENDLY-URL with your actual link, e.g.:
-              https://calendly.com/rosetta-brands/strategy-call
-
-              The iframe will auto-resize inside the card.
-              ═══════════════════════════════════════════════════
-            -->
-            <div class="sched-calendly-embed" id="calendly-embed">
-              <iframe
-                src="https://calendly.com/YOUR-CALENDLY-URL?embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a18&primary_color=E8440A"
-                title="Schedule a call with Rosetta Brands"
-                loading="lazy">
-              </iframe>
-            </div>
-
-          </div><!-- /sched-calendly-card -->
-
-          <!-- Trust note below card -->
-          <p style="font-size:13px;color:var(--charcoal-60,#888);text-align:center;margin-top:16px;line-height:1.5;">
-            We usually respond within one business day.<br>
-            Prefer email? <a href="mailto:hello@rosettabrands.co.uk" style="color:var(--orange);font-weight:600;">hello@rosettabrands.co.uk</a>
-          </p>
-
-        </div><!-- /sched-right -->
-
-      </div><!-- /sched-grid -->
-    </div><!-- /container -->
-  </section>
-
-  <!-- ── Reassurance bar ──────────────────────────────────────── -->
-  <div class="sched-reassurance">
-    <div class="container">
-      <div class="sched-reassurance-inner">
-        <div class="sched-reassurance-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-          No hard sell. Ever.
-        </div>
-        <div class="sched-reassurance-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          15 minutes, no obligation
-        </div>
-        <div class="sched-reassurance-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Immediate value, even if we're not the right fit
-        </div>
+      <div class="cs-filter-inner">
+        <span class="cs-filter-label">Filter by</span>
+        <button class="cs-filter-btn active" data-filter="all">All stories</button>
+        <button class="cs-filter-btn" data-filter="growth">Growth</button>
+        <button class="cs-filter-btn" data-filter="migration">Seller to Vendor</button>
+        <button class="cs-filter-btn" data-filter="operations">Operations</button>
+        <button class="cs-filter-btn" data-filter="new">New to Amazon</button>
       </div>
     </div>
   </div>
+
+  <!-- ── Stories ──────────────────────────────────────────────── -->
+  <section class="cs-body">
+    <div class="container">
+      <div class="cs-grid">
+
+        <!-- FEATURED: Pet Supplies -->
+        <div class="cs-card featured fade-in" data-tags="growth">
+          <div class="cs-card-left">
+            <div class="cs-card-top">
+              <div class="cs-card-meta">
+                <span class="cs-tag cs-tag-category">Pet Supplies</span>
+                <span class="cs-tag cs-tag-theme">Vendor Access</span>
+                <span class="cs-tag cs-tag-theme">Growth</span>
+              </div>
+              <h2>From blocked out of Amazon to building their biggest customer</h2>
+              <p class="cs-card-challenge">A UK pet supplies brand had strong retail distribution and a product range that performed wherever it was stocked. On Amazon, they were stuck. Without vendor access, full-pallet inbound was refused, lower-value SKUs were uneconomical, and their account manager was clearly junior. Amazon had the potential to be their largest single customer. They just could not get in.</p>
+            </div>
+            <div class="cs-card-outcome">
+              <div class="cs-outcome-label">What changed</div>
+              <p>Through Rosetta Brands' Top 20 Vendor account, they gained access to pallet-level inbound, Subscribe &amp; Save, and direct category manager relationships for the first time. Advertising was rebuilt from the ground up. Out-of-stocks that had been running for weeks were resolved within the first fortnight.</p>
+            </div>
+          </div>
+          <div class="cs-card-right">
+            <div class="cs-quote">
+              <blockquote>"The biggest thing Rosetta brings to the table is the fact that they have the vendor account. Amazon has the potential to be probably my biggest customer."</blockquote>
+              <cite>Founder, UK Pet Supplies Brand</cite>
+            </div>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <span class="cs-metric-value">£<span>30K</span>+</span>
+                <span class="cs-metric-label">Monthly Amazon revenue</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value"><span>#1</span></span>
+                <span class="cs-metric-label">Potential largest customer</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric-value"><span>Pallet</span></span>
+                <span class="cs-metric-label">Inbound unlocked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confectionery -->
+        <div class="cs-card fade-in" data-tags="new growth">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Confectionery</span>
+              <span class="cs-tag cs-tag-theme">New to Amazon</span>
+            </div>
+            <h2>Zero to £250K on Amazon in under three years</h2>
+            <p class="cs-card-challenge">A confectionery brand with strong wholesale and gifting trade presence had no meaningful Amazon footprint. They had looked at the channel but concluded it would require a partner who truly understood how Amazon traded, not just an agency who managed it from the outside. For them, vendor access was non-negotiable.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"I would only work with someone like Rosetta to deal with Amazon. It would have to be Rosetta or a company like Rosetta for us to even acknowledge it."</blockquote>
+            <cite>Director, UK Confectionery Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>Amazon is now a top five account for the brand, generating over £250K in annual revenue. New brand lines were introduced and listed on Amazon before they reached retail shelves, using the channel as a proof-of-concept market.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>250K</span>+</span>
+              <span class="cs-metric-label">Annual Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value">Top <span>5</span></span>
+              <span class="cs-metric-label">Amazon as a trade account</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Drinks -->
+        <div class="cs-card fade-in" data-tags="migration operations">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Premium Soft Drinks</span>
+              <span class="cs-tag cs-tag-theme">Operations</span>
+              <span class="cs-tag cs-tag-theme">Growth</span>
+            </div>
+            <h2>Tried Amazon alone, failed, came back with a partner</h2>
+            <p class="cs-card-challenge">A premium soft drinks brand with £25M in annual revenue had managed their own Amazon vendor account. The admin burden was unsustainable: PO management, prep charges, shortage disputes, and the sheer complexity of keeping the account healthy consumed more resource than the channel returned. They left. Two years later, they returned via Rosetta Brands.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"The admin involved with dealing with Amazon direct from a supply chain and sales admin point of view was too much. We're not particularly skilled in the world of e-commerce. Amazon is critical but we can't manage it ourselves."</blockquote>
+            <cite>Commercial Director, UK Premium Soft Drinks Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>Back on Amazon through Rosetta Brands' account, all operational overhead was removed. The brand now trades at over £80K per month, with Amazon positioned as a core channel in their commercial plan. International expansion into Germany is the next step.</p>
+          </div>
+          <div class="cs-metrics">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>80K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>0</span></span>
+              <span class="cs-metric-label">Admin overhead for brand team</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>DE</span></span>
+              <span class="cs-metric-label">Next: Germany expansion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health Food -->
+        <div class="cs-card fade-in" data-tags="operations growth">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Health Foods</span>
+              <span class="cs-tag cs-tag-theme">Brand Protection</span>
+              <span class="cs-tag cs-tag-theme">Operations</span>
+            </div>
+            <h2>Amazon without the exposure: chargebacks absorbed, brand protected</h2>
+            <p class="cs-card-challenge">A health food brand had built a strong following across retail and direct-to-consumer, but Amazon was a source of anxiety. Pricing control, chargeback exposure, and the prospect of absorbing returns and regulatory compliance on a complex health foods catalogue felt unmanageable for a lean team.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"They protect us from Amazon. They take a lot of that pain away. I trust them implicitly. I wouldn't be able to do that myself, and I don't think it would be very productive of us as a team to be focusing on Amazon like that."</blockquote>
+            <cite>Founder, UK Health Food Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>All chargeback and shortage exposure moved to Rosetta Brands. HFSS compliance is handled in-house by our regulatory team. The brand's internal team has zero operational involvement in Amazon, freeing them entirely for brand and product development.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>50K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>Zero</span></span>
+              <span class="cs-metric-label">Chargeback exposure for brand</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Craft Spirits -->
+        <div class="cs-card fade-in" data-tags="operations">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Craft Spirits</span>
+              <span class="cs-tag cs-tag-theme">Headcount Saving</span>
+              <span class="cs-tag cs-tag-theme">Operations</span>
+            </div>
+            <h2>A full Amazon operation with no Amazon headcount</h2>
+            <p class="cs-card-challenge">A craft spirits brand knew Amazon was important to their DTC and gifting sales. But the operational demands of running it, age verification, compliance, advertising, account management, and logistics, were far beyond what a small brand team could absorb. The alternative to Rosetta Brands was hiring a dedicated Amazon manager.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"If we didn't have Rosetta, we would have to employ somebody. They take the hassle out of it all. They just deal with any problems that we ever have."</blockquote>
+            <cite>Founder, UK Craft Spirits Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>A full Amazon operation, including alcohol compliance, age verification, advertising, and account health, runs entirely through Rosetta Brands. The brand team engages via a single point of contact. Amazon now runs at over £40K per month with no internal headcount requirement.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>40K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>1</span></span>
+              <span class="cs-metric-label">Contact needed on brand side</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- National Drinks -->
+        <div class="cs-card fade-in" data-tags="operations growth">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">National Drinks Brand</span>
+              <span class="cs-tag cs-tag-theme">Reporting</span>
+              <span class="cs-tag cs-tag-theme">Stakeholder Buy-in</span>
+            </div>
+            <h2>From internal pressure to internal champion</h2>
+            <p class="cs-card-challenge">The head of e-commerce at a national drinks brand was under constant pressure from their finance team to justify Amazon. Numbers were improving but the data was fragmented, reports arrived without context, and building the internal case for continued investment was a monthly battle.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"You've got to do the job of justifying it to the finance function, and if you don't have the data presented to you, it's hard."</blockquote>
+            <cite>Head of E-Commerce, National Drinks Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>Structured monthly reporting through the Rosetta Brands client portal gave the e-commerce team a single, coherent view of performance. The finance conversation changed from justifying the spend to planning the growth. Unauthorised third-party sellers misrepresenting the brand were identified and removed.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>35K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>Live</span></span>
+              <span class="cs-metric-label">Dashboard for finance sign-off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wholefoods -->
+        <div class="cs-card fade-in" data-tags="growth">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Wholefood Brand</span>
+              <span class="cs-tag cs-tag-theme">Scale</span>
+              <span class="cs-tag cs-tag-theme">Insight</span>
+            </div>
+            <h2>£80K per month and pushing for strategic depth</h2>
+            <p class="cs-card-challenge">At £80K per month on Amazon, a wholefood brand was performing well by most standards. But their commercial director wanted more from the relationship: not just execution, but commercial insight, proactive recommendations, and a partner who brought ideas to the table rather than waiting to be briefed.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"Reporting is okay, but I want insights, not just data. The real big thing for me is how they come to us with solutions."</blockquote>
+            <cite>Head of E-Commerce, UK Wholefood Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>Monthly strategy calls were restructured around commercial recommendations, not just performance reviews. A volume incentive framework tied to growth milestones was agreed. International expansion into Germany and France is under active planning.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>80K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>EU</span></span>
+              <span class="cs-metric-label">Expansion in planning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tea / New entrant -->
+        <div class="cs-card fade-in" data-tags="new growth">
+          <div class="cs-card-top">
+            <div class="cs-card-meta">
+              <span class="cs-tag cs-tag-category">Tea Brand</span>
+              <span class="cs-tag cs-tag-theme">New to Amazon</span>
+              <span class="cs-tag cs-tag-theme">Trust</span>
+            </div>
+            <h2>A new entrant using Amazon to consolidate all e-commerce</h2>
+            <p class="cs-card-challenge">A premium tea brand had been selling through their own website but saw Amazon as the platform that could consolidate and scale their direct business. They needed a partner they could trust completely, having been approached by several agencies making claims they could not substantiate.</p>
+          </div>
+          <div class="cs-quote">
+            <blockquote>"The kicker for me with Rosetta was the Invest Northern Ireland piece, where they were fully behind them. We trusted them. If things go well over the next year, we'll move everything, all our e-commerce, onto Amazon."</blockquote>
+            <cite>Founder, UK Tea Brand</cite>
+          </div>
+          <div class="cs-card-outcome">
+            <div class="cs-outcome-label">What changed</div>
+            <p>The brand launched on Amazon via Rosetta Brands' vendor account and began building review and advertising momentum from a clean starting point. Unauthorised sellers diverting trade on the brand's listings were identified within the first month and addressed.</p>
+          </div>
+          <div class="cs-metrics two-col">
+            <div class="cs-metric">
+              <span class="cs-metric-value">£<span>25K</span>+</span>
+              <span class="cs-metric-label">Monthly Amazon revenue</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric-value"><span>D2C</span></span>
+              <span class="cs-metric-label">Migration to Amazon planned</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="cs-cta fade-in" style="grid-column: 1 / -1;">
+          <div class="cs-cta-label">Your brand next</div>
+          <h3>Ready to find out what<br>Amazon can do for your brand?</h3>
+          <p>Every story on this page started with a 15-minute call. No pitch, no pressure, just an honest conversation about your brand and what is possible.</p>
+          <a href="schedule-a-call.html" class="btn btn-primary btn-lg">
+            Schedule a Call
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <div id="footer-placeholder" data-inlined="true">
 <footer class="footer" role="contentinfo">
@@ -1481,5 +1564,26 @@ a {
 </div>
 
   <script src="nav-loader.js"></script>
+  <script>
+    // Filter logic
+    var filterBtns = document.querySelectorAll('.cs-filter-btn');
+    var cards = document.querySelectorAll('.cs-card[data-tags]');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+        cards.forEach(function(card) {
+          if (filter === 'all') {
+            card.style.display = '';
+          } else {
+            var tags = card.getAttribute('data-tags') || '';
+            card.style.display = tags.indexOf(filter) !== -1 ? '' : 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
