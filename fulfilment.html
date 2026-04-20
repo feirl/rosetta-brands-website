@@ -800,6 +800,29 @@ section { width: 100%; }
   ]
 }
 </script>
+
+  <!-- ═══ ANALYTICS & ADVERTISING — managed by cookie-consent.js ═══
+       Replace G-XXXXXXXXXX with GA4 Measurement ID
+       Replace LI-XXXXXXX  with LinkedIn Partner ID            ═══ -->
+
+  <!-- Google Analytics 4 (fires only after analytics consent) -->
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- LinkedIn Insight Tag (fires only after advertising consent) -->
+  <script type="text/plain" data-consent="advertising">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>
+
 </head>
 <body>
 <div id="nav-placeholder" data-inlined="true">
