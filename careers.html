@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listing Health &amp; Optimisation | Buy Box Monitoring &amp; ASIN Protection | Rosetta Brands</title>
-<meta name="description" content="Rosetta Brands' proprietary monitoring stack tracks Buy Box status, availability, pricing conflicts, and suppression risks across your entire ASIN catalogue, catching issues before they hit sales.">
-<meta name="keywords" content="Amazon Buy Box monitoring, ASIN health check, Amazon listing suppression fix, Buy Box recovery, Amazon Vendor catalogue health, FMCG Amazon listing optimisation">
-<link rel="canonical" href="https://rosettabrands.co.uk/listing-health.html">
-<meta property="og:title" content="Listing Health &amp; Optimisation | Rosetta Brands">
-<meta property="og:description" content="Every ASIN, monitored. Every issue, actioned. Rosetta's catalogue health technology keeps your listings protected around the clock.">
+<title>Careers | Rosetta Brands</title>
+<meta name="description" content="Join Rosetta Brands — building the infrastructure that puts UK FMCG brands at the centre of Amazon. Small team, high ownership, real commercial problems from day one.">
+<meta name="keywords" content="Rosetta Brands careers, Amazon jobs UK, FMCG Amazon jobs, vendor management careers, Amazon e-commerce jobs UK">
+<link rel="canonical" href="https://rosettabrands.co.uk/careers.html">
+<meta property="og:title" content="Careers | Rosetta Brands">
+<meta property="og:description" content="We're building the infrastructure that puts UK FMCG brands at the centre of Amazon. If that excites you, we'd like to hear from you.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/listing-health.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/careers.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Listing Health &amp; Optimisation | Rosetta Brands">
-<meta name="twitter:description" content="Continuous Buy Box monitoring, suppression detection, and catalogue health management across your full ASIN range.">
+<meta name="twitter:title" content="Careers | Rosetta Brands">
+<meta name="twitter:description" content="We're building the infrastructure that puts UK FMCG brands at the centre of Amazon. If that excites you, we'd like to hear from you.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -25,469 +25,233 @@
 <link rel="stylesheet" href="rosetta.css">
 <style>
 
-/* ═══ PURPLE ACCENT OVERRIDES (Platform) ═══ */
-:root {
-  --purple-light: rgba(127,134,193,0.10);
-  --purple-mid:   rgba(127,134,193,0.20);
-}
-
-section { width: 100%; }
-
-/* Hero */
+/* ═══ HERO ═══ */
 .page-hero {
+  padding: 140px 0 96px;
   background: var(--off-white);
-  padding: calc(var(--nav-height) + 80px) 0 80px;
-  border-bottom: 1px solid var(--border);
-}
-.hero-layout {
-  display: grid;
-  grid-template-columns: 1fr 440px;
-  gap: 64px;
-  align-items: center;
-}
-.hero-breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
-}
-.hero-breadcrumb svg { width: 12px; height: 12px; color: var(--charcoal-50); flex-shrink: 0; }
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--purple-light);
-  color: var(--purple);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 8px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.hero-tag svg { width: 12px; height: 12px; }
-.page-hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 4vw, 52px);
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-.page-hero h1 span { color: var(--purple); }
-.hero-sub {
-  font-size: 17px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 540px;
-  margin-bottom: 32px;
-}
-.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-
-/* ═══ CATALOGUE MONITOR CARD ═══ */
-.monitor-card {
-  background: var(--charcoal);
-  border-radius: 20px;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  text-align: center;
 }
-.monitor-card::before {
+.page-hero::before {
   content: '';
   position: absolute;
-  top: -40px; right: -40px;
-  width: 140px; height: 140px;
+  top: -200px; right: -150px;
+  width: 600px; height: 600px;
   border-radius: 50%;
-  background: rgba(127,134,193,0.12);
+  background: radial-gradient(circle, rgba(241,125,2,0.09) 0%, transparent 70%);
   pointer-events: none;
 }
-.monitor-topbar {
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-.monitor-brand {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-}
-.monitor-live-pill {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #4ade80;
-  background: rgba(74,222,128,0.10);
-  border: 1px solid rgba(74,222,128,0.20);
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-.monitor-live-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #4ade80;
-  flex-shrink: 0;
-}
-.monitor-col-headers {
-  display: grid;
-  grid-template-columns: 1fr 72px 74px 68px 66px;
-  padding: 10px 20px 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  gap: 0;
-}
-.monitor-col-hdr {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.20);
-}
-.monitor-rows {
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.monitor-row {
-  display: grid;
-  grid-template-columns: 1fr 72px 74px 68px 66px;
-  align-items: center;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 7px;
-  padding: 8px 10px;
-  gap: 0;
-}
-.monitor-asin {
-  font-size: 10px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.65);
-  font-family: monospace;
-  letter-spacing: 0.02em;
-}
-.m-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 4px;
-  width: fit-content;
-  white-space: nowrap;
-}
-.m-pill.ok  { background: rgba(74,222,128,0.12); color: #4ade80; }
-.m-pill.warn { background: rgba(255,180,30,0.12); color: rgba(255,180,30,0.9); }
-.m-pill.err  { background: rgba(248,113,113,0.12); color: #f87171; }
-.m-status {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 2px 6px;
-  border-radius: 4px;
-  width: fit-content;
-}
-.m-status.active   { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.25); }
-.m-status.flagged  { background: rgba(255,180,30,0.12); color: rgba(255,180,30,0.9); }
-.m-status.alert    { background: rgba(248,113,113,0.12); color: #f87171; }
-.monitor-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px 14px;
-  border-top: 1px solid rgba(255,255,255,0.07);
-}
-.monitor-footer-stat {
-  font-size: 9px;
-  color: rgba(255,255,255,0.30);
-  letter-spacing: 0.03em;
-}
-.monitor-footer-stat strong { color: rgba(255,255,255,0.55); font-weight: 600; }
-.monitor-alert-pill {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #f87171;
-  background: rgba(248,113,113,0.10);
-  border: 1px solid rgba(248,113,113,0.18);
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-
-/* ═══ CHALLENGES ═══ */
-.challenges { background: var(--white); padding: var(--section-pad) 0; }
-.section-header { text-align: center; margin-bottom: 56px; }
-.section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 14px;
-}
-.section-tag::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--purple);
-  border-radius: 2px;
-}
-.section-header h2 {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 38px);
-  font-weight: 700;
-  color: var(--charcoal);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
-}
-.section-header p {
-  font-size: 16px;
-  color: var(--text-secondary);
-  max-width: 560px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.pain-card {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  position: relative;
-  overflow: hidden;
-}
-.pain-card::before {
+.page-hero::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--charcoal-10);
+  bottom: -150px; left: -100px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(241,125,2,0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
-.pain-number { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal-50); margin-bottom: 16px; }
-.pain-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--charcoal-05); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--charcoal); }
-.pain-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; line-height: 1.3; }
-.pain-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
-
-/* ═══ HOW IT WORKS ═══ */
-.how-it-works { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.hiw-layout { display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: start; }
-.hiw-text { position: sticky; top: calc(var(--nav-height) + 32px); }
-.hiw-text .section-tag { text-align: left; display: inline-flex; }
-.hiw-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-.hiw-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 24px; }
-.hiw-text .hiw-note {
-  background: var(--purple-light);
-  border: 1px solid var(--purple-mid);
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 13px;
+.hero-inner-centered {
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.page-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(242,107,29,0.10);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
   color: var(--charcoal);
-  line-height: 1.55;
+  line-height: 1.18;
+  margin-bottom: 24px;
 }
-.hiw-text .hiw-note strong { color: var(--purple); font-weight: 700; }
+.page-hero p.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-.hiw-steps { display: flex; flex-direction: column; gap: 16px; }
-.hiw-step {
-  background: var(--white);
+/* ═══ CONTENT SECTIONS ═══ */
+.careers-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.careers-section:nth-child(even) {
+  background: var(--off-white);
+}
+.careers-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.careers-section h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+.careers-section p {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.careers-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* How we work — 3 pillars */
+.how-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+@media (max-width: 700px) {
+  .how-pillars { grid-template-columns: 1fr; }
+}
+.how-pillar {
+  background: #fff;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 12px;
+  padding: 28px 24px;
+}
+.how-pillar .pillar-icon {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  display: block;
+}
+.how-pillar h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.how-pillar p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Open roles box */
+.open-roles-box {
+  background: var(--charcoal);
+  border-radius: 14px;
+  padding: 40px 36px;
+  margin-top: 8px;
+}
+.open-roles-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.open-roles-box p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.open-roles-box a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 600;
+}
+.open-roles-box a:hover {
+  text-decoration: underline;
+}
+
+/* What we look for list */
+.look-for-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 16px;
+}
+.look-for-list li {
+  display: flex;
   align-items: flex-start;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  gap: 16px;
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
-.hiw-step:hover { border-color: var(--purple); box-shadow: 0 4px 20px rgba(127,134,193,0.10); }
-.hiw-step-icon {
-  width: 40px; height: 40px;
+.look-for-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(242,107,29,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f26b1d'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.look-for-list li strong {
+  color: var(--charcoal);
+}
+
+/* ═══ CTA SECTION ═══ */
+.careers-cta {
+  padding: 88px 0;
+  background: var(--charcoal);
+  text-align: center;
+}
+.careers-cta h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.careers-cta p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+.careers-cta .btn-primary {
+  background: var(--orange);
+  color: #fff;
+  padding: 16px 36px;
   border-radius: 10px;
-  background: var(--purple);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
 }
-.hiw-step-icon svg { width: 18px; height: 18px; }
-.hiw-step-body { flex: 1; }
-.hiw-step-fn { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); margin-bottom: 4px; }
-.hiw-step-body h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; line-height: 1.3; }
-.hiw-step-body p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-.hiw-step-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.hiw-step-tag { font-size: 11px; font-weight: 600; padding: 4px 9px; border-radius: 5px; background: var(--charcoal-05); color: var(--charcoal-70); }
-
-/* ═══ PROOF ═══ */
-.proof-section { background: var(--charcoal); padding: var(--section-pad) 0; }
-.proof-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-.proof-text .section-tag { color: rgba(255,255,255,0.45); }
-.proof-text .section-tag::before { background: var(--purple); }
-.proof-text h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 38px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-.proof-text h2 span { color: var(--purple); }
-.proof-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 28px; }
-.proof-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.proof-stat { text-align: center; padding: 20px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
-.proof-stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
-.proof-stat-num span { color: var(--purple); }
-.proof-stat-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
-
-/* ═══ QUOTE ═══ */
-.quote-section { background: var(--off-white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.quote-box { max-width: 840px; margin: 0 auto; text-align: center; }
-.quote-mark { font-family: var(--font-display); font-size: 80px; color: var(--purple); line-height: 0.7; display: block; margin-bottom: 24px; opacity: 0.4; }
-.quote-text { font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 27px); font-weight: 500; color: var(--charcoal); line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 20px; }
-.quote-attribution { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
-.quote-attribution strong { color: var(--charcoal); }
-
-/* ═══ CTA ═══ */
-.cta-section { background: var(--white); padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.cta-box { background: var(--charcoal); border-radius: 24px; padding: 72px 80px; text-align: center; }
-.cta-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: white; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
-.cta-text { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto 32px; line-height: 1.65; }
-.cta-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.btn-cta-primary { background: var(--purple); color: white; }
-.btn-cta-primary:hover { background: #6b72b5; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(127,134,193,0.35); }
-.btn-cta-ghost { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
-.btn-cta-ghost:hover { background: rgba(255,255,255,0.14); }
-.cta-note { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 20px; }
-.cta-note span { margin: 0 8px; }
-
-/* ═══ RELATED ═══ */
-.related-section { padding: var(--section-pad) 0; }
-.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
-.related-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; }
-.related-card:hover { border-color: var(--purple); box-shadow: 0 4px 24px rgba(127,134,193,0.10); transform: translateY(-2px); }
-.related-card-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--purple-light); color: var(--purple); display: flex; align-items: center; justify-content: center; }
-.related-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.3; }
-.related-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; flex: 1; }
-.related-card-link { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 600; color: var(--purple); margin-top: 4px; }
-.related-card-link svg { width: 14px; height: 14px; }
-.related-card.coming-soon { opacity: 0.6; cursor: default; }
-.related-card.coming-soon:hover { border-color: var(--border); box-shadow: none; transform: none; }
-.coming-badge { display: inline-flex; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--charcoal-05); color: var(--charcoal-50); padding: 3px 8px; border-radius: 4px; margin-top: 2px; align-self: flex-start; }
-
-/* ═══ FAQ ═══ */
-[hidden] { display: none !important; }
-
-/* ═══ RESPONSIVE ═══ */
-@media (max-width: 1024px) {
-  :root { --section-pad: 72px; }
-  .hero-layout { grid-template-columns: 1fr; gap: 48px; }
-  .hero-layout > *:last-child { display: none; }
-  .hiw-layout { grid-template-columns: 1fr; gap: 40px; }
-  .hiw-text { position: static; }
-  .proof-inner { grid-template-columns: 1fr; gap: 48px; }
-  .pain-grid { grid-template-columns: 1fr 1fr; }
-  .related-grid { grid-template-columns: 1fr 1fr; }
+.careers-cta .btn-primary:hover {
+  background: #d95a10;
+  transform: translateY(-1px);
 }
-@media (max-width: 768px) {
-  :root { --section-pad: 56px; }
-  .nav-links, .nav-actions { display: none; }
-  .hamburger { display: flex; }
-  .container { padding: 0 20px; }
-  .pain-grid { grid-template-columns: 1fr; }
-  .related-grid { grid-template-columns: 1fr; }
-  .proof-stats { grid-template-columns: 1fr; }
-  .cta-box { padding: 48px 28px; }
-}
+
 </style>
-  <script src="nav-loader.js" defer></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://rosettabrands.co.uk/listing-health.html",
-      "url": "https://rosettabrands.co.uk/listing-health.html",
-      "name": "Listing Health & Optimisation | Buy Box Monitoring & ASIN Protection | Rosetta Brands",
-      "description": "Rosetta Brands' proprietary monitoring stack tracks Buy Box status, availability, pricing conflicts, and suppression risks across your entire ASIN catalogue, catching issues before they hit sales.",
-      "isPartOf": { "@id": "https://rosettabrands.co.uk" },
-      "breadcrumb": { "@id": "https://rosettabrands.co.uk/listing-health.html#breadcrumb" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://rosettabrands.co.uk/listing-health.html#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rosettabrands.co.uk" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rosettabrands.co.uk/#services" },
-        { "@type": "ListItem", "position": 3, "name": "Platform", "item": "https://rosettabrands.co.uk/#platform" },
-        { "@type": "ListItem", "position": 4, "name": "Listing Health & Optimisation", "item": "https://rosettabrands.co.uk/listing-health.html" }
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Listing Health & Optimisation",
-      "provider": { "@type": "Organization", "name": "Rosetta Brands", "url": "https://rosettabrands.co.uk" },
-      "description": "Rosetta Brands' connected, purpose-built technology stack continuously monitors and optimises ASIN performance at scale, tracking Buy Box status, suppression risks, pricing conflicts, and postcode-level availability gaps with automated alerting and immediate action triggering.",
-      "serviceType": "Amazon Vendor Listing Health & ASIN Monitoring",
-      "url": "https://rosettabrands.co.uk/listing-health.html",
-      "areaServed": "United Kingdom"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How often does Rosetta monitor our ASINs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our proprietary data extraction layer captures live signals at regular intervals, providing a near real-time view of catalogue health. The cadence is designed to detect issues quickly enough to take action before sales are meaningfully impacted, for most signal types, this means hourly captures. This is significantly more frequent than what Amazon's own Vendor Central alerts provide, and it runs continuously without manual intervention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of issues does the monitoring detect?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The monitoring stack covers the key performance drivers that most commonly impact ASIN sales: Buy Box status (won, lost, suppressed), product availability including postcode-level gaps, pricing anomalies and conflicts, listing suppression for any reason including compliance or data issues, and fulfilment status signals. When any of these move outside expected parameters, our system flags the issue and triggers the appropriate response."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How are issues resolved, automatically or by your team?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on the type of issue. Some actions can be triggered automatically through our automation platform, reducing the time between detection and resolution to minutes. Others require human judgement, and these are escalated directly into our team's workflow through our Interface CRM, where they are prioritised, tracked, and resolved with full transparency. The goal in every case is speed: catching issues before they accumulate and protecting sales performance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do we get notified when a problem is found?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Flagged issues surface through the client portal and via direct communication from your account team where action or awareness is needed. The level of notification is designed to be meaningful rather than overwhelming, you will not receive alerts for every signal change, but you will know promptly when something requires your attention or when a resolution has been completed on your behalf."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does listing health monitoring cover our full catalogue or just priority ASINs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The monitoring covers your full ASIN catalogue as managed through Rosetta. There is no selection of priority SKUs, the system is designed to provide complete coverage. This matters because issues rarely appear only on your top-selling products, and an undetected problem on a secondary ASIN can grow into a meaningful revenue gap if left unresolved. All information is centralised in our cloud database, creating a single, consistent view of your entire catalogue's health."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body>
 
@@ -1299,396 +1063,78 @@ a {
 </div>
 
 <!-- ═══ HERO ═══ -->
-<section class="page-hero">
+<section class="page-hero fade-in">
   <div class="container">
-    <div class="hero-layout">
-      <!-- Left: copy -->
-      <div>
-        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html#services" style="color:inherit;">Services</a>
-          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 2l4 4-4 4"/></svg>
-          <span>Platform</span>
-        </nav>
+    <div class="hero-inner-centered">
+      <div class="page-label">Careers</div>
+      <h1>Join Rosetta Brands</h1>
+      <p class="hero-sub">We're building the infrastructure that puts UK FMCG brands at the centre of Amazon. If that excites you, we'd like to hear from you.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="hero-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/><circle cx="6" cy="5" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
-          Listing Health &amp; Optimisation
+<!-- ═══ HOW WE WORK ═══ -->
+<section class="careers-section fade-in">
+  <div class="container">
+    <div class="careers-inner">
+      <h2>How we work</h2>
+      <p>Rosetta Brands is a small team by design. We're not a large agency with layers of account management — we're a focused group of people working directly with brands and Amazon to solve real commercial problems.</p>
+      <p>That means high ownership from day one. You'll work on things that matter, make decisions that have a visible impact, and deal directly with founders and commercial teams — not layers of intermediaries.</p>
+
+      <div class="how-pillars">
+        <div class="how-pillar">
+          <h4>Small team, real ownership</h4>
+          <p>No large agency structure. Your work has a direct impact on outcomes for the brands we partner with.</p>
         </div>
-
-        <h1>Every ASIN, <span>monitored</span>.<br>Every issue, <span>actioned</span>.</h1>
-
-        <p class="hero-sub">Rosetta's proprietary monitoring stack captures live signals across Buy Box status, availability, pricing conflicts, and suppression risks, across your entire catalogue, continuously.</p>
-
-        <div class="hero-actions">
-          <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
-          <a href="schedule-a-call.html" class="btn btn-lg btn-secondary">Schedule a Call</a>
+        <div class="how-pillar">
+          <h4>Direct contact</h4>
+          <p>You'll work alongside brand founders, commercial leads, and Amazon directly. Not briefings and handoffs.</p>
         </div>
-      </div>
-
-      <!-- Right: catalogue monitor card -->
-      <div class="monitor-card">
-        <div class="monitor-topbar">
-          <span class="monitor-brand">Catalogue Monitor</span>
-          <span class="monitor-live-pill">
-            <span class="monitor-live-dot"></span>Live
-          </span>
-        </div>
-
-        <div class="monitor-col-headers">
-          <span class="monitor-col-hdr">ASIN</span>
-          <span class="monitor-col-hdr">Buy Box</span>
-          <span class="monitor-col-hdr">Availability</span>
-          <span class="monitor-col-hdr">Pricing</span>
-          <span class="monitor-col-hdr">Status</span>
-        </div>
-
-        <div class="monitor-rows">
-          <div class="monitor-row">
-            <span class="monitor-asin">B0CX12345K</span>
-            <span class="m-pill ok">✓ Won</span>
-            <span class="m-pill ok">✓ Stock</span>
-            <span class="m-pill ok">✓ OK</span>
-            <span class="m-status active">Active</span>
-          </div>
-          <div class="monitor-row">
-            <span class="monitor-asin">B0DY67890M</span>
-            <span class="m-pill ok">✓ Won</span>
-            <span class="m-pill ok">✓ Stock</span>
-            <span class="m-pill warn">⚠ Conflict</span>
-            <span class="m-status flagged">Flagged</span>
-          </div>
-          <div class="monitor-row">
-            <span class="monitor-asin">B0EZ11223N</span>
-            <span class="m-pill err">✗ Lost</span>
-            <span class="m-pill warn">⚠ Gap</span>
-            <span class="m-pill ok">✓ OK</span>
-            <span class="m-status alert">Alert</span>
-          </div>
-          <div class="monitor-row">
-            <span class="monitor-asin">B0FW44556P</span>
-            <span class="m-pill ok">✓ Won</span>
-            <span class="m-pill ok">✓ Stock</span>
-            <span class="m-pill ok">✓ OK</span>
-            <span class="m-status active">Active</span>
-          </div>
-          <div class="monitor-row">
-            <span class="monitor-asin">B0GX78901Q</span>
-            <span class="m-pill err">✗ Suppressed</span>
-            <span class="m-pill err">✗ Suppressed</span>
-            <span class="m-pill ok">✓ OK</span>
-            <span class="m-status alert">Alert</span>
-          </div>
-        </div>
-
-        <div class="monitor-footer">
-          <span class="monitor-footer-stat"><strong>47 ASINs</strong> · checked <strong>hourly</strong></span>
-          <span class="monitor-alert-pill">3 actions triggered</span>
+        <div class="how-pillar">
+          <h4>Remote-friendly, UK-based</h4>
+          <p>We operate remotely with a UK base. The team is distributed but tight. Lancashire is our home.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CHALLENGES ═══ -->
-<section class="challenges">
+<!-- ═══ OPEN ROLES ═══ -->
+<section class="careers-section fade-in">
   <div class="container">
-    <div class="section-header">
-      <div class="section-tag">The Problem</div>
-      <h2>Listing issues cost more than you think</h2>
-      <p>Most Amazon Vendor brands find out about Buy Box losses, suppressions, and availability gaps after the damage is done, in the weekly sales report.</p>
-    </div>
-
-    <div class="pain-grid">
-
-      <div class="pain-card fade-in">
-        <div class="pain-number">01</div>
-        <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
-        <h3>Buy Box losses happen without warning</h3>
-        <p>By the time a sales dip surfaces in your reporting, the Buy Box may have been lost for hours or days. Amazon Vendor Central does not proactively alert you, it is your responsibility to notice, and most brands don't have the tooling to do so at pace.</p>
-      </div>
-
-      <div class="pain-card fade-in fade-in-delay-1">
-        <div class="pain-number">02</div>
-        <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-        </div>
-        <h3>Suppressions stay live for days unnoticed</h3>
-        <p>A suppressed listing is invisible to shoppers, effectively switched off, yet it does not appear in your sales data until revenue drops. Compliance triggers, data quality issues, or content flags can suppress an ASIN with no notification to the brand.</p>
-      </div>
-
-      <div class="pain-card fade-in fade-in-delay-2">
-        <div class="pain-number">03</div>
-        <div class="pain-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Regional availability gaps are invisible</h3>
-        <p>Postcode-level availability issues, where customers in specific regions cannot purchase your product, do not appear in standard Vendor Central reporting. These gaps compound silently, affecting sales velocity, rank, and customer experience without any visible trigger.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ HOW IT WORKS ═══ -->
-<section class="how-it-works">
-  <div class="container">
-    <div class="hiw-layout">
-
-      <!-- Left: sticky text -->
-      <div class="hiw-text">
-        <div class="section-tag">How It Works</div>
-        <h2>A connected stack that monitors, detects, and acts</h2>
-        <p>Rosetta's listing health capability is not a dashboard you check, it is an active system that captures signals, identifies problems, and triggers responses without manual intervention.</p>
-        <div class="hiw-note">
-          <strong>Proactive, not reactive.</strong> The goal is to resolve issues before they reach your reporting, protecting sales performance rather than explaining why it dropped.
-        </div>
-      </div>
-
-      <!-- Right: steps -->
-      <div class="hiw-steps">
-
-        <div class="hiw-step fade-in">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Step 01</div>
-            <h3>Proprietary Data Extraction</h3>
-            <p>Our connected data layer captures live signals across the key performance drivers, Buy Box status, availability, pricing, and fulfilment, at regular intervals. This gives us a near real-time view of catalogue health across your entire ASIN range, without relying on Amazon's own delayed reporting.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Hourly cadence</span>
-              <span class="hiw-step-tag">All ASINs</span>
-              <span class="hiw-step-tag">4 signal types</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in fade-in-delay-1">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Step 02</div>
-            <h3>Automated Anomaly Detection</h3>
-            <p>Captured data is processed through our automation platform, where rules and logic are applied to identify anomalies, performance drops, and compliance risks. The system knows what healthy looks like for your catalogue, and flags any deviation, large or small, for immediate review.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Rules-based logic</span>
-              <span class="hiw-step-tag">Suppression detection</span>
-              <span class="hiw-step-tag">Pricing conflicts</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in fade-in-delay-2">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Step 03</div>
-            <h3>Immediate Action Triggering</h3>
-            <p>When issues are identified, Buy Box suppression, pricing conflicts, or postcode-level availability gaps, actions are triggered immediately. Where possible, responses are automated. Where human judgement is needed, the issue escalates directly into our team's workflow with full context and priority assigned.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Automated responses</span>
-              <span class="hiw-step-tag">Escalation pathways</span>
-              <span class="hiw-step-tag">Minimal downtime</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in fade-in-delay-3">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Step 04</div>
-            <h3>Centralised Data Layer</h3>
-            <p>All monitoring data is stored in our cloud-based database, creating a single, reliable source of truth for your catalogue. This consistency flows across reporting, analysis, and decision-making, and underpins the catalogue health view available through the Client Portal.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">Cloud database</span>
-              <span class="hiw-step-tag">Single source of truth</span>
-              <span class="hiw-step-tag">Portal connected</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hiw-step fade-in fade-in-delay-3">
-          <div class="hiw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <div class="hiw-step-body">
-            <div class="hiw-step-fn">Step 05</div>
-            <h3>Structured Workflow &amp; Client Visibility</h3>
-            <p>Through our Interface CRM, clients benefit from clear visibility into issue status and resolution progress. Issues are prioritised, tracked, and resolved efficiently, with full transparency. You always know what is happening with your listings and what actions have been taken.</p>
-            <div class="hiw-step-tags">
-              <span class="hiw-step-tag">CRM-managed workflow</span>
-              <span class="hiw-step-tag">Status transparency</span>
-              <span class="hiw-step-tag">Resolution tracking</span>
-            </div>
-          </div>
-        </div>
-
+    <div class="careers-inner">
+      <h2>Open roles</h2>
+      <p>We don't always advertise open roles publicly — the best people we've worked with have simply reached out directly.</p>
+      <div class="open-roles-box">
+        <h3>No specific roles listed right now</h3>
+        <p>If you think you'd contribute to what we're building, send a short note — tell us who you are, what you've done, and why Rosetta Brands makes sense to you. We read everything sent to <a href="mailto:careers@rosettabrands.co.uk">careers@rosettabrands.co.uk</a></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PROOF ═══ -->
-<section class="proof-section">
+<!-- ═══ WHAT WE LOOK FOR ═══ -->
+<section class="careers-section fade-in">
   <div class="container">
-    <div class="proof-inner">
-      <div class="proof-text">
-        <div class="section-tag">The Numbers</div>
-        <h2>Catalogue health that <span>doesn't sleep</span></h2>
-        <p>Listing issues rarely announce themselves. The brands that protect their sales performance are the ones with monitoring infrastructure in place before something goes wrong, not the ones who look for answers after a bad week.</p>
-        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
-      </div>
-      <div class="proof-stats">
-        <div class="proof-stat fade-in">
-          <div class="proof-stat-num">1<span>hr</span></div>
-          <div class="proof-stat-label">Signal capture cadence, near real-time catalogue health</div>
-        </div>
-        <div class="proof-stat fade-in fade-in-delay-1">
-          <div class="proof-stat-num">100<span>%</span></div>
-          <div class="proof-stat-label">Full catalogue coverage, every ASIN, not just priority SKUs</div>
-        </div>
-        <div class="proof-stat fade-in fade-in-delay-2">
-          <div class="proof-stat-num">0</div>
-          <div class="proof-stat-label">Manual checks required, the system monitors so you don't have to</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ QUOTE ═══ -->
-<section class="quote-section">
-  <div class="container">
-    <div class="quote-box fade-in">
-      <span class="quote-mark">"</span>
-      <p class="quote-text">Listing issues used to catch us off guard. Now problems are picked up and resolved before we even know they've happened, the Buy Box is protected and the catalogue stays clean.</p>
-      <p class="quote-attribution"><strong>Sophie Smith</strong>, Rosetta Brands</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ RELATED ═══ -->
-<section class="related-section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Also on the Platform</div>
-      <h2>Monitoring is one piece of the stack</h2>
-      <p style="font-size:16px;color:var(--text-secondary);max-width:520px;margin:0 auto;">Listing health feeds directly into the broader Platform infrastructure, automation, analytics, and your client portal all connected.</p>
-    </div>
-    <div class="related-grid" style="margin-top:48px;">
-
-      <a href="order-automation.html" class="related-card fade-in">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <h3>Order Automation</h3>
-        <p>The operational backbone behind your Amazon Vendor account, from purchase order through to shipment and invoicing, fully automated and integrated with your existing systems.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-      </a>
-
-      <a href="client-portal.html" class="related-card fade-in fade-in-delay-1">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Client Portal</h3>
-        <p>Listing health monitoring feeds directly into your portal's catalogue view. See which ASINs are healthy, which have active issues, and what actions have been taken, all in one place.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-      </a>
-
-      <a href="reporting-analytics.html" class="related-card fade-in fade-in-delay-2">
-        <div class="related-card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <h3>Reporting &amp; Analytics</h3>
-        <p>Full visibility across all Amazon Vendor data, retail analytics, proprietary forecasting, and category-level insights transformed into clear, actionable reporting for your team.</p>
-        <div class="related-card-link">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-      </a>
-
+    <div class="careers-inner">
+      <h2>What we look for</h2>
+      <p>There's no single profile. But there are a few things that tend to matter here.</p>
+      <ul class="look-for-list">
+        <li><span><strong>Amazon knowledge, or genuine curiosity about it.</strong> You don't need to have worked in Amazon before — but you should want to understand how it works at a deep level.</span></li>
+        <li><span><strong>Commercial instinct.</strong> You think in terms of outcomes, not tasks. You understand what "this moves the needle" means and you care about it.</span></li>
+        <li><span><strong>FMCG background useful, but not required.</strong> Experience with consumer goods, grocery, or branded products helps. We're willing to work with people who are willing to learn.</span></li>
+        <li><span><strong>People who say what they think.</strong> We're a direct team. You should be comfortable sharing an opinion, raising a concern, and disagreeing constructively.</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ═══ CTA ═══ -->
-<section class="cta-section">
+<section class="careers-cta fade-in">
   <div class="container">
-    <div class="cta-box fade-in">
-      <h2 class="cta-title">Stop finding out after the damage is done.</h2>
-      <p class="cta-text">Every hour a Buy Box is lost or a listing stays suppressed, sales are being missed. Rosetta's monitoring infrastructure keeps your catalogue protected, automatically, continuously, without manual effort.</p>
-      <div class="cta-actions">
-        <a href="pricing.html" class="btn btn-lg btn-cta-primary">See Pricing</a>
-        <a href="schedule-a-call.html" class="btn btn-lg btn-cta-ghost">Schedule a Call</a>
-      </div>
-      <p class="cta-note">FMCG vendors only <span>·</span> UK market <span>·</span> Managed via Vendor Central</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FAQ ═══ -->
-<section style="background:var(--off-white);padding:var(--section-pad) 0;border-top:1px solid var(--border);">
-  <div class="container">
-    <div class="section-header" style="margin-bottom:48px;">
-      <div class="section-tag">FAQ</div>
-      <h2>Common questions</h2>
-    </div>
-    <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
-
-      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          How often does Rosetta monitor our ASINs?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
-          Our proprietary data extraction layer captures live signals at regular intervals, providing a near real-time view of catalogue health. The cadence is designed to detect issues quickly enough to act before sales are meaningfully impacted, for most signal types, this means hourly captures. This is significantly more frequent than Amazon's own Vendor Central alerts, and it runs continuously without manual intervention.
-        </div>
-      </details>
-
-      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          What types of issues does the monitoring detect?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
-          The monitoring stack covers the key performance drivers that most commonly affect ASIN sales: Buy Box status (won, lost, or suppressed), product availability including postcode-level gaps, pricing anomalies and conflicts, listing suppression for compliance or data reasons, and fulfilment status signals. When any of these move outside expected parameters, our system flags the issue and triggers the appropriate response.
-        </div>
-      </details>
-
-      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          How are issues resolved, automatically or by your team?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
-          It depends on the issue type. Some actions can be triggered automatically through our automation platform, reducing the time between detection and resolution to minutes. Others require human judgement and are escalated directly into our team's workflow through our Interface CRM, where they are prioritised, tracked, and resolved with full transparency. The goal in every case is speed: catching issues before they accumulate and protecting sales performance.
-        </div>
-      </details>
-
-      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          Do we get notified when a problem is found?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
-          Yes. Flagged issues surface through the Client Portal and via direct communication from your account team where action or awareness is needed. The level of notification is designed to be meaningful rather than overwhelming, you will not receive alerts for every signal change, but you will know promptly when something requires your attention, or when a resolution has been completed on your behalf.
-        </div>
-      </details>
-
-      <details style="background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;">
-        <summary style="padding:20px 24px;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--charcoal);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-          Does monitoring cover our full catalogue or just priority ASINs?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--purple);"><polyline points="6 9 12 15 18 9"/></svg>
-        </summary>
-        <div style="padding:0 24px 20px;font-size:14px;color:var(--text-secondary);line-height:1.7;">
-          The monitoring covers your full ASIN catalogue as managed through Rosetta. There is no selection of priority SKUs, the system is designed to provide complete coverage. This matters because issues rarely appear only on your top-selling products, and an undetected problem on a secondary ASIN can grow into a meaningful revenue gap if left unresolved. All data is centralised in our cloud database, creating a single, consistent view of your entire catalogue's health.
-        </div>
-      </details>
-
-    </div>
+    <h2>Talk to us</h2>
+    <p>Not sure if you're the right fit? Talk to the team. We'd rather have an honest conversation than miss a good person.</p>
+    <a href="schedule-a-call.html" class="btn-primary">Schedule a call</a>
   </div>
 </section>
 
@@ -1912,17 +1358,6 @@ a {
 </script>
 </div>
 
-<script>
-/* Fade-in on scroll */
-(function(){
-  const els = document.querySelectorAll('.fade-in');
-  if(!els.length) return;
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-  },{threshold:0.12});
-  els.forEach(el=>io.observe(el));
-})();
-</script>
-
+<script src="nav-loader.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core -->
+  <url><loc>https://rosettabrands.co.uk/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/why-rosetta-brands.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/pricing.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/schedule-a-call.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Solutions -->
+  <url><loc>https://rosettabrands.co.uk/amazon-vendors.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/amazon-sellers.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/new-to-amazon.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/amazon-agencies.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- FMCG Categories -->
+  <url><loc>https://rosettabrands.co.uk/grocery-gourmet.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/beer-wine-spirits.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/health-personal-care.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/pet-supplies.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/home-household.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/garden-outdoor.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Services: VaaS -->
+  <url><loc>https://rosettabrands.co.uk/vendor-access.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/vendor-management-team.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/compliance-escalation.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/international-expansion.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/exclusive-amazon-programmes.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/fulfilment.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Services: Growth Marketing -->
+  <url><loc>https://rosettabrands.co.uk/advertising.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/brand-store.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/aplus-content.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/key-feature-images.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/product-launch.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Services: Platform -->
+  <url><loc>https://rosettabrands.co.uk/order-automation.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/client-portal.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/listing-health.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/reporting-analytics.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Resources -->
+  <url><loc>https://rosettabrands.co.uk/faq.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/case-studies.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/blog.html</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+
+  <!-- Legal -->
+  <url><loc>https://rosettabrands.co.uk/privacy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://rosettabrands.co.uk/data-protection.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+
+</urlset>

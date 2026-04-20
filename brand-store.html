@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="rosetta.css">
 <style>
 
@@ -2005,7 +2006,7 @@ a {
           <li><a href="health-personal-care.html">Health &amp; Personal Care</a></li>
           <li><a href="pet-supplies.html">Pet Supplies</a></li>
           <li><a href="home-household.html">Home &amp; Household</a></li>
-          <li><a href="#">Garden &amp; Outdoor</a></li>
+          <li><a href="garden-outdoor.html">Garden &amp; Outdoor</a></li>
         </ul>
       </div>
 
@@ -2019,13 +2020,13 @@ a {
         <h5 style="margin-top:24px;">Company</h5>
         <ul>
           <li><a href="why-rosetta-brands.html">Why Rosetta Brands</a></li>
-          <li><a href="#">About Rosetta Brands</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="meet-the-team.html">Meet the Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="schedule-a-call.html">Schedule a Call</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="data-protection.html">Data Protection</a></li>
+          <li><a href="privacy.html#cookies">Cookie Policy</a></li>
         </ul>
       </div>
 
@@ -2037,6 +2038,110 @@ a {
     </div>
   </div>
 </footer>
+
+<!-- ═══ COOKIE CONSENT BANNER ═══ -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #2d2933;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+">
+  <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.88);flex:1;min-width:240px;">
+    We use cookies to improve your experience. By continuing to use this site, you accept our use of cookies.
+  </p>
+  <div style="display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;">
+    <button
+      id="cookie-accept"
+      onclick="rosettaCookieAccept()"
+      style="
+        background: #f26b1d;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        white-space: nowrap;
+      "
+      onmouseover="this.style.background='#d95a10'"
+      onmouseout="this.style.background='#f26b1d'"
+    >Accept</button>
+    <a
+      href="privacy.html"
+      style="
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        color: rgba(255,255,255,0.80);
+        border: 1px solid rgba(255,255,255,0.30);
+        border-radius: 8px;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-color 0.2s, color 0.2s;
+        white-space: nowrap;
+      "
+      onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.color='#fff'"
+      onmouseout="this.style.borderColor='rgba(255,255,255,0.30)';this.style.color='rgba(255,255,255,0.80)'"
+    >Manage Preferences</a>
+  </div>
+</div>
+
+<style>
+@media (max-width: 600px) {
+  #cookie-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  #cookie-banner > div {
+    width: 100%;
+  }
+  #cookie-banner > div a,
+  #cookie-banner > div button {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'rosetta_cookie_consent';
+  var banner = document.getElementById('cookie-banner');
+
+  function hideBanner() {
+    if (banner) {
+      banner.style.display = 'none';
+    }
+  }
+
+  // Hide immediately if already consented
+  if (localStorage.getItem(STORAGE_KEY) === 'accepted') {
+    hideBanner();
+  }
+
+  // Global function called by the Accept button
+  window.rosettaCookieAccept = function () {
+    localStorage.setItem(STORAGE_KEY, 'accepted');
+    hideBanner();
+  };
+})();
+</script>
 </div>
 
 </body>

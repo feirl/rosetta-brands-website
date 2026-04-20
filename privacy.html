@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog & Insights | Rosetta Brands — Amazon Strategy for UK FMCG</title>
-<meta name="description" content="Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon. Vendor Central, advertising, brand protection and more.">
-<meta name="keywords" content="Amazon FMCG blog, Amazon Vendor Central UK, FMCG Amazon strategy, Amazon advertising FMCG, brand protection Amazon, Amazon chargebacks, Subscribe Save Amazon">
-<link rel="canonical" href="https://rosettabrands.co.uk/blog.html">
-<meta property="og:title" content="Blog & Insights | Rosetta Brands">
-<meta property="og:description" content="Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon.">
+<title>Privacy Policy | Rosetta Brands</title>
+<meta name="description" content="Rosetta Brands' privacy policy — how we collect, use and protect your personal data.">
+<link rel="canonical" href="https://rosettabrands.co.uk/privacy.html">
+<meta property="og:title" content="Privacy Policy | Rosetta Brands">
+<meta property="og:description" content="How Rosetta Brands collects, uses and protects your personal data.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/blog.html">
+<meta property="og:url" content="https://rosettabrands.co.uk/privacy.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog & Insights | Rosetta Brands">
-<meta name="twitter:description" content="Amazon intelligence for UK FMCG brands. Strategy, tactics, and honest perspective.">
+<meta name="twitter:title" content="Privacy Policy | Rosetta Brands">
+<meta name="twitter:description" content="How Rosetta Brands collects, uses and protects your personal data.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -25,504 +24,161 @@
 <link rel="stylesheet" href="rosetta.css">
 <style>
 
-/* ═══════════════════════════════════════════
-   PILL / TAG COMPONENT
-   ═══════════════════════════════════════════ */
-
-.pill {
+/* ═══ POLICY PAGE ═══ */
+.policy-hero {
+  padding: 120px 0 64px;
+  background: #fafafa;
+  border-bottom: 1px solid var(--border, #e8e8e8);
+}
+.policy-hero .section-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(241,125,2,0.08);
-  border: 1px solid rgba(241,125,2,0.25);
-  color: var(--orange);
-  font-family: var(--font-display);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
   padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 24px;
+  border-radius: 99px;
+  margin-bottom: 16px;
+  background: var(--orange-light, #fff3e6);
+  color: var(--orange, #f26b1d);
 }
-.pill::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--orange);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ═══════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════ */
-
-.blog-hero {
-  padding: 128px 0 72px;
-  background: var(--off-white);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
-.blog-hero::before {
-  content: '';
-  position: absolute;
-  top: -120px; right: -180px;
-  width: 480px; height: 480px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.blog-hero::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -80px;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(127,134,193,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-.blog-hero-inner {
-  max-width: 680px;
-  position: relative;
-  z-index: 1;
-}
-.blog-hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(34px, 5vw, 52px);
+.policy-hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: var(--charcoal);
-  margin-bottom: 20px;
+  color: var(--charcoal, #1a1823);
+  line-height: 1.15;
+  margin-bottom: 12px;
 }
-.blog-hero-sub {
-  font-size: 18px;
-  line-height: 1.65;
-  color: var(--text-secondary);
+.policy-hero p.subtitle {
+  font-size: 16px;
+  color: var(--charcoal-60, #888);
   max-width: 560px;
 }
 
-/* ═══════════════════════════════════════════
-   FILTER BAR
-   ═══════════════════════════════════════════ */
+.policy-body {
+  padding: 64px 0 96px;
+}
+.policy-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .policy-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .policy-sidebar {
+    display: none;
+  }
+}
 
-.filter-bar {
+/* ── Sticky sidebar ── */
+.policy-sidebar {
   position: sticky;
-  top: 72px;
-  z-index: 90;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
+  top: 92px;
+}
+.policy-sidebar-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-40, #aaa);
+  margin-bottom: 12px;
+}
+.policy-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-.filter-bar-inner {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  overflow-x: auto;
-  padding: 12px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.filter-bar-inner::-webkit-scrollbar { display: none; }
-.filter-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
+.policy-nav a {
+  display: block;
   font-size: 13px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 100px;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--text-secondary);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-.filter-btn:hover {
-  background: var(--charcoal-05);
-  color: var(--charcoal);
-  border-color: var(--border);
-}
-.filter-btn.active {
-  background: var(--charcoal);
-  color: var(--white);
-  border-color: var(--charcoal);
-}
-
-/* ═══════════════════════════════════════════
-   CATEGORY TAGS (on cards)
-   ═══════════════════════════════════════════ */
-
-.cat-tag {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 100px;
-  margin-bottom: 12px;
-}
-.cat-tag.orange   { background: rgba(241,125,2,0.1);   color: var(--orange); }
-.cat-tag.pink     { background: rgba(225,82,134,0.1);  color: var(--pink); }
-.cat-tag.purple   { background: rgba(127,134,193,0.12); color: var(--purple); }
-.cat-tag.grey     { background: var(--charcoal-10);    color: var(--grey); }
-
-/* ═══════════════════════════════════════════
-   FEATURED ARTICLE
-   ═══════════════════════════════════════════ */
-
-.featured-section {
-  padding: 64px 0 0;
-}
-.featured-card {
-  background: linear-gradient(135deg, var(--charcoal) 0%, #3a3542 100%);
-  border-radius: 24px;
-  padding: 56px 64px;
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 48px;
-}
-.featured-card::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 320px; height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.featured-card::after {
-  content: '';
-  position: absolute;
-  bottom: -60px; left: 30%;
-  width: 250px; height: 250px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(225,82,134,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.featured-card > * { position: relative; z-index: 1; }
-.featured-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  background: rgba(241,125,2,0.2);
-  color: #ffb366;
-  border: 1px solid rgba(241,125,2,0.3);
-  margin-bottom: 20px;
-}
-.featured-card h2 {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  margin-bottom: 16px;
-  max-width: 580px;
-}
-.featured-excerpt {
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.65);
-  max-width: 520px;
-  margin-bottom: 28px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.featured-meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 28px;
-}
-.featured-meta span { display: flex; align-items: center; gap: 6px; }
-.featured-meta-dot {
-  width: 3px; height: 3px;
-  background: rgba(255,255,255,0.3);
-  border-radius: 50%;
-}
-.featured-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--orange);
-  transition: gap 0.2s ease;
-}
-.featured-link:hover { gap: 12px; color: #ffb366; }
-.featured-badge {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 28px;
-  text-align: center;
-  min-width: 160px;
-}
-.featured-badge-num {
-  font-family: var(--font-display);
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.featured-badge-label {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  color: var(--charcoal-60, #888);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.15s ease;
   line-height: 1.4;
 }
+.policy-nav a:hover,
+.policy-nav a.active {
+  color: var(--charcoal, #1a1823);
+  background: var(--orange-light, #fff3e6);
+  border-left-color: var(--orange, #f26b1d);
+}
 
-/* ═══════════════════════════════════════════
-   ARTICLE GRID
-   ═══════════════════════════════════════════ */
-
-.articles-section {
-  padding: 64px 0;
+/* ── Content ── */
+.policy-content section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border, #e8e8e8);
 }
-.articles-heading {
-  font-family: var(--font-display);
-  font-size: 13px;
+.policy-content section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.policy-content h2 {
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-}
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.article-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-.article-card:hover {
-  border-color: transparent;
-  box-shadow: 0 8px 40px rgba(45,41,51,0.09);
-  transform: translateY(-3px);
-}
-.article-card h3 {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  color: var(--charcoal);
-  margin-bottom: 12px;
-  flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.article-excerpt {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.article-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-.article-meta {
-  font-size: 12px;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.article-meta-dot {
-  width: 3px; height: 3px;
-  background: var(--border);
-  border-radius: 50%;
-}
-.article-read-more {
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--orange);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: gap 0.2s ease;
-  white-space: nowrap;
-}
-.article-card:hover .article-read-more { gap: 8px; }
-
-/* ═══════════════════════════════════════════
-   EMAIL CTA
-   ═══════════════════════════════════════════ */
-
-.email-cta-section {
-  padding: 80px 0;
-  background: var(--white);
-}
-.email-cta-box {
-  background: linear-gradient(135deg, var(--charcoal) 0%, #3d3647 100%);
-  border-radius: 28px;
-  padding: 72px 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.email-cta-box::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.email-cta-box > * { position: relative; z-index: 1; }
-.email-cta-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  background: rgba(241,125,2,0.2);
-  color: #ffb366;
-  border: 1px solid rgba(241,125,2,0.3);
-  margin-bottom: 20px;
-}
-.email-cta-heading {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--charcoal, #1a1823);
   margin-bottom: 16px;
 }
-.email-cta-text {
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.6);
+.policy-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--charcoal-80, #444);
+  margin-bottom: 12px;
 }
-.email-cta-form {
+.policy-content p:last-child {
+  margin-bottom: 0;
+}
+.policy-content ul {
+  margin: 12px 0 12px 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-.email-cta-note {
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
-  margin-top: 4px;
-}
-.email-input-row {
-  display: flex;
-  gap: 12px;
-}
-.email-input {
-  flex: 1;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  font-size: 15px;
-  color: var(--white);
-  font-family: var(--font-body);
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.email-input::placeholder { color: rgba(255,255,255,0.35); }
-.email-input:focus { border-color: rgba(241,125,2,0.5); }
-.email-submit {
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
-  background: var(--orange);
-  color: var(--white);
-  border: none;
+}
+.policy-content ul li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--charcoal-80, #444);
+}
+.policy-content a {
+  color: var(--orange, #f26b1d);
+  text-decoration: none;
+}
+.policy-content a:hover {
+  text-decoration: underline;
+}
+.policy-contact-box {
+  background: var(--charcoal-04, #f7f7f8);
+  border: 1px solid var(--border, #e8e8e8);
   border-radius: 12px;
-  padding: 14px 24px;
-  font-family: var(--font-display);
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+.policy-contact-box p {
   font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(241,125,2,0.3);
+  margin-bottom: 6px;
 }
-.email-submit:hover {
-  background: #e07200;
-  box-shadow: 0 4px 16px rgba(241,125,2,0.35);
-  transform: translateY(-1px);
+.policy-updated {
+  font-size: 13px;
+  color: var(--charcoal-40, #aaa);
+  margin-top: 32px;
 }
-
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════ */
-
-@media (max-width: 1024px) {
-  .articles-grid { grid-template-columns: repeat(2, 1fr); }
-  .featured-card { grid-template-columns: 1fr; }
-  .featured-badge { display: none; }
-  .email-cta-box { grid-template-columns: 1fr; padding: 48px 40px; }
-}
-
-@media (max-width: 768px) {
-  .articles-grid { grid-template-columns: 1fr; }
-  .featured-card { padding: 36px 28px; }
-  .email-cta-box { padding: 40px 28px; }
-  .email-input-row { flex-direction: column; }
-}
-
 </style>
 </head>
 <body>
 
-<a href="#main" class="skip-link">Skip to content</a>
 <div id="nav-placeholder" data-inlined="true">
 <style>
 /* ═══════════════════════════════════════════
@@ -1330,203 +986,102 @@ a {
 </div>
 </div>
 
-<main id="main">
-
-  <!-- ═══ HERO ═══ -->
-  <section class="blog-hero">
-    <div class="container">
-      <div class="blog-hero-inner">
-        <div class="pill fade-in">Insights &amp; Blog</div>
-        <h1 class="fade-in fade-in-delay-1">Amazon intelligence for UK FMCG brands.</h1>
-        <p class="blog-hero-sub fade-in fade-in-delay-2">Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FILTER BAR ═══ -->
-  <div class="filter-bar">
-    <div class="container">
-      <div class="filter-bar-inner">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">Amazon Strategy</button>
-        <button class="filter-btn">Vendor Central</button>
-        <button class="filter-btn">Advertising</button>
-        <button class="filter-btn">Brand Protection</button>
-        <button class="filter-btn">FMCG Sectors</button>
-        <button class="filter-btn">Operations</button>
-        <button class="filter-btn">Growth</button>
-      </div>
-    </div>
+<section class="policy-hero">
+  <div class="container">
+    <span class="section-tag">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Rosetta Brands Limited prioritises privacy and uses personal information solely to deliver and enhance our services.</p>
   </div>
+</section>
 
-  <!-- ═══ FEATURED ARTICLE ═══ -->
-  <section class="featured-section">
-    <div class="container">
-      <div class="featured-card fade-in">
-        <div class="featured-content">
-          <div class="featured-label">Vendor Central</div>
-          <h2>Why Amazon Vendor Central Has Closed Its Doors — And What That Means for FMCG Brands</h2>
-          <p class="featured-excerpt">Amazon quietly stopped issuing new Vendor Central invitations in 2024, leaving thousands of FMCG brands locked out of the wholesale model. We explain what's happened, who it affects, and what the path forward actually looks like.</p>
-          <div class="featured-meta">
-            <span>March 2026</span>
-            <span class="featured-meta-dot"></span>
-            <span>6 min read</span>
+<section class="policy-body">
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- Sidebar nav -->
+      <aside class="policy-sidebar">
+        <p class="policy-sidebar-label">On this page</p>
+        <ul class="policy-nav">
+          <li><a href="#data-we-collect">Data we collect</a></li>
+          <li><a href="#why-we-collect">Why we collect it</a></li>
+          <li><a href="#legal-basis">Legal basis</a></li>
+          <li><a href="#what-we-do">What we do with it</a></li>
+          <li><a href="#retention">How long we keep it</a></li>
+          <li><a href="#storage">How we store it</a></li>
+          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main content -->
+      <div class="policy-content">
+
+        <section id="data-we-collect">
+          <h2>The data we collect</h2>
+          <ul>
+            <li>IP address</li>
+            <li>Website usage information via cookies</li>
+            <li>Name and email address</li>
+            <li>Messages submitted through our contact form</li>
+          </ul>
+        </section>
+
+        <section id="why-we-collect">
+          <h2>Why we collect this data</h2>
+          <ul>
+            <li>To provide service information</li>
+            <li>To respond to requests or messages</li>
+            <li>To monitor website performance and usage</li>
+          </ul>
+        </section>
+
+        <section id="legal-basis">
+          <h2>Our legal basis</h2>
+          <p>The legal basis for collecting and processing your personal data is to perform functions in providing services to our clients and website visitors.</p>
+        </section>
+
+        <section id="what-we-do">
+          <h2>What we do with your data</h2>
+          <p>Rosetta Brands Limited will not share, sell or rent your data to any third parties. Data sharing only occurs when legally required.</p>
+        </section>
+
+        <section id="retention">
+          <h2>How long we keep your data</h2>
+          <p>Personal data is retained only as long as necessary to fulfil the purpose for which it was collected, or as required by law.</p>
+        </section>
+
+        <section id="storage">
+          <h2>How we store your data</h2>
+          <p>We implement appropriate technical and organisational measures to prevent unauthorised access or disclosure of your data.</p>
+        </section>
+
+        <section id="your-rights">
+          <h2>Your rights</h2>
+          <p>You may request:</p>
+          <ul>
+            <li>A copy of your personal data</li>
+            <li>Information about how it is processed</li>
+            <li>Correction of inaccurate data</li>
+            <li>Objection to processing</li>
+            <li>Erasure of your data in specific circumstances</li>
+            <li>Restriction of processing where applicable</li>
+          </ul>
+          <div class="policy-contact-box">
+            <p>To exercise any of these rights, contact us at <a href="mailto:sam@rosettabrands.com">sam@rosettabrands.com</a></p>
+            <p>Complaints may be filed with the Information Commissioner's Office (ICO) at <a href="https://www.ico.org.uk" target="_blank" rel="noopener">www.ico.org.uk</a> or by calling 0303 123 1113.</p>
           </div>
-          <a href="blog-template.html" class="featured-link">
-            Read article
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-        <div class="featured-badge" aria-hidden="true">
-          <div class="featured-badge-num">6</div>
-          <div class="featured-badge-label">min<br>read</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- ═══ ARTICLE GRID ═══ -->
-  <section class="articles-section">
-    <div class="container">
-      <p class="articles-heading">Latest articles</p>
-      <div class="articles-grid">
+        <section id="changes">
+          <h2>Changes to this policy</h2>
+          <p>Policy updates apply immediately upon posting.</p>
+          <p class="policy-updated">Rosetta Brands Limited &mdash; Registered in England &amp; Wales</p>
+        </section>
 
-        <!-- Card 1 -->
-        <a href="blog-template.html" class="article-card fade-in">
-          <span class="cat-tag grey">Operations</span>
-          <h3>The Hidden Cost of Amazon Chargebacks — What Most FMCG Brands Don't Realise Until It's Too Late</h3>
-          <p class="article-excerpt">Chargebacks quietly erode vendor margins. Most brands only notice when a statement arrives — by then, months of penalties have stacked up.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Feb 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>5 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 2 -->
-        <a href="blog-template.html" class="article-card fade-in fade-in-delay-1">
-          <span class="cat-tag pink">Growth</span>
-          <h3>Subscribe &amp; Save: The FMCG Growth Lever Most Brands Are Leaving on the Table</h3>
-          <p class="article-excerpt">Repeat purchase rates jump by 30–60% when shoppers subscribe. Here's how to structure your S&S strategy from day one.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Feb 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>4 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 3 -->
-        <a href="blog-template.html" class="article-card fade-in fade-in-delay-2">
-          <span class="cat-tag purple">Brand Protection</span>
-          <h3>How to Protect Your Brand Pricing on Amazon (When Amazon Sets the Retail Price)</h3>
-          <p class="article-excerpt">Vendor Central's fundamental tension: Amazon controls the RRP. We explain the levers brands actually have to manage this.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Jan 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>5 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="blog-template.html" class="article-card fade-in">
-          <span class="cat-tag pink">FMCG Sectors</span>
-          <h3>Selling Alcohol on Amazon UK: A Practical Guide for Drinks Brands</h3>
-          <p class="article-excerpt">Age-gating, DRS compliance, fulfilment restrictions — alcohol is one of Amazon's most complex categories. Here's what to expect.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Jan 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>7 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 5 -->
-        <a href="blog-template.html" class="article-card fade-in fade-in-delay-1">
-          <span class="cat-tag pink">Advertising</span>
-          <h3>TACoS vs ACoS: Which Advertising Metric Actually Matters for FMCG?</h3>
-          <p class="article-excerpt">ACoS tells you about ad efficiency. TACoS tells you about business health. For FMCG brands with organic volume, only one of these is the right north star.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Dec 2025</span>
-              <span class="article-meta-dot"></span>
-              <span>4 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 6 -->
-        <a href="blog-template.html" class="article-card fade-in fade-in-delay-2">
-          <span class="cat-tag orange">Amazon Strategy</span>
-          <h3>From Seller Central to Vendor Central: What the Switch Actually Involves</h3>
-          <p class="article-excerpt">The move from 3P to 1P isn't just a platform change — it's a fundamentally different commercial relationship with Amazon. What to expect.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Nov 2025</span>
-              <span class="article-meta-dot"></span>
-              <span>6 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EMAIL CTA ═══ -->
-  <section class="email-cta-section">
-    <div class="container">
-      <div class="email-cta-box fade-in">
-        <div>
-          <div class="email-cta-label">Monthly Digest</div>
-          <h2 class="email-cta-heading">Want these insights in your inbox?</h2>
-          <p class="email-cta-text">We send one email a month. No fluff, no sales pitches — just the things worth knowing about FMCG on Amazon that month.</p>
-        </div>
-        <div class="email-cta-form">
-          <div class="email-input-row">
-            <input type="email" class="email-input" placeholder="Your work email" aria-label="Email address">
-            <button type="button" class="email-submit">
-              Subscribe
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-          <p class="email-cta-note">One email per month. Unsubscribe any time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
+      </div><!-- /policy-content -->
+    </div><!-- /policy-layout -->
+  </div><!-- /container -->
+</section>
 
 <div id="footer-placeholder" data-inlined="true">
 <footer class="footer" role="contentinfo">
@@ -1747,17 +1302,6 @@ a {
 })();
 </script>
 </div>
-<script src="nav-loader.js"></script>
-
-<script>
-  // Filter bar — client-side JS for active state toggle (visual only)
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-    });
-  });
-</script>
 
 </body>
 </html>
