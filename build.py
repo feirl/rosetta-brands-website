@@ -12,8 +12,7 @@ What it does:
      that nav-loader.js would otherwise make on every page load.
   3. Marks the inlined HTML with data-inlined="true" so nav-loader.js
      knows to skip fetching and jump straight to initNav().
-  4. Adds a <link rel="preload"> hint for rosetta.css.
-  5. Reports what was done.
+  4. Reports what was done.
 
 Source files (with placeholders) are untouched — build.py edits in-place
 but git diff will show the inlined content, which is intentional.
@@ -95,12 +94,6 @@ PAGES = [
     'blog.html',
     'blog-template.html',
 ]
-
-def strip_style_tags(fragment):
-    """Remove <style>...</style> blocks from a fragment.
-    Nav CSS travels via rosetta.css on each page; we don't want it duplicated
-    inside the inlined HTML fragment."""
-    return re.sub(r'<style>.*?</style>', '', fragment, flags=re.DOTALL).strip()
 
 def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))

@@ -36,12 +36,6 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFAQ);
-  } else {
-    initFAQ();
-  }
-
   // ── 3. Fade-in observer — always runs ────────────────────────────────────
   function initFadeIn() {
     var els = document.querySelectorAll('.fade-in');
@@ -54,10 +48,11 @@
     els.forEach(function (el) { obs.observe(el); });
   }
 
+  function initOnReady() { initFAQ(); initFadeIn(); }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFadeIn);
+    document.addEventListener('DOMContentLoaded', initOnReady);
   } else {
-    initFadeIn();
+    initOnReady();
   }
 
   // ── 4. Nav init ────────────────────────────────────────────────────────────
