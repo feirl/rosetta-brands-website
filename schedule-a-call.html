@@ -1480,109 +1480,188 @@ a {
   </div>
 </footer>
 
-<!-- ═══ COOKIE CONSENT BANNER ═══ -->
-<div id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" style="
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: #2d2933;
-  color: #fff;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
-">
-  <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.88);flex:1;min-width:240px;">
-    We use cookies to improve your experience. By continuing to use this site, you accept our use of cookies.
-  </p>
-  <div style="display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;">
-    <button
-      id="cookie-accept"
-      onclick="rosettaCookieAccept()"
-      style="
-        background: #f26b1d;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 22px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s;
-        white-space: nowrap;
-      "
-      onmouseover="this.style.background='#d95a10'"
-      onmouseout="this.style.background='#f26b1d'"
-    >Accept</button>
-    <a
-      href="privacy.html"
-      style="
-        display: inline-flex;
-        align-items: center;
-        background: transparent;
-        color: rgba(255,255,255,0.80);
-        border: 1px solid rgba(255,255,255,0.30);
-        border-radius: 8px;
-        padding: 10px 22px;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        transition: border-color 0.2s, color 0.2s;
-        white-space: nowrap;
-      "
-      onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.color='#fff'"
-      onmouseout="this.style.borderColor='rgba(255,255,255,0.30)';this.style.color='rgba(255,255,255,0.80)'"
-    >Manage Preferences</a>
-  </div>
-</div>
+<!-- ═══════════════════════════════════════════
+     COOKIE CONSENT — BANNER + PREFERENCES MODAL
+     Controlled by cookie-consent.js
+     ═══════════════════════════════════════════ -->
 
 <style>
+/* ── Banner ── */
+#rc-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: #2d2933; color: #fff;
+  padding: 16px 32px;
+  display: none; /* shown by JS on first visit */
+  align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+  box-shadow: 0 -4px 32px rgba(0,0,0,0.20);
+}
+#rc-banner p { margin: 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.85); flex: 1; min-width: 220px; }
+#rc-banner a { color: #f17d02; text-decoration: underline; }
+.rc-banner-btns { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* ── Modal overlay ── */
+#rc-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.55);
+  display: none; /* shown by JS */
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+
+/* ── Modal card ── */
+.rc-modal {
+  background: #fff; border-radius: 16px;
+  max-width: 540px; width: 100%;
+  padding: 32px; position: relative;
+  max-height: 90vh; overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+.rc-modal h2 { font-size: 20px; font-weight: 700; color: #2d2933; margin: 0 0 6px; }
+.rc-modal > p { font-size: 14px; color: #666; line-height: 1.5; margin: 0 0 24px; }
+
+#rc-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; cursor: pointer;
+  font-size: 22px; line-height: 1; color: #999;
+  padding: 4px 8px; border-radius: 6px;
+}
+#rc-close:hover { background: #f5f5f7; color: #2d2933; }
+
+/* ── Consent rows ── */
+.rc-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 18px 0; border-top: 1px solid #eee;
+  gap: 16px;
+}
+.rc-row-label { font-weight: 600; font-size: 15px; color: #2d2933; margin-bottom: 4px; }
+.rc-row-desc  { font-size: 13px; color: #666; line-height: 1.5; }
+.rc-always-on {
+  font-size: 12px; font-weight: 600; color: #f17d02;
+  background: #fff4e6; padding: 4px 10px; border-radius: 100px; white-space: nowrap;
+}
+
+/* ── Toggle switch ── */
+.rc-toggle-wrap { flex-shrink: 0; padding-top: 2px; }
+.rc-toggle { position: relative; display: inline-block; width: 44px; height: 24px; }
+.rc-toggle input { opacity: 0; width: 0; height: 0; }
+.rc-slider {
+  position: absolute; cursor: pointer; inset: 0;
+  background: #ddd; border-radius: 24px;
+  transition: background 0.2s;
+}
+.rc-slider::before {
+  content: ''; position: absolute;
+  height: 18px; width: 18px; left: 3px; bottom: 3px;
+  background: #fff; border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.rc-toggle input:checked + .rc-slider { background: #f17d02; }
+.rc-toggle input:checked + .rc-slider::before { transform: translateX(20px); }
+
+/* ── Modal buttons ── */
+.rc-modal-btns {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  padding-top: 20px; border-top: 1px solid #eee; margin-top: 4px;
+}
+.rc-btn-primary {
+  flex: 1; min-width: 120px;
+  background: #f17d02; color: #fff; border: none;
+  padding: 11px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s;
+}
+.rc-btn-primary:hover { background: #d96a00; }
+.rc-btn-dark {
+  flex: 1; min-width: 120px;
+  background: #2d2933; color: #fff; border: none;
+  padding: 11px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s;
+}
+.rc-btn-dark:hover { background: #1a1820; }
+.rc-btn-ghost {
+  background: transparent; color: #2d2933;
+  border: 1px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.82);
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+}
+.rc-btn-ghost:hover { border-color: rgba(255,255,255,0.65); color: #fff; }
+
+/* ── Mobile ── */
 @media (max-width: 600px) {
-  #cookie-banner {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  #cookie-banner > div {
-    width: 100%;
-  }
-  #cookie-banner > div a,
-  #cookie-banner > div button {
-    flex: 1;
-    text-align: center;
-    justify-content: center;
-  }
+  #rc-banner { flex-direction: column; align-items: flex-start; }
+  .rc-banner-btns { width: 100%; }
+  .rc-banner-btns button { flex: 1; }
 }
 </style>
 
-<script>
-(function () {
-  var STORAGE_KEY = 'rosetta_cookie_consent';
-  var banner = document.getElementById('cookie-banner');
+<!-- BANNER -->
+<div id="rc-banner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and understand how the site is used. <a href="privacy.html">Learn more</a></p>
+  <div class="rc-banner-btns">
+    <button class="rc-btn-ghost" id="rc-manage">Manage Preferences</button>
+    <button style="background:#f17d02;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;" id="rc-accept-all">Accept All</button>
+  </div>
+</div>
 
-  function hideBanner() {
-    if (banner) {
-      banner.style.display = 'none';
-    }
-  }
+<!-- PREFERENCES MODAL -->
+<div id="rc-overlay" role="dialog" aria-modal="true" aria-label="Cookie preferences">
+  <div class="rc-modal">
+    <button id="rc-close" aria-label="Close">&times;</button>
+    <h2>Cookie Preferences</h2>
+    <p>Choose which cookies you allow. Essential cookies are always active — they're needed for the site to work.</p>
 
-  // Hide immediately if already consented
-  if (localStorage.getItem(STORAGE_KEY) === 'accepted') {
-    hideBanner();
-  }
+    <!-- Essential -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Essential</div>
+        <div class="rc-row-desc">Required for the site to function — session management and your saved cookie preferences. Cannot be disabled.</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <span class="rc-always-on">Always on</span>
+      </div>
+    </div>
 
-  // Global function called by the Accept button
-  window.rosettaCookieAccept = function () {
-    localStorage.setItem(STORAGE_KEY, 'accepted');
-    hideBanner();
-  };
-})();
-</script>
+    <!-- Analytics -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Analytics</div>
+        <div class="rc-row-desc">Helps us understand how visitors use the site. Data is anonymous and used only to improve performance. Includes Google Analytics (GA4).</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <label class="rc-toggle">
+          <input type="checkbox" id="rc-analytics">
+          <span class="rc-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Advertising -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Advertising</div>
+        <div class="rc-row-desc">Enables personalised ads and conversion tracking. Used for remarketing via Google Ads and LinkedIn Insight Tag. Your data may be shared with advertising partners.</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <label class="rc-toggle">
+          <input type="checkbox" id="rc-advertising">
+          <span class="rc-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="rc-modal-btns">
+      <button class="rc-btn-primary" id="rc-save">Save Preferences</button>
+      <button class="rc-btn-dark" id="rc-accept-all-2">Accept All</button>
+    </div>
+  </div>
+</div>
+
+<script src="cookie-consent.js"></script>
 </div>
 
   <script src="nav-loader.js"></script>
