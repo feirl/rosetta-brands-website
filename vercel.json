@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)\\.(css|js|svg|png|jpg|jpeg|webp|gif|woff|woff2|mp4)",
