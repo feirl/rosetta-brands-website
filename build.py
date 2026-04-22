@@ -135,6 +135,27 @@ def main():
         print(f'  ✓ {page}  (+{delta:,} chars inlined)')
 
     print()
+
+    # ── Em-dash guard ──────────────────────────────────────────────────────
+    # Em dashes are banned site-wide. Use ' - ' or ':' instead.
+    em_dash_hits = []
+    check_files = PAGES + ['_nav.html', '_footer.html', 'cookie-consent.js']
+    for f in check_files:
+        if not os.path.exists(f):
+            continue
+        content = open(f, encoding='utf-8').read()
+        if '—' in content or '&mdash;' in content or '&#8212;' in content:
+            em_dash_hits.append(f)
+
+    if em_dash_hits:
+        print('⚠️  EM DASH WARNING — replace with hyphen or colon before pushing:')
+        for f in em_dash_hits:
+            print(f'     {f}')
+        print()
+    else:
+        print('✓ No em dashes found.')
+
+    print()
     print('Build complete. Ready to push.')
     print()
     print('  git add -A && git commit -m "build: inline nav + footer" && git push origin main')

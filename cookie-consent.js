@@ -1,5 +1,5 @@
 /**
- * cookie-consent.js — Rosetta Brands
+ * cookie-consent.js - Rosetta Brands
  * Manages GDPR cookie consent: Essential / Analytics / Advertising
  *
  * HOW TO GATE A SCRIPT:
@@ -138,10 +138,10 @@
   function init() {
     var consent = getConsent();
     if (consent) {
-      // Already consented — silently activate scripts, no banner
+      // Already consented - silently activate scripts, no banner
       activateScripts(consent);
     } else {
-      // First visit — show banner
+      // First visit - show banner
       show(document.getElementById('rc-banner'));
     }
     bindButtons();

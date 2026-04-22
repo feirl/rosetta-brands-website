@@ -1,13 +1,13 @@
 /**
- * nav-loader.js — Rosetta Brands
+ * nav-loader.js - Rosetta Brands
  *
  * Two modes:
- *   INLINED  (production) — build.py has already stamped nav + footer HTML
+ *   INLINED  (production) - build.py has already stamped nav + footer HTML
  *     directly into the page. We detect data-inlined="true" on the placeholder
  *     div and skip all fetch() calls, going straight to initNav().
  *     Result: zero extra network requests, nav is visible on first paint.
  *
- *   FETCH  (development / local) — placeholders are empty divs. We fetch
+ *   FETCH  (development / local) - placeholders are empty divs. We fetch
  *     _nav.html and _footer.html as before. Requires a local HTTP server:
  *     python3 -m http.server
  *
@@ -17,12 +17,12 @@
 
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  // ── 1. FAQ accordion — always runs ───────────────────────────────────────
+  // ── 1. FAQ accordion - always runs ───────────────────────────────────────
   // Guard: data-faq-init prevents duplicate listeners when this script is
   // loaded more than once (deferred in <head> + inline at end of <body>).
   function initFAQ() {
     document.querySelectorAll('.faq-q').forEach(function (btn) {
-      if (btn.dataset.faqInit) return;          // already wired — skip
+      if (btn.dataset.faqInit) return;          // already wired - skip
       btn.dataset.faqInit = '1';
       var answer = btn.nextElementSibling;
       btn.addEventListener('click', function () {
@@ -36,7 +36,7 @@
     });
   }
 
-  // ── 3. Fade-in observer — always runs ────────────────────────────────────
+  // ── 3. Fade-in observer - always runs ────────────────────────────────────
   function initFadeIn() {
     var els = document.querySelectorAll('.fade-in');
     if (!els.length) return;
@@ -158,7 +158,7 @@
       });
     }
 
-    // Mobile accordion — click to expand/collapse sub-navs
+    // Mobile accordion - click to expand/collapse sub-navs
     document.querySelectorAll('.mobile-accordion-header').forEach(function (header) {
       function toggleAccordion() {
         var body   = document.getElementById(header.getAttribute('aria-controls'));
@@ -172,7 +172,7 @@
           if (b) b.classList.remove('open');
         });
 
-        // Open this one (unless it was already open — toggle off)
+        // Open this one (unless it was already open - toggle off)
         if (!isOpen && body) {
           header.classList.add('open');
           header.setAttribute('aria-expanded', 'true');

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   ROSETTA BRANDS  —  Shared Design System
+   ROSETTA BRANDS - Shared Design System
    rosetta.css
    Loaded by every page. Nav CSS travels with _nav.html.
    ═══════════════════════════════════════════════════════════ */
@@ -462,7 +462,7 @@ button:focus-visible {
 }
 
 /* ═══════════════════════════════════════════
-   RESPONSIVE  —  shared rules
+   RESPONSIVE - shared rules
    ═══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
