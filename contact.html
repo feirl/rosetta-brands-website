@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Rosetta Brands</title>
+  <meta name="description" content="Get in touch with the Rosetta Brands team. Call us, email us, or book a discovery call to talk about your FMCG brand on Amazon.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="rosetta.css" as="style">
+  <link rel="stylesheet" href="rosetta.css">
+  <style>
+
+    /* ── Hero ──────────────────────────────────────────────────── */
+    .contact-hero {
+      padding: 128px 0 64px;
+      background: var(--white);
+    }
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(232,68,10,0.10);
+      border: 1px solid rgba(232,68,10,0.25);
+      color: var(--orange);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .contact-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+    .contact-hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      color: var(--charcoal);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 0 0 16px;
+    }
+    .contact-hero h1 span { color: var(--orange); }
+    .contact-hero p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Two-column body ───────────────────────────────────────── */
+    .contact-body {
+      background: var(--white);
+      padding: 0 0 96px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ── Left column ───────────────────────────────────────────── */
+    .contact-left { display: flex; flex-direction: column; gap: 48px; }
+
+    /* Detail blocks */
+    .contact-detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-detail-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .contact-detail-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(232,68,10,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--orange);
+    }
+    .contact-detail-body { display: flex; flex-direction: column; gap: 2px; }
+    .contact-detail-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal-60, #888);
+      font-family: var(--font-display);
+    }
+    .contact-detail-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1.5;
+    }
+    .contact-detail-value a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-detail-value a:hover { color: var(--orange); }
+    .contact-detail-note {
+      font-size: 13px;
+      color: var(--charcoal-60, #888);
+      margin-top: 2px;
+    }
+
+    /* Address block */
+    .contact-address {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      background: var(--light-grey, #f9f9f7);
+    }
+    .contact-address-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal-60, #888);
+      font-family: var(--font-display);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-address-label svg { color: var(--orange); }
+    .contact-address-text {
+      font-size: 15px;
+      color: var(--charcoal);
+      line-height: 1.8;
+      margin: 0 0 16px;
+    }
+    .contact-address-map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-address-map-link:hover { opacity: 0.75; }
+
+    /* Reassurance strip */
+    .contact-reassurance {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 24px;
+      background: rgba(232,68,10,0.04);
+      border: 1px solid rgba(232,68,10,0.12);
+      border-radius: 16px;
+    }
+    .contact-reassurance-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--charcoal-70);
+    }
+    .contact-reassurance-item svg { color: var(--orange); flex-shrink: 0; }
+
+    /* ── Right column — Calendly card ─────────────────────────── */
+    .contact-right { position: sticky; top: 100px; }
+
+    .contact-calendly-card {
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+    .contact-calendly-header {
+      background: var(--charcoal);
+      padding: 24px 28px;
+    }
+    .contact-calendly-header h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 4px;
+      font-family: var(--font-display);
+    }
+    .contact-calendly-header p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+    .contact-calendly-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .contact-meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+    }
+    .contact-meta-pill svg { opacity: 0.75; }
+
+    /* Calendly embed */
+    .contact-calendly-embed {
+      background: #fff;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-calendly-embed iframe {
+      width: 100%;
+      height: 580px;
+      border: none;
+      display: block;
+    }
+    .contact-calendly-placeholder {
+      padding: 48px 28px;
+      text-align: center;
+    }
+    .contact-calendly-placeholder .placeholder-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(232,68,10,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--orange);
+    }
+    .contact-calendly-placeholder h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 0 0 8px;
+      font-family: var(--font-display);
+    }
+    .contact-calendly-placeholder p {
+      font-size: 14px;
+      color: var(--charcoal-60, #888);
+      margin: 0 0 20px;
+    }
+
+    /* ── Mobile ────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-right { position: static; }
+      .contact-hero { padding: 100px 0 48px; }
+    }
+    @media (max-width: 600px) {
+      .contact-hero { padding: 84px 0 40px; }
+    }
+
+  </style>
+
+  <!-- Google Analytics 4 (fires only after analytics consent) -->
+  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1QWDWL7EP0');
+  </script>
+
+  <!-- LinkedIn Insight Tag (fires only after advertising consent) -->
+  <script type="text/plain" data-consent="advertising">
+    _linkedin_partner_id = "LI-XXXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>
+
+  <meta property="og:title" content="Contact Us | Rosetta Brands">
+  <meta property="og:description" content="Get in touch with the Rosetta Brands team — call, email, or book a discovery call.">
+  <meta property="og:image" content="https://rosettabrands.co.uk/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rosetta Brands — The UK's Only Vendor-as-a-Service for FMCG Brands">
+  <meta name="twitter:image" content="https://rosettabrands.co.uk/og-default.jpg">
+</head>
+<body>
+
+  <div id="nav-placeholder" data-inlined="true">
+<style>
+/* ═══════════════════════════════════════════
+   NAVIGATION
+   (reset/base/.container/buttons live in rosetta.css)
+   ═══════════════════════════════════════════ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+.nav.scrolled {
+  box-shadow: 0 1px 24px rgba(45,41,51,0.08);
+}
+
+.nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 52px;
+  width: auto;
+}
+
+/* SVG Inline Logo */
+.nav-logo svg {
+  height: 52px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal-70);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link:hover {
+  color: var(--charcoal);
+  background: var(--charcoal-05);
+}
+
+.nav-link .chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-login {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal-70);
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+
+.nav-login:hover { color: var(--charcoal); }
+
+/* ═══════════════════════════════════════════
+   MEGA MENU
+   ═══════════════════════════════════════════ */
+
+.mega-menu {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 16px 48px rgba(45,41,51,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s ease;
+  z-index: 1050;
+}
+
+.mega-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  display: grid;
+  gap: 40px;
+}
+
+.mega-menu-inner.product-menu {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mega-menu-inner.solutions-menu {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mega-menu-inner.resources-menu {
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 900px;
+}
+
+.mega-col-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--charcoal-50);
+  margin-bottom: 16px;
+}
+
+.mega-col-label.orange { color: var(--orange); }
+.mega-col-label.pink { color: var(--pink); }
+.mega-col-label.purple { color: var(--purple); }
+
+.mega-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mega-item:hover {
+  background: var(--charcoal-05);
+}
+
+.mega-item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.mega-item-icon.orange-bg { background: var(--orange-light); color: var(--orange); }
+.mega-item-icon.pink-bg { background: var(--pink-light); color: var(--pink); }
+.mega-item-icon.purple-bg { background: var(--purple-light); color: var(--purple); }
+
+.mega-item-text h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+
+.mega-item-text p {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════
+   HAMBURGER / MOBILE NAV
+   ═══════════════════════════════════════════ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+.hamburger:hover {
+  background: var(--charcoal-10);
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  z-index: 998;
+  overflow-y: auto;
+  padding: 16px;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--border);
+}
+.mobile-nav.open {
+  display: flex;
+}
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.mobile-nav-link:hover {
+  background: var(--charcoal-05);
+  color: var(--orange);
+}
+.mobile-nav-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+.mobile-nav-cta {
+  margin-top: 8px;
+  padding: 0 16px 16px;
+}
+.mobile-nav-cta .btn-primary {
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: 12px;
+}
+
+/* ── Mobile accordion ──────────────────────────────────────────── */
+.mobile-accordion { border-radius: 10px; overflow: hidden; }
+.mobile-accordion-header {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--charcoal);
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.mobile-accordion-header:hover { background: var(--charcoal-05); color: var(--orange); }
+.mobile-accordion-header.open  { background: var(--charcoal-05); color: var(--orange); }
+.mobile-accordion-chevron { width: 16px; height: 16px; transition: transform 0.2s ease; flex-shrink: 0; }
+.mobile-accordion-header.open .mobile-accordion-chevron { transform: rotate(180deg); }
+.mobile-accordion-body {
+  display: none;
+  flex-direction: column;
+  padding: 0 8px 8px;
+  gap: 2px;
+}
+.mobile-accordion-body.open { display: flex; }
+.mobile-sub-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 12px 4px;
+  color: var(--charcoal-40, #aaa);
+}
+.mobile-sub-label.orange { color: var(--orange); }
+.mobile-sub-label.pink   { color: var(--pink); }
+.mobile-sub-label.purple { color: var(--purple); }
+.mobile-sub-link {
+  font-size: 14px;
+  color: var(--charcoal);
+  padding: 9px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.15s ease;
+}
+.mobile-sub-link:hover { background: var(--charcoal-05); color: var(--orange); }
+
+/* ═══════════════════════════════════════════
+   MOBILE NAV BREAKPOINTS
+   Canonical responsive behaviour for the top
+   nav. Lives here (not in page <style> blocks)
+   so it wins the cascade regardless of page
+   source order once build.py inlines this file.
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .nav-links  { display: none; }
+  .nav-login  { display: none; }
+  .hamburger  { display: flex; }
+  .nav-inner  { padding: 0 20px; }
+  .nav-logo img { height: 44px; }
+  .mega-menu  { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .nav-inner    { padding: 0 16px; }
+  .nav-logo img { height: 38px; }
+}
+</style>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <picture>
+        <source srcset="logo.webp" type="image/webp">
+        <img src="logo-dark-2026.png" alt="Rosetta Brands" style="height:52px;width:auto;">
+      </picture>
+    </a>
+
+    <ul class="nav-links">
+      <li class="nav-link" data-menu="product">
+        Services
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+      <li class="nav-link" data-menu="solutions">
+        Solutions
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+      <li class="nav-link"><a href="pricing" style="color:inherit;text-decoration:none;">Pricing</a></li>
+      <li class="nav-link"><a href="why-rosetta-brands" style="color:inherit;text-decoration:none;">Why Rosetta Brands</a></li>
+      <li class="nav-link" data-menu="resources">
+        Resources
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="schedule-a-call" class="btn btn-primary btn-sm">Schedule a Call</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mega-menu" id="menu-product">
+  <div class="mega-menu-inner product-menu">
+    <div>
+      <div class="mega-col-label orange">Vendor-as-a-Service</div>
+      <a href="vendor-access" class="mega-item">
+        <div class="mega-item-icon orange-bg">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0114 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L10 6.873l-1.763.71 1.715 5.348a1 1 0 01-.285 1.05A3.989 3.989 0 016 15a3.989 3.989 0 01-3.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.789l1.599.799L9 4.323V3a1 1 0 011-1z"/></svg>
+        </div>
+        <div class="mega-item-text">
+          <h4>Vendor Access & Prime</h4>
+          <p>Enterprise-grade vendor status from day one</p>
+        </div>
+      </a>
+      <a href="fulfilment" class="mega-item">
+        <div class="mega-item-icon orange-bg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="mega-item-text">
+          <h4>Fulfilment &amp; Logistics</h4>
+          <p>One warehouse, zero headaches</p>
+        </div>
+      </a>
+      <a href="vendor-management-team" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Vendor Management Team</h4>
+          <p>A dedicated cross-functional team behind your brand</p>
+        </div>
+      </a>
+      <a href="compliance-escalation" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Compliance &amp; Escalation</h4>
+          <p>Chargeback absorption, shortage claims, AVS access &amp; FMCG regulatory compliance</p>
+        </div>
+      </a>
+      <a href="international-expansion" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>International Expansion</h4>
+          <p>Ireland, Germany, France and PAN-EU through one vendor relationship</p>
+        </div>
+      </a>
+      <a href="exclusive-amazon-programmes" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Exclusive Amazon Programmes</h4>
+          <p>Subscribe &amp; Save, Amazon Business, Freight &amp; more</p>
+        </div>
+      </a>
+    </div>
+
+    <div>
+      <div class="mega-col-label pink">Growth Marketing</div>
+      <a href="advertising" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Advertising</h4>
+          <p>AI-powered campaigns with real-time performance visibility</p>
+        </div>
+      </a>
+      <a href="brand-store" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Brand Store</h4>
+          <p>A branded destination on Amazon</p>
+        </div>
+      </a>
+      <a href="aplus-content" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>A+ Content</h4>
+          <p>Enhanced listings that convert</p>
+        </div>
+      </a>
+      <a href="key-feature-images" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Key Feature Images & Lifestyle</h4>
+          <p>Professional imagery that sells</p>
+        </div>
+      </a>
+      <a href="product-launch" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Product Launch</h4>
+          <p>Listing to best-seller lifecycle</p>
+        </div>
+      </a>
+    </div>
+
+    <div>
+      <div class="mega-col-label purple">Platform</div>
+      <a href="order-automation" class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Order Automation</h4>
+          <p>PO to shipped product, fully automated</p>
+        </div>
+      </a>
+      <a href="client-portal" class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Client Portal</h4>
+          <p>One place for your Amazon relationship</p>
+        </div>
+      </a>
+      <a href="listing-health" class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Listing Health & Optimisation</h4>
+          <p>Buy box monitoring, suppressions, and proactive fixes</p>
+        </div>
+      </a>
+      <a href="reporting-analytics" class="mega-item">
+        <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Reporting & Analytics</h4>
+          <p>Insights that drive decisions</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="mega-menu" id="menu-solutions">
+  <div class="mega-menu-inner solutions-menu">
+    <div>
+      <div class="mega-col-label orange">Solutions For...</div>
+      <a href="amazon-sellers" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Sellers</h4>
+          <p>Upgrade from Seller Central to vendor access and scale</p>
+        </div>
+      </a>
+      <a href="amazon-vendors" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><path d="M9 22v-4h6v4"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Vendors</h4>
+          <p>Optimise your vendor account and recover lost margin</p>
+        </div>
+      </a>
+      <a href="new-to-amazon" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <div class="mega-item-text">
+          <h4>New to Amazon</h4>
+          <p>A consultative entry point into Amazon's vendor ecosystem</p>
+        </div>
+      </a>
+      <a href="amazon-agencies" class="mega-item">
+        <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Amazon Agencies</h4>
+          <p>Refer clients to a vendor solution and retain your relationship</p>
+        </div>
+      </a>
+    </div>
+    <div>
+      <div class="mega-col-label pink">Scaling FMCG on Amazon</div>
+      <a href="grocery-gourmet" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Grocery & Gourmet</h4>
+          <p>Ambient grocery, speciality foods, snacks</p>
+        </div>
+      </a>
+      <a href="beer-wine-spirits" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l-1 7c0 2.21-1.79 4-4 4h-2c-2.21 0-4-1.79-4-4L8 2z"/><line x1="12" y1="13" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Beer, Wine & Spirits</h4>
+          <p>Alcohol brands with compliance expertise</p>
+        </div>
+      </a>
+      <a href="health-personal-care" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Health & Personal Care</h4>
+          <p>Wellness, supplements, personal care</p>
+        </div>
+      </a>
+      <a href="pet-supplies" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="8" cy="6" rx="2" ry="2.5"/><ellipse cx="16" cy="6" rx="2" ry="2.5"/><ellipse cx="5" cy="11" rx="2" ry="2.5"/><ellipse cx="19" cy="11" rx="2" ry="2.5"/><path d="M12 19c-2 0-4-1.5-5-3 1-2 3-3 5-3s4 1 5 3c-1 1.5-3 3-5 3z"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Pet Supplies</h4>
+          <p>Pet food, treats, and accessories</p>
+        </div>
+      </a>
+      <a href="home-household" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Home & Household</h4>
+          <p>Cleaning, essentials, household brands</p>
+        </div>
+      </a>
+      <a href="garden-outdoor" class="mega-item">
+        <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2C6.5 2 2 6.5 2 12"/><path d="M12 2c5.5 0 10 4.5 10 10"/><path d="M7 9l5-7 5 7"/></svg></div>
+        <div class="mega-item-text">
+          <h4>Garden &amp; Outdoor</h4>
+          <p>Outdoor living, gardening, and seasonal brands</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="mega-menu" id="menu-resources">
+  <div class="mega-menu-inner resources-menu">
+    <a href="case-studies" class="mega-item">
+      <div class="mega-item-icon orange-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      <div class="mega-item-text">
+        <h4>Case Studies</h4>
+        <p>Real brand transformation stories</p>
+      </div>
+    </a>
+    <a href="blog" class="mega-item">
+      <div class="mega-item-icon purple-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+      <div class="mega-item-text">
+        <h4>Insights &amp; Blog</h4>
+        <p>Guides, analysis, and Amazon intelligence</p>
+      </div>
+    </a>
+    <a href="faq" class="mega-item">
+      <div class="mega-item-icon pink-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="mega-item-text">
+        <h4>FAQ</h4>
+        <p>Common questions about Vendor-as-a-Service</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+
+  <!-- Services accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-services">
+      Services
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-services">
+      <div class="mobile-sub-label orange">Vendor-as-a-Service</div>
+      <a class="mobile-sub-link" href="vendor-access">Vendor Access &amp; Prime</a>
+      <a class="mobile-sub-link" href="fulfilment">Fulfilment &amp; Logistics</a>
+      <a class="mobile-sub-link" href="vendor-management-team">Vendor Management Team</a>
+      <a class="mobile-sub-link" href="compliance-escalation">Compliance &amp; Escalation</a>
+      <a class="mobile-sub-link" href="international-expansion">International Expansion</a>
+      <a class="mobile-sub-link" href="exclusive-amazon-programmes">Exclusive Amazon Programmes</a>
+      <div class="mobile-sub-label pink">Growth Marketing</div>
+      <a class="mobile-sub-link" href="advertising">Advertising</a>
+      <a class="mobile-sub-link" href="brand-store">Brand Store</a>
+      <a class="mobile-sub-link" href="aplus-content">A+ Content</a>
+      <a class="mobile-sub-link" href="key-feature-images">Key Feature Images &amp; Lifestyle</a>
+      <a class="mobile-sub-link" href="product-launch">Product Launch</a>
+      <div class="mobile-sub-label purple">Platform</div>
+      <a class="mobile-sub-link" href="order-automation">Order Automation</a>
+      <a class="mobile-sub-link" href="client-portal">Client Portal</a>
+      <a class="mobile-sub-link" href="listing-health">Listing Health &amp; Optimisation</a>
+      <a class="mobile-sub-link" href="reporting-analytics">Reporting &amp; Analytics</a>
+    </div>
+  </div>
+
+  <!-- Solutions accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-solutions">
+      Solutions
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-solutions">
+      <div class="mobile-sub-label orange">Solutions For...</div>
+      <a class="mobile-sub-link" href="amazon-sellers">Amazon Sellers</a>
+      <a class="mobile-sub-link" href="amazon-vendors">Amazon Vendors</a>
+      <a class="mobile-sub-link" href="new-to-amazon">New to Amazon</a>
+      <a class="mobile-sub-link" href="amazon-agencies">Amazon Agencies</a>
+      <div class="mobile-sub-label pink">Scaling FMCG on Amazon</div>
+      <a class="mobile-sub-link" href="grocery-gourmet">Grocery &amp; Gourmet</a>
+      <a class="mobile-sub-link" href="beer-wine-spirits">Beer, Wine &amp; Spirits</a>
+      <a class="mobile-sub-link" href="health-personal-care">Health &amp; Personal Care</a>
+      <a class="mobile-sub-link" href="pet-supplies">Pet Supplies</a>
+      <a class="mobile-sub-link" href="home-household">Home &amp; Household</a>
+      <a class="mobile-sub-link" href="garden-outdoor">Garden &amp; Outdoor</a>
+    </div>
+  </div>
+
+  <!-- Direct links -->
+  <a class="mobile-nav-link" href="pricing">Pricing</a>
+  <a class="mobile-nav-link" href="why-rosetta-brands">Why Rosetta Brands</a>
+
+  <!-- Resources accordion -->
+  <div class="mobile-accordion">
+    <div class="mobile-accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mob-resources">
+      Resources
+      <svg class="mobile-accordion-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="mobile-accordion-body" id="mob-resources">
+      <a class="mobile-sub-link" href="case-studies">Case Studies</a>
+      <a class="mobile-sub-link" href="blog">Insights &amp; Blog</a>
+      <a class="mobile-sub-link" href="faq">FAQ</a>
+    </div>
+  </div>
+
+  <div class="mobile-nav-divider"></div>
+  <div class="mobile-nav-cta">
+    <a href="schedule-a-call" class="btn btn-primary" style="text-decoration:none;justify-content:center;">
+      Schedule a Call
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+</div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-pill">Get in touch</div>
+      <h1>We'd love to <span>hear from you.</span></h1>
+      <p>Whether you're ready to start, just exploring, or have a specific question — our team is here to help.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT BODY
+       ═══════════════════════════════════════════ -->
+  <section class="contact-body">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: contact details -->
+        <div class="contact-left">
+
+          <!-- Phone & Email -->
+          <div class="contact-detail-list">
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 3.5C2.5 2.95 2.95 2.5 3.5 2.5h3l1.5 3.75-1.75 1.75c.96 1.94 2.31 3.29 4.25 4.25l1.75-1.75L16.5 12v3c0 .55-.45 1-1 1C7.44 16 2.5 11.06 2.5 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="contact-detail-body">
+                <div class="contact-detail-label">Phone</div>
+                <div class="contact-detail-value">
+                  <a href="tel:+443333448171">+44 (0)333 344 8171</a>
+                </div>
+                <div class="contact-detail-note">Mon–Fri, 9am–5:30pm GMT</div>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="contact-detail-body">
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">
+                  <a href="mailto:info@rosettabrands.com">info@rosettabrands.com</a>
+                </div>
+                <div class="contact-detail-note">We typically respond within one business day</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Address -->
+          <div class="contact-address">
+            <div class="contact-address-label">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5C5.07 1.5 3.5 3.07 3.5 5c0 2.63 3.5 7 3.5 7s3.5-4.37 3.5-7c0-1.93-1.57-3.5-3.5-3.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="7" cy="5" r="1.2" stroke="currentColor" stroke-width="1.3"/></svg>
+              Registered Office
+            </div>
+            <p class="contact-address-text">
+              Rosetta Brands Ltd<br>
+              The Barn, Island Farm<br>
+              Nateby, Lancashire<br>
+              PR3 0LU
+            </p>
+            <a href="https://maps.google.com/?q=Nateby+Lancashire+PR3+0LU" target="_blank" rel="noopener" class="contact-address-map-link">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10m0 0L8 3m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              View on Google Maps
+            </a>
+          </div>
+
+          <!-- Reassurance -->
+          <div class="contact-reassurance">
+            <div class="contact-reassurance-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              No pitch. Just an honest conversation about your Amazon strategy.
+            </div>
+            <div class="contact-reassurance-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              We only work with brands we can genuinely grow.
+            </div>
+            <div class="contact-reassurance-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              You'll speak directly with our commercial team — not a sales rep.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Calendly booking card -->
+        <div class="contact-right">
+          <div class="contact-calendly-card">
+            <div class="contact-calendly-header">
+              <h3>Book a Discovery Call</h3>
+              <p>15 minutes with our commercial team</p>
+              <div class="contact-calendly-meta">
+                <span class="contact-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 3.5V6l1.5 1.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  15 min
+                </span>
+                <span class="contact-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1.5" y="2" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 1v2M8 1v2M1.5 5h9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  Free
+                </span>
+                <span class="contact-meta-pill">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" stroke="currentColor" stroke-width="1.2"/><path d="M6 4v2l1 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  Video or phone
+                </span>
+              </div>
+            </div>
+            <div class="contact-calendly-embed">
+              <!-- Replace YOUR-CALENDLY-URL with your actual Calendly link -->
+              <!-- <iframe src="https://calendly.com/YOUR-CALENDLY-URL?embed_domain=rosettabrands.co.uk&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1" title="Book a call with Rosetta Brands"></iframe> -->
+              <div class="contact-calendly-placeholder">
+                <div class="placeholder-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M8 2v4M16 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <h4>Book directly in our calendar</h4>
+                <p>Choose a time that works for you — no back-and-forth.</p>
+                <a href="https://calendly.com/YOUR-CALENDLY-URL" target="_blank" rel="noopener" class="btn btn-primary">
+                  Open Booking Calendar
+                  <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder" data-inlined="true">
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="/"><img src="logo-light-2026.png" alt="Rosetta Brands" style="height:36px;width:auto;display:block;margin-bottom:16px;"></a>
+        <p>The UK's only Vendor-as-a-Service for FMCG brands on Amazon. Rosetta Brands helps ambitious brands access enterprise-grade vendor infrastructure and scale profitably.</p>
+
+        <!-- Social icons -->
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/rosettabrands" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://twitter.com/rosettabrands" target="_blank" rel="noopener" aria-label="Twitter / X" class="footer-social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rosettabrands" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Vendor-as-a-Service</h5>
+        <ul>
+          <li><a href="vendor-access">Vendor Access &amp; Prime</a></li>
+          <li><a href="fulfilment">Fulfilment &amp; Logistics</a></li>
+          <li><a href="vendor-management-team">Vendor Management Team</a></li>
+          <li><a href="compliance-escalation">Compliance &amp; Escalation</a></li>
+          <li><a href="international-expansion">International Expansion</a></li>
+          <li><a href="exclusive-amazon-programmes">Exclusive Amazon Programmes</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Growth Marketing</h5>
+        <ul>
+          <li><a href="advertising">Advertising</a></li>
+          <li><a href="brand-store">Brand Store</a></li>
+          <li><a href="aplus-content">A+ Content</a></li>
+          <li><a href="key-feature-images">Key Feature Images &amp; Lifestyle</a></li>
+          <li><a href="product-launch">Product Launch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="order-automation">Order Automation</a></li>
+          <li><a href="client-portal">Client Portal</a></li>
+          <li><a href="listing-health">Listing Health &amp; Optimisation</a></li>
+          <li><a href="reporting-analytics">Reporting &amp; Analytics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions For&hellip;</h5>
+        <ul>
+          <li><a href="amazon-sellers">Amazon Sellers</a></li>
+          <li><a href="amazon-vendors">Amazon Vendors</a></li>
+          <li><a href="new-to-amazon">New to Amazon</a></li>
+          <li><a href="amazon-agencies">Amazon Agencies</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Scaling FMCG on Amazon</h5>
+        <ul>
+          <li><a href="grocery-gourmet">Grocery &amp; Gourmet</a></li>
+          <li><a href="beer-wine-spirits">Beer, Wine &amp; Spirits</a></li>
+          <li><a href="health-personal-care">Health &amp; Personal Care</a></li>
+          <li><a href="pet-supplies">Pet Supplies</a></li>
+          <li><a href="home-household">Home &amp; Household</a></li>
+          <li><a href="garden-outdoor">Garden &amp; Outdoor</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="case-studies">Case Studies</a></li>
+          <li><a href="blog">Insights &amp; Blog</a></li>
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+        <h5 style="margin-top:24px;">Company</h5>
+        <ul>
+          <li><a href="why-rosetta-brands">Why Rosetta Brands</a></li>
+          <li><a href="meet-the-team">Meet the Team</a></li>
+          <li><a href="careers">Careers</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="schedule-a-call">Schedule a Call</a></li>
+          <li><a href="privacy">Privacy Policy</a></li>
+          <li><a href="data-protection">Data Protection</a></li>
+          <li><a href="privacy#cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Rosetta Brands. All rights reserved.</span>
+      <span>Lancashire, UK &middot; Australia &middot; Germany</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     COOKIE CONSENT — BANNER + PREFERENCES MODAL
+     Controlled by cookie-consent.js
+     ═══════════════════════════════════════════ -->
+
+<style>
+/* ── Banner ── */
+#rc-banner {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: #2d2933; color: #fff;
+  padding: 16px 32px;
+  display: none; /* shown by JS on first visit */
+  align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+  box-shadow: 0 -4px 32px rgba(0,0,0,0.20);
+}
+#rc-banner p { margin: 0; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.85); flex: 1; min-width: 220px; }
+#rc-banner a { color: #f17d02; text-decoration: underline; }
+.rc-banner-btns { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+/* ── Modal overlay ── */
+#rc-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.55);
+  display: none; /* shown by JS */
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+
+/* ── Modal card ── */
+.rc-modal {
+  background: #fff; border-radius: 16px;
+  max-width: 540px; width: 100%;
+  padding: 32px; position: relative;
+  max-height: 90vh; overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+.rc-modal h2 { font-size: 20px; font-weight: 700; color: #2d2933; margin: 0 0 6px; }
+.rc-modal > p { font-size: 14px; color: #666; line-height: 1.5; margin: 0 0 24px; }
+
+#rc-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; cursor: pointer;
+  font-size: 22px; line-height: 1; color: #999;
+  padding: 4px 8px; border-radius: 6px;
+}
+#rc-close:hover { background: #f5f5f7; color: #2d2933; }
+
+/* ── Consent rows ── */
+.rc-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 18px 0; border-top: 1px solid #eee;
+  gap: 16px;
+}
+.rc-row-label { font-weight: 600; font-size: 15px; color: #2d2933; margin-bottom: 4px; }
+.rc-row-desc  { font-size: 13px; color: #666; line-height: 1.5; }
+.rc-always-on {
+  font-size: 12px; font-weight: 600; color: #f17d02;
+  background: #fff4e6; padding: 4px 10px; border-radius: 100px; white-space: nowrap;
+}
+
+/* ── Toggle switch ── */
+.rc-toggle-wrap { flex-shrink: 0; padding-top: 2px; }
+.rc-toggle { position: relative; display: inline-block; width: 44px; height: 24px; }
+.rc-toggle input { opacity: 0; width: 0; height: 0; }
+.rc-slider {
+  position: absolute; cursor: pointer; inset: 0;
+  background: #ddd; border-radius: 24px;
+  transition: background 0.2s;
+}
+.rc-slider::before {
+  content: ''; position: absolute;
+  height: 18px; width: 18px; left: 3px; bottom: 3px;
+  background: #fff; border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.rc-toggle input:checked + .rc-slider { background: #f17d02; }
+.rc-toggle input:checked + .rc-slider::before { transform: translateX(20px); }
+
+/* ── Modal buttons ── */
+.rc-modal-btns {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  padding-top: 20px; border-top: 1px solid #eee; margin-top: 4px;
+}
+.rc-btn-primary {
+  flex: 1; min-width: 120px;
+  background: #f17d02; color: #fff; border: none;
+  padding: 11px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s;
+}
+.rc-btn-primary:hover { background: #d96a00; }
+.rc-btn-dark {
+  flex: 1; min-width: 120px;
+  background: #2d2933; color: #fff; border: none;
+  padding: 11px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s;
+}
+.rc-btn-dark:hover { background: #1a1820; }
+.rc-btn-ghost {
+  background: transparent; color: #2d2933;
+  border: 1px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.82);
+  padding: 10px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+}
+.rc-btn-ghost:hover { border-color: rgba(255,255,255,0.65); color: #fff; }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  #rc-banner { flex-direction: column; align-items: flex-start; }
+  .rc-banner-btns { width: 100%; }
+  .rc-banner-btns button { flex: 1; }
+}
+</style>
+
+<!-- BANNER -->
+<div id="rc-banner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and understand how the site is used. <a href="privacy">Learn more</a></p>
+  <div class="rc-banner-btns">
+    <button class="rc-btn-ghost" id="rc-manage">Manage Preferences</button>
+    <button style="background:#f17d02;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;" id="rc-accept-all">Accept All</button>
+  </div>
+</div>
+
+<!-- PREFERENCES MODAL -->
+<div id="rc-overlay" role="dialog" aria-modal="true" aria-label="Cookie preferences">
+  <div class="rc-modal">
+    <button id="rc-close" aria-label="Close">&times;</button>
+    <h2>Cookie Preferences</h2>
+    <p>Choose which cookies you allow. Essential cookies are always active — they're needed for the site to work.</p>
+
+    <!-- Essential -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Essential</div>
+        <div class="rc-row-desc">Required for the site to function — session management and your saved cookie preferences. Cannot be disabled.</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <span class="rc-always-on">Always on</span>
+      </div>
+    </div>
+
+    <!-- Analytics -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Analytics</div>
+        <div class="rc-row-desc">Helps us understand how visitors use the site. Data is anonymous and used only to improve performance. Includes Google Analytics (GA4).</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <label class="rc-toggle">
+          <input type="checkbox" id="rc-analytics">
+          <span class="rc-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Advertising -->
+    <div class="rc-row">
+      <div>
+        <div class="rc-row-label">Advertising</div>
+        <div class="rc-row-desc">Enables personalised ads and conversion tracking. Used for remarketing via Google Ads and LinkedIn Insight Tag. Your data may be shared with advertising partners.</div>
+      </div>
+      <div class="rc-toggle-wrap">
+        <label class="rc-toggle">
+          <input type="checkbox" id="rc-advertising">
+          <span class="rc-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="rc-modal-btns">
+      <button class="rc-btn-primary" id="rc-save">Save Preferences</button>
+      <button class="rc-btn-dark" id="rc-accept-all-2">Accept All</button>
+    </div>
+  </div>
+</div>
+
+<script src="cookie-consent.js"></script>
+</div>
+  <script src="nav-loader.js" defer></script>
+  <script src="cookie-consent.js" defer></script>
+
+</body>
+</html>

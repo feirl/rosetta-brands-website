@@ -93,6 +93,7 @@ PAGES = [
     'case-studies.html',
     'blog.html',
     'blog-template.html',
+    'contact.html',
 ]
 
 def main():
