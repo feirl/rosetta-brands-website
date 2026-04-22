@@ -93,6 +93,13 @@ PAGES = [
     'case-studies.html',
     'blog.html',
     'blog-template.html',
+    'amazon-chargebacks.html',
+    'subscribe-and-save.html',
+    'brand-pricing-amazon.html',
+    'selling-alcohol-amazon-uk.html',
+    'tacos-vs-acos.html',
+    'seller-central-to-vendor-central.html',
+    'vendor-central-access.html',
     'contact.html',
 ]
 
