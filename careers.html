@@ -120,6 +120,37 @@
   margin-bottom: 0;
 }
 
+/* ═══ TWO-COLUMN SPLIT SECTION ═══ */
+.careers-split {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+.careers-split-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .careers-split-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+.careers-split h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  line-height: 1.25;
+}
+.careers-split p {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.careers-split p:last-child { margin-bottom: 0; }
+
 /* How we work - 3 pillars */
 .how-pillars {
   display: grid;
@@ -1053,18 +1084,36 @@
   </div>
 </section>
 
-<!-- ═══ WHY WORK WITH US ═══ -->
-<section class="careers-section fade-in">
+<!-- ═══ WHAT IT'S LIKE + WHY WORK WITH US (split) ═══ -->
+<section class="careers-split fade-in">
   <div class="container">
-    <div class="careers-inner">
-      <h2>Why work with us</h2>
-      <p>We keep things straightforward:</p>
-      <ul class="look-for-list">
-        <li><span>You'll know what's expected of you</span></li>
-        <li><span>You'll have the tools and support to do your job properly</span></li>
-        <li><span>Your work will matter — it won't disappear into a large corporate machine</span></li>
-      </ul>
-      <p style="margin-top: 24px;">We value people who are reliable, take ownership, and want to improve over time.</p>
+    <div class="careers-split-inner">
+
+      <!-- Left: What it's like to work here -->
+      <div>
+        <h2>What it's like to work here</h2>
+        <p>We're a small team of around 25, so your contribution is visible. There's no unnecessary hierarchy, and decisions are made quickly.</p>
+        <p>Day-to-day, that means:</p>
+        <ul class="look-for-list">
+          <li><span>Open communication — no politics</span></li>
+          <li><span>A practical approach to problem-solving</span></li>
+          <li><span>Flexibility where it makes sense</span></li>
+        </ul>
+        <p style="margin-top: 24px;">We don't expect perfection, but we do expect people to care about their work and take responsibility.</p>
+      </div>
+
+      <!-- Right: Why work with us -->
+      <div>
+        <h2>Why work with us</h2>
+        <p>We keep things straightforward:</p>
+        <ul class="look-for-list">
+          <li><span>You'll know what's expected of you</span></li>
+          <li><span>You'll have the tools and support to do your job properly</span></li>
+          <li><span>Your work will matter — it won't disappear into a large corporate machine</span></li>
+        </ul>
+        <p style="margin-top: 24px;">We value people who are reliable, take ownership, and want to improve over time.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1096,23 +1145,6 @@
         <li><span>Condensed working week — half day Friday (from home)</span></li>
         <li><span>Training and development support</span></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ WHAT IT'S LIKE TO WORK HERE ═══ -->
-<section class="careers-section fade-in">
-  <div class="container">
-    <div class="careers-inner">
-      <h2>What it's like to work here</h2>
-      <p>We're a small team of around 25, so your contribution is visible. There's no unnecessary hierarchy, and decisions are made quickly.</p>
-      <p>Day-to-day, that means:</p>
-      <ul class="look-for-list">
-        <li><span>Open communication — no politics</span></li>
-        <li><span>A practical approach to problem-solving</span></li>
-        <li><span>Flexibility where it makes sense</span></li>
-      </ul>
-      <p style="margin-top: 24px;">We don't expect perfection, but we do expect people to care about their work and take responsibility.</p>
     </div>
   </div>
 </section>
