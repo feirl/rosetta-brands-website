@@ -230,6 +230,7 @@
   text-underline-offset: 3px;
 }
 .article-body a:hover { color: #e07200; }
+.article-body a.btn-primary { color: var(--white); text-decoration: none; }
 
 /* Pull quote */
 .pull-quote {
@@ -611,7 +612,7 @@
    ═══════════════════════════════════════════ */
 .article-faq {
   margin: 48px 0 0;
-  padding: 20px 24px 16px;
+  padding: 20px 28px 20px;
   background: var(--light-grey, #f9f9f7);
   border-radius: 20px;
   border: 1px solid var(--border);
@@ -632,13 +633,16 @@
 .faq-item {
   border-top: 1px solid var(--border);
 }
+.faq-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
 .faq-question {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 0;
+  padding: 14px 4px;
   background: none;
   border: none;
   cursor: pointer;
