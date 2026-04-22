@@ -120,36 +120,82 @@
   margin-bottom: 0;
 }
 
-/* ═══ TWO-COLUMN SPLIT SECTION ═══ */
-.careers-split {
+/* ═══ CARD GRID SECTIONS ═══ */
+.careers-cards-section {
   padding: 80px 0;
   background: var(--off-white);
 }
-.careers-split-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+.careers-cards-section + .careers-cards-section {
+  background: #fff;
+  padding-top: 0;
 }
-@media (max-width: 768px) {
-  .careers-split-inner { grid-template-columns: 1fr; gap: 48px; }
+.careers-cards-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
-.careers-split h2 {
+.careers-cards-header h2 {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--charcoal);
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   line-height: 1.25;
 }
-.careers-split p {
+.careers-cards-header p {
   font-size: 1.03rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 18px;
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto;
 }
-.careers-split p:last-child { margin-bottom: 0; }
+.careers-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .careers-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .careers-card-grid { grid-template-columns: 1fr; }
+}
+.careers-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.careers-cards-section + .careers-cards-section .careers-card {
+  background: var(--off-white);
+}
+.careers-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(242,107,29,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.careers-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin: 0;
+}
+.careers-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
 
 /* How we work - 3 pillars */
 .how-pillars {
@@ -1084,36 +1130,68 @@
   </div>
 </section>
 
-<!-- ═══ WHAT IT'S LIKE + WHY WORK WITH US (split) ═══ -->
-<section class="careers-split fade-in">
+<!-- ═══ WHAT IT'S LIKE TO WORK HERE ═══ -->
+<section class="careers-cards-section fade-in">
   <div class="container">
-    <div class="careers-split-inner">
-
-      <!-- Left: What it's like to work here -->
-      <div>
-        <h2>What it's like to work here</h2>
-        <p>We're a small team of around 25, so your contribution is visible. There's no unnecessary hierarchy, and decisions are made quickly.</p>
-        <p>Day-to-day, that means:</p>
-        <ul class="look-for-list">
-          <li><span>Open communication — no politics</span></li>
-          <li><span>A practical approach to problem-solving</span></li>
-          <li><span>Flexibility where it makes sense</span></li>
-        </ul>
-        <p style="margin-top: 24px;">We don't expect perfection, but we do expect people to care about their work and take responsibility.</p>
+    <div class="careers-cards-header">
+      <h2>What it's like to work here</h2>
+      <p>We're a small team of around 25 — no unnecessary hierarchy, decisions made quickly, and your contribution is always visible.</p>
+    </div>
+    <div class="careers-card-grid">
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Open communication</h3>
+        <p>No politics. We say what we think and expect the same from everyone on the team.</p>
       </div>
-
-      <!-- Right: Why work with us -->
-      <div>
-        <h2>Why work with us</h2>
-        <p>We keep things straightforward:</p>
-        <ul class="look-for-list">
-          <li><span>You'll know what's expected of you</span></li>
-          <li><span>You'll have the tools and support to do your job properly</span></li>
-          <li><span>Your work will matter — it won't disappear into a large corporate machine</span></li>
-        </ul>
-        <p style="margin-top: 24px;">We value people who are reliable, take ownership, and want to improve over time.</p>
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Practical problem-solving</h3>
+        <p>We focus on what works. A straightforward approach to real challenges, without overcomplicating things.</p>
       </div>
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Flexibility where it counts</h3>
+        <p>We don't expect perfection — but we do expect people to care about their work and take responsibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ═══ WHY WORK WITH US ═══ -->
+<section class="careers-cards-section fade-in">
+  <div class="container">
+    <div class="careers-cards-header">
+      <h2>Why work with us</h2>
+      <p>We value people who are reliable, take ownership, and want to improve over time. Here's what you can expect.</p>
+    </div>
+    <div class="careers-card-grid">
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Clear expectations</h3>
+        <p>You'll know what's expected of you from day one — no ambiguity, no moving goalposts.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Tools &amp; support</h3>
+        <p>You'll have everything you need to do your job properly — we don't set people up to fail.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Work that matters</h3>
+        <p>Your contribution won't disappear into a large corporate machine. What you do here has a real, visible impact.</p>
+      </div>
     </div>
   </div>
 </section>
