@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog & Insights | Rosetta Brands: Amazon Strategy for UK FMCG</title>
-<meta name="description" content="Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon. Vendor Central, advertising, brand protection and more.">
-<link rel="canonical" href="https://rosettabrands.co.uk/blog">
-<meta property="og:title" content="Blog & Insights | Rosetta Brands">
-<meta property="og:description" content="Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rosettabrands.co.uk/blog.html">
+<title>Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now | Rosetta Brands Blog</title>
+<meta name="description" content="Amazon has stopped issuing new Vendor Central invitations. We explain what happened, which UK FMCG brands are affected, and the routes still available in 2025.">
+<link rel="canonical" href="https://rosettabrands.co.uk/vendor-central-access">
+<meta property="og:title" content="Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now">
+<meta property="og:description" content="Amazon has stopped issuing new Vendor Central invitations. We explain what happened, which UK FMCG brands are affected, and the routes still available in 2025.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rosettabrands.co.uk/vendor-central-access">
 <meta property="og:image" content="https://rosettabrands.co.uk/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Rosetta Brands: The UK's Only Vendor-as-a-Service for FMCG Brands">
 <meta name="twitter:image" content="https://rosettabrands.co.uk/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog & Insights | Rosetta Brands">
-<meta name="twitter:description" content="Amazon intelligence for UK FMCG brands. Strategy, tactics, and honest perspective.">
+<meta name="twitter:title" content="Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now | Rosetta Brands">
+<meta name="twitter:description" content="Amazon has stopped issuing new Vendor Central invitations. Here's what it means for UK FMCG brands and the routes still available in 2025.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -31,136 +31,48 @@
 <style>
 
 /* ═══════════════════════════════════════════
-   PILL / TAG COMPONENT
+   ARTICLE HERO
    ═══════════════════════════════════════════ */
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(241,125,2,0.08);
-  border: 1px solid rgba(241,125,2,0.25);
-  color: var(--orange);
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 24px;
-}
-.pill::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--orange);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ═══════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════ */
-
-.blog-hero {
-  padding: 128px 0 72px;
+.article-hero {
+  padding: 128px 0 64px;
   background: var(--off-white);
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
 }
-.blog-hero::before {
+.article-hero::before {
   content: '';
   position: absolute;
-  top: -120px; right: -180px;
-  width: 480px; height: 480px;
+  top: -100px; right: -160px;
+  width: 420px; height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(241,125,2,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
-.blog-hero::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -80px;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(127,134,193,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-.blog-hero-inner {
-  max-width: 680px;
+.article-hero-inner {
+  max-width: 800px;
   position: relative;
   z-index: 1;
 }
-.blog-hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(34px, 5vw, 52px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: var(--charcoal);
-  margin-bottom: 20px;
-}
-.blog-hero-sub {
-  font-size: 18px;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 560px;
-}
-
-/* ═══════════════════════════════════════════
-   FILTER BAR
-   ═══════════════════════════════════════════ */
-
-.filter-bar {
-  position: sticky;
-  top: 72px;
-  z-index: 90;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 0;
-}
-.filter-bar-inner {
+.breadcrumb {
   display: flex;
   align-items: center;
-  gap: 4px;
-  overflow-x: auto;
-  padding: 12px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.filter-bar-inner::-webkit-scrollbar { display: none; }
-.filter-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
+  gap: 8px;
   font-size: 13px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 100px;
-  border: 1px solid transparent;
-  background: transparent;
   color: var(--text-secondary);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
+  margin-bottom: 24px;
 }
-.filter-btn:hover {
-  background: var(--charcoal-05);
-  color: var(--charcoal);
-  border-color: var(--border);
+.breadcrumb a {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
 }
-.filter-btn.active {
-  background: var(--charcoal);
-  color: var(--white);
-  border-color: var(--charcoal);
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb-sep {
+  color: var(--border);
+  font-size: 16px;
 }
-
-/* ═══════════════════════════════════════════
-   CATEGORY TAGS (on cards)
-   ═══════════════════════════════════════════ */
+.breadcrumb-current { color: var(--charcoal); font-weight: 500; }
 
 .cat-tag {
   display: inline-flex;
@@ -170,157 +82,426 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
-.cat-tag.orange   { background: rgba(241,125,2,0.1);   color: var(--orange); }
-.cat-tag.pink     { background: rgba(225,82,134,0.1);  color: var(--pink); }
-.cat-tag.purple   { background: rgba(127,134,193,0.12); color: var(--purple); }
-.cat-tag.grey     { background: var(--charcoal-10);    color: var(--grey); }
+.cat-tag.orange { background: rgba(241,125,2,0.1); color: var(--orange); }
+.cat-tag.pink   { background: rgba(225,82,134,0.1); color: var(--pink); }
+.cat-tag.purple { background: rgba(127,134,193,0.12); color: var(--purple); }
+.cat-tag.grey   { background: var(--charcoal-10); color: var(--grey); }
+
+.article-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+}
+.article-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.article-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--orange) 0%, #e07200 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+.author-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.meta-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+}
+.meta-item {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.article-deck {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 680px;
+  border-left: 3px solid var(--orange);
+  padding-left: 20px;
+  margin-top: 8px;
+}
 
 /* ═══════════════════════════════════════════
-   FEATURED ARTICLE
+   ARTICLE LAYOUT: TWO-COLUMN
    ═══════════════════════════════════════════ */
 
-.featured-section {
-  padding: 64px 0 0;
+.article-layout {
+  padding: 64px 0 80px;
 }
-.featured-card {
-  background: linear-gradient(135deg, var(--charcoal) 0%, #3a3542 100%);
-  border-radius: 24px;
-  padding: 56px 64px;
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
+.article-layout-inner {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 48px;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
 }
-.featured-card::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 320px; height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.15) 0%, transparent 70%);
-  pointer-events: none;
+
+/* ═══════════════════════════════════════════
+   ARTICLE BODY
+   ═══════════════════════════════════════════ */
+
+.article-body {
+  max-width: 680px;
 }
-.featured-card::after {
-  content: '';
-  position: absolute;
-  bottom: -60px; left: 30%;
-  width: 250px; height: 250px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(225,82,134,0.08) 0%, transparent 70%);
-  pointer-events: none;
+.article-body p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: 24px;
 }
-.featured-card > * { position: relative; z-index: 1; }
-.featured-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.article-body p.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 0.85;
+  float: left;
+  margin-right: 8px;
+  margin-top: 6px;
+  color: var(--orange);
+}
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--charcoal);
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+.article-body ul,
+.article-body ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+.article-body li {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.article-body strong {
+  font-weight: 700;
+  color: var(--charcoal);
+}
+.article-body a {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article-body a:hover { color: #e07200; }
+
+/* Pull quote */
+.pull-quote {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--charcoal);
+  border-left: 3px solid var(--orange);
+  padding: 8px 0 8px 24px;
+  margin: 40px 0;
+}
+
+/* Callout box */
+.callout-box {
+  background: var(--orange-light);
+  border: 1px solid rgba(241,125,2,0.2);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 36px 0;
+}
+.callout-box-label {
   font-family: var(--font-display);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  background: rgba(241,125,2,0.2);
-  color: #ffb366;
-  border: 1px solid rgba(241,125,2,0.3);
-  margin-bottom: 20px;
+  color: var(--orange);
+  margin-bottom: 12px;
 }
-.featured-card h2 {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  margin-bottom: 16px;
-  max-width: 580px;
-}
-.featured-excerpt {
+.callout-box p {
   font-size: 16px;
   line-height: 1.65;
-  color: rgba(255,255,255,0.65);
-  max-width: 520px;
-  margin-bottom: 28px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  color: var(--charcoal);
+  margin-bottom: 0 !important;
+}
+
+/* Article CTA */
+.article-cta-inline {
+  background: var(--charcoal);
+  border-radius: 20px;
+  padding: 40px 44px;
+  margin-top: 48px;
+  position: relative;
   overflow: hidden;
 }
-.featured-meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 28px;
-}
-.featured-meta span { display: flex; align-items: center; gap: 6px; }
-.featured-meta-dot {
-  width: 3px; height: 3px;
-  background: rgba(255,255,255,0.3);
+.article-cta-inline::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
   border-radius: 50%;
+  background: radial-gradient(circle, rgba(241,125,2,0.2) 0%, transparent 70%);
 }
-.featured-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.article-cta-inline > * { position: relative; z-index: 1; }
+.article-cta-inline h3 {
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--orange);
-  transition: gap 0.2s ease;
-}
-.featured-link:hover { gap: 12px; color: #ffb366; }
-.featured-badge {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 28px;
-  text-align: center;
-  min-width: 160px;
-}
-.featured-badge-num {
-  font-family: var(--font-display);
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 800;
-  color: var(--orange);
-  line-height: 1;
-  margin-bottom: 8px;
+  color: var(--white);
+  margin-bottom: 12px;
+  margin-top: 0;
+  letter-spacing: -0.01em;
 }
-.featured-badge-label {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.4;
+.article-cta-inline p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 /* ═══════════════════════════════════════════
-   ARTICLE GRID
+   STICKY SIDEBAR
    ═══════════════════════════════════════════ */
 
-.articles-section {
-  padding: 64px 0;
+.article-sidebar {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-.articles-heading {
+.sidebar-block {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  margin-bottom: 16px;
+}
+.sidebar-block:last-child { margin-bottom: 0; }
+
+/* TOC */
+.sidebar-toc-label {
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
-.articles-grid {
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.toc-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+.toc-list li a:hover {
+  color: var(--orange);
+  background: rgba(241,125,2,0.05);
+}
+.toc-list li a.active {
+  color: var(--orange);
+  background: rgba(241,125,2,0.08);
+  border-color: rgba(241,125,2,0.15);
+  font-weight: 600;
+}
+.toc-indicator {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.toc-list li a.active .toc-indicator,
+.toc-list li a:hover .toc-indicator {
+  background: var(--orange);
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0 16px;
+}
+
+/* Related articles in sidebar */
+.sidebar-related-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.sidebar-article {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.2s ease;
+}
+.sidebar-article:last-child { border-bottom: none; padding-bottom: 0; }
+.sidebar-article:hover .sidebar-article-title { color: var(--orange); }
+.sidebar-article-tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.sidebar-article-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--charcoal);
+  transition: color 0.2s ease;
+}
+
+/* Sidebar CTA */
+.sidebar-cta {
+  background: linear-gradient(135deg, var(--charcoal) 0%, #3a3542 100%);
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.sidebar-cta::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(241,125,2,0.2) 0%, transparent 70%);
+}
+.sidebar-cta > * { position: relative; z-index: 1; }
+.sidebar-cta-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+.sidebar-cta h4 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.sidebar-cta p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+.sidebar-cta .btn-primary {
+  width: 100%;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* ═══════════════════════════════════════════
+   MORE ARTICLES SECTION
+   ═══════════════════════════════════════════ */
+
+.more-articles {
+  padding: 80px 0;
+  background: var(--light-grey);
+  border-top: 1px solid var(--border);
+}
+.more-articles-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.more-articles-heading {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+}
+.more-articles-link {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+.more-articles-link:hover { gap: 10px; }
+.more-articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 .article-card {
   background: var(--white);
@@ -396,131 +577,106 @@
 .article-card:hover .article-read-more { gap: 8px; }
 
 /* ═══════════════════════════════════════════
-   EMAIL CTA
-   ═══════════════════════════════════════════ */
-
-.email-cta-section {
-  padding: 80px 0;
-  background: var(--white);
-}
-.email-cta-box {
-  background: linear-gradient(135deg, var(--charcoal) 0%, #3d3647 100%);
-  border-radius: 28px;
-  padding: 72px 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.email-cta-box::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 280px; height: 280px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(241,125,2,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.email-cta-box > * { position: relative; z-index: 1; }
-.email-cta-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 100px;
-  background: rgba(241,125,2,0.2);
-  color: #ffb366;
-  border: 1px solid rgba(241,125,2,0.3);
-  margin-bottom: 20px;
-}
-.email-cta-heading {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  margin-bottom: 16px;
-}
-.email-cta-text {
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255,255,255,0.6);
-}
-.email-cta-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.email-cta-note {
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
-  margin-top: 4px;
-}
-.email-input-row {
-  display: flex;
-  gap: 12px;
-}
-.email-input {
-  flex: 1;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  font-size: 15px;
-  color: var(--white);
-  font-family: var(--font-body);
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.email-input::placeholder { color: rgba(255,255,255,0.35); }
-.email-input:focus { border-color: rgba(241,125,2,0.5); }
-.email-submit {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--orange);
-  color: var(--white);
-  border: none;
-  border-radius: 12px;
-  padding: 14px 24px;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(241,125,2,0.3);
-}
-.email-submit:hover {
-  background: #e07200;
-  box-shadow: 0 4px 16px rgba(241,125,2,0.35);
-  transform: translateY(-1px);
-}
-
-/* ═══════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .articles-grid { grid-template-columns: repeat(2, 1fr); }
-  .featured-card { grid-template-columns: 1fr; }
-  .featured-badge { display: none; }
-  .email-cta-box { grid-template-columns: 1fr; padding: 48px 40px; }
+  .article-layout-inner {
+    grid-template-columns: 1fr;
+  }
+  .article-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .sidebar-block { margin-bottom: 0; }
+  .more-articles-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .articles-grid { grid-template-columns: 1fr; }
-  .featured-card { padding: 36px 28px; }
-  .email-cta-box { padding: 40px 28px; }
-  .email-input-row { flex-direction: column; }
+  .article-body p.drop-cap::first-letter {
+    font-size: 48px;
+  }
+  .article-sidebar { grid-template-columns: 1fr; }
+  .more-articles-grid { grid-template-columns: 1fr; }
+  .more-articles-header { flex-direction: column; gap: 12px; }
+  .article-hero { padding: 128px 0 48px; }
+  .article-meta-row { gap: 12px; }
+  .meta-divider { display: none; }
+}
+
+/* ═══════════════════════════════════════════
+   ARTICLE FAQ SECTION
+   ═══════════════════════════════════════════ */
+.article-faq {
+  margin: 48px 0 0;
+  padding: 36px 40px 24px;
+  background: var(--light-grey, #f9f9f7);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+.article-faq-heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+.article-faq-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+.faq-item {
+  border-top: 1px solid var(--border);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--charcoal);
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+.faq-question:hover { color: var(--orange); }
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  color: var(--text-secondary);
+  width: 18px; height: 18px;
+}
+.faq-question[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+  color: var(--orange);
+}
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-answer.open {
+  max-height: 400px;
+}
+.faq-answer-inner {
+  padding-bottom: 16px;
+}
+.faq-answer-inner p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 0 !important;
 }
 
 </style>
@@ -547,6 +703,114 @@
   <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>
 
+<!-- ═══ STRUCTURED DATA - Article + BreadcrumbList + FAQPage ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://rosettabrands.co.uk/vendor-central-access#article",
+      "headline": "Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now",
+      "description": "Amazon has stopped issuing new Vendor Central invitations. We explain what happened, which UK FMCG brands are affected, and the routes still available in 2025.",
+      "url": "https://rosettabrands.co.uk/vendor-central-access",
+      "datePublished": "2026-04-22",
+      "dateModified": "2026-04-22",
+      "inLanguage": "en-GB",
+      "author": {
+        "@type": "Person",
+        "name": "Nick Comer",
+        "jobTitle": "CEO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Rosetta Brands",
+          "url": "https://rosettabrands.co.uk"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rosettabrands.co.uk/logo-dark-2026.png"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://rosettabrands.co.uk/og-default.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://rosettabrands.co.uk/vendor-central-access"
+      },
+      "articleSection": "Amazon Strategy",
+      "keywords": ["Amazon Vendor Central", "FMCG", "Amazon UK", "Vendor-as-a-Service", "1P seller"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://rosettabrands.co.uk/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why Vendor Central Access Has Closed"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can UK FMCG brands still get Vendor Central access in 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direct Vendor Central invitations from Amazon have effectively stopped for new brands. The most viable route to 1P vendor access is through a Vendor-as-a-Service partner like Rosetta Brands, which holds established vendor relationships and allows brands to access the benefits of the vendor model through a shared account structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Vendor Central and Seller Central?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vendor Central (1P) means Amazon buys your products wholesale and sells them as the retailer - you get the Prime badge and Amazon manages fulfilment. Seller Central (3P) means you list products yourself and pay Amazon a referral fee. Vendor relationships have historically driven stronger conversion rates for FMCG categories, particularly grocery, health, and pet supplies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Amazon close existing Vendor Central accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no indication that Amazon intends to close active Vendor Central accounts. The change is specifically about new account creation - existing vendor relationships are continuing as normal. Brands already in Vendor Central retain their access, which has made that access increasingly valuable as new routes close off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Vendor-as-a-Service and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vendor-as-a-Service (VaaS) is a model where an established Amazon vendor operates as the vendor of record for multiple FMCG brands. Brands trade through the VaaS provider's account rather than building their own vendor relationship. Rosetta Brands is the UK's only dedicated VaaS provider, managing over 958 brands through a single Top 15 Grocery Vendor account."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1255,113 +1519,253 @@
 
 <main id="main">
 
-  <!-- ═══ HERO ═══ -->
-  <section class="blog-hero">
+  <!-- ═══ ARTICLE HERO ═══ -->
+  <section class="article-hero">
     <div class="container">
-      <div class="blog-hero-inner">
-        <div class="pill fade-in">Insights &amp; Blog</div>
-        <h1 class="fade-in fade-in-delay-1">Amazon intelligence for UK FMCG brands.</h1>
-        <p class="blog-hero-sub fade-in fade-in-delay-2">Strategy, tactics, and honest perspective from the team running £100M+ of FMCG on Amazon.</p>
+      <div class="article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="blog">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">Amazon Strategy</span>
+        </nav>
+        <span class="cat-tag orange">Amazon Strategy</span>
+        <h1 class="fade-in">Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now</h1>
+        <div class="article-meta-row fade-in fade-in-delay-1">
+          <div class="article-author">
+            <div class="author-avatar" aria-hidden="true">RB</div>
+            <span class="author-name">Rosetta Brands Team</span>
+          </div>
+          <div class="meta-divider" aria-hidden="true"></div>
+          <span class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            April 2026
+          </span>
+          <div class="meta-divider" aria-hidden="true"></div>
+          <span class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.5l2 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            6 min read
+          </span>
+        </div>
+        <p class="article-deck fade-in fade-in-delay-2">Amazon has quietly stopped issuing new Vendor Central invitations. For UK FMCG brands, the window to secure 1P status independently may be gone for good.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FILTER BAR ═══ -->
-  <div class="filter-bar">
+  <!-- ═══ ARTICLE CONTENT + SIDEBAR ═══ -->
+  <section class="article-layout">
     <div class="container">
-      <div class="filter-bar-inner">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">Amazon Strategy</button>
-        <button class="filter-btn">Vendor Central</button>
-        <button class="filter-btn">Advertising</button>
-        <button class="filter-btn">Brand Protection</button>
-        <button class="filter-btn">FMCG Sectors</button>
-        <button class="filter-btn">Operations</button>
-        <button class="filter-btn">Growth</button>
-      </div>
-    </div>
-  </div>
+      <div class="article-layout-inner">
 
-  <!-- ═══ FEATURED ARTICLE ═══ -->
-  <section class="featured-section">
-    <div class="container">
-      <div class="featured-card fade-in">
-        <div class="featured-content">
-          <div class="featured-label">Vendor Central</div>
-          <h2>Why Amazon Vendor Central Has Closed Its Doors - And What That Means for FMCG Brands</h2>
-          <p class="featured-excerpt">Amazon quietly stopped issuing new Vendor Central invitations in 2024, leaving thousands of FMCG brands locked out of the wholesale model. We explain what's happened, who it affects, and what the path forward actually looks like.</p>
-          <div class="featured-meta">
-            <span>March 2026</span>
-            <span class="featured-meta-dot"></span>
-            <span>6 min read</span>
+        <!-- Main article body -->
+        <article class="article-body fade-in" id="article-content">
+
+          <p class="drop-cap">For years, receiving a Vendor Central invitation from Amazon felt like winning a golden ticket. You became a first-party (1P) supplier: Amazon bought your products wholesale, managed the retail listing, and displayed the coveted "Ships from and sold by Amazon" badge that consumers trust. The Prime badge. The credibility. The volume. Then, in 2024, Amazon stopped issuing new invitations almost entirely - and the industry noticed.</p>
+
+          <h2 id="what-happened">What actually happened?</h2>
+
+          <p>Amazon hasn't published a formal press release, and there's no official policy document that says "Vendor Central is closed." What happened was quieter than that, and more deliberate. Over the course of 2023 and into 2024, the cadence of new vendor invitations slowed to near-zero. Brands that had been in conversation with Amazon buyer teams for months found those conversations go cold. New-to-Amazon brands trying to enter via the 1P route were turned away entirely.</p>
+
+          <p>The reason isn't hard to deduce. Amazon's Vendor Central business model - buying inventory wholesale and reselling it - is capital-intensive and operationally complex. It requires Amazon to manage pricing, inventory risk, and fulfilment at scale across millions of SKUs. Over recent years, Amazon has made no secret of its preference for the Seller Central (3P) model, where third-party brands own the inventory risk, manage their own listings, and pay Amazon a referral fee and fulfilment cost instead. It's a higher-margin business for Amazon, with less operational exposure.</p>
+
+          <blockquote class="pull-quote">
+            "The brands that already have Vendor Central access are sitting on something genuinely scarce. Amazon is not giving it away anymore - and that changes the strategic calculus entirely."
+          </blockquote>
+
+          <h2 id="who-is-affected">Who is affected, and who isn't?</h2>
+
+          <p>It's important to distinguish between two groups of brands here:</p>
+
+          <ul>
+            <li><strong>Existing vendors</strong> - brands already in Vendor Central - are largely unaffected operationally. Their accounts remain active, their wholesale relationships continue, and there is no indication that Amazon plans to force existing vendors to migrate. If you have vendor access, you still have it.</li>
+            <li><strong>Brands that don't yet have Vendor Central access</strong> - whether new to Amazon entirely, or currently operating via Seller Central - now face a fundamentally different landscape. The standard route of applying and waiting for an invitation is no longer viable. The self-service application process still exists in name, but approvals have effectively stopped.</li>
+          </ul>
+
+          <p>For mid-market FMCG brands - the £5M–£50M turnover businesses building their Amazon presence - this is significant. The Vendor Central model has historically offered advantages that Seller Central can't fully replicate: Amazon-managed logistics, automatic Prime eligibility, and a commercial relationship that can drive higher organic visibility for high-velocity products.</p>
+
+          <div class="callout-box">
+            <div class="callout-box-label">Key point</div>
+            <p>Being in Vendor Central doesn't automatically mean better results - poor vendor management still leads to poor outcomes. But for certain FMCG categories (grocery, health, pet, drinks), the 1P model consistently outperforms 3P on conversion and repeat purchase metrics. Amazon's own team made its view clear during a 2026 supplier webinar: "We love dealing with Rosetta because we only have to deal with one vendor." It's a rare public signal of how Amazon views consolidated vendor relationships - and why Rosetta's position is commercially protected in a way few others can replicate.</p>
           </div>
-          <a href="vendor-central-access" class="featured-link">
-            Read article
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-        <div class="featured-badge" aria-hidden="true">
-          <div class="featured-badge-num">6</div>
-          <div class="featured-badge-label">min<br>read</div>
-        </div>
+
+          <h2 id="what-it-means">What this means for FMCG brands in practice</h2>
+
+          <p>The closure of new Vendor Central access has three practical implications that FMCG operators need to understand:</p>
+
+          <h3>1. Existing vendor access has become a strategic asset</h3>
+          <p>If your business already holds Vendor Central access - or partners with an entity that does - that access is now scarce. Amazon cannot simply be petitioned for a new account. Brands that work through a Vendor-as-a-Service partner or managed vendor programme are, in effect, leveraging infrastructure that cannot easily be replicated.</p>
+
+          <h3>2. The Seller Central path requires more investment to compete</h3>
+          <p>Brands moving to Amazon via Seller Central in 2025 and 2026 will find themselves competing against both established 3P sellers and well-run vendor accounts that benefit from Amazon's own promotional and logistics infrastructure. The advertising investment required to achieve comparable visibility is higher, and the conversion disadvantage versus Prime-badged vendor listings is real and measurable.</p>
+
+          <h3>3. The hybrid model is the likely long-term reality</h3>
+          <p>Amazon appears to be steering towards a world where large, strategic suppliers maintain Vendor Central relationships for their core range, while newer, smaller, or more niche products are handled through the 3P model. FMCG brands building long-term Amazon strategies should plan for this bifurcation rather than treating it as a temporary aberration.</p>
+
+          <h2 id="what-to-do">What brands should do now</h2>
+
+          <p>If you're currently outside Vendor Central and want to explore 1P access, the practical options are limited but not zero. The most credible route is through a managed vendor programme - a model where an established vendor operates wholesale accounts that brands can access as part of a broader partnership. This is the structure Rosetta Brands was built around: we hold the vendor relationships, and brands access the benefits of the 1P model through our commercial infrastructure.</p>
+
+          <p>If you're currently in Vendor Central and managing it in-house, the closure of new accounts is a prompt to invest properly in your existing access. Chargebacks, compliance, inventory management, and promotional optimisation all become more valuable as the competitive advantage of vendor status increases.</p>
+
+          <p>The era of being able to apply for Vendor Central access on demand is over. That doesn't mean the door is permanently shut - but it does mean that the brands treating their existing access, or their access to it through a partner, as a genuine competitive asset are the ones positioned to pull ahead.</p>
+
+          <p>Due diligence advisors BDO assessed the UK Amazon vendor management market and reached a blunt conclusion: "These guys haven't got any direct competitors." Rosetta Brands is the only business operating at this scale as a dedicated VaaS provider - 958+ brands, 8,000+ products, and a Top 15 Grocery Vendor account that took years to build.</p>
+
+          <!-- ═══ FAQ SECTION - edit questions to match article topic ═══ -->
+          <section class="article-faq" id="faq">
+            <h2 class="article-faq-heading">Frequently asked questions</h2>
+            <p class="article-faq-sub">Common questions about this topic from UK FMCG brands.</p>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+                Can UK FMCG brands still get Vendor Central access in 2025?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a1">
+                <div class="faq-answer-inner">
+                  <p>Direct Vendor Central invitations from Amazon have effectively stopped for new brands. The most viable route to 1P vendor access is through a Vendor-as-a-Service partner like Rosetta Brands, which holds established vendor relationships and allows brands to access the benefits of the vendor model through a shared account structure.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+                What is the difference between Vendor Central and Seller Central?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a2">
+                <div class="faq-answer-inner">
+                  <p>Vendor Central (1P) means Amazon buys your products wholesale and sells them as the retailer - you get the Prime badge and Amazon manages fulfilment. Seller Central (3P) means you list products yourself and pay Amazon a referral fee. Vendor relationships have historically driven stronger conversion rates for FMCG categories, particularly grocery, health, and pet supplies.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+                Will Amazon close existing Vendor Central accounts?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a3">
+                <div class="faq-answer-inner">
+                  <p>There is no indication that Amazon intends to close active Vendor Central accounts. The change is specifically about new account creation - existing vendor relationships are continuing as normal. Brands already in Vendor Central retain their access, which has made that access increasingly valuable as new routes close off.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+                What is Vendor-as-a-Service and how does it work?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a4">
+                <div class="faq-answer-inner">
+                  <p>Vendor-as-a-Service (VaaS) is a model where an established Amazon vendor - one with an existing, active Vendor Central account - operates as the vendor of record for multiple FMCG brands. Brands trade through the VaaS provider's account rather than building their own vendor relationship. Rosetta Brands is the UK's only dedicated VaaS provider, managing over 958 brands through a single Top 15 Grocery Vendor account.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <div class="article-cta-inline">
+            <h3>Want to explore Vendor Central access?</h3>
+            <p>Rosetta Brands holds established vendor relationships with Amazon. If you're building a serious Amazon strategy and want to understand what 1P access could mean for your brand, let's talk.</p>
+            <a href="schedule-a-call" class="btn btn-primary btn-lg">
+              Schedule a call
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+
+        <aside class="article-sidebar" aria-label="Article navigation">
+
+          <!-- TOC -->
+          <div class="sidebar-block">
+            <p class="sidebar-toc-label">In this article</p>
+            <ul class="toc-list" id="toc-list">
+              <li>
+                <a href="#what-happened" class="toc-link">
+                  <span class="toc-indicator"></span>
+                  What actually happened?
+                </a>
+              </li>
+              <li>
+                <a href="#who-is-affected" class="toc-link">
+                  <span class="toc-indicator"></span>
+                  Who is affected?
+                </a>
+              </li>
+              <li>
+                <a href="#what-it-means" class="toc-link">
+                  <span class="toc-indicator"></span>
+                  What this means in practice
+                </a>
+              </li>
+              <li>
+                <a href="#what-to-do" class="toc-link">
+                  <span class="toc-indicator"></span>
+                  What brands should do now
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Related articles -->
+          <div class="sidebar-block">
+            <p class="sidebar-related-label">Related articles</p>
+            <a href="seller-central-to-vendor-central" class="sidebar-article">
+              <div class="sidebar-article-tag">Amazon Strategy</div>
+              <div class="sidebar-article-title">From Seller Central to Vendor Central: What the Switch Actually Involves</div>
+            </a>
+            <a href="brand-pricing-amazon" class="sidebar-article">
+              <div class="sidebar-article-tag">Brand Protection</div>
+              <div class="sidebar-article-title">How to Protect Your Brand Pricing on Amazon When Amazon Sets the RRP</div>
+            </a>
+            <a href="amazon-chargebacks" class="sidebar-article">
+              <div class="sidebar-article-tag">Operations</div>
+              <div class="sidebar-article-title">The Hidden Cost of Amazon Chargebacks - What Most Brands Don't Realise</div>
+            </a>
+          </div>
+
+          <!-- Sidebar CTA -->
+          <div class="sidebar-block sidebar-cta">
+            <p class="sidebar-cta-label">Get vendor access</p>
+            <h4>Ready to get on Vendor Central?</h4>
+            <p>We hold established vendor relationships. Schedule a call to understand what's possible for your brand.</p>
+            <a href="schedule-a-call" class="btn btn-primary">
+              Schedule a call
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+        </aside>
+
       </div>
     </div>
   </section>
 
-  <!-- ═══ ARTICLE GRID ═══ -->
-  <section class="articles-section">
+  <!-- ═══ MORE ARTICLES ═══ -->
+  <section class="more-articles">
     <div class="container">
-      <p class="articles-heading">Latest articles</p>
-      <div class="articles-grid">
-
-        <!-- Featured post -->
-        <a href="vendor-central-access" class="article-card article-card-featured fade-in" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
-          <div>
-            <span class="cat-tag orange" style="margin-bottom: 16px;">Amazon Strategy</span>
-            <h3 style="font-size: 22px; -webkit-line-clamp: unset; overflow: visible;">Why Amazon Vendor Central Access Has Closed - And What FMCG Brands Should Do Now</h3>
-            <p class="article-excerpt" style="-webkit-line-clamp: unset; overflow: visible; margin-bottom: 20px;">Amazon has quietly stopped issuing new Vendor Central invitations. For UK FMCG brands building an Amazon strategy, the window to secure 1P status independently may be gone for good.</p>
-          </div>
-          <div class="article-footer" style="flex-direction: column; align-items: flex-start; padding-top: 0; border-top: none; justify-content: flex-end;">
-            <div class="article-meta" style="margin-bottom: 16px;">
-              <span>April 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>6 min read</span>
-            </div>
-            <span class="article-read-more" style="font-size: 15px;">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
+      <div class="more-articles-header">
+        <h2 class="more-articles-heading">More from Rosetta Brands</h2>
+        <a href="blog" class="more-articles-link">
+          View all articles
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+      </div>
+      <div class="more-articles-grid">
 
-        <!-- Card 1 -->
-        <a href="amazon-chargebacks" class="article-card fade-in">
-          <span class="cat-tag grey">Operations</span>
-          <h3>The Hidden Cost of Amazon Chargebacks - What Most FMCG Brands Don't Realise Until It's Too Late</h3>
-          <p class="article-excerpt">Chargebacks quietly erode vendor margins. Most brands only notice when a statement arrives - by then, months of penalties have stacked up.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Feb 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>5 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 2 -->
-        <a href="subscribe-and-save" class="article-card fade-in fade-in-delay-1">
+        <a href="subscribe-and-save" class="article-card fade-in">
           <span class="cat-tag pink">Growth</span>
           <h3>Subscribe &amp; Save: The FMCG Growth Lever Most Brands Are Leaving on the Table</h3>
-          <p class="article-excerpt">Repeat purchase rates jump by 30-60% when shoppers subscribe. Here's how to structure your S&S strategy from day one.</p>
+          <p class="article-excerpt">Repeat purchase rates jump significantly when shoppers subscribe. Here's how to structure your S&amp;S strategy from day one.</p>
           <div class="article-footer">
             <div class="article-meta">
               <span>Feb 2026</span>
               <span class="article-meta-dot"></span>
-              <span>4 min read</span>
+              <span>4 min</span>
             </div>
             <span class="article-read-more">
               Read more
@@ -1370,52 +1774,15 @@
           </div>
         </a>
 
-        <!-- Card 3 -->
-        <a href="brand-pricing-amazon" class="article-card fade-in fade-in-delay-2">
-          <span class="cat-tag purple">Brand Protection</span>
-          <h3>How to Protect Your Brand Pricing on Amazon (When Amazon Sets the Retail Price)</h3>
-          <p class="article-excerpt">Vendor Central's fundamental tension: Amazon controls the RRP. We explain the levers brands actually have to manage this.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Jan 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>5 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="selling-alcohol-amazon-uk" class="article-card fade-in">
-          <span class="cat-tag pink">FMCG Sectors</span>
-          <h3>Selling Alcohol on Amazon UK: A Practical Guide for Drinks Brands</h3>
-          <p class="article-excerpt">Age-gating, DRS compliance, fulfilment restrictions - alcohol is one of Amazon's most complex categories. Here's what to expect.</p>
-          <div class="article-footer">
-            <div class="article-meta">
-              <span>Jan 2026</span>
-              <span class="article-meta-dot"></span>
-              <span>7 min read</span>
-            </div>
-            <span class="article-read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Card 5 -->
         <a href="tacos-vs-acos" class="article-card fade-in fade-in-delay-1">
           <span class="cat-tag pink">Advertising</span>
           <h3>TACoS vs ACoS: Which Advertising Metric Actually Matters for FMCG?</h3>
-          <p class="article-excerpt">ACoS tells you about ad efficiency. TACoS tells you about business health. For FMCG brands with organic volume, only one of these is the right north star.</p>
+          <p class="article-excerpt">ACoS tells you about ad efficiency. TACoS tells you about business health. For FMCG brands, only one is the right north star.</p>
           <div class="article-footer">
             <div class="article-meta">
               <span>Dec 2025</span>
               <span class="article-meta-dot"></span>
-              <span>4 min read</span>
+              <span>4 min</span>
             </div>
             <span class="article-read-more">
               Read more
@@ -1424,16 +1791,15 @@
           </div>
         </a>
 
-        <!-- Card 6 -->
-        <a href="seller-central-to-vendor-central" class="article-card fade-in fade-in-delay-2">
-          <span class="cat-tag orange">Amazon Strategy</span>
-          <h3>From Seller Central to Vendor Central: What the Switch Actually Involves</h3>
-          <p class="article-excerpt">The move from 3P to 1P isn't just a platform change - it's a fundamentally different commercial relationship with Amazon. What to expect.</p>
+        <a href="amazon-chargebacks" class="article-card fade-in fade-in-delay-2">
+          <span class="cat-tag grey">Operations</span>
+          <h3>The Hidden Cost of Amazon Chargebacks - What Most FMCG Brands Don't Realise Until It's Too Late</h3>
+          <p class="article-excerpt">Chargebacks quietly erode vendor margins. Most brands only notice when a statement arrives - months of penalties stacked up.</p>
           <div class="article-footer">
             <div class="article-meta">
-              <span>Nov 2025</span>
+              <span>Feb 2026</span>
               <span class="article-meta-dot"></span>
-              <span>6 min read</span>
+              <span>5 min</span>
             </div>
             <span class="article-read-more">
               Read more
@@ -1442,29 +1808,6 @@
           </div>
         </a>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ EMAIL CTA ═══ -->
-  <section class="email-cta-section">
-    <div class="container">
-      <div class="email-cta-box fade-in">
-        <div>
-          <div class="email-cta-label">Monthly Digest</div>
-          <h2 class="email-cta-heading">Want these insights in your inbox?</h2>
-          <p class="email-cta-text">We send one email a month. No fluff, no sales pitches - just the things worth knowing about FMCG on Amazon that month.</p>
-        </div>
-        <div class="email-cta-form">
-          <div class="email-input-row">
-            <input type="email" class="email-input" placeholder="Your work email" aria-label="Email address">
-            <button type="button" class="email-submit">
-              Subscribe
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-          <p class="email-cta-note">One email per month. Unsubscribe any time.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -1764,13 +2107,42 @@
 <script src="nav-loader.js"></script>
 
 <script>
-  // Filter bar - client-side JS for active state toggle (visual only)
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
+  // ── Sidebar TOC: highlight active section on scroll ──────────────────────
+  (function() {
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        var answerId = this.getAttribute('aria-controls');
+        var answer = document.getElementById(answerId);
+        this.setAttribute('aria-expanded', !expanded);
+        if (answer) answer.classList.toggle('open', !expanded);
+      });
     });
-  });
+
+    var headings = document.querySelectorAll('.article-body h2[id]');
+    var tocLinks = document.querySelectorAll('.toc-link');
+    if (!headings.length || !tocLinks.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          tocLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-80px 0px -60% 0px',
+      threshold: 0
+    });
+
+    headings.forEach(function(h) { observer.observe(h); });
+  })();
 </script>
 
 </body>
