@@ -11,7 +11,7 @@ Read `llms.txt` for a full map of every page on the site.
 
 | Branch | Owner | Purpose |
 |--------|-------|---------|
-| `main` | Live site | Never push directly — only merge via pull request |
+| `main` | Live site | Merging here deploys to rosettabrands.co.uk instantly |
 | `brendan` | Brendan | Brendan's working branch |
 | `sophie` | Sophie | Sophie's working branch |
 
@@ -21,11 +21,21 @@ git checkout sophie   # or brendan
 git pull origin main  # get latest changes
 ```
 
-**When changes are ready to go live:**
-```
-Run build.py, then open a pull request to main
-```
-Claude will handle the PR. Brendan reviews and merges it. Vercel deploys automatically.
+### Sophie's workflow step by step
+
+1. Make changes (just describe what you want to Claude)
+2. **Push to the sophie branch** — Claude runs build.py and pushes:
+   ```
+   Run build.py then push my changes to the sophie branch
+   ```
+3. **Vercel auto-creates a preview URL** — check the Vercel dashboard or the link Claude returns. It looks like:
+   `https://rosetta-brands-website-git-sophie-rosettabrands.vercel.app`
+4. Review the preview in your browser
+5. **When happy, push to main** to go live:
+   ```
+   Push these changes to main
+   ```
+   Vercel deploys to rosettabrands.co.uk within ~60 seconds.
 
 ---
 
