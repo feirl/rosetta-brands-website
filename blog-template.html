@@ -606,6 +606,79 @@
   .meta-divider { display: none; }
 }
 
+/* ═══════════════════════════════════════════
+   ARTICLE FAQ SECTION
+   ═══════════════════════════════════════════ */
+.article-faq {
+  margin: 48px 0 0;
+  padding: 36px 40px 24px;
+  background: var(--light-grey, #f9f9f7);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+.article-faq-heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+.article-faq-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+.faq-item {
+  border-top: 1px solid var(--border);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--charcoal);
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+.faq-question:hover { color: var(--orange); }
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  color: var(--text-secondary);
+  width: 18px; height: 18px;
+}
+.faq-question[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+  color: var(--orange);
+}
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-answer.open {
+  max-height: 400px;
+}
+.faq-answer-inner {
+  padding-bottom: 16px;
+}
+.faq-answer-inner p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 0 !important;
+}
+
 </style>
 
   <!-- ═══ ANALYTICS & ADVERTISING - managed by cookie-consent.js ═══
@@ -630,6 +703,114 @@
   <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>
 
+<!-- ═══ STRUCTURED DATA - Article + BreadcrumbList + FAQPage ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://rosettabrands.co.uk/blog-template#article",
+      "headline": "Why Amazon Vendor Central Has Closed Its Doors - And What That Means for FMCG Brands",
+      "description": "Amazon stopped issuing new Vendor Central invitations. We explain what happened, which brands are affected, and what UK FMCG brands should do now.",
+      "url": "https://rosettabrands.co.uk/blog-template",
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "inLanguage": "en-GB",
+      "author": {
+        "@type": "Person",
+        "name": "Nick Comer",
+        "jobTitle": "CEO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Rosetta Brands",
+          "url": "https://rosettabrands.co.uk"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rosetta Brands",
+        "url": "https://rosettabrands.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rosettabrands.co.uk/logo-dark-2026.png"
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://rosettabrands.co.uk/og-default.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://rosettabrands.co.uk/blog-template"
+      },
+      "articleSection": "Amazon Strategy",
+      "keywords": ["Amazon Vendor Central", "FMCG", "Amazon UK", "Vendor-as-a-Service", "1P seller"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rosettabrands.co.uk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://rosettabrands.co.uk/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why Amazon Vendor Central Has Closed Its Doors"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can UK FMCG brands still get Vendor Central access in 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direct Vendor Central invitations from Amazon have effectively stopped for new brands. The most viable route to 1P vendor access is through a Vendor-as-a-Service partner like Rosetta Brands, which holds established vendor relationships and allows brands to access the benefits of the vendor model through a shared account structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Vendor Central and Seller Central?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vendor Central (1P) means Amazon buys your products wholesale and sells them as the retailer - you get the Prime badge and Amazon manages fulfilment. Seller Central (3P) means you list products yourself and pay Amazon a referral fee. Vendor relationships have historically driven stronger conversion rates for FMCG categories, particularly grocery, health, and pet supplies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Amazon close existing Vendor Central accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no indication that Amazon intends to close active Vendor Central accounts. The change is specifically about new account creation - existing vendor relationships are continuing as normal. Brands already in Vendor Central retain their access, which has made that access increasingly valuable as new routes close off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Vendor-as-a-Service and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vendor-as-a-Service (VaaS) is a model where an established Amazon vendor operates as the vendor of record for multiple FMCG brands. Brands trade through the VaaS provider's account rather than building their own vendor relationship. Rosetta Brands is the UK's only dedicated VaaS provider, managing over 958 brands through a single Top 15 Grocery Vendor account."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1427,6 +1608,61 @@
 
           <p>The era of being able to apply for Vendor Central access on demand is over. That doesn't mean the door is permanently shut - but it does mean that the brands treating their existing access, or their access to it through a partner, as a genuine competitive asset are the ones positioned to pull ahead.</p>
 
+          <!-- ═══ FAQ SECTION - edit questions to match article topic ═══ -->
+          <section class="article-faq" id="faq">
+            <h2 class="article-faq-heading">Frequently asked questions</h2>
+            <p class="article-faq-sub">Common questions about this topic from UK FMCG brands.</p>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+                Can UK FMCG brands still get Vendor Central access in 2025?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a1">
+                <div class="faq-answer-inner">
+                  <p>Direct Vendor Central invitations from Amazon have effectively stopped for new brands. The most viable route to 1P vendor access is through a Vendor-as-a-Service partner like Rosetta Brands, which holds established vendor relationships and allows brands to access the benefits of the vendor model through a shared account structure.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+                What is the difference between Vendor Central and Seller Central?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a2">
+                <div class="faq-answer-inner">
+                  <p>Vendor Central (1P) means Amazon buys your products wholesale and sells them as the retailer - you get the Prime badge and Amazon manages fulfilment. Seller Central (3P) means you list products yourself and pay Amazon a referral fee. Vendor relationships have historically driven stronger conversion rates for FMCG categories, particularly grocery, health, and pet supplies.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+                Will Amazon close existing Vendor Central accounts?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a3">
+                <div class="faq-answer-inner">
+                  <p>There is no indication that Amazon intends to close active Vendor Central accounts. The change is specifically about new account creation - existing vendor relationships are continuing as normal. Brands already in Vendor Central retain their access, which has made that access increasingly valuable as new routes close off.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+                What is Vendor-as-a-Service and how does it work?
+                <svg viewBox="0 0 18 18" fill="none"><path d="M4 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer" id="faq-a4">
+                <div class="faq-answer-inner">
+                  <p>Vendor-as-a-Service (VaaS) is a model where an established Amazon vendor - one with an existing, active Vendor Central account - operates as the vendor of record for multiple FMCG brands. Brands trade through the VaaS provider's account rather than building their own vendor relationship. Rosetta Brands is the UK's only dedicated VaaS provider, managing over 958 brands through a single Top 15 Grocery Vendor account.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
           <div class="article-cta-inline">
             <h3>Want to explore Vendor Central access?</h3>
             <p>Rosetta Brands holds established vendor relationships with Amazon. If you're building a serious Amazon strategy and want to understand what 1P access could mean for your brand, let's talk.</p>
@@ -1870,6 +2106,17 @@
 <script>
   // ── Sidebar TOC: highlight active section on scroll ──────────────────────
   (function() {
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        var answerId = this.getAttribute('aria-controls');
+        var answer = document.getElementById(answerId);
+        this.setAttribute('aria-expanded', !expanded);
+        if (answer) answer.classList.toggle('open', !expanded);
+      });
+    });
+
     var headings = document.querySelectorAll('.article-body h2[id]');
     var tocLinks = document.querySelectorAll('.toc-link');
     if (!headings.length || !tocLinks.length) return;
