@@ -11,31 +11,35 @@ Read `llms.txt` for a full map of every page on the site.
 
 | Branch | Owner | Purpose |
 |--------|-------|---------|
-| `main` | Live site | Merging here deploys to rosettabrands.co.uk instantly |
-| `brendan` | Brendan | Brendan's working branch |
+| `main` | Live site | Only push here once Brendan has approved the preview |
+| `brendan` | Brendan | Brendan's preview branch — all changes go here first |
 | `sophie` | Sophie | Sophie's working branch |
 
 **Before starting any session**, make sure you're on the right branch:
 ```
-git checkout sophie   # or brendan
+git checkout brendan  # or sophie
 git pull origin main  # get latest changes
 ```
 
-### Sophie's workflow step by step
+### Workflow — every change, every time
 
 1. Make changes (just describe what you want to Claude)
-2. **Push to the sophie branch** — Claude runs build.py and pushes:
+2. **Push to the brendan branch first:**
    ```
-   Run build.py then push my changes to the sophie branch
+   Run build.py then push my changes to the brendan branch
    ```
-3. **Vercel auto-creates a preview URL** — check the Vercel dashboard or the link Claude returns. It looks like:
-   `https://rosetta-brands-website-git-sophie-rosettabrands.vercel.app`
-4. Review the preview in your browser
-5. **When happy, push to main** to go live:
+3. **Vercel creates a preview URL automatically:**
+   `https://rosetta-brands-website-git-brendan-rosettabrands.vercel.app`
+4. Brendan reviews the preview in his browser
+5. **Happy? Push to main to go live:**
    ```
-   Push these changes to main
+   Push to main
    ```
    Vercel deploys to rosettabrands.co.uk within ~60 seconds.
+
+### Sophie's workflow
+
+Same as above — Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `brendan` then `main`.
 
 ---
 
