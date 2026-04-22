@@ -327,7 +327,7 @@
   position: relative;
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 40px 32px;
+  padding: 20px 20px 32px;
   background: var(--white);
   transition: all 0.3s ease;
   overflow: hidden;
@@ -360,23 +360,28 @@
 .pillar-card.pink-accent::before { background: var(--pink); }
 .pillar-card.purple-accent::before { background: var(--purple); }
 
-.pillar-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pillar-image {
+  position: relative;
+  width: 100%;
+  padding-top: 52px;
   margin-bottom: 24px;
 }
 
-.pillar-icon.orange { background: var(--orange-light); color: var(--orange); }
-.pillar-icon.pink { background: var(--pink-light); color: var(--pink); }
-.pillar-icon.purple { background: var(--purple-light); color: var(--purple); }
+.pillar-image-bg {
+  width: 100%;
+  display: block;
+}
 
-.pillar-icon svg {
-  width: 24px;
-  height: 24px;
+.pillar-image-graphic {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,0.13));
 }
 
 .pillar-card h3 {
@@ -1850,8 +1855,9 @@
     <div class="pillar-grid">
       <!-- Pillar 1: VaaS -->
       <div class="pillar-card orange-accent fade-in">
-        <div class="pillar-icon orange">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="5" rx="2"/><rect x="1" y="12" width="22" height="5" rx="2"/><line x1="5" y1="5.5" x2="5" y2="5.5"/><line x1="5" y1="14.5" x2="5" y2="14.5"/></svg>
+        <div class="pillar-image">
+          <img src="img/pillars/vendor-bg.png" class="pillar-image-bg" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/pillars/vendor-graphic.png" class="pillar-image-graphic" alt="" aria-hidden="true" loading="lazy">
         </div>
         <h3>Vendor-As-A-Service</h3>
         <p>The UK's only fully managed vendor infrastructure for FMCG brands. Six integrated services, our vendor account, our team, and our compliance liability.</p>
@@ -1871,8 +1877,9 @@
 
       <!-- Pillar 2: Growth Marketing -->
       <div class="pillar-card pink-accent fade-in fade-in-delay-1">
-        <div class="pillar-icon pink">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="pillar-image">
+          <img src="img/pillars/marketing-bg.png" class="pillar-image-bg" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/pillars/marketing-graphic.png" class="pillar-image-graphic" alt="" aria-hidden="true" loading="lazy">
         </div>
         <h3>Growth Marketing</h3>
         <p>Specialist marketing services that take your brand presence, content, and advertising to the next level.</p>
@@ -1883,7 +1890,7 @@
           <li><svg class="pink-icon" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> KFI & Lifestyle Imagery</li>
           <li><svg class="pink-icon" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Product Launch & Optimisation</li>
         </ul>
-        <a class="btn btn-ghost" style="color:var(--pink)">
+        <a href="advertising" class="btn btn-ghost" style="color:var(--pink)">
           Explore Marketing
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1891,8 +1898,9 @@
 
       <!-- Pillar 3: Platform -->
       <div class="pillar-card purple-accent fade-in fade-in-delay-2">
-        <div class="pillar-icon purple">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div class="pillar-image">
+          <img src="img/pillars/platform-bg.png" class="pillar-image-bg" alt="" aria-hidden="true" loading="lazy">
+          <img src="img/pillars/platform-graphic.png" class="pillar-image-graphic" alt="" aria-hidden="true" loading="lazy">
         </div>
         <h3>Platform</h3>
         <p>Purpose-built technology powering vendor management at scale  -  from order automation to live analytics.</p>
@@ -1903,7 +1911,7 @@
           <li><svg class="purple-icon" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Analytics & Forecasting</li>
           <li><svg class="purple-icon" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Reporting & Analytics</li>
         </ul>
-        <a class="btn btn-ghost" style="color:var(--purple)">
+        <a href="order-automation" class="btn btn-ghost" style="color:var(--purple)">
           Explore Platform
           <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
