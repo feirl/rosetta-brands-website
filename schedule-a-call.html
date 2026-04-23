@@ -11,9 +11,8 @@
   <style>
 
     /* ── Hero ──────────────────────────────────────────────────── */
-    .sched-hero {
-      padding: 128px 0 56px; /* 72px fixed nav + 56px visual gap */
-    }
+    .sched-hero { display: none; }
+
     .sched-hero-pill {
       display: inline-flex;
       align-items: center;
@@ -28,7 +27,7 @@
       text-transform: uppercase;
       padding: 6px 14px;
       border-radius: 100px;
-      margin-bottom: 56px;
+      margin-bottom: 20px;
     }
     .sched-hero-pill::before {
       content: '';
@@ -37,20 +36,20 @@
       background: var(--orange);
       border-radius: 50%;
     }
-    .sched-hero h1 {
-      font-size: clamp(36px, 5vw, 58px);
+    .sched-intro h1 {
+      font-size: clamp(28px, 3.5vw, 44px);
       font-weight: 800;
       color: var(--charcoal);
       line-height: 1.1;
       letter-spacing: -0.03em;
       margin: 0;
     }
-    .sched-hero h1 span { color: var(--orange); }
+    .sched-intro h1 span { color: var(--orange); }
 
     /* ── Two-column body ───────────────────────────────────────── */
     .sched-body {
       background: var(--white);
-      padding: 0 0 96px;
+      padding: 128px 0 96px;
     }
     .sched-grid {
       display: grid;
@@ -371,7 +370,7 @@
       .sched-right { position: static; }
       .sched-team-cards { grid-template-columns: 1fr 1fr; }
       .sched-stats { grid-template-columns: repeat(3, 1fr); }
-      .sched-hero { padding: 60px 0 52px; }
+      .sched-body { padding: 72px 0 64px; }
     }
     @media (max-width: 600px) {
       .sched-team-cards { grid-template-columns: 1fr; }
@@ -1128,13 +1127,6 @@
 </div>
 
   <!-- ── Hero ─────────────────────────────────────────────────── -->
-  <section class="sched-hero">
-    <div class="container">
-      <div class="sched-hero-pill">Free 15-Minute Strategy Call</div>
-      <h1>A straight conversation<br>about your <span>Amazon future.</span></h1>
-    </div>
-  </section>
-
   <!-- ── Body ─────────────────────────────────────────────────── -->
   <section class="sched-body">
     <div class="container">
@@ -1142,6 +1134,12 @@
 
         <!-- LEFT COLUMN ─────────────────────────────────────── -->
         <div class="sched-left">
+
+          <!-- Intro -->
+          <div class="sched-intro fade-in">
+            <div class="sched-hero-pill">Free 15-Minute Strategy Call</div>
+            <h1>A straight conversation<br>about your <span>Amazon future.</span></h1>
+          </div>
 
           <!-- What we cover -->
           <div class="fade-in">
@@ -1230,20 +1228,6 @@
             <div class="sched-calendly-header">
               <h3>Book your free strategy call</h3>
               <p>Pick a time that works for you</p>
-              <div class="sched-calendly-meta">
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                  15 minutes
-                </div>
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07C7.13 17.03 4.97 14.87 3.12 12.2A19.79 19.79 0 0 1 .06 3.53 2 2 0 0 1 2.03 1.4h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L6.91 9a16 16 0 0 0 6 6l.38-.38a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 19.93 17z"/></svg>
-                  Phone or video
-                </div>
-                <div class="sched-meta-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  No commitment
-                </div>
-              </div>
             </div>
 
             <!-- Calendly inline widget -->
