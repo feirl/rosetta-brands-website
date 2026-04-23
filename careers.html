@@ -120,6 +120,82 @@
   margin-bottom: 0;
 }
 
+/* ═══ CARD GRID SECTIONS ═══ */
+.careers-cards-section {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+.careers-cards-section + .careers-cards-section {
+  background: #fff;
+}
+.careers-cards-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.careers-cards-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.careers-cards-header p {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.careers-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .careers-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .careers-card-grid { grid-template-columns: 1fr; }
+}
+.careers-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.careers-cards-section + .careers-cards-section .careers-card {
+  background: var(--off-white);
+}
+.careers-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(242,107,29,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.careers-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin: 0;
+}
+.careers-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* How we work - 3 pillars */
 .how-pillars {
   display: grid;
@@ -217,6 +293,137 @@
 }
 .look-for-list li strong {
   color: var(--charcoal);
+}
+
+/* ═══ TWO-COL: HIRING + BENEFITS ═══ */
+.careers-two-col {
+  padding: 80px 0;
+  background: #fff;
+}
+.careers-two-col-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 56px;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .careers-two-col-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .careers-two-col-divider { display: none; }
+}
+.careers-two-col-divider {
+  background: var(--border);
+  width: 1px;
+  align-self: stretch;
+}
+.careers-two-col h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+.careers-two-col p {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* ═══ CENTRED APPLY SECTION ═══ */
+.careers-apply {
+  padding: 80px 0;
+  background: var(--off-white);
+  text-align: center;
+}
+.careers-apply-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.careers-apply h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+.careers-apply p {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.careers-apply .policy-links {
+  justify-content: center;
+  margin-top: 32px;
+}
+.careers-apply .policy-section-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  margin-top: 40px;
+}
+
+/* ═══ HIRING STEPS ═══ */
+.hiring-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+.hiring-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.hiring-step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.hiring-step-text {
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.hiring-step-text strong {
+  color: var(--charcoal);
+}
+
+/* ═══ POLICY LINKS ═══ */
+.policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+.policy-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: none;
+  border: 1px solid rgba(242,107,29,0.3);
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.policy-links a:hover {
+  background: rgba(242,107,29,0.07);
+  border-color: var(--orange);
 }
 
 /* ═══ CTA SECTION ═══ */
@@ -990,76 +1197,158 @@
   <div class="container">
     <div class="hero-inner-centered">
       <div class="page-label">Careers</div>
-      <h1>Join Rosetta Brands</h1>
-      <p class="hero-sub">We're building the infrastructure that puts UK FMCG brands at the centre of Amazon. If that excites you, we'd like to hear from you.</p>
+      <h1>Build something<br>worthwhile with us</h1>
+      <p class="hero-sub">At Rosetta Brands, we focus on delivering, treating people properly, and building a business that lasts. We're a growing team based in Nateby, Lancs, working with clients across the UK, Europe and Australia.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ HOW WE WORK ═══ -->
-<section class="careers-section fade-in">
+<!-- ═══ WHAT IT'S LIKE TO WORK HERE ═══ -->
+<section class="careers-cards-section fade-in">
   <div class="container">
-    <div class="careers-inner">
-      <h2>How we work</h2>
-      <p>Rosetta Brands is a small team by design. We're not a large agency with layers of account management - we're a focused group of people working directly with brands and Amazon to solve real commercial problems.</p>
-      <p>That means high ownership from day one. You'll work on things that matter, make decisions that have a visible impact, and deal directly with founders and commercial teams - not layers of intermediaries.</p>
-
-      <div class="how-pillars">
-        <div class="how-pillar">
-          <h4>Small team, real ownership</h4>
-          <p>No large agency structure. Your work has a direct impact on outcomes for the brands we partner with.</p>
+    <div class="careers-cards-header">
+      <h2>What it's like to work here</h2>
+      <p>We're a small team of around 25 — no unnecessary hierarchy, decisions made quickly, and your contribution is always visible.</p>
+    </div>
+    <div class="careers-card-grid">
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(242,107,29,0.10);color:var(--orange);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <div class="how-pillar">
-          <h4>Direct contact</h4>
-          <p>You'll work alongside brand founders, commercial leads, and Amazon directly. Not briefings and handoffs.</p>
+        <h3>Open communication</h3>
+        <p>No politics. We say what we think and expect the same from everyone on the team.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(232,67,130,0.10);color:var(--pink);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
-        <div class="how-pillar">
-          <h4>Remote-friendly, UK-based</h4>
-          <p>We operate remotely with a UK base. The team is distributed but tight. Lancashire is our home.</p>
+        <h3>Practical problem-solving</h3>
+        <p>We focus on what works. A straightforward approach to real challenges, without overcomplicating things.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(124,58,237,0.10);color:var(--purple);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
+        <h3>Flexibility where it counts</h3>
+        <p>We don't expect perfection — but we do expect people to care about their work and take responsibility.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ OPEN ROLES ═══ -->
+<!-- ═══ WHY WORK WITH US ═══ -->
+<section class="careers-cards-section fade-in">
+  <div class="container">
+    <div class="careers-cards-header">
+      <h2>Why work with us</h2>
+      <p>We value people who are reliable, take ownership, and want to improve over time. Here's what you can expect.</p>
+    </div>
+    <div class="careers-card-grid">
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(242,107,29,0.10);color:var(--orange);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Clear expectations</h3>
+        <p>You'll know what's expected of you from day one — no ambiguity, no moving goalposts.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(232,67,130,0.10);color:var(--pink);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Tools &amp; support</h3>
+        <p>You'll have everything you need to do your job properly — we don't set people up to fail.</p>
+      </div>
+      <div class="careers-card">
+        <div class="careers-card-icon" style="background:rgba(124,58,237,0.10);color:var(--purple);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Work that matters</h3>
+        <p>Your contribution won't disappear into a large corporate machine. What you do here has a real, visible impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HIRING PROCESS + PAY & BENEFITS ═══ -->
+<section class="careers-two-col fade-in">
+  <div class="container">
+    <div class="careers-two-col-inner">
+
+      <!-- Left: Our Hiring Process -->
+      <div>
+        <h2>Our hiring process</h2>
+        <p>We keep the process simple and respectful of your time:</p>
+        <div class="hiring-steps">
+          <div class="hiring-step">
+            <div class="hiring-step-num">1</div>
+            <div class="hiring-step-text"><strong>Application review</strong> — we aim to respond within 5 working days</div>
+          </div>
+          <div class="hiring-step">
+            <div class="hiring-step-num">2</div>
+            <div class="hiring-step-text"><strong>Initial conversation</strong> — informal chat to get to know you</div>
+          </div>
+          <div class="hiring-step">
+            <div class="hiring-step-num">3</div>
+            <div class="hiring-step-text"><strong>Interview / task (if needed)</strong> — role-specific discussion</div>
+          </div>
+          <div class="hiring-step">
+            <div class="hiring-step-num">4</div>
+            <div class="hiring-step-text"><strong>Decision</strong> — we'll let you know either way</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="careers-two-col-divider"></div>
+
+      <!-- Right: Pay & Benefits -->
+      <div>
+        <h2>Pay &amp; benefits</h2>
+        <p>We aim to offer fair, competitive packages. Depending on the role, this may include:</p>
+        <ul class="look-for-list">
+          <li><strong>Competitive salary</strong></li>
+          <li><strong>Financial rewards for achieving business targets</strong></li>
+          <li><strong>5 weeks holiday + bank holidays</strong></li>
+          <li><strong>Enhanced sick pay</strong></li>
+          <li><strong>Condensed working week — half day Friday (from home)</strong></li>
+          <li><strong>Training and development support</strong></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CURRENT VACANCIES ═══ -->
 <section class="careers-section fade-in">
   <div class="container">
-    <div class="careers-inner">
-      <h2>Open roles</h2>
-      <p>We don't always advertise open roles publicly - the best people we've worked with have simply reached out directly.</p>
+    <div class="careers-inner" style="text-align:center;">
+      <h2>Current vacancies</h2>
       <div class="open-roles-box">
-        <h3>No specific roles listed right now</h3>
-        <p>If you think you'd contribute to what we're building, send a short note - tell us who you are, what you've done, and why Rosetta Brands makes sense to you. We read everything sent to <a href="mailto:careers@rosettabrands.co.uk">careers@rosettabrands.co.uk</a></p>
+        <h3>No vacancies listed right now</h3>
+        <p>Any vacancies will be posted here. If you don't see a role that fits but think you'd be a strong addition, feel free to get in touch anyway.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WHAT WE LOOK FOR ═══ -->
-<section class="careers-section fade-in">
+<!-- ═══ HOW TO APPLY + POLICIES ═══ -->
+<section class="careers-apply fade-in">
   <div class="container">
-    <div class="careers-inner">
-      <h2>What we look for</h2>
-      <p>There's no single profile. But there are a few things that tend to matter here.</p>
-      <ul class="look-for-list">
-        <li><span><strong>Amazon knowledge, or genuine curiosity about it.</strong> You don't need to have worked in Amazon before - but you should want to understand how it works at a deep level.</span></li>
-        <li><span><strong>Commercial instinct.</strong> You think in terms of outcomes, not tasks. You understand what "this moves the needle" means and you care about it.</span></li>
-        <li><span><strong>FMCG background useful, but not required.</strong> Experience with consumer goods, grocery, or branded products helps. We're willing to work with people who are willing to learn.</span></li>
-        <li><span><strong>People who say what they think.</strong> We're a direct team. You should be comfortable sharing an opinion, raising a concern, and disagreeing constructively.</span></li>
-      </ul>
+    <div class="careers-apply-inner">
+      <h2>How to apply</h2>
+      <p>Send your CV (and a short note if you'd like) to:<br><a href="mailto:careers@rosettabrands.co.uk" style="color:var(--orange);font-weight:600;">careers@rosettabrands.co.uk</a></p>
+      <p>If you don't see a role that fits but think you'd be a strong addition, feel free to get in touch anyway.</p>
+      <p class="policy-section-label">Policies</p>
+      <div class="policy-links">
+        <a href="#">Equal Opportunities</a>
+        <a href="privacy">Privacy</a>
+        <a href="#">Right to Work in the UK</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
-<section class="careers-cta fade-in">
-  <div class="container">
-    <h2>Talk to us</h2>
-    <p>Not sure if you're the right fit? Talk to the team. We'd rather have an honest conversation than miss a good person.</p>
-    <a href="schedule-a-call" class="btn-primary">Schedule a call</a>
-  </div>
-</section>
 
 <div id="footer-placeholder" data-inlined="true">
 <footer class="footer" role="contentinfo">
