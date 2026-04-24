@@ -55,7 +55,7 @@ Rosetta Brands operates three service pillars: Vendor-as-a-Service (account infr
 
 ## Resources
 
-- [FAQ](https://rosettabrands.co.uk/faq): 25 strategic questions covering the VaaS model, vendor position, pricing, and results
+- [FAQ](https://rosettabrands.co.uk/faqs): 25 strategic questions covering the VaaS model, vendor position, pricing, and results
 - [Case Studies](https://rosettabrands.co.uk/case-studies): Anonymised brand stories from 8 real partnerships
 - [Blog](https://rosettabrands.co.uk/blog): Insights and analysis from the Rosetta Brands team
 - [Blog - Amazon Chargebacks](https://rosettabrands.co.uk/amazon-chargebacks): What vendor chargebacks are, how they erode margins, and how FMCG brands can reduce exposure
