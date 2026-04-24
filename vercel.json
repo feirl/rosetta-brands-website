@@ -5,7 +5,10 @@
     { "source": "/lp-amazon-agency", "destination": "/vendor-access", "permanent": true },
     { "source": "/how-it-works", "destination": "/vendor-access", "permanent": true },
     { "source": "/faq", "destination": "/faqs", "permanent": true },
-    { "source": "/faqs.html", "destination": "/faqs", "permanent": true }
+    { "source": "/faqs.html", "destination": "/faqs", "permanent": true },
+    { "source": "/agency/home", "destination": "/", "permanent": true },
+    { "source": "/germany/lp-amazon-agency", "destination": "/", "permanent": true },
+    { "source": "/australia/contact-us", "destination": "/schedule-a-call", "permanent": true }
   ],
   "headers": [
     {
