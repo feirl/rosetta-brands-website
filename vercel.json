@@ -2,8 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/lp-amazon-agency", "destination": "/amazon-agencies", "permanent": true },
-    { "source": "/how-it-works", "destination": "/why-rosetta-brands", "permanent": true },
+    { "source": "/lp-amazon-agency", "destination": "/vendor-access", "permanent": true },
+    { "source": "/how-it-works", "destination": "/vendor-access", "permanent": true },
     { "source": "/faq", "destination": "/faqs", "permanent": true },
     { "source": "/faqs.html", "destination": "/faqs", "permanent": true }
   ],
