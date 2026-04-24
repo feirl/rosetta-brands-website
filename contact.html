@@ -12,7 +12,8 @@
 
     /* ── Hero ──────────────────────────────────────────────────── */
     .contact-hero {
-      display: none;
+      padding: 128px 0 64px;
+      background: var(--white);
     }
     .contact-pill {
       display: inline-flex;
@@ -57,7 +58,7 @@
     /* ── Two-column body ───────────────────────────────────────── */
     .contact-body {
       background: var(--white);
-      padding: 128px 0 96px;
+      padding: 0 0 96px;
     }
     .contact-grid {
       display: grid;
@@ -266,10 +267,10 @@
     @media (max-width: 900px) {
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .contact-right { position: static; }
-      .contact-body { padding: 100px 0 64px; }
+      .contact-hero { padding: 100px 0 48px; }
     }
     @media (max-width: 600px) {
-      .contact-body { padding: 84px 0 48px; }
+      .contact-hero { padding: 84px 0 40px; }
     }
 
   </style>
@@ -1063,13 +1064,6 @@
 
         <!-- LEFT: contact details -->
         <div class="contact-left">
-
-          <!-- Intro -->
-          <div class="contact-intro">
-            <div class="contact-pill">Get in touch</div>
-            <h1>We'd love to <span>hear from you.</span></h1>
-            <p>Whether you're ready to start, just exploring, or have a specific question - our team is here to help.</p>
-          </div>
 
           <!-- Phone & Email -->
           <div class="contact-detail-list">
