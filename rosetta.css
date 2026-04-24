@@ -233,7 +233,9 @@ section { padding: var(--section-pad) 0; }
   justify-content: center;
   gap: 16px;
 }
-.cta-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 20px; }
+.cta-note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 20px; }
+.cta-note a { color: rgba(255,255,255,0.75); text-decoration: underline; text-underline-offset: 3px; }
+.cta-note a:hover { color: #fff; }
 .cta-actions .btn-secondary {
   background: transparent;
   border-color: rgba(255,255,255,0.3);
