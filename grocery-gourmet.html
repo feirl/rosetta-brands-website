@@ -69,7 +69,9 @@
   gap: 20px;
 }
 .brand-showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
-.brand-ph-box { aspect-ratio: 2/1; background: var(--off-white); border: 1px dashed rgba(45,41,51,0.18); border-radius: 8px; }
+.brand-logo-box { aspect-ratio: 2/1; background: var(--off-white); border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.brand-logo-box img { max-width: 100%; max-height: 48px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: opacity 0.2s, filter 0.2s; }
+.brand-logo-box:hover img { filter: grayscale(0%); opacity: 1; }
 .brand-showcase-label { font-size: 12px; color: var(--charcoal-50); text-align: center; font-weight: 500; letter-spacing: 0.02em; }
 
 .hero-b-label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--charcoal-50); margin-bottom: 20px; }
@@ -1107,15 +1109,15 @@
         </div>
       </div>
 
-      <!-- Right: brand showcase placeholder -->
+      <!-- Right: brand showcase -->
       <div class="hero-brand-showcase fade-in fade-in-delay-2">
         <div class="brand-showcase-grid">
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
+          <div class="brand-logo-box"><img src="img/logos/Belvoir Farm.png" alt="Belvoir Farm"></div>
+          <div class="brand-logo-box"><img src="img/logos/Branston.png" alt="Branston"></div>
+          <div class="brand-logo-box"><img src="img/logos/Marmite.png" alt="Marmite"></div>
+          <div class="brand-logo-box"><img src="img/logos/Jelly Belly.png" alt="Jelly Belly"></div>
+          <div class="brand-logo-box"><img src="img/logos/Golden Wonder.png" alt="Golden Wonder"></div>
+          <div class="brand-logo-box"><img src="img/logos/Tayto.png" alt="Tayto"></div>
         </div>
         <p class="brand-showcase-label">Our grocery &amp; gourmet brand partners</p>
       </div>
