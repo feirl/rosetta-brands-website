@@ -8,7 +8,16 @@
     { "source": "/faqs.html", "destination": "/faqs", "permanent": true },
     { "source": "/agency/home", "destination": "/", "permanent": true },
     { "source": "/germany/lp-amazon-agency", "destination": "/", "permanent": true },
-    { "source": "/australia/contact-us", "destination": "/schedule-a-call", "permanent": true }
+    { "source": "/australia/contact-us", "destination": "/schedule-a-call", "permanent": true },
+    { "source": "/agency/schedule-a-call", "destination": "/schedule-a-call", "permanent": true },
+    { "source": "/australia/lp-amazon-ppc", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/lp-amazon-ppc", "destination": "/advertising", "permanent": true },
+    { "source": "/australia/contact-us-details", "destination": "/schedule-a-call", "permanent": true },
+    { "source": "/lp-amazon-advertising", "destination": "/advertising", "permanent": true },
+    { "source": "/lp-amazon-vendor", "destination": "/amazon-vendors", "permanent": true },
+    { "source": "/how-we-help/data-protection-policy", "destination": "/data-protection", "permanent": true },
+    { "source": "/fine-food-and-drink", "destination": "/grocery-gourmet", "permanent": true }
   ],
   "headers": [
     {
