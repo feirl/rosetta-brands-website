@@ -1,0 +1,200 @@
+# Rosetta Brands - Full Content Reference
+
+> This file contains comprehensive information about Rosetta Brands for use by AI agents, language models, and automated systems. It is the authoritative single-document reference for the business.
+
+---
+
+## About Rosetta Brands
+
+Rosetta Brands is the UK's only Vendor-as-a-Service (VaaS) for FMCG brands on Amazon. The business is headquartered in Lancashire, UK, with operations extending to Australia and Germany.
+
+### Core credentials
+
+- Top 15 Grocery Vendor on Amazon UK
+- 958+ brands managed
+- £100M+ in client revenue generated
+- Established vendor account with access to Amazon's full 1P infrastructure
+- Amazon Fresh partner (UK)
+
+### The problem Rosetta Brands solves
+
+Amazon stopped issuing new Vendor Central invitations around 2019. This means the vast majority of FMCG brands cannot access 1P (first-party) vendor status directly. Without vendor status, brands are locked out of:
+
+- Prime badging on their product listings
+- Amazon Freight (pallet-level logistics at cost)
+- Subscribe & Save programme
+- Amazon Fresh
+- Vine (review generation programme)
+- Favourable commercial terms available only to direct suppliers
+- Amazon-funded promotions and deal placements
+
+The only routes to 1P status for most brands are: (1) receive a direct invitation from Amazon (extremely rare), (2) trade through an established vendor's account. Rosetta Brands provides route (2) at scale.
+
+### How the VaaS model works
+
+1. Brand supplies product to Rosetta Brands
+2. Rosetta Brands sells the product to Amazon through its own established Vendor Central account
+3. Amazon sells the product to consumers as a 1P listing (Prime badge, Amazon-fulfilled)
+4. The brand receives professional management, full channel visibility, and a share of revenue growth
+
+This is fundamentally different from:
+- **An Amazon agency**: agencies manage a brand's own Seller Central or Vendor Central account. They cannot provide vendor access if the brand doesn't have it.
+- **A distributor**: distributors buy and resell stock but do not provide account management, marketing, or technology services.
+- **A 3P seller**: Seller Central accounts do not carry the Prime badge automatically and operate under different commercial terms.
+
+---
+
+## Business model and pricing
+
+Rosetta Brands operates on a pure success-fee model. There is no fixed monthly retainer. Commercial fees are tied directly to the brand's Amazon revenue - Rosetta Brands only earns more when the brand earns more. This aligns incentives completely: the business is motivated to grow every client's Amazon channel.
+
+Commercial terms vary by product category and volume. The best way for a brand to understand their specific terms is to book a discovery call.
+
+---
+
+## Leadership team
+
+- **Nick Comer** - CEO and co-founder. Leads overall strategy and Amazon commercial relationships.
+- **Sophie Smith** - Commercial Director. Leads new brand partnerships and commercial development.
+- **Matt Nash** - Head of Sales. Manages inbound and outbound brand acquisition.
+- **Becky Webster** - Head of Vendor. Leads the operational vendor management function.
+
+---
+
+## Service pillars
+
+### Pillar 1: Vendor-as-a-Service (VaaS)
+
+The core infrastructure layer that underpins everything else.
+
+**Vendor Access & Prime**
+Brands gain access to Amazon's 1P infrastructure through Rosetta's established vendor account. From the first product listing, the brand's products carry the Prime badge. This is the foundational benefit - Prime dramatically improves conversion rates and search ranking versus non-Prime listings.
+
+**Vendor Management Team**
+Each brand partnership is managed by a dedicated team. This team handles day-to-day Amazon operations: purchase order management, catalogue maintenance, pricing compliance, and relationship management with Amazon's category teams.
+
+**Compliance & Escalation**
+Amazon's vendor compliance framework includes chargebacks (financial penalties for late or incorrect deliveries), listing suppressions, and catalogue errors. Rosetta Brands manages all of these, including formal escalation processes to Amazon's vendor management teams.
+
+**Fulfilment & Logistics**
+Rosetta Brands manages inbound logistics via Amazon Freight lanes, operating at pallet level. This is more cost-efficient than carton-level inbound and is only available to established vendors.
+
+**International Expansion**
+From a UK vendor base, Rosetta Brands can route brands into Amazon Germany (DE), Ireland (IE), and wider EU marketplaces. Australian operations are run through a separate entity.
+
+**Exclusive Amazon Programmes**
+Vendor-only programmes available through Rosetta Brands include:
+- Subscribe & Save (recurring purchase programme driving LTV)
+- Amazon Fresh (UK grocery delivery, access requires established vendor standing)
+- Amazon Vine (review generation programme for new products)
+- Amazon-funded promotions and lightning deals
+
+### Pillar 2: Growth Marketing
+
+Full-service Amazon marketing executed by Rosetta Brands' in-house team.
+
+**Advertising**
+Sponsored Products, Sponsored Brands, Sponsored Display, and DSP (Demand Side Platform). Strategy, execution, optimisation, and reporting. The team uses TACoS (Total Advertising Cost of Sale) as the primary efficiency metric rather than ACoS, as TACoS captures the full impact of advertising on organic sales.
+
+**A+ Content**
+Enhanced product detail page content including module-based layouts, comparison tables, and brand story content. Premium A+ content (full-width imagery, interactive modules) is available to eligible vendors. A+ content improves conversion rates and is a key driver of organic ranking.
+
+**Brand Store**
+Design and build of the brand's Amazon storefront - a branded destination page on Amazon.co.uk. Brand Stores appear in Sponsored Brands ads and provide a curated brand experience outside of standard search results.
+
+**Key Feature Images & Lifestyle Photography**
+Product image strategy and creation. The key feature image (the main image on a product listing) is the single highest-impact creative asset on Amazon. Rosetta Brands' team produces key feature images, infographic images, and lifestyle photography optimised for Amazon's display context.
+
+**Product Launch**
+End-to-end new product launch playbook: listing creation and optimisation, Vine review seeding, advertising launch strategy, pricing strategy, and early-stage ranking tactics.
+
+### Pillar 3: Platform (proprietary technology)
+
+Rosetta Brands has built its own technology layer to manage operations at scale and give brand partners real-time visibility.
+
+**Order Automation**
+Automated processing of Amazon purchase orders across the vendor account. Reduces manual handling, improves accuracy, and ensures faster confirmation of orders to Amazon (which impacts in-stock rates and catalogue health).
+
+**Client Portal**
+A self-service dashboard for brand partners. Brands can view their Amazon sales performance, inventory levels, advertising metrics, and operational status without waiting for reports. The portal provides the transparency that brands need when they are not directly managing their own Amazon account.
+
+**Listing Health & Optimisation**
+Continuous monitoring of listing quality across all managed brands. Alerts for suppressions, content compliance issues, image rejections, and catalogue errors. Proactive resolution before issues impact sales.
+
+**Reporting & Analytics**
+Category-level and brand-level performance reporting. Market share analysis, advertising performance, and growth trend reporting delivered to brand partners on a regular cadence.
+
+---
+
+## FMCG categories
+
+### Grocery & Gourmet
+Rosetta Brands' core specialism. Ambient grocery including condiments, snacks, beverages, dry goods, and packaged foods. Top 15 Grocery Vendor credential demonstrates scale and standing within Amazon's grocery category. Amazon Fresh access is available for eligible grocery brands.
+
+### Beer, Wine & Spirits
+Alcohol category on Amazon requires specific compliance: age-verification (over-18 gating), Deposit Return Scheme (DRS) compliance for applicable containers, and category-specific listing restrictions. Rosetta Brands has established processes for all alcohol sub-categories.
+
+### Health & Personal Care
+Regulated category with restricted claims, ingredient compliance, and listing approval processes. Rosetta Brands manages the compliance framework for personal care, supplements, and OTC health products.
+
+### Pet Supplies
+Pet food (complete and complementary), pet accessories, and related supplies. Veterinary nutritional claims require specific compliance handling. Category has strong Subscribe & Save performance.
+
+### Home & Household
+Cleaning products, household consumables, laundry, and home care. Strong category for Subscribe & Save. Some sub-categories (e.g. biocides, disinfectants) require regulatory compliance.
+
+### Garden & Outdoor
+Seasonal category with year-round opportunity. Pesticides and biocides require UK regulatory compliance (MAPP number listings). Gardening consumables, outdoor furniture accessories, and related goods.
+
+---
+
+## Key differentiators vs alternatives
+
+| Factor | Rosetta Brands (VaaS) | Traditional Amazon Agency | Going Direct (own account) |
+|--------|----------------------|--------------------------|---------------------------|
+| Prime badge | Day one | Only if brand has vendor status | Only if brand has vendor status |
+| Amazon Vendor Central access | Included | Not provided | Must be invited by Amazon |
+| Success-fee model | Yes - no retainer | Typically fixed monthly fee | N/A |
+| Dedicated operational team | Yes | Varies | Requires internal hire |
+| Proprietary technology | Yes | Varies | Must build or buy |
+| Brand retains control | Yes - collaborative | Yes | Yes |
+| Subscribe & Save | Available | Only with vendor status | Only with vendor status |
+
+---
+
+## Common questions
+
+**Does the brand retain control of its brand?**
+Yes. Brand identity, pricing strategy, creative direction, and product decisions remain with the brand. Rosetta Brands acts as the operational and commercial engine. All major decisions are made collaboratively.
+
+**What categories does Rosetta Brands work with?**
+Primarily ambient FMCG: grocery, drinks, health and personal care, pet supplies, home and household, garden and outdoor. Not suitable for fashion, electronics, or categories that require Seller Central (3P) fulfilment models.
+
+**How is pricing structured?**
+Success-fee only. No fixed monthly retainer. Commercial terms vary by category and volume. A discovery call is the fastest way to understand specific terms.
+
+**How quickly can a brand go live?**
+Onboarding timelines vary by brand size and catalogue complexity. A typical onboarding takes 4-8 weeks from signed agreement to first live listings.
+
+**What Amazon marketplaces does Rosetta Brands operate in?**
+Amazon UK (primary), Amazon Germany, Amazon Ireland. Australia operations via a separate entity.
+
+**Can Rosetta Brands work with brands that already have their own Vendor Central account?**
+Yes. Some brands with existing Vendor Central accounts choose to consolidate under Rosetta's account for operational efficiency, marketing support, or technology access.
+
+---
+
+## Contact information
+
+- **Website**: https://www.rosettabrands.com
+- **Schedule a discovery call**: https://www.rosettabrands.com/schedule-a-call
+- **Contact form**: https://www.rosettabrands.com/contact
+- **Email**: hello@rosettabrands.co.uk
+- **Headquarters**: Lancashire, United Kingdom
+
+---
+
+## Site map
+
+For a structured list of all pages with descriptions, see: https://www.rosettabrands.com/llms.txt
+For the XML sitemap: https://www.rosettabrands.com/sitemap.xml

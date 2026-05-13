@@ -1,72 +1,131 @@
 # Rosetta Brands
 
-> The UK's only Vendor-as-a-Service (VaaS) for FMCG brands on Amazon. Rosetta Brands is a Top 15 Grocery Vendor on Amazon UK, managing 958+ brands and generating £100M+ in revenue for clients. FMCG brands trade through Rosetta Brands' own vendor account rather than building and managing their own Amazon Vendor or Seller Central relationship.
+> The UK's only Vendor-as-a-Service (VaaS) for FMCG brands on Amazon. Rosetta Brands is a Top 15 Grocery Vendor on Amazon UK, managing 958+ brands and generating £100M+ in revenue for clients. FMCG brands trade through Rosetta Brands' own established vendor account rather than building and managing their own Amazon Vendor or Seller Central relationship.
 
-Rosetta Brands operates three service pillars: Vendor-as-a-Service (account infrastructure, fulfilment, compliance), Growth Marketing (advertising, content, product launches), and Platform (proprietary technology for order automation, listing health, reporting). The business specialises in ambient grocery and is now unlocking Amazon Fresh for UK brands. Headquartered in Lancashire, UK, with operations across Australia and Germany.
+## What Rosetta Brands does
 
-## Core pages
+Rosetta Brands solves a fundamental problem: Amazon stopped issuing new Vendor Central invitations around 2019, locking most FMCG brands out of 1P (first-party) vendor status. Without vendor status, brands cannot access Prime badging, Amazon Freight logistics, exclusive programmes like Subscribe & Save or Amazon Fresh, or the commercial terms that come with being a direct supplier to Amazon.
+
+Rosetta Brands provides access to all of this by acting as the vendor. Brands supply product to Rosetta Brands, Rosetta Brands sells it to Amazon through its own established Vendor Central account, and the brand gets Prime badging, full Amazon exposure, and professional management - without needing its own Amazon relationship.
+
+This is fundamentally different from an Amazon agency (which manages a brand's own account) or a distributor (which just buys and resells stock). Rosetta Brands is a strategic partner that provides the infrastructure, team, technology, and commercial expertise to run a brand's entire Amazon channel.
+
+## Business model and pricing
+
+Rosetta Brands operates on a success-fee model. Revenue is tied directly to the brand's Amazon revenue growth - there is no fixed monthly retainer. This means Rosetta Brands' commercial incentives are fully aligned with the brand's: the business only grows if client brands grow. Commercial terms vary by category and volume.
+
+## Key credentials
+
+- Top 15 Grocery Vendor on Amazon UK
+- 958+ brands managed
+- £100M+ in client revenue generated
+- Operates across Amazon UK, DE, IE and AU
+- Access to Amazon Fresh (UK)
+- Exclusive vendor programmes including Subscribe & Save, Amazon Freight, Vine
+
+## Three service pillars
+
+### 1. Vendor-as-a-Service (VaaS)
+The core infrastructure layer. Brands trade through Rosetta's vendor account, receiving Prime badging from day one. Includes a dedicated vendor management team, chargeback and compliance handling, purchase order management, and logistics via Amazon Freight pallet lanes.
+
+### 2. Growth Marketing
+Advertising (Sponsored Products, Sponsored Brands, DSP), A+ Content creation, Brand Store design, key feature images and lifestyle photography, and new product launch playbooks.
+
+### 3. Platform (proprietary technology)
+Rosetta Brands has built its own technology stack including: automated order processing, a client portal for real-time visibility, listing health monitoring, and category-level reporting and analytics.
+
+## Who Rosetta Brands works with
+
+- FMCG brands currently on Seller Central (3P) wanting to move to Vendor Central (1P)
+- Brands with existing Vendor Central accounts that want professional management
+- FMCG brands new to Amazon needing end-to-end setup
+- Amazon agencies that want to offer vendor infrastructure to their own clients
+- Categories: ambient grocery, beer/wine/spirits, health & personal care, pet supplies, home & household, garden & outdoor
+
+## Leadership
+
+- **Nick Comer** - CEO and co-founder
+- **Sophie Smith** - Commercial Director
+- **Matt Nash** - Head of Sales
+- **Becky Webster** - Head of Vendor
+
+## Contact
+
+- Website: https://www.rosettabrands.com
+- Schedule a call: https://www.rosettabrands.com/schedule-a-call
+- Contact: https://www.rosettabrands.com/contact
+- Email: hello@rosettabrands.co.uk
+- Headquarters: Lancashire, UK
+
+## Full site map
+
+### Core pages
 
 - [Home](https://www.rosettabrands.com/): Overview of the Vendor-as-a-Service model, core statistics, and service pillars
-- [Why Rosetta Brands](https://www.rosettabrands.com/why-rosetta-brands): The five reasons FMCG brands choose Rosetta over an agency, consultancy, or running Seller Central themselves
+- [Why Rosetta Brands](https://www.rosettabrands.com/why-rosetta-brands): The five reasons FMCG brands choose Rosetta over an agency, consultancy, or running Seller Central themselves - brand control, Prime access, cost structure, operational expertise, and technology
+- [Pricing](https://www.rosettabrands.com/pricing): Success-fee model details - no fixed monthly retainer, revenue tied to client growth, terms vary by category and volume
+- [Schedule a Call](https://www.rosettabrands.com/schedule-a-call): Book a discovery call with the commercial team via Calendly
 - [Meet the Team](https://www.rosettabrands.com/meet-the-team): Company history and bios for Nick Comer (CEO), Sophie Smith (Commercial Director), Matt Nash (Head of Sales), Becky Webster (Head of Vendor)
-- [Pricing](https://www.rosettabrands.com/pricing): Success-fee based pricing structure tied to client growth
-- [Schedule a Call](https://www.rosettabrands.com/schedule-a-call): Book a discovery call with the commercial team
 - [Careers](https://www.rosettabrands.com/careers): Open roles and how to join the team
+- [Contact](https://www.rosettabrands.com/contact): Direct contact form and email
 
-## Solutions by situation
+### Solutions by situation
 
-- [Amazon Vendors](https://www.rosettabrands.com/amazon-vendors): For brands currently running their own Vendor Central account
-- [Amazon Sellers](https://www.rosettabrands.com/amazon-sellers): For brands currently on Seller Central considering the vendor route
-- [New to Amazon](https://www.rosettabrands.com/new-to-amazon): For FMCG brands entering the channel for the first time
-- [Amazon Agencies](https://www.rosettabrands.com/amazon-agencies): For agencies wanting vendor infrastructure to offer their clients
+- [Amazon Vendors](https://www.rosettabrands.com/amazon-vendors): For brands currently running their own Vendor Central account who want professional management or to consolidate operations
+- [Amazon Sellers](https://www.rosettabrands.com/amazon-sellers): For brands currently on Seller Central (3P) considering the move to Vendor Central (1P) status via Rosetta
+- [New to Amazon](https://www.rosettabrands.com/new-to-amazon): For FMCG brands entering the Amazon channel for the first time, including full setup and onboarding
+- [Amazon Agencies](https://www.rosettabrands.com/amazon-agencies): For agencies wanting to offer vendor infrastructure and Prime badging to their own clients via a white-label partnership
 
-## FMCG categories
+### FMCG categories
 
-- [Grocery & Gourmet](https://www.rosettabrands.com/grocery-gourmet): Ambient grocery specialisation, Top 15 Grocery Vendor credential, Amazon Fresh access
-- [Beer, Wine & Spirits](https://www.rosettabrands.com/beer-wine-spirits): Alcohol category compliance and listing strategy
-- [Health & Personal Care](https://www.rosettabrands.com/health-personal-care): Regulated category approach
-- [Pet Supplies](https://www.rosettabrands.com/pet-supplies): Pet food and supplies on Amazon
-- [Home & Household](https://www.rosettabrands.com/home-household): FMCG home and cleaning products
-- [Garden & Outdoor](https://www.rosettabrands.com/garden-outdoor): Seasonal garden and outdoor goods
+- [Grocery & Gourmet](https://www.rosettabrands.com/grocery-gourmet): Ambient grocery specialisation, Top 15 Grocery Vendor credential, Amazon Fresh access for eligible brands
+- [Beer, Wine & Spirits](https://www.rosettabrands.com/beer-wine-spirits): Alcohol category compliance, age-gating, DRS (Deposit Return Scheme) handling, listing strategy
+- [Health & Personal Care](https://www.rosettabrands.com/health-personal-care): Regulated category approach, compliance, restricted ingredient handling
+- [Pet Supplies](https://www.rosettabrands.com/pet-supplies): Pet food and supplies on Amazon, veterinary claims compliance
+- [Home & Household](https://www.rosettabrands.com/home-household): FMCG home, cleaning and household products
+- [Garden & Outdoor](https://www.rosettabrands.com/garden-outdoor): Seasonal garden and outdoor goods, pesticide and biocide compliance
 
-## Vendor-as-a-Service
+### Vendor-as-a-Service services
 
-- [Vendor Access & Prime](https://www.rosettabrands.com/vendor-access): How the vendor account works, Prime badge from day one
-- [Vendor Management Team](https://www.rosettabrands.com/vendor-management-team): The dedicated team managing each brand partnership
-- [Compliance & Escalation](https://www.rosettabrands.com/compliance-escalation): Chargeback, compliance, and escalation handling
-- [International Expansion](https://www.rosettabrands.com/international-expansion): Route into Amazon DE, IE, and wider EU marketplaces
-- [Exclusive Amazon Programmes](https://www.rosettabrands.com/exclusive-amazon-programmes): Access to Amazon programmes available only to established vendors
-- [Fulfilment & Logistics](https://www.rosettabrands.com/fulfilment): Amazon Freight lanes, pallet-level inbound, logistics
+- [Vendor Access & Prime](https://www.rosettabrands.com/vendor-access): How the vendor account works, Prime badge from day one, why Amazon stopped issuing new invitations
+- [Vendor Management Team](https://www.rosettabrands.com/vendor-management-team): The dedicated team structure managing each brand partnership day-to-day
+- [Compliance & Escalation](https://www.rosettabrands.com/compliance-escalation): Chargeback defence, compliance monitoring, Amazon escalation handling, shortfall management
+- [International Expansion](https://www.rosettabrands.com/international-expansion): Route into Amazon DE, IE, and wider EU marketplaces from a UK vendor base
+- [Exclusive Amazon Programmes](https://www.rosettabrands.com/exclusive-amazon-programmes): Subscribe & Save, Amazon Fresh, Amazon Freight, Vine, and other programmes only available to established vendors
+- [Fulfilment & Logistics](https://www.rosettabrands.com/fulfilment): Amazon Freight lanes, pallet-level inbound, logistics co-ordination
 
-## Growth Marketing
+### Growth Marketing services
 
-- [Advertising](https://www.rosettabrands.com/advertising): Amazon Ads strategy and execution
-- [Brand Store](https://www.rosettabrands.com/brand-store): Branded destination page design and build
-- [A+ Content](https://www.rosettabrands.com/aplus-content): Enhanced product detail page content
-- [Key Feature Images & Lifestyle](https://www.rosettabrands.com/key-feature-images): Product image and lifestyle photography
-- [Product Launch](https://www.rosettabrands.com/product-launch): New SKU and product launch playbook
+- [Advertising](https://www.rosettabrands.com/advertising): Full Amazon Ads management including Sponsored Products, Sponsored Brands, Sponsored Display, and DSP
+- [Brand Store](https://www.rosettabrands.com/brand-store): Branded storefront design, build and optimisation on Amazon
+- [A+ Content](https://www.rosettabrands.com/aplus-content): Enhanced product detail page content including Premium A+ for eligible vendors
+- [Key Feature Images & Lifestyle](https://www.rosettabrands.com/key-feature-images): Product image strategy, key feature image creation, lifestyle photography
+- [Product Launch](https://www.rosettabrands.com/product-launch): New SKU and product launch playbook including Vine reviews, advertising ramp, and listing optimisation
 
-## Platform (proprietary technology)
+### Platform services
 
-- [Order Automation](https://www.rosettabrands.com/order-automation): Automated order processing across vendor accounts
-- [Client Portal](https://www.rosettabrands.com/client-portal): Self-service visibility for brand partners
-- [Listing Health & Optimisation](https://www.rosettabrands.com/listing-health): Continuous listing quality monitoring
-- [Reporting & Analytics](https://www.rosettabrands.com/reporting-analytics): Category and brand performance reporting
+- [Order Automation](https://www.rosettabrands.com/order-automation): Proprietary automated order processing across vendor accounts, reducing manual PO handling
+- [Client Portal](https://www.rosettabrands.com/client-portal): Self-service visibility dashboard for brand partners - sales, inventory, advertising performance
+- [Listing Health & Optimisation](https://www.rosettabrands.com/listing-health): Continuous listing quality monitoring, suppression alerts, content compliance
+- [Reporting & Analytics](https://www.rosettabrands.com/reporting-analytics): Category and brand performance reporting, market share data, advertising analytics
 
-## Resources
+### Resources
 
-- [FAQ](https://www.rosettabrands.com/faqs): 25 strategic questions covering the VaaS model, vendor position, pricing, and results
-- [Case Studies](https://www.rosettabrands.com/case-studies): Anonymised brand stories from 8 real partnerships
-- [Blog](https://www.rosettabrands.com/blog): Insights and analysis from the Rosetta Brands team
-- [Blog - Amazon Chargebacks](https://www.rosettabrands.com/amazon-chargebacks): What vendor chargebacks are, how they erode margins, and how FMCG brands can reduce exposure
-- [Blog - Subscribe and Save](https://www.rosettabrands.com/subscribe-and-save): How FMCG brands can use Amazon's Subscribe and Save programme to drive repeat purchase and LTV
-- [Blog - Brand Pricing on Amazon](https://www.rosettabrands.com/brand-pricing-amazon): How FMCG vendors can protect brand pricing when Amazon controls the retail price in Vendor Central
-- [Blog - Selling Alcohol on Amazon UK](https://www.rosettabrands.com/selling-alcohol-amazon-uk): Practical guide to age-gating, DRS compliance, and category restrictions for drinks brands on Amazon UK
-- [Blog - TACoS vs ACoS](https://www.rosettabrands.com/tacos-vs-acos): Why TACoS is the better north star metric for FMCG brands advertising on Amazon, and how to calculate it
-- [Blog - Seller Central to Vendor Central](https://www.rosettabrands.com/seller-central-to-vendor-central): What the commercial and operational transition from 3P Seller Central to 1P Vendor Central actually involves
-- [Blog - Why Vendor Central Access Has Closed](https://www.rosettabrands.com/vendor-central-access): Why Amazon stopped issuing new Vendor Central invitations and what UK FMCG brands can do to access 1P status in 2025 and beyond
+- [FAQ](https://www.rosettabrands.com/faqs): 25 strategic questions covering the VaaS model, vendor position, pricing, brand control, and results
+- [Case Studies](https://www.rosettabrands.com/case-studies): Anonymised brand stories from 8 real partnerships across grocery, drinks, and health categories
+- [Blog](https://www.rosettabrands.com/blog): Insights and analysis from the Rosetta Brands team on Amazon vendor strategy
 
-## Legal
+### Blog posts
+
+- [Amazon Chargebacks](https://www.rosettabrands.com/amazon-chargebacks): What vendor chargebacks are, how they erode margins, and how FMCG brands can reduce exposure
+- [Subscribe and Save](https://www.rosettabrands.com/subscribe-and-save): How FMCG brands can use Amazon's Subscribe & Save programme to drive repeat purchase and lifetime value
+- [Brand Pricing on Amazon](https://www.rosettabrands.com/brand-pricing-amazon): How FMCG vendors can protect brand pricing when Amazon controls the retail price in Vendor Central
+- [Selling Alcohol on Amazon UK](https://www.rosettabrands.com/selling-alcohol-amazon-uk): Practical guide to age-gating, DRS compliance, and category restrictions for drinks brands on Amazon UK
+- [TACoS vs ACoS](https://www.rosettabrands.com/tacos-vs-acos): Why TACoS is the better north star metric for FMCG brands advertising on Amazon, and how to calculate it
+- [Seller Central to Vendor Central](https://www.rosettabrands.com/seller-central-to-vendor-central): What the commercial and operational transition from 3P Seller Central to 1P Vendor Central actually involves
+- [Why Vendor Central Access Has Closed](https://www.rosettabrands.com/vendor-central-access): Why Amazon stopped issuing new Vendor Central invitations and what UK FMCG brands can do to access 1P status
+
+### Legal
 
 - [Privacy Policy](https://www.rosettabrands.com/privacy): Data collection, legal basis, rights, and cookie policy
 - [Data Protection](https://www.rosettabrands.com/data-protection): UK GDPR compliance policy
