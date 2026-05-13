@@ -886,6 +886,22 @@
       "name": "Rosetta Brands",
       "url": "https://www.rosettabrands.com",
       "description": "The UK's only Vendor-as-a-Service for consumer brands on Amazon. 958+ brands managed across UK, Ireland, Germany, and Australia.",
+      "sameAs": [
+        "https://www.linkedin.com/company/rosetta-brands-ltd",
+        "https://www.crunchbase.com/organization/rosetta-brands"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Lancashire",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "hello@rosettabrands.co.uk",
+        "url": "https://www.rosettabrands.com/schedule-a-call",
+        "availableLanguage": "English"
+      },
       "areaServed": [
         "GB",
         "IE",
@@ -903,6 +919,27 @@
       "numberOfEmployees": {
         "@type": "QuantitativeValue",
         "value": 50
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.rosettabrands.com/#service",
+      "name": "Vendor-as-a-Service for FMCG Brands",
+      "serviceType": "Vendor-as-a-Service",
+      "provider": {
+        "@id": "https://www.rosettabrands.com/#organization"
+      },
+      "description": "Rosetta Brands provides FMCG brands with access to Amazon Vendor Central, Prime badging, growth marketing, and proprietary platform technology. No fixed monthly retainer - success-fee model only.",
+      "areaServed": ["GB", "IE", "DE", "AU"],
+      "url": "https://www.rosettabrands.com",
+      "offers": {
+        "@type": "Offer",
+        "description": "Success-fee pricing model - no fixed monthly retainer. Commercial terms vary by category and volume.",
+        "url": "https://www.rosettabrands.com/pricing"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero h1", ".hero p", ".stats-bar"]
       }
     },
     {

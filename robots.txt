@@ -46,3 +46,6 @@ User-agent: OAI-SearchBot
 Allow: /
 
 Sitemap: https://www.rosettabrands.com/sitemap.xml
+
+# NLWeb Schema Map
+Schemamap: https://www.rosettabrands.com/sitemap.xml

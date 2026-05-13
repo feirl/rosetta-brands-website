@@ -1,0 +1,39 @@
+{
+  "name": "Rosetta Brands",
+  "description": "The UK's only Vendor-as-a-Service for FMCG brands on Amazon. Provides vendor account access, Prime badging, growth marketing, compliance handling, and proprietary platform technology for consumer brands.",
+  "version": "1.0.0",
+  "url": "https://www.rosettabrands.com",
+  "documentationUrl": "https://www.rosettabrands.com/llms-full.txt",
+  "provider": {
+    "organization": "Rosetta Brands Ltd",
+    "url": "https://www.rosettabrands.com",
+    "email": "hello@rosettabrands.co.uk"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "skills": [
+    {
+      "id": "vendor-as-a-service",
+      "name": "Vendor-as-a-Service (VaaS)",
+      "description": "Amazon Vendor Central access, Prime badging, purchase order management, fulfilment via Amazon Freight, compliance and chargeback handling for FMCG brands",
+      "tags": ["amazon", "vendor-central", "prime", "fmcg", "ecommerce", "uk"]
+    },
+    {
+      "id": "growth-marketing",
+      "name": "Growth Marketing",
+      "description": "Amazon Ads management (Sponsored Products, Sponsored Brands, DSP), A+ Content, Brand Store, product launch, and creative production",
+      "tags": ["amazon-advertising", "aplus-content", "brand-store", "marketing"]
+    },
+    {
+      "id": "platform-technology",
+      "name": "Platform Technology",
+      "description": "Proprietary order automation, client portal for real-time visibility, listing health monitoring, and performance reporting",
+      "tags": ["order-automation", "reporting", "analytics", "listing-health"]
+    }
+  ]
+}

@@ -30,6 +30,15 @@
       ]
     },
     {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://www.rosettabrands.com/sitemap.xml>; rel=\"sitemap\", <https://www.rosettabrands.com/llms.txt>; rel=\"describedby\"; type=\"text/plain\", <https://www.rosettabrands.com/llms-full.txt>; rel=\"alternate\"; type=\"text/plain\""
+        }
+      ]
+    },
+    {
       "source": "/(.*)\\.html",
       "headers": [
         {
