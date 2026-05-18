@@ -39,7 +39,11 @@ git pull origin main  # get latest changes
 
 ### Sophie's workflow
 
-Sophie works via **claude.ai/code** (browser-based, no local clone needed). She connects her GitHub account there and Claude handles push/pull directly. Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `main`.
+Sophie works via the **Claude Code desktop app**. On a new machine, she needs to clone the repo first:
+```
+git clone https://feirl:PAT@github.com/feirl/rosetta-brands-website.git
+```
+Then open that folder in Claude Code. Ask Brendan for the PAT. Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `main`.
 
 ---
 
