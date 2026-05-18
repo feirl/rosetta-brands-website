@@ -1,7 +1,7 @@
 # Rosetta Brands Website
 
 ## What this project is
-Static HTML website for Rosetta Brands (rosettabrands.co.uk) — the UK's only Vendor-as-a-Service for FMCG brands on Amazon. Deployed on Vercel. No framework, no build tool except `build.py`.
+Static HTML website for Rosetta Brands (www.rosettabrands.com) — the UK's only Vendor-as-a-Service for FMCG brands on Amazon. Deployed on Vercel. No framework, no build tool except `build.py`.
 
 Read `llms.txt` for a full map of every page on the site.
 
@@ -35,11 +35,11 @@ git pull origin main  # get latest changes
    ```
    Push to main
    ```
-   Vercel deploys to rosettabrands.co.uk within ~60 seconds.
+   Vercel deploys to www.rosettabrands.com within ~60 seconds.
 
 ### Sophie's workflow
 
-Same as above — Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `brendan` then `main`.
+Sophie works via **claude.ai/code** (browser-based, no local clone needed). She connects her GitHub account there and Claude handles push/pull directly. Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `main`.
 
 ---
 
@@ -65,7 +65,7 @@ This also checks for em dashes and will warn you if any are found.
 2. **Edit `_nav.html` and `_footer.html`** for nav/footer changes — not the individual page files. Then run build.py.
 3. **Images** go in `img/`. Pillar graphics are in `img/pillars/`.
 4. **Clean URLs** — no `.html` in any internal links. `/contact` not `/contact.html`.
-5. **Never push to `main` directly** — always open a pull request.
+5. **Push workflow** — push to `brendan` or `sophie` first for preview, then push to `main` once Brendan approves.
 
 ---
 
@@ -76,10 +76,14 @@ This also checks for em dashes and will warn you if any are found.
 | `index.html` | Homepage |
 | `rosetta.css` | All shared CSS variables, typography, components |
 | `build.py` | Pre-push build script — run this before every push |
-| `llms.txt` | Full site map (37 pages) — read this first |
-| `vercel.json` | Clean URLs, cache headers, security headers |
+| `llms.txt` | Structured site map with page descriptions for AI crawlers |
+| `llms-full.txt` | Comprehensive single-document reference for AI crawlers |
+| `pricing.md` | Machine-readable pricing model |
+| `agents.md` | Agent discovery file — capabilities and resource URLs |
+| `.well-known/agent-card.json` | A2A agent card |
+| `vercel.json` | Clean URLs, redirects, cache headers, security headers |
 | `cookie-consent.js` | GDPR cookie consent manager |
-| `sitemap.xml` | Search engine sitemap |
+| `sitemap.xml` | Search engine sitemap (44 pages, www.rosettabrands.com) |
 
 ---
 
@@ -108,6 +112,6 @@ Ask Brendan for a PAT if you don't have one.
 
 - **Brendan Hughes** — project lead, reviews and merges PRs
 - **Sophie Smith** — Commercial Director, content and copy
-- **Live site** — rosettabrands.co.uk
+- **Live site** — www.rosettabrands.com
 - **Vercel project** — rosetta-brands-website (Rosetta Brands team)
 - **GitHub repo** — github.com/feirl/rosetta-brands-website
