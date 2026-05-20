@@ -29,7 +29,7 @@ git pull origin main  # get latest changes
    Run build.py then push my changes to the brendan branch
    ```
 3. **Vercel creates a preview URL automatically:**
-   `https://rosetta-brands-website-git-brendan-rosettabrands.vercel.app`
+   `https://rosetta-brands-website-git-brendan-feirls-projects.vercel.app`
 4. Brendan reviews the preview in his browser
 5. **Happy? Push to main to go live:**
    ```
