@@ -11,31 +11,26 @@ Read `llms.txt` for a full map of every page on the site.
 
 | Branch | Owner | Purpose |
 |--------|-------|---------|
-| `main` | Live site | Only push here once Brendan has approved the preview |
-| `brendan` | Brendan | Brendan's preview branch — all changes go here first |
-| `sophie` | Sophie | Sophie's working branch |
+| `main` | **Production — www.rosettabrands.com** | Only push here after Brendan has reviewed the preview |
+| `brendan` | Brendan | Brendan's preview branch |
+| `sophie` | Sophie | Sophie's preview branch |
 
-**Before starting any session**, make sure you're on the right branch:
+**Before starting any session**, sync with main first:
 ```
-git checkout brendan  # or sophie
-git pull origin main  # get latest changes
+Fetch the latest from GitHub, switch to the [brendan/sophie] branch, and merge in the latest main before we start
 ```
 
-### Workflow — every change, every time
+### Deployment flow — every change, every time
 
-1. Make changes (just describe what you want to Claude)
-2. **Push to the brendan branch first:**
-   ```
-   Run build.py then push my changes to the brendan branch
-   ```
-3. **Vercel creates a preview URL automatically:**
-   `https://rosetta-brands-website-git-brendan-feirls-projects.vercel.app`
-4. Brendan reviews the preview in his browser
-5. **Happy? Push to main to go live:**
-   ```
-   Push to main
-   ```
-   Vercel deploys to www.rosettabrands.com within ~60 seconds.
+1. Make changes (describe what you want to Claude)
+2. **Push to the preview branch** (brendan or sophie)
+3. **Review the preview URL before doing anything else:**
+   - Brendan: `https://rosetta-brands-website-git-brendan-feirls-projects.vercel.app`
+   - Sophie: `https://rosetta-brands-website-git-sophie-feirls-projects.vercel.app`
+4. **Claude must always ask:** *"Please review the preview. Would you like to push this to main (production)?"*
+5. Only push to main after receiving explicit confirmation
+
+**Pushing to main = going live on www.rosettabrands.com immediately. Always confirm before doing this.**
 
 ### Sophie's workflow
 
@@ -43,7 +38,7 @@ Sophie works via the **Claude Code desktop app**. On a new machine, she needs to
 ```
 git clone https://feirl:PAT@github.com/feirl/rosetta-brands-website.git
 ```
-Then open that folder in Claude Code. Ask Brendan for the PAT. Sophie pushes to her `sophie` branch first, shares the preview URL with Brendan, and once approved Claude pushes to `main`.
+Then open that folder in Claude Code. Ask Brendan for the PAT. Sophie pushes to her `sophie` branch, shares the preview URL with Brendan, and only pushes to `main` after Brendan confirms.
 
 ---
 
@@ -69,7 +64,7 @@ This also checks for em dashes and will warn you if any are found.
 2. **Edit `_nav.html` and `_footer.html`** for nav/footer changes — not the individual page files. Then run build.py.
 3. **Images** go in `img/`. Pillar graphics are in `img/pillars/`.
 4. **Clean URLs** — no `.html` in any internal links. `/contact` not `/contact.html`.
-5. **Push workflow** — push to `brendan` or `sophie` first for preview, then push to `main` once Brendan approves.
+5. **Push workflow** — ALWAYS push to the preview branch first, share the preview URL, and explicitly ask Brendan "Would you like to push this to main (production)?" before pushing to main. Never push to main without this confirmation.
 
 ---
 
