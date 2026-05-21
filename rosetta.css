@@ -325,6 +325,9 @@ section { padding: var(--section-pad) 0; }
   opacity: 0.75;
   filter: grayscale(20%);
 }
+.cert-item img[src*="amazon-verified-partner"] {
+  height: 64px;
+}
 .cert-item-text { line-height: 1.4; }
 .cert-item-text strong { display: block; font-size: 13px; font-weight: 700; color: var(--charcoal); }
 .cert-item-text span  { font-size: 12px; color: var(--charcoal-50); }
