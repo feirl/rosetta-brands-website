@@ -100,6 +100,7 @@ PAGES = [
     'tacos-vs-acos.html',
     'seller-central-to-vendor-central.html',
     'vendor-central-access.html',
+    'how-to-become-amazon-vendor-uk.html',
     'contact.html',
 ]
 
