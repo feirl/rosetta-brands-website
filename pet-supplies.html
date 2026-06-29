@@ -56,7 +56,10 @@
 .hero-cat-copy { text-align: left; }
 .hero-cat-copy .hero-sub { max-width: none; margin-left: 0; margin-right: 0; }
 .hero-cat-copy .hero-b-actions { justify-content: flex-start; margin-bottom: 0; }
-.hero-brand-showcase { background: var(--white); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.hero-brand-showcase { background: var(--white); border-radius: 20px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 16px; overflow: hidden; box-sizing: border-box; width: 100%; }
+.brand-logo-box { min-width: 0; height: 90px; background: var(--off-white); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; }
+.brand-logo-box img { max-width: 100%; max-height: 80px; object-fit: contain; }
+.brand-showcase-label { font-size: 12px; color: var(--charcoal-50); text-align: center; font-weight: 500; letter-spacing: 0.02em; }
 .brand-showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
 .brand-ph-box { aspect-ratio: 2/1; background: var(--off-white); border: 1px dashed rgba(45,41,51,0.18); border-radius: 8px; }
 .brand-showcase-label { font-size: 12px; color: var(--charcoal-50); text-align: center; font-weight: 500; letter-spacing: 0.02em; }
@@ -1051,6 +1054,15 @@
         <p style="font-size:0.95rem;font-weight:600;color:var(--text-secondary);text-align:center;margin:0;">Rosetta Brands are proud members of the <span style="white-space:nowrap;">Pet Industry Federation</span></p>
         <div style="display:flex;justify-content:center;align-items:center;">
           <img src="img/PIF-Member-Logo-2026.png" alt="Pet Industry Federation 2026 Member" style="max-width:320px;width:100%;height:auto;">
+        </div>
+        <p class="brand-showcase-label" style="margin-top:8px;">A selection of our pet supplies partners</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;box-sizing:border-box;">
+          <div class="brand-logo-box"><img src="img/logos/Bunny Bistro.avif" alt="Bunny Bistro"></div>
+          <div class="brand-logo-box"><img src="img/logos/Horse Herbs.png" alt="Horse Herbs"></div>
+          <div class="brand-logo-box"><img src="img/logos/Petcare Logo.avif" alt="Petcare"></div>
+          <div class="brand-logo-box"><img src="img/logos/Natures Grub.png" alt="Natures Grub"></div>
+          <div class="brand-logo-box"><img src="img/logos/Park Life.png" alt="Park Life"></div>
+          <div class="brand-logo-box"><img src="img/logos/Bird Food Warehouse.png" alt="Bird Food Warehouse"></div>
         </div>
       </div>
 
