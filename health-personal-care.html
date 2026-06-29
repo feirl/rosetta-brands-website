@@ -56,9 +56,9 @@
 .hero-cat-copy { text-align: left; }
 .hero-cat-copy .hero-sub { max-width: none; margin-left: 0; margin-right: 0; }
 .hero-cat-copy .hero-b-actions { justify-content: flex-start; margin-bottom: 0; }
-.hero-brand-showcase { background: var(--white); border-radius: 20px; border: 2px dashed var(--border); padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.brand-showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
-.brand-ph-box { aspect-ratio: 2/1; background: var(--off-white); border: 1px dashed rgba(45,41,51,0.18); border-radius: 8px; }
+.hero-brand-showcase { background: var(--white); border-radius: 20px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 16px; overflow: hidden; box-sizing: border-box; width: 100%; }
+.brand-logo-box { min-width: 0; height: 90px; background: var(--off-white); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; }
+.brand-logo-box img { max-width: 100%; max-height: 80px; object-fit: contain; }
 .brand-showcase-label { font-size: 12px; color: var(--charcoal-50); text-align: center; font-weight: 500; letter-spacing: 0.02em; }
 .hero-b-label { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--charcoal-50); margin-bottom: 20px; }
 .hero-b-label span { color: var(--pink); font-weight: 700; }
@@ -1009,15 +1009,15 @@
       </div>
 
       <div class="hero-brand-showcase fade-in fade-in-delay-2">
-        <div class="brand-showcase-grid">
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
-          <div class="brand-ph-box"></div>
+        <p class="brand-showcase-label">A selection of our health &amp; personal care partners</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;box-sizing:border-box;">
+          <div class="brand-logo-box"><img src="img/logos/Dr Bronners.png" alt="Dr Bronners"></div>
+          <div class="brand-logo-box"><img src="img/logos/Edens Gate.webp" alt="Edens Gate"></div>
+          <div class="brand-logo-box"><img src="img/logos/For Goodness Shakes.png" alt="For Goodness Shakes"></div>
+          <div class="brand-logo-box"><img src="img/logos/Friendly Soap.jpg" alt="Friendly Soap"></div>
+          <div class="brand-logo-box"><img src="img/logos/Get More Vits.png" alt="Get More Vits"></div>
+          <div class="brand-logo-box"><img src="img/logos/Yubi Bar.png" alt="Yubi Bar"></div>
         </div>
-        <p class="brand-showcase-label">Our health &amp; personal care brand partners</p>
       </div>
 
     </div>
