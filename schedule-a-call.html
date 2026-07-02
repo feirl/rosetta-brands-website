@@ -269,6 +269,19 @@
       border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 12px;
+      min-height: 640px;
+    }
+    .sched-calendly-card .meetings-iframe-container {
+      width: 100%;
+      min-height: 616px;
+    }
+    .sched-calendly-card .meetings-iframe-container iframe {
+      width: 100% !important;
+      min-height: 616px;
+      border: none;
+      display: block;
     }
     .sched-calendly-header {
       background: var(--orange);
@@ -1254,13 +1267,8 @@
         <!-- RIGHT COLUMN, Calendly ──────────────────────────── -->
         <div class="sched-right">
           <div class="sched-calendly-card">
-            <div class="sched-calendly-header">
-              <h3>Book a Call</h3>
-            </div>
-
             <!-- HubSpot Meetings embed -->
             <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/rb/intro?embed=true"></div>
-
           </div><!-- /sched-calendly-card -->
 
           <!-- Trust note below card -->
