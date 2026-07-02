@@ -271,10 +271,29 @@
       box-shadow: 0 8px 40px rgba(0,0,0,0.08);
       background: #f17d02;
       padding: 5px;
+      position: relative;
+    }
+    /* Subtle iPad-style "home button" in the bottom orange band.
+       Sits behind the iframe so it shows through the transparent area
+       but is never overlapped by the booking form as it grows. */
+    .sched-calendly-card::after {
+      content: '';
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.22);
+      z-index: 0;
+      pointer-events: none;
     }
     .sched-calendly-card .meetings-iframe-container {
       width: 100%;
       min-height: 560px;
+      position: relative;
+      z-index: 1;
     }
     .sched-calendly-card .meetings-iframe-container iframe {
       width: 100% !important;
