@@ -102,6 +102,7 @@ PAGES = [
     'vendor-central-access.html',
     'how-to-become-amazon-vendor-uk.html',
     'contact.html',
+    'meeting-confirmed.html',
 ]
 
 def main():
