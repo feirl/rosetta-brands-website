@@ -1141,7 +1141,7 @@
 
             <div class="quote-form-alert" id="quote-form-alert" role="alert"></div>
 
-            <form id="quote-form" novalidate>
+            <div id="quote-form">
 
               <!-- First / Last name -->
               <div class="quote-row">
@@ -1267,11 +1267,11 @@
               </div>
 
               <!-- Submit -->
-              <button type="submit" class="btn btn-primary btn-lg quote-submit" id="quote-submit">Get my quote</button>
+              <button type="button" class="btn btn-primary btn-lg quote-submit" id="quote-submit">Get my quote</button>
 
               <p class="quote-reassure-text">We usually respond within one business day. Prefer to talk? <a href="/schedule-a-call">Book a call</a>.</p>
 
-            </form>
+            </div>
 
           </div>
         </div>
@@ -1579,9 +1579,22 @@
     const HUBSPOT_PORTAL_ID = "148770068";
     const HUBSPOT_FORM_GUID = "67cfd1a0-624c-44a9-8ce0-8887a7bafa68";
 
+    // Container is a <div>, not a <form>, so HubSpot's Collected Forms
+    // scraper has no form-submit event to capture. elem() replaces the
+    // <form>.elements[name] lookup used below.
     const form = document.getElementById('quote-form');
     const submitBtn = document.getElementById('quote-submit');
     const alertBox = document.getElementById('quote-form-alert');
+    function elem(name) { return form.querySelector('[name="' + name + '"]'); }
+
+    // Preserve Enter-to-submit without a real form submit event
+    form.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.tagName === 'INPUT' &&
+          e.target.type !== 'checkbox' && e.target.type !== 'radio') {
+        e.preventDefault();
+        submitBtn.click();
+      }
+    });
 
     const amazonUrlField = document.getElementById('field-amazon-url');
     const storeUrlField = document.getElementById('field-store-url');
@@ -1668,7 +1681,7 @@
     function showError(name) {
       const msg = form.querySelector('[data-error-for="' + name + '"]');
       if (msg) msg.classList.add('show');
-      const field = form.elements[name];
+      const field = elem(name);
       if (name === 'selling_on_amazon') {
         document.getElementById('selling-segment').classList.add('error');
       } else if (name === 'amazon_markets') {
@@ -1681,7 +1694,7 @@
     function clearError(name) {
       const msg = form.querySelector('[data-error-for="' + name + '"]');
       if (msg) msg.classList.remove('show');
-      const field = form.elements[name];
+      const field = elem(name);
       if (name === 'selling_on_amazon') {
         document.getElementById('selling-segment').classList.remove('error');
       } else if (name === 'amazon_markets') {
@@ -1693,7 +1706,7 @@
 
     // Clear error state as the user corrects a field
     ['firstname', 'lastname', 'email', 'phone', 'brand', 'amazon_url', 'online_store_url', 'product_category'].forEach(function (name) {
-      const el = form.elements[name];
+      const el = elem(name);
       if (el) {
         el.addEventListener('input', function () { clearError(name); });
         el.addEventListener('change', function () { clearError(name); });
@@ -1710,7 +1723,7 @@
       const required = ['firstname', 'lastname', 'email', 'phone', 'brand', 'product_category'];
 
       required.forEach(function (name) {
-        const el = form.elements[name];
+        const el = elem(name);
         const value = el ? (el.value || '').trim() : '';
         let invalid = !value;
         if (name === 'email' && value && !isValidEmail(value)) invalid = true;
@@ -1774,7 +1787,15 @@
           }
           return;
         }
-        const el = form.elements[name];
+        // Radio group: send the checked option's value
+        if (name === 'selling_on_amazon') {
+          const picked = form.querySelector('input[name="selling_on_amazon"]:checked');
+          if (picked) {
+            fields.push({ objectTypeId: '0-1', name: name, value: picked.value });
+          }
+          return;
+        }
+        const el = elem(name);
         if (!el) return;
         // Skip disabled (hidden) conditional fields so stale values don't submit
         if (el.disabled) return;
@@ -1803,8 +1824,8 @@
       alertBox.innerHTML = '';
     }
 
-    // ── Submit handler ──────────────────────────────────────────
-    form.addEventListener('submit', async function (e) {
+    // ── Submit handler (button click - no form submit event) ────
+    submitBtn.addEventListener('click', async function (e) {
       e.preventDefault();
       hideAlert();
 
