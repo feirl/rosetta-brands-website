@@ -173,6 +173,66 @@
       cursor: pointer;
     }
 
+    /* Multi-select market checkboxes */
+    .quote-checkgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      padding: 14px 16px;
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .quote-checkgrid.error {
+      border-color: #d32f2f;
+      box-shadow: 0 0 0 3px rgba(211,47,47,0.1);
+    }
+    .quote-check {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--charcoal, #2d2933);
+      cursor: pointer;
+      line-height: 1.3;
+    }
+    .quote-check input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid var(--border, #d8d8d4);
+      border-radius: 5px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .quote-check input[type="checkbox"]:checked {
+      background: var(--orange, #f17d02);
+      border-color: var(--orange, #f17d02);
+    }
+    .quote-check input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1.5px;
+      width: 5px;
+      height: 9px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .quote-check input[type="checkbox"]:focus-visible {
+      outline: 2px solid var(--orange, #f17d02);
+      outline-offset: 2px;
+    }
+    @media (max-width: 560px) {
+      .quote-checkgrid { grid-template-columns: 1fr; }
+    }
+
     .quote-error-msg {
       display: none;
       font-family: var(--font-body);
@@ -1151,31 +1211,31 @@
 
               <!-- Target Amazon markets -->
               <div class="quote-field">
-                <label class="quote-label" for="current_vendor_countrys">Which Amazon markets are you targeting?<span class="req">*</span></label>
-                <select class="quote-select" id="current_vendor_countrys" name="current_vendor_countrys" required>
-                  <option value="" disabled selected>Select a marketplace</option>
-                  <option value="United Kingdom (amazon.co.uk)">United Kingdom (amazon.co.uk)</option>
-                  <option value="Australia (amazon.com.au)">Australia (amazon.com.au)</option>
-                  <option value="Brazil (amazon.com.br)">Brazil (amazon.com.br)</option>
-                  <option value="Canada (amazon.ca)">Canada (amazon.ca)</option>
-                  <option value="Egypt (amazon.eg)">Egypt (amazon.eg)</option>
-                  <option value="France (amazon.fr)">France (amazon.fr)</option>
-                  <option value="Germany (amazon.de)">Germany (amazon.de)</option>
-                  <option value="India (amazon.in)">India (amazon.in)</option>
-                  <option value="Italy (amazon.it)">Italy (amazon.it)</option>
-                  <option value="Japan (amazon.co.jp)">Japan (amazon.co.jp)</option>
-                  <option value="Mexico (amazon.com.mx)">Mexico (amazon.com.mx)</option>
-                  <option value="Netherlands (amazon.nl)">Netherlands (amazon.nl)</option>
-                  <option value="Poland (amazon.pl)">Poland (amazon.pl)</option>
-                  <option value="Saudi Arabia (amazon.sa)">Saudi Arabia (amazon.sa)</option>
-                  <option value="Singapore (amazon.sg)">Singapore (amazon.sg)</option>
-                  <option value="Spain (amazon.es)">Spain (amazon.es)</option>
-                  <option value="Sweden (amazon.se)">Sweden (amazon.se)</option>
-                  <option value="Türkiye (amazon.com.tr)">Türkiye (amazon.com.tr)</option>
-                  <option value="United Arab Emirates (amazon.ae)">United Arab Emirates (amazon.ae)</option>
-                  <option value="United States (amazon.com)">United States (amazon.com)</option>
-                </select>
-                <div class="quote-error-msg" data-error-for="current_vendor_countrys">Please select a marketplace.</div>
+                <label class="quote-label">Which Amazon markets are you targeting?<span class="req">*</span></label>
+                <div class="quote-checkgrid" id="markets-group" role="group" aria-label="Amazon markets">
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="United Kingdom (.co.uk)"><span>United Kingdom (.co.uk)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Australia (.com.au)"><span>Australia (.com.au)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Brazil (.com.br)"><span>Brazil (.com.br)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Canada (.ca)"><span>Canada (.ca)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Egypt (.eg)"><span>Egypt (.eg)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="France (.fr)"><span>France (.fr)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Germany (.de)"><span>Germany (.de)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="India (.in)"><span>India (.in)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Ireland (.ie)"><span>Ireland (.ie)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Italy (.it)"><span>Italy (.it)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Japan (.co.jp)"><span>Japan (.co.jp)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Mexico (.com.mx)"><span>Mexico (.com.mx)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Netherlands (.nl)"><span>Netherlands (.nl)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Poland (.pl)"><span>Poland (.pl)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Saudi Arabia (.sa)"><span>Saudi Arabia (.sa)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Singapore (.sg)"><span>Singapore (.sg)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Spain (.es)"><span>Spain (.es)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Sweden (.se)"><span>Sweden (.se)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="Türkiye (.com.tr)"><span>Türkiye (.com.tr)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="United Arab Emirates (.ae)"><span>United Arab Emirates (.ae)</span></label>
+                  <label class="quote-check"><input type="checkbox" name="current_vendor_countrys" value="United States (.com)"><span>United States (.com)</span></label>
+                </div>
+                <div class="quote-error-msg" data-error-for="current_vendor_countrys">Please select at least one market.</div>
               </div>
 
               <!-- SKUs slider -->
@@ -1608,7 +1668,9 @@
       const field = form.elements[name];
       if (name === 'current_amazon_position') {
         document.getElementById('selling-segment').classList.add('error');
-      } else if (field) {
+      } else if (name === 'current_vendor_countrys') {
+        document.getElementById('markets-group').classList.add('error');
+      } else if (field && field.classList) {
         field.classList.add('error');
       }
     }
@@ -1619,13 +1681,15 @@
       const field = form.elements[name];
       if (name === 'current_amazon_position') {
         document.getElementById('selling-segment').classList.remove('error');
+      } else if (name === 'current_vendor_countrys') {
+        document.getElementById('markets-group').classList.remove('error');
       } else if (field && field.classList) {
         field.classList.remove('error');
       }
     }
 
     // Clear error state as the user corrects a field
-    ['firstname', 'lastname', 'email', 'phone', 'brand', 'amazon_url', 'online_store_url', 'current_vendor_countrys', 'primary_categorys'].forEach(function (name) {
+    ['firstname', 'lastname', 'email', 'phone', 'brand', 'amazon_url', 'online_store_url', 'primary_categorys'].forEach(function (name) {
       const el = form.elements[name];
       if (el) {
         el.addEventListener('input', function () { clearError(name); });
@@ -1633,9 +1697,14 @@
       }
     });
 
+    // Market checkboxes (multi-select) clear the group error on change
+    form.querySelectorAll('input[name="current_vendor_countrys"]').forEach(function (cb) {
+      cb.addEventListener('change', function () { clearError('current_vendor_countrys'); });
+    });
+
     function validate() {
       let firstInvalid = null;
-      const required = ['firstname', 'lastname', 'email', 'phone', 'brand', 'current_vendor_countrys', 'primary_categorys'];
+      const required = ['firstname', 'lastname', 'email', 'phone', 'brand', 'primary_categorys'];
 
       required.forEach(function (name) {
         const el = form.elements[name];
@@ -1657,6 +1726,15 @@
         if (!firstInvalid) firstInvalid = document.getElementById('selling-segment');
       } else {
         clearError('current_amazon_position');
+      }
+
+      // Target markets (multi-select, at least one)
+      const marketsChecked = form.querySelectorAll('input[name="current_vendor_countrys"]:checked').length;
+      if (!marketsChecked) {
+        showError('current_vendor_countrys');
+        if (!firstInvalid) firstInvalid = document.getElementById('markets-group');
+      } else {
+        clearError('current_vendor_countrys');
       }
 
       // Conditional URL field (only the visible/enabled one is validated)
@@ -1683,6 +1761,16 @@
       ];
       const fields = [];
       names.forEach(function (name) {
+        // Multi-select markets: join all checked values with a semicolon
+        if (name === 'current_vendor_countrys') {
+          const checked = Array.prototype.slice.call(
+            form.querySelectorAll('input[name="current_vendor_countrys"]:checked')
+          ).map(function (c) { return c.value; });
+          if (checked.length) {
+            fields.push({ objectTypeId: '0-1', name: name, value: checked.join(';') });
+          }
+          return;
+        }
         const el = form.elements[name];
         if (!el) return;
         // Skip disabled (hidden) conditional fields so stale values don't submit
