@@ -1199,15 +1199,15 @@
                 <label class="quote-label">Are you currently selling on Amazon?<span class="req">*</span></label>
                 <div class="quote-segment" id="selling-segment" role="radiogroup" aria-label="Are you currently selling on Amazon?">
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="Yes, as a Vendor">
+                    <input type="radio" name="selling_on_amazon" value="Vendor to Vendor">
                     <span>Yes, as a Vendor</span>
                   </label>
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="Yes, as a Seller">
+                    <input type="radio" name="selling_on_amazon" value="Seller to Vendor">
                     <span>Yes, as a Seller</span>
                   </label>
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="No, not yet">
+                    <input type="radio" name="selling_on_amazon" value="DTC Store to Vendor">
                     <span>No, not yet</span>
                   </label>
                 </div>
@@ -1622,11 +1622,11 @@
     form.querySelectorAll('input[name="selling_on_amazon"]').forEach(function (radio) {
       radio.addEventListener('change', function () {
         const v = this.value;
-        if (v === 'Yes, as a Vendor' || v === 'Yes, as a Seller') {
+        if (v === 'Vendor to Vendor' || v === 'Seller to Vendor') {
           showField(amazonUrlField, amazonUrlInput);
           hideField(storeUrlField, storeUrlInput);
           showRevenue();
-        } else if (v === 'No, not yet') {
+        } else if (v === 'DTC Store to Vendor') {
           showField(storeUrlField, storeUrlInput);
           hideField(amazonUrlField, amazonUrlInput);
           hideRevenue();
