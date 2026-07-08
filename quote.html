@@ -1846,6 +1846,18 @@
         const responseText = await response.text();
         console.log('HubSpot response (' + response.status + '):', responseText);
 
+        // Debug mode: /quote?debug=1 halts the redirect and shows what we sent
+        // + HubSpot's status/response, so field mapping can be diagnosed.
+        if (window.location.search.indexOf('debug') !== -1) {
+          const sent = payload.fields.map(function (f) { return f.name + ' = ' + f.value; }).join('<br>');
+          showAlert('<strong>DEBUG - HubSpot status ' + response.status + '</strong><br><br>' +
+                    '<strong>Fields sent:</strong><br>' + sent + '<br><br>' +
+                    '<strong>Response:</strong><br>' + responseText);
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel;
+          return;
+        }
+
         if (response.status === 200) {
           window.location.href = '/quote-thanks';
           return;
