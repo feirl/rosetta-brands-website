@@ -1179,6 +1179,22 @@
                 <div class="quote-error-msg" data-error-for="brand">Please enter your company or brand name.</div>
               </div>
 
+              <!-- Product category -->
+              <div class="quote-field">
+                <label class="quote-label" for="primary_categorys">Which product category best describes your brand?<span class="req">*</span></label>
+                <select class="quote-select" id="primary_categorys" name="primary_categorys" required>
+                  <option value="" disabled selected>Select a category</option>
+                  <option value="Grocery & Gourmet">Grocery &amp; Gourmet</option>
+                  <option value="Beer, Wine & Spirits">Beer, Wine &amp; Spirits</option>
+                  <option value="Health & Personal Care">Health &amp; Personal Care</option>
+                  <option value="Pet Supplies">Pet Supplies</option>
+                  <option value="Home & Household">Home &amp; Household</option>
+                  <option value="Garden & Outdoor">Garden &amp; Outdoor</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="quote-error-msg" data-error-for="primary_categorys">Please select a category.</div>
+              </div>
+
               <!-- Current Amazon position -->
               <div class="quote-field">
                 <label class="quote-label">Are you currently selling on Amazon?<span class="req">*</span></label>
@@ -1251,29 +1267,13 @@
                 <input class="quote-range" type="range" id="of_skus" name="of_skus" min="1" max="500" step="1" value="20">
               </div>
 
-              <!-- Product category -->
-              <div class="quote-field">
-                <label class="quote-label" for="primary_categorys">Which product category best describes your brand?<span class="req">*</span></label>
-                <select class="quote-select" id="primary_categorys" name="primary_categorys" required>
-                  <option value="" disabled selected>Select a category</option>
-                  <option value="Grocery & Gourmet">Grocery &amp; Gourmet</option>
-                  <option value="Beer, Wine & Spirits">Beer, Wine &amp; Spirits</option>
-                  <option value="Health & Personal Care">Health &amp; Personal Care</option>
-                  <option value="Pet Supplies">Pet Supplies</option>
-                  <option value="Home & Household">Home &amp; Household</option>
-                  <option value="Garden & Outdoor">Garden &amp; Outdoor</option>
-                  <option value="Other">Other</option>
-                </select>
-                <div class="quote-error-msg" data-error-for="primary_categorys">Please select a category.</div>
-              </div>
-
-              <!-- Monthly Amazon revenue slider -->
-              <div class="quote-field">
+              <!-- Monthly Amazon revenue slider (shown only when selling on Amazon) -->
+              <div class="quote-field hidden" id="revenue-field">
                 <div class="quote-slider-head">
-                  <label class="quote-label" for="amazon_revenue_monthly">Approximate current or target monthly Amazon revenue<span class="req">*</span></label>
+                  <label class="quote-label" for="amazon_revenue_monthly">Approximate current monthly Amazon revenue<span class="req">*</span></label>
                   <span class="quote-slider-value" id="amazon_revenue_monthly_value">&pound;50,000</span>
                 </div>
-                <input class="quote-range" type="range" id="amazon_revenue_monthly" name="amazon_revenue_monthly" min="0" max="500000" step="5000" value="50000">
+                <input class="quote-range" type="range" id="amazon_revenue_monthly" name="amazon_revenue_monthly" min="0" max="500000" step="5000" value="50000" disabled>
               </div>
 
               <!-- Submit -->
@@ -1597,6 +1597,12 @@
     const storeUrlField = document.getElementById('field-store-url');
     const amazonUrlInput = document.getElementById('amazon_url');
     const storeUrlInput = document.getElementById('online_store_url');
+    const revenueField = document.getElementById('revenue-field');
+    const revenueInput = document.getElementById('amazon_revenue_monthly');
+
+    // Revenue only applies to brands already selling on Amazon
+    function showRevenue() { revenueField.classList.remove('hidden'); revenueInput.disabled = false; }
+    function hideRevenue() { revenueField.classList.add('hidden'); revenueInput.disabled = true; }
 
     // ── Conditional URL field logic ─────────────────────────────
     // Visible field becomes required; hidden field is disabled + display:none
@@ -1620,12 +1626,15 @@
         if (v === 'Yes, as a Vendor' || v === 'Yes, as a Seller') {
           showField(amazonUrlField, amazonUrlInput);
           hideField(storeUrlField, storeUrlInput);
+          showRevenue();
         } else if (v === 'No, not yet') {
           showField(storeUrlField, storeUrlInput);
           hideField(amazonUrlField, amazonUrlInput);
+          hideRevenue();
         } else {
           hideField(amazonUrlField, amazonUrlInput);
           hideField(storeUrlField, storeUrlInput);
+          hideRevenue();
         }
         clearError('current_amazon_position');
       });
