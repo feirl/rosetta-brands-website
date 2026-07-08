@@ -1110,9 +1110,9 @@
 
               <!-- Company / Brand -->
               <div class="quote-field">
-                <label class="quote-label" for="company">Company / Brand<span class="req">*</span></label>
-                <input class="quote-input" type="text" id="company" name="company" autocomplete="organization" required>
-                <div class="quote-error-msg" data-error-for="company">Please enter your company or brand name.</div>
+                <label class="quote-label" for="brand">Company/Brand(s)<span class="req">*</span></label>
+                <input class="quote-input" type="text" id="brand" name="brand" autocomplete="organization" required>
+                <div class="quote-error-msg" data-error-for="brand">Please enter your company or brand name.</div>
               </div>
 
               <!-- Current Amazon position -->
@@ -1523,7 +1523,7 @@
   (function () {
     // ⚠️ Replace with the HubSpot Form GUID once the form is created in HubSpot (Marketing > Forms).
     const HUBSPOT_PORTAL_ID = "148770068";
-    const HUBSPOT_FORM_GUID = "REPLACE_WITH_FORM_GUID";
+    const HUBSPOT_FORM_GUID = "67cfd1a0-624c-44a9-8ce0-8887a7bafa68";
 
     const form = document.getElementById('quote-form');
     const submitBtn = document.getElementById('quote-submit');
@@ -1625,7 +1625,7 @@
     }
 
     // Clear error state as the user corrects a field
-    ['firstname', 'lastname', 'email', 'phone', 'company', 'amazon_url', 'online_store_url', 'current_vendor_countrys', 'primary_categorys'].forEach(function (name) {
+    ['firstname', 'lastname', 'email', 'phone', 'brand', 'amazon_url', 'online_store_url', 'current_vendor_countrys', 'primary_categorys'].forEach(function (name) {
       const el = form.elements[name];
       if (el) {
         el.addEventListener('input', function () { clearError(name); });
@@ -1635,7 +1635,7 @@
 
     function validate() {
       let firstInvalid = null;
-      const required = ['firstname', 'lastname', 'email', 'phone', 'company', 'current_vendor_countrys', 'primary_categorys'];
+      const required = ['firstname', 'lastname', 'email', 'phone', 'brand', 'current_vendor_countrys', 'primary_categorys'];
 
       required.forEach(function (name) {
         const el = form.elements[name];
@@ -1677,7 +1677,7 @@
     // ── Build HubSpot v3 payload ────────────────────────────────
     function buildPayload() {
       const names = [
-        'firstname', 'lastname', 'email', 'phone', 'company',
+        'firstname', 'lastname', 'email', 'phone', 'brand',
         'current_amazon_position', 'amazon_url', 'online_store_url',
         'current_vendor_countrys', 'of_skus', 'primary_categorys', 'amazon_revenue_monthly'
       ];
