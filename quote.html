@@ -1792,6 +1792,8 @@
           fields.push({ objectTypeId: '0-1', name: name, value: value });
         }
       });
+      // Hidden lead source (not shown to the user)
+      fields.push({ objectTypeId: '0-1', name: 'lead_sour', value: 'Quote Request' });
       return {
         fields: fields,
         context: {
