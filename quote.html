@@ -226,6 +226,62 @@
     }
     .quote-segment.error label { border-color: #d32f2f; }
 
+    /* ── Range slider ──────────────────────────────────────────── */
+    .quote-slider-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+    }
+    .quote-slider-head .quote-label { margin-bottom: 0; }
+    .quote-slider-value {
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--orange);
+      background: rgba(241,125,2,0.1);
+      border: 1px solid rgba(241,125,2,0.25);
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .quote-range {
+      width: 100%;
+      height: 6px;
+      margin: 8px 0 2px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--border);
+      border-radius: 100px;
+      outline: none;
+      cursor: pointer;
+    }
+    .quote-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(241,125,2,0.4);
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+    .quote-range::-webkit-slider-thumb:hover { transform: scale(1.1); }
+    .quote-range::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: 3px solid #fff;
+      box-shadow: 0 2px 8px rgba(241,125,2,0.4);
+      cursor: pointer;
+    }
+    .quote-range:focus { box-shadow: 0 0 0 3px rgba(241,125,2,0.12); }
+
     .quote-submit {
       width: 100%;
       justify-content: center;
@@ -1059,55 +1115,82 @@
                 <div class="quote-error-msg" data-error-for="company">Please enter your company or brand name.</div>
               </div>
 
-              <!-- Selling on Amazon -->
+              <!-- Current Amazon position -->
               <div class="quote-field">
                 <label class="quote-label">Are you currently selling on Amazon?<span class="req">*</span></label>
                 <div class="quote-segment" id="selling-segment" role="radiogroup" aria-label="Are you currently selling on Amazon?">
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="Yes, as a Vendor">
+                    <input type="radio" name="current_amazon_position" value="Yes, as a Vendor">
                     <span>Yes, as a Vendor</span>
                   </label>
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="Yes, as a Seller">
+                    <input type="radio" name="current_amazon_position" value="Yes, as a Seller">
                     <span>Yes, as a Seller</span>
                   </label>
                   <label>
-                    <input type="radio" name="selling_on_amazon" value="No, not yet">
+                    <input type="radio" name="current_amazon_position" value="No, not yet">
                     <span>No, not yet</span>
                   </label>
                 </div>
-                <div class="quote-error-msg" data-error-for="selling_on_amazon">Please let us know where you are on Amazon.</div>
+                <div class="quote-error-msg" data-error-for="current_amazon_position">Please let us know where you are on Amazon.</div>
               </div>
 
               <!-- Conditional: Amazon listing URL (Vendor / Seller) -->
               <div class="quote-field hidden" id="field-amazon-url">
-                <label class="quote-label" for="amazon_listing_url">Paste your Amazon brand or product URL (optional but helpful)</label>
-                <input class="quote-input" type="url" id="amazon_listing_url" name="amazon_listing_url" placeholder="https://www.amazon.co.uk/..." disabled>
+                <label class="quote-label" for="amazon_url">Paste your Amazon brand or product URL<span class="req">*</span></label>
+                <input class="quote-input" type="url" id="amazon_url" name="amazon_url" placeholder="https://www.amazon.co.uk/..." disabled>
+                <div class="quote-error-msg" data-error-for="amazon_url">Please enter a valid URL.</div>
               </div>
 
               <!-- Conditional: Online store URL (No, not yet) -->
               <div class="quote-field hidden" id="field-store-url">
-                <label class="quote-label" for="online_store_url">Paste your online store URL (optional but helpful)</label>
+                <label class="quote-label" for="online_store_url">Paste your online store URL<span class="req">*</span></label>
                 <input class="quote-input" type="url" id="online_store_url" name="online_store_url" placeholder="https://..." disabled>
+                <div class="quote-error-msg" data-error-for="online_store_url">Please enter a valid URL.</div>
               </div>
 
-              <!-- SKU count -->
+              <!-- Target Amazon markets -->
               <div class="quote-field">
-                <label class="quote-label" for="sku_count">How many SKUs are you looking to list or manage?<span class="req">*</span></label>
-                <select class="quote-select" id="sku_count" name="sku_count" required>
-                  <option value="" disabled selected>Select a range</option>
-                  <option value="1 to 5">1 to 5</option>
-                  <option value="6 to 20">6 to 20</option>
-                  <option value="21 to 50">21 to 50</option>
-                  <option value="50 plus">50 plus</option>
+                <label class="quote-label" for="current_vendor_countrys">Which Amazon markets are you targeting?<span class="req">*</span></label>
+                <select class="quote-select" id="current_vendor_countrys" name="current_vendor_countrys" required>
+                  <option value="" disabled selected>Select a marketplace</option>
+                  <option value="United Kingdom (amazon.co.uk)">United Kingdom (amazon.co.uk)</option>
+                  <option value="Australia (amazon.com.au)">Australia (amazon.com.au)</option>
+                  <option value="Brazil (amazon.com.br)">Brazil (amazon.com.br)</option>
+                  <option value="Canada (amazon.ca)">Canada (amazon.ca)</option>
+                  <option value="Egypt (amazon.eg)">Egypt (amazon.eg)</option>
+                  <option value="France (amazon.fr)">France (amazon.fr)</option>
+                  <option value="Germany (amazon.de)">Germany (amazon.de)</option>
+                  <option value="India (amazon.in)">India (amazon.in)</option>
+                  <option value="Italy (amazon.it)">Italy (amazon.it)</option>
+                  <option value="Japan (amazon.co.jp)">Japan (amazon.co.jp)</option>
+                  <option value="Mexico (amazon.com.mx)">Mexico (amazon.com.mx)</option>
+                  <option value="Netherlands (amazon.nl)">Netherlands (amazon.nl)</option>
+                  <option value="Poland (amazon.pl)">Poland (amazon.pl)</option>
+                  <option value="Saudi Arabia (amazon.sa)">Saudi Arabia (amazon.sa)</option>
+                  <option value="Singapore (amazon.sg)">Singapore (amazon.sg)</option>
+                  <option value="Spain (amazon.es)">Spain (amazon.es)</option>
+                  <option value="Sweden (amazon.se)">Sweden (amazon.se)</option>
+                  <option value="Türkiye (amazon.com.tr)">Türkiye (amazon.com.tr)</option>
+                  <option value="United Arab Emirates (amazon.ae)">United Arab Emirates (amazon.ae)</option>
+                  <option value="United States (amazon.com)">United States (amazon.com)</option>
                 </select>
-                <div class="quote-error-msg" data-error-for="sku_count">Please select a SKU range.</div>
+                <div class="quote-error-msg" data-error-for="current_vendor_countrys">Please select a marketplace.</div>
+              </div>
+
+              <!-- SKUs slider -->
+              <div class="quote-field">
+                <div class="quote-slider-head">
+                  <label class="quote-label" for="of_skus">How many SKUs are you looking to list or manage?<span class="req">*</span></label>
+                  <span class="quote-slider-value" id="of_skus_value">20</span>
+                </div>
+                <input class="quote-range" type="range" id="of_skus" name="of_skus" min="1" max="500" step="1" value="20">
               </div>
 
               <!-- Product category -->
               <div class="quote-field">
-                <label class="quote-label" for="product_category">Which product category best describes your brand?<span class="req">*</span></label>
-                <select class="quote-select" id="product_category" name="product_category" required>
+                <label class="quote-label" for="primary_categorys">Which product category best describes your brand?<span class="req">*</span></label>
+                <select class="quote-select" id="primary_categorys" name="primary_categorys" required>
                   <option value="" disabled selected>Select a category</option>
                   <option value="Grocery & Gourmet">Grocery &amp; Gourmet</option>
                   <option value="Beer, Wine & Spirits">Beer, Wine &amp; Spirits</option>
@@ -1117,22 +1200,16 @@
                   <option value="Garden & Outdoor">Garden &amp; Outdoor</option>
                   <option value="Other">Other</option>
                 </select>
-                <div class="quote-error-msg" data-error-for="product_category">Please select a category.</div>
+                <div class="quote-error-msg" data-error-for="primary_categorys">Please select a category.</div>
               </div>
 
-              <!-- Monthly Amazon revenue -->
+              <!-- Monthly Amazon revenue slider -->
               <div class="quote-field">
-                <label class="quote-label" for="monthly_amazon_revenue">Approximate current or target monthly Amazon revenue<span class="req">*</span></label>
-                <select class="quote-select" id="monthly_amazon_revenue" name="monthly_amazon_revenue" required>
-                  <option value="" disabled selected>Select a range</option>
-                  <option value="Under £10k">Under &pound;10k</option>
-                  <option value="£10k to £50k">&pound;10k to &pound;50k</option>
-                  <option value="£50k to £150k">&pound;50k to &pound;150k</option>
-                  <option value="£150k to £250k">&pound;150k to &pound;250k</option>
-                  <option value="£250k to £500k">&pound;250k to &pound;500k</option>
-                  <option value="£500k plus">&pound;500k plus</option>
-                </select>
-                <div class="quote-error-msg" data-error-for="monthly_amazon_revenue">Please select a revenue range.</div>
+                <div class="quote-slider-head">
+                  <label class="quote-label" for="amazon_revenue_monthly">Approximate current or target monthly Amazon revenue<span class="req">*</span></label>
+                  <span class="quote-slider-value" id="amazon_revenue_monthly_value">&pound;50,000</span>
+                </div>
+                <input class="quote-range" type="range" id="amazon_revenue_monthly" name="amazon_revenue_monthly" min="0" max="500000" step="5000" value="50000">
               </div>
 
               <!-- Submit -->
@@ -1454,21 +1531,26 @@
 
     const amazonUrlField = document.getElementById('field-amazon-url');
     const storeUrlField = document.getElementById('field-store-url');
-    const amazonUrlInput = document.getElementById('amazon_listing_url');
+    const amazonUrlInput = document.getElementById('amazon_url');
     const storeUrlInput = document.getElementById('online_store_url');
 
     // ── Conditional URL field logic ─────────────────────────────
+    // Visible field becomes required; hidden field is disabled + display:none
+    // so it is neither validated nor submitted.
     function showField(fieldEl, inputEl) {
       fieldEl.classList.remove('hidden');
       inputEl.disabled = false;
+      inputEl.required = true;
     }
     function hideField(fieldEl, inputEl) {
       fieldEl.classList.add('hidden');
       inputEl.disabled = true;
+      inputEl.required = false;
       inputEl.value = '';
+      clearError(inputEl.name);
     }
 
-    form.querySelectorAll('input[name="selling_on_amazon"]').forEach(function (radio) {
+    form.querySelectorAll('input[name="current_amazon_position"]').forEach(function (radio) {
       radio.addEventListener('change', function () {
         const v = this.value;
         if (v === 'Yes, as a Vendor' || v === 'Yes, as a Seller') {
@@ -1481,20 +1563,50 @@
           hideField(amazonUrlField, amazonUrlInput);
           hideField(storeUrlField, storeUrlInput);
         }
-        clearError('selling_on_amazon');
+        clearError('current_amazon_position');
       });
     });
+
+    // ── Sliders: live value badges ──────────────────────────────
+    const skuSlider = document.getElementById('of_skus');
+    const skuValue = document.getElementById('of_skus_value');
+    const revenueSlider = document.getElementById('amazon_revenue_monthly');
+    const revenueValue = document.getElementById('amazon_revenue_monthly_value');
+
+    function updateSkuBadge() {
+      const n = parseInt(skuSlider.value, 10);
+      skuValue.textContent = n >= 500 ? '500+' : String(n);
+    }
+    function updateRevenueBadge() {
+      const n = parseInt(revenueSlider.value, 10);
+      revenueValue.textContent = n >= 500000
+        ? '£500,000+'
+        : '£' + n.toLocaleString('en-GB');
+    }
+    skuSlider.addEventListener('input', updateSkuBadge);
+    revenueSlider.addEventListener('input', updateRevenueBadge);
+    updateSkuBadge();
+    updateRevenueBadge();
 
     // ── Validation helpers ──────────────────────────────────────
     function isValidEmail(value) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
+    function isValidUrl(value) {
+      try {
+        const u = new URL(value);
+        return u.protocol === 'http:' || u.protocol === 'https:';
+      } catch (e) {
+        return false;
+      }
+    }
+
     function showError(name) {
       const msg = form.querySelector('[data-error-for="' + name + '"]');
       if (msg) msg.classList.add('show');
       const field = form.elements[name];
-      if (name === 'selling_on_amazon') {
+      if (name === 'current_amazon_position') {
         document.getElementById('selling-segment').classList.add('error');
       } else if (field) {
         field.classList.add('error');
@@ -1505,7 +1617,7 @@
       const msg = form.querySelector('[data-error-for="' + name + '"]');
       if (msg) msg.classList.remove('show');
       const field = form.elements[name];
-      if (name === 'selling_on_amazon') {
+      if (name === 'current_amazon_position') {
         document.getElementById('selling-segment').classList.remove('error');
       } else if (field && field.classList) {
         field.classList.remove('error');
@@ -1513,7 +1625,7 @@
     }
 
     // Clear error state as the user corrects a field
-    ['firstname', 'lastname', 'email', 'phone', 'company', 'sku_count', 'product_category', 'monthly_amazon_revenue'].forEach(function (name) {
+    ['firstname', 'lastname', 'email', 'phone', 'company', 'amazon_url', 'online_store_url', 'current_vendor_countrys', 'primary_categorys'].forEach(function (name) {
       const el = form.elements[name];
       if (el) {
         el.addEventListener('input', function () { clearError(name); });
@@ -1523,7 +1635,7 @@
 
     function validate() {
       let firstInvalid = null;
-      const required = ['firstname', 'lastname', 'email', 'phone', 'company', 'sku_count', 'product_category', 'monthly_amazon_revenue'];
+      const required = ['firstname', 'lastname', 'email', 'phone', 'company', 'current_vendor_countrys', 'primary_categorys'];
 
       required.forEach(function (name) {
         const el = form.elements[name];
@@ -1539,13 +1651,25 @@
       });
 
       // Radio group
-      const selling = form.querySelector('input[name="selling_on_amazon"]:checked');
+      const selling = form.querySelector('input[name="current_amazon_position"]:checked');
       if (!selling) {
-        showError('selling_on_amazon');
+        showError('current_amazon_position');
         if (!firstInvalid) firstInvalid = document.getElementById('selling-segment');
       } else {
-        clearError('selling_on_amazon');
+        clearError('current_amazon_position');
       }
+
+      // Conditional URL field (only the visible/enabled one is validated)
+      [amazonUrlInput, storeUrlInput].forEach(function (el) {
+        if (!el || el.disabled) return;
+        const value = (el.value || '').trim();
+        if (!value || !isValidUrl(value)) {
+          showError(el.name);
+          if (!firstInvalid) firstInvalid = el;
+        } else {
+          clearError(el.name);
+        }
+      });
 
       return firstInvalid;
     }
@@ -1554,8 +1678,8 @@
     function buildPayload() {
       const names = [
         'firstname', 'lastname', 'email', 'phone', 'company',
-        'selling_on_amazon', 'amazon_listing_url', 'online_store_url',
-        'sku_count', 'product_category', 'monthly_amazon_revenue'
+        'current_amazon_position', 'amazon_url', 'online_store_url',
+        'current_vendor_countrys', 'of_skus', 'primary_categorys', 'amazon_revenue_monthly'
       ];
       const fields = [];
       names.forEach(function (name) {
