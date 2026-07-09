@@ -1,26 +1,80 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Rosetta Brands</title>
-  <meta name="description" content="Get in touch with the Rosetta Brands team. Call us, email us, or book a discovery call to talk about your consumer brand on Amazon.">
+  <title>Message Sent | Rosetta Brands</title>
+  <meta name="description" content="Thanks for getting in touch. The Rosetta Brands team will get back to you within one business day.">
+  <link rel="canonical" href="https://www.rosettabrands.com/message-sent">
+  <meta name="robots" content="noindex, follow">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="rosetta.css" as="style">
   <link rel="stylesheet" href="rosetta.css">
   <style>
 
-    /* ── Hero ──────────────────────────────────────────────────── */
-    .contact-hero {
-      padding: 128px 0 64px;
-      background: var(--white);
+    /* ── Confirmation section ──────────────────────────────────── */
+    .confirm-section {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 0 96px;
+      background: var(--off-white, #faf8f5);
+      position: relative;
+      overflow: hidden;
     }
-    .contact-pill {
+    .confirm-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -160px;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(241,125,2,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .confirm-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(127,134,193,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .confirm-card {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 24px;
+    }
+
+    .confirm-check {
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 32px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(241,125,2,0.32);
+      animation: confirm-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    @keyframes confirm-pop {
+      0%   { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .confirm-check svg { width: 42px; height: 42px; color: #fff; }
+
+    .confirm-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(232,68,10,0.10);
-      border: 1px solid rgba(232,68,10,0.25);
+      background: rgba(241,125,2,0.1);
+      border: 1px solid rgba(241,125,2,0.25);
       color: var(--orange);
       font-family: var(--font-display);
       font-size: 11px;
@@ -31,457 +85,88 @@
       border-radius: 100px;
       margin-bottom: 24px;
     }
-    .contact-pill::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: var(--orange);
-      border-radius: 50%;
-    }
-    .contact-hero h1 {
-      font-size: clamp(36px, 5vw, 56px);
+
+    .confirm-card h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 46px);
       font-weight: 800;
-      color: var(--charcoal);
       line-height: 1.1;
       letter-spacing: -0.03em;
+      color: var(--charcoal);
       margin: 0 0 16px;
     }
-    .contact-hero h1 span { color: var(--orange); }
-    .contact-hero p {
-      font-size: 17px;
-      color: var(--text-secondary);
-      max-width: 520px;
-      line-height: 1.65;
-      margin: 0;
-    }
-
-    /* ── Two-column body ───────────────────────────────────────── */
-    .contact-body {
-      background: var(--white);
-      padding: 0 0 96px;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 64px;
-      align-items: start;
-    }
-
-    /* ── Left column ───────────────────────────────────────────── */
-    .contact-left { display: flex; flex-direction: column; gap: 48px; }
-
-    /* Detail blocks */
-    .contact-detail-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .contact-detail-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .contact-detail-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(232,68,10,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--orange);
-    }
-    .contact-detail-body { display: flex; flex-direction: column; gap: 2px; }
-    .contact-detail-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--charcoal-60, #888);
-      font-family: var(--font-display);
-    }
-    .contact-detail-value {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--charcoal);
-      line-height: 1.5;
-    }
-    .contact-detail-value a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .contact-detail-value a:hover { color: var(--orange); }
-    .contact-detail-note {
-      font-size: 13px;
-      color: var(--charcoal-60, #888);
-      margin-top: 2px;
-    }
-
-    /* Address block */
-    .contact-address {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 28px 24px;
-      background: var(--light-grey, #f9f9f7);
-    }
-    .contact-address-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--charcoal-60, #888);
-      font-family: var(--font-display);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .contact-address-label svg { color: var(--orange); }
-    .contact-address-text {
-      font-size: 15px;
-      color: var(--charcoal);
-      line-height: 1.8;
-      margin: 0 0 16px;
-    }
-    .contact-address-map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--orange);
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .contact-address-map-link:hover { opacity: 0.75; }
-
-    /* Reassurance strip */
-    .contact-reassurance {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      padding: 24px;
-      background: rgba(232,68,10,0.04);
-      border: 1px solid rgba(232,68,10,0.12);
-      border-radius: 16px;
-    }
-    .contact-reassurance-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      color: var(--charcoal-70);
-    }
-    .contact-reassurance-item svg { color: var(--orange); flex-shrink: 0; }
-
-    /* ── Right column - Calendly card ─────────────────────────── */
-    .contact-right { position: sticky; top: 100px; }
-
-    .contact-calendly-card {
-      border: 1px solid var(--border, #e8e8e4);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-    }
-    .contact-calendly-header {
-      background: var(--charcoal);
-      padding: 24px 28px;
-    }
-    .contact-calendly-header h3 {
+    .confirm-card > p.lead {
+      font-family: var(--font-body);
       font-size: 18px;
-      font-weight: 700;
-      color: #fff;
-      margin: 0 0 4px;
-      font-family: var(--font-display);
+      line-height: 1.6;
+      color: var(--grey, #545454);
+      margin: 0 0 40px;
     }
-    .contact-calendly-header p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
-      margin: 0;
-    }
-    .contact-calendly-meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-    .contact-meta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 100px;
-      padding: 5px 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.85);
-      font-weight: 500;
-    }
-    .contact-meta-pill svg { opacity: 0.75; }
 
-    /* Calendly embed */
-    .contact-calendly-embed {
+    /* ── What happens next ─────────────────────────────────────── */
+    .confirm-next {
       background: #fff;
-      min-height: 580px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border: 1px solid var(--border, #e8e8e4);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+      padding: 32px 36px;
+      text-align: left;
+      margin-bottom: 40px;
     }
-    .contact-calendly-embed iframe {
-      width: 100%;
-      height: 580px;
-      border: none;
-      display: block;
-    }
-    .contact-calendly-placeholder {
-      padding: 48px 28px;
-      text-align: center;
-    }
-    .contact-calendly-placeholder .placeholder-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(232,68,10,0.08);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      color: var(--orange);
-    }
-    .contact-calendly-placeholder h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin: 0 0 8px;
+    .confirm-next h2 {
       font-family: var(--font-display);
-    }
-    .contact-calendly-placeholder p {
-      font-size: 14px;
-      color: var(--charcoal-60, #888);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--charcoal);
       margin: 0 0 20px;
     }
-
-    /* ── Google Map ────────────────────────────────────────────── */
-    .contact-map {
-      margin-top: 24px;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--border,#e8e8e4);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
-    }
-    .contact-map iframe {
-      display: block;
-      width: 100%;
-      height: 260px;
-      border: 0;
-    }
-
-    /* ── Contact form card (mirrors quote.html) ────────────────── */
-    .quote-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-      padding: 32px 36px;
-    }
-    .quote-card-heading {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--charcoal);
-      margin: 0 0 22px;
-    }
-
-    .quote-form-alert {
-      display: none;
-      background: rgba(211,47,47,0.06);
-      border: 1px solid rgba(211,47,47,0.3);
-      color: #c62828;
-      font-family: var(--font-body);
-      font-size: 14px;
-      line-height: 1.5;
-      border-radius: 12px;
-      padding: 12px 16px;
-      margin-bottom: 20px;
-    }
-    .quote-form-alert.show { display: block; }
-    .quote-form-alert a { color: #c62828; text-decoration: underline; }
-
-    .quote-field { margin-bottom: 18px; }
-    .quote-field.hidden { display: none; }
-
-    .quote-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .confirm-step {
+      display: flex;
+      align-items: flex-start;
       gap: 16px;
+      padding: 14px 0;
+      border-top: 1px solid var(--border, #e8e8e4);
     }
-
-    .quote-label {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--charcoal);
-      margin-bottom: 7px;
-    }
-    .quote-label .req { color: #d32f2f; margin-left: 2px; }
-
-    .quote-input,
-    .quote-select,
-    .quote-textarea {
-      width: 100%;
-      font-family: var(--font-body);
-      font-size: 15px;
-      color: var(--charcoal);
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 14px;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    .quote-input::placeholder,
-    .quote-textarea::placeholder { color: #b3b0ac; }
-    .quote-input:focus,
-    .quote-select:focus,
-    .quote-textarea:focus {
-      outline: none;
-      border-color: var(--orange);
-      box-shadow: 0 0 0 3px rgba(241,125,2,0.12);
-    }
-    .quote-input.error,
-    .quote-select.error,
-    .quote-textarea.error {
-      border-color: #d32f2f;
-      box-shadow: 0 0 0 3px rgba(211,47,47,0.1);
-    }
-
-    .quote-textarea {
-      min-height: 120px;
-      line-height: 1.5;
-      resize: vertical;
-    }
-
-    .quote-select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%23545454' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      background-size: 16px;
-      padding-right: 40px;
-      cursor: pointer;
-    }
-
-    .quote-error-msg {
-      display: none;
-      font-family: var(--font-body);
-      font-size: 12.5px;
-      color: #d32f2f;
-      margin-top: 6px;
-    }
-    .quote-error-msg.show { display: block; }
-
-    /* ── Segmented radio group ─────────────────────────────────── */
-    .quote-segment {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-    }
-    .quote-segment label {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: left;
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--charcoal);
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px 14px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      line-height: 1.3;
-    }
-    .quote-segment label:hover { border-color: rgba(241,125,2,0.5); }
-    .quote-segment input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .quote-segment input:checked + span,
-    .quote-segment label:has(input:checked) {
-      border-color: var(--orange);
-      background: rgba(241,125,2,0.08);
-      color: var(--orange);
-      font-weight: 600;
-    }
-    .quote-segment input:focus-visible + span,
-    .quote-segment label:has(input:focus-visible) {
-      box-shadow: 0 0 0 3px rgba(241,125,2,0.12);
-    }
-    .quote-segment.error label { border-color: #d32f2f; }
-
-    .quote-submit {
-      width: 100%;
-      justify-content: center;
-      margin-top: 6px;
-    }
-    .quote-submit[disabled] { opacity: 0.7; cursor: not-allowed; }
-
-    /* ── Inline success state ──────────────────────────────────── */
-    .contact-form-success {
-      text-align: center;
-      padding: 24px 8px 12px;
-    }
-    .contact-form-success .success-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(232,68,10,0.08);
+    .confirm-step:first-of-type { border-top: none; padding-top: 0; }
+    .confirm-step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
+      background: rgba(241,125,2,0.1);
+      color: var(--orange);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 18px;
-      color: var(--orange);
     }
-    .contact-form-success h3 {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--charcoal);
-      margin: 0 0 8px;
-    }
-    .contact-form-success p {
+    .confirm-step-text {
       font-family: var(--font-body);
       font-size: 15px;
       line-height: 1.6;
       color: var(--grey, #545454);
-      margin: 0;
+    }
+    .confirm-step-text strong { color: var(--charcoal); font-weight: 600; }
+
+    .confirm-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    /* ── Mobile ────────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .contact-right { position: static; }
-      .contact-hero { padding: 100px 0 48px; }
-    }
-    @media (max-width: 600px) {
-      .contact-hero { padding: 84px 0 40px; }
-    }
     @media (max-width: 560px) {
-      .quote-card { padding: 24px 22px; }
-      .quote-row { grid-template-columns: 1fr; gap: 0; }
+      .confirm-next { padding: 24px 22px; }
+      .confirm-actions .btn { width: 100%; }
     }
 
   </style>
+
+  <!-- ═══ ANALYTICS & ADVERTISING - managed by cookie-consent.js ═══ -->
 
   <!-- Google Analytics 4 (fires only after analytics consent) -->
   <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
@@ -501,50 +186,6 @@
   <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>
 
-  <link rel="canonical" href="https://www.rosettabrands.com/contact">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Contact Us | Rosetta Brands">
-  <meta property="og:description" content="Get in touch with the Rosetta Brands team - call, email, or book a discovery call.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.rosettabrands.com/contact">
-  <meta property="og:image" content="https://www.rosettabrands.com/og-social.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Rosetta Brands: The UK's Only Vendor-as-a-Service for Consumer Brands">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Us | Rosetta Brands">
-  <meta name="twitter:description" content="Get in touch with the Rosetta Brands team - call, email, or book a discovery call.">
-  <meta name="twitter:image" content="https://www.rosettabrands.com/og-social.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ContactPage",
-      "@id": "https://www.rosettabrands.com/contact#webpage",
-      "url": "https://www.rosettabrands.com/contact",
-      "name": "Contact Us | Rosetta Brands",
-      "description": "Get in touch with the Rosetta Brands team - call, email, or book a discovery call.",
-      "inLanguage": "en-GB",
-      "isPartOf": { "@id": "https://www.rosettabrands.com/#website" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.rosettabrands.com/#organization",
-      "name": "Rosetta Brands",
-      "url": "https://www.rosettabrands.com",
-      "email": "hello@rosettabrands.co.uk",
-      "areaServed": "GB",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "hello@rosettabrands.co.uk",
-        "availableLanguage": "English"
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 
@@ -1252,120 +893,24 @@
 </div>
 </div>
 
-  <!-- ═══════════════════════════════════════════
-       HERO
-       ═══════════════════════════════════════════ -->
-  <section class="contact-hero">
-    <div class="container">
-      <div class="contact-pill">Get in touch</div>
-      <h1>We'd love to <span>hear from you.</span></h1>
-      <p>Whether you're ready to start, just exploring, or have a specific question - our team is here to help.</p>
-    </div>
-  </section>
+  <!-- ═══ CONFIRMATION ═══ -->
+  <section class="confirm-section">
+    <div class="confirm-card">
 
-  <!-- ═══════════════════════════════════════════
-       CONTACT BODY
-       ═══════════════════════════════════════════ -->
-  <section class="contact-body">
-    <div class="container">
-      <div class="contact-grid">
-
-        <!-- LEFT: contact details -->
-        <div class="contact-left">
-
-          <!-- Phone -->
-          <div class="contact-detail-list">
-
-            <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.5 3.5C2.5 2.95 2.95 2.5 3.5 2.5h3l1.5 3.75-1.75 1.75c.96 1.94 2.31 3.29 4.25 4.25l1.75-1.75L16.5 12v3c0 .55-.45 1-1 1C7.44 16 2.5 11.06 2.5 3.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="contact-detail-body">
-                <div class="contact-detail-label">Phone</div>
-                <div class="contact-detail-value">
-                  <a href="tel:+443333448171">+44 (0)333 344 8171</a>
-                </div>
-                <div class="contact-detail-note">Mon-Fri, 9am-5:30pm GMT</div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Address -->
-          <div class="contact-address">
-            <div class="contact-address-label">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5C5.07 1.5 3.5 3.07 3.5 5c0 2.63 3.5 7 3.5 7s3.5-4.37 3.5-7c0-1.93-1.57-3.5-3.5-3.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="7" cy="5" r="1.2" stroke="currentColor" stroke-width="1.3"/></svg>
-              Registered Office
-            </div>
-            <p class="contact-address-text">
-              Rosetta Brands Ltd<br>
-              The Barn, Island Farm<br>
-              Nateby, Lancashire<br>
-              PR3 0LU
-            </p>
-            <a href="https://maps.google.com/?q=Rosetta+Brands,+Barn+2,+Island+Farm,+Preston+PR3+0LU" target="_blank" rel="noopener" class="contact-address-map-link">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10m0 0L8 3m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              View on Google Maps
-            </a>
-          </div>
-
-          <!-- Map -->
-          <div class="contact-map"><iframe title="Rosetta Brands location" src="https://maps.google.com/maps?q=Rosetta%20Brands%2C%20Barn%202%2C%20Island%20Farm%2C%20Preston%20PR3%200LU%2C%20United%20Kingdom&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-
-        </div>
-
-        <!-- RIGHT: contact form -->
-        <div class="contact-right">
-          <div class="quote-card">
-            <h2 class="quote-card-heading">Send us a message</h2>
-
-            <div class="quote-form-alert" id="contact-form-alert" role="alert"></div>
-
-            <div id="contact-form">
-
-              <!-- First / Last name -->
-              <div class="quote-row">
-                <div class="quote-field">
-                  <label class="quote-label" for="firstname">First name<span class="req">*</span></label>
-                  <input class="quote-input" type="text" id="firstname" name="firstname" autocomplete="given-name" required>
-                  <div class="quote-error-msg" data-error-for="firstname">Please enter your first name.</div>
-                </div>
-                <div class="quote-field">
-                  <label class="quote-label" for="lastname">Last name<span class="req">*</span></label>
-                  <input class="quote-input" type="text" id="lastname" name="lastname" autocomplete="family-name" required>
-                  <div class="quote-error-msg" data-error-for="lastname">Please enter your last name.</div>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="quote-field">
-                <label class="quote-label" for="email">Email<span class="req">*</span></label>
-                <input class="quote-input" type="email" id="email" name="email" autocomplete="email" required>
-                <div class="quote-error-msg" data-error-for="email">Please enter a valid email address.</div>
-              </div>
-
-              <!-- Phone -->
-              <div class="quote-field">
-                <label class="quote-label" for="phone">Phone<span class="req">*</span></label>
-                <input class="quote-input" type="tel" id="phone" name="phone" autocomplete="tel" required>
-                <div class="quote-error-msg" data-error-for="phone">Please enter your phone number.</div>
-              </div>
-
-              <!-- Message -->
-              <div class="quote-field">
-                <label class="quote-label" for="message">Your message<span class="req">*</span></label>
-                <textarea class="quote-textarea" id="message" name="message" rows="5" required></textarea>
-                <div class="quote-error-msg" data-error-for="message">Please enter a message.</div>
-              </div>
-
-              <!-- Submit -->
-              <button type="button" class="btn btn-primary btn-lg quote-submit" id="contact-submit">Send message</button>
-
-            </div>
-          </div>
-        </div>
-
+      <div class="confirm-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
+
+      <span class="confirm-pill">Message received</span>
+
+      <h1>Thanks, message received.</h1>
+      <p class="lead">Thanks for getting in touch. A member of the Rosetta Brands team will get back to you within one business day.</p>
+
+      <div class="confirm-actions">
+        <a href="/" class="btn btn-secondary">Back to home</a>
+        <a href="/blog" class="btn btn-primary">Read our guides</a>
+      </div>
+
     </div>
   </section>
 
@@ -1659,173 +1204,8 @@
 
 <script src="cookie-consent.js"></script>
 </div>
-  <script src="nav-loader.js" defer></script>
-  <script src="cookie-consent.js" defer></script>
 
-  <script>
-  (function () {
-    // ⚠️ Replace with the HubSpot Form GUID once the form is created in HubSpot (Marketing > Forms).
-    const HUBSPOT_PORTAL_ID = "148770068";
-    const HUBSPOT_FORM_GUID = "c873b8e3-888a-4506-9d60-9b49e4d3b911";
-
-    // Container is a <div>, not a <form>, so HubSpot's Collected Forms
-    // scraper has no form-submit event to capture. elem() replaces the
-    // <form>.elements[name] lookup used below.
-    const form = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('contact-submit');
-    const alertBox = document.getElementById('contact-form-alert');
-    const card = form.closest('.quote-card');
-    function elem(name) { return form.querySelector('[name="' + name + '"]'); }
-
-    // Preserve Enter-to-submit without a real form submit event
-    form.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' && e.target.tagName === 'INPUT' &&
-          e.target.type !== 'checkbox' && e.target.type !== 'radio') {
-        e.preventDefault();
-        submitBtn.click();
-      }
-    });
-
-    // ── Validation helpers ──────────────────────────────────────
-    function isValidEmail(value) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    }
-
-    function showError(name) {
-      const msg = form.querySelector('[data-error-for="' + name + '"]');
-      if (msg) msg.classList.add('show');
-      const field = elem(name);
-      if (field && field.classList) {
-        field.classList.add('error');
-      }
-    }
-
-    function clearError(name) {
-      const msg = form.querySelector('[data-error-for="' + name + '"]');
-      if (msg) msg.classList.remove('show');
-      const field = elem(name);
-      if (field && field.classList) {
-        field.classList.remove('error');
-      }
-    }
-
-    // Clear error state as the user corrects a field
-    ['firstname', 'lastname', 'email', 'phone', 'message'].forEach(function (name) {
-      const el = elem(name);
-      if (el) {
-        el.addEventListener('input', function () { clearError(name); });
-        el.addEventListener('change', function () { clearError(name); });
-      }
-    });
-
-    function validate() {
-      let firstInvalid = null;
-      const required = ['firstname', 'lastname', 'email', 'phone', 'message'];
-
-      required.forEach(function (name) {
-        const el = elem(name);
-        const value = el ? (el.value || '').trim() : '';
-        let invalid = !value;
-        if (name === 'email' && value && !isValidEmail(value)) invalid = true;
-        if (invalid) {
-          showError(name);
-          if (!firstInvalid) firstInvalid = el;
-        } else {
-          clearError(name);
-        }
-      });
-
-      return firstInvalid;
-    }
-
-    // ── Build HubSpot v3 payload ────────────────────────────────
-    function buildPayload() {
-      const names = ['firstname', 'lastname', 'email', 'phone', 'message'];
-      const fields = [];
-      names.forEach(function (name) {
-        const el = elem(name);
-        if (!el) return;
-        const value = (el.value || '').trim();
-        if (value) {
-          fields.push({ objectTypeId: '0-1', name: name, value: value });
-        }
-      });
-      // Hidden lead source (not shown to the user)
-      fields.push({ objectTypeId: '0-1', name: 'lead_sour', value: 'Contact Us' });
-      return {
-        fields: fields,
-        context: {
-          pageUri: window.location.href,
-          pageName: document.title
-        }
-      };
-    }
-
-    function showAlert(message) {
-      alertBox.innerHTML = message;
-      alertBox.classList.add('show');
-    }
-    function hideAlert() {
-      alertBox.classList.remove('show');
-      alertBox.innerHTML = '';
-    }
-
-    // Replace the card content with an inline success state
-    function showSuccess() {
-      card.innerHTML =
-        '<div class="contact-form-success">' +
-          '<div class="success-icon">' +
-            '<svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-          '</div>' +
-          '<h3>Message sent</h3>' +
-          '<p>Thanks - we\'ll get back to you within one business day.</p>' +
-        '</div>';
-    }
-
-    // ── Submit handler (button click - no form submit event) ────
-    submitBtn.addEventListener('click', async function (e) {
-      e.preventDefault();
-      hideAlert();
-
-      const firstInvalid = validate();
-      if (firstInvalid) {
-        if (typeof firstInvalid.focus === 'function') firstInvalid.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      const originalLabel = submitBtn.textContent;
-      submitBtn.textContent = 'Sending...';
-
-      try {
-        if (HUBSPOT_FORM_GUID === 'REPLACE_WITH_FORM_GUID') {
-          console.warn('HubSpot Form GUID is not set - skipping the HubSpot submission and redirecting for testing.');
-          window.location.href = '/message-sent';
-          return;
-        }
-
-        const endpoint = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID;
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(buildPayload())
-        });
-
-        if (response.status === 200) {
-          window.location.href = '/message-sent';
-          return;
-        }
-
-        throw new Error('HubSpot responded with status ' + response.status);
-      } catch (err) {
-        console.error('Contact form submission failed:', err);
-        showAlert("Something went wrong - please try again, or call us on +44 (0)333 344 8171.");
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-      }
-    });
-  })();
-  </script>
+  <script src="nav-loader.js"></script>
 
 </body>
 </html>
