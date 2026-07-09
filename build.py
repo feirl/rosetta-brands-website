@@ -105,6 +105,8 @@ PAGES = [
     'meeting-confirmed.html',
     'quote.html',
     'quote-thanks.html',
+    'vendor-guide.html',
+    'vendor-guide-thanks.html',
 ]
 
 def main():
