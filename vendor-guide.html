@@ -50,6 +50,31 @@
 
     /* ── Left column ───────────────────────────────────────────── */
     .quote-left { position: sticky; top: 100px; }
+
+    /* Fanned trio of guide covers */
+    .guide-covers {
+      position: relative;
+      height: 260px;
+      margin: 0 0 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .guide-covers img {
+      position: absolute;
+      width: 168px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 16px 36px rgba(45,41,51,0.22);
+    }
+    .guide-covers img:nth-child(1) { transform: rotate(-8deg) translateX(-72px); z-index: 1; }
+    .guide-covers img:nth-child(2) { transform: rotate(8deg) translateX(72px); z-index: 2; }
+    .guide-covers img:nth-child(3) { transform: rotate(0deg); z-index: 3; }
+    @media (max-width: 900px) {
+      .guide-covers { height: 230px; }
+      .guide-covers img { width: 150px; }
+    }
+
     .quote-left h1 {
       font-family: var(--font-display);
       font-size: clamp(30px, 4vw, 46px);
@@ -1056,6 +1081,11 @@
 
         <!-- LEFT: persuasive copy -->
         <div class="quote-left">
+          <div class="guide-covers" aria-hidden="true">
+            <img src="img/guides/guide-cover-d2c.jpg" alt="" loading="lazy" width="168">
+            <img src="img/guides/guide-cover-seller.jpg" alt="" loading="lazy" width="168">
+            <img src="img/guides/guide-cover-vendor.jpg" alt="Rosetta Brands Amazon Vendor Guide" loading="lazy" width="168">
+          </div>
           <span class="quote-hero-pill">Free Guide</span>
           <h1>The Amazon <span>Vendor Guide</span></h1>
           <p class="quote-lead">The definitive guide to succeeding and maximising your profitability on Amazon Vendor, with unique insights from the UK's Top 15 FMCG vendor.</p>
