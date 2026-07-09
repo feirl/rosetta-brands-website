@@ -60,19 +60,55 @@
       justify-content: center;
       align-items: center;
     }
-    .guide-covers img {
+    .guide-covers .cover {
       position: absolute;
-      width: 168px;
-      height: auto;
-      border-radius: 6px;
+      width: 172px;
+      aspect-ratio: 1 / 1.414;
+      background: var(--charcoal, #2d2933);
+      border-radius: 7px;
       box-shadow: 0 16px 36px rgba(45,41,51,0.22);
+      padding: 16px 15px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
-    .guide-covers img:nth-child(1) { transform: rotate(-8deg) translateX(-72px); z-index: 1; }
-    .guide-covers img:nth-child(2) { transform: rotate(8deg) translateX(72px); z-index: 2; }
-    .guide-covers img:nth-child(3) { transform: rotate(0deg); z-index: 3; }
+    .guide-covers .cover-eyebrow {
+      margin-top: 34px;
+      font-family: var(--font-display);
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+    .guide-covers .cover-title {
+      margin-top: 9px;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .guide-covers .cover-title span { color: var(--orange); }
+    .guide-covers .cover-rule {
+      width: 34px;
+      height: 3px;
+      border-radius: 2px;
+      margin-top: 12px;
+      background: linear-gradient(90deg, var(--orange), var(--pink, #e15286), var(--purple, #7f86c1));
+    }
+    .guide-covers .cover-logo {
+      margin-top: auto;
+      height: 15px;
+      width: auto;
+    }
+    .guide-covers .cover:nth-child(1) { transform: rotate(-8deg) translateX(-72px); z-index: 1; }
+    .guide-covers .cover:nth-child(2) { transform: rotate(8deg) translateX(72px); z-index: 2; }
+    .guide-covers .cover:nth-child(3) { transform: rotate(0deg); z-index: 3; }
     @media (max-width: 900px) {
       .guide-covers { height: 230px; }
-      .guide-covers img { width: 150px; }
+      .guide-covers .cover { width: 152px; }
     }
 
     .quote-left h1 {
@@ -1086,9 +1122,24 @@
           <p class="quote-lead">The definitive guide to succeeding and maximising your profitability on Amazon Vendor, with unique insights from the UK's Top 15 FMCG vendor.</p>
 
           <div class="guide-covers" aria-hidden="true">
-            <img src="img/guides/guide-cover-d2c.jpg" alt="" loading="lazy" width="168">
-            <img src="img/guides/guide-cover-seller.jpg" alt="" loading="lazy" width="168">
-            <img src="img/guides/guide-cover-vendor.jpg" alt="Rosetta Brands Amazon Vendor Guide" loading="lazy" width="168">
+            <div class="cover">
+              <div class="cover-eyebrow">FMCG Vendor Guide</div>
+              <div class="cover-title">The Amazon <span>Vendor Guide</span></div>
+              <div class="cover-rule"></div>
+              <img class="cover-logo" src="logo-light-2026.png" alt="">
+            </div>
+            <div class="cover">
+              <div class="cover-eyebrow">FMCG Vendor Guide</div>
+              <div class="cover-title">The Amazon <span>Vendor Guide</span></div>
+              <div class="cover-rule"></div>
+              <img class="cover-logo" src="logo-light-2026.png" alt="">
+            </div>
+            <div class="cover">
+              <div class="cover-eyebrow">FMCG Vendor Guide</div>
+              <div class="cover-title">The Amazon <span>Vendor Guide</span></div>
+              <div class="cover-rule"></div>
+              <img class="cover-logo" src="logo-light-2026.png" alt="">
+            </div>
           </div>
 
           <ul class="quote-reassure">
