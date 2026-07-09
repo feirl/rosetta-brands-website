@@ -64,10 +64,11 @@ Rosetta Brands has built its own technology stack including: automated order pro
 - [Home](https://www.rosettabrands.com/): Overview of the Vendor-as-a-Service model, core statistics, and service pillars
 - [Why Rosetta Brands](https://www.rosettabrands.com/why-rosetta-brands): The five reasons FMCG brands choose Rosetta over an agency, consultancy, or running Seller Central themselves - brand control, Prime access, cost structure, operational expertise, and technology
 - [Pricing](https://www.rosettabrands.com/pricing): Success-fee model details - no fixed monthly retainer, revenue tied to client growth, terms vary by category and volume
-- [Schedule a Call](https://www.rosettabrands.com/schedule-a-call): Book a discovery call with the commercial team via Calendly
+- [Get a Quote](https://www.rosettabrands.com/quote): Request a tailored, success-fee-based quote for scaling your brand on Amazon - a short form covering your Amazon position, category, SKUs and target markets
+- [Schedule a Call](https://www.rosettabrands.com/schedule-a-call): Book a discovery call with the commercial team
 - [Meet the Team](https://www.rosettabrands.com/meet-the-team): Company history and bios for Nick Comer (CEO), Sophie Smith (Commercial Director), Matt Nash (Head of Sales), Becky Webster (Head of Vendor)
 - [Careers](https://www.rosettabrands.com/careers): Open roles and how to join the team
-- [Contact](https://www.rosettabrands.com/contact): Direct contact form and email
+- [Contact](https://www.rosettabrands.com/contact): Contact form, phone number, and registered office location with map
 
 ### Solutions by situation
 
@@ -114,9 +115,11 @@ Rosetta Brands has built its own technology stack including: automated order pro
 - [FAQ](https://www.rosettabrands.com/faqs): 25 strategic questions covering the VaaS model, vendor position, pricing, brand control, and results
 - [Case Studies](https://www.rosettabrands.com/case-studies): Anonymised brand stories from 8 real partnerships across grocery, drinks, and health categories
 - [Blog](https://www.rosettabrands.com/blog): Insights and analysis from the Rosetta Brands team on Amazon vendor strategy
+- [Amazon Vendor Guide (free download)](https://www.rosettabrands.com/vendor-guide): A free, downloadable guide to succeeding and maximising profitability on Amazon Vendor, with three versions tailored to whether the brand sells D2C, on Seller Central (3P), or already as a Vendor (1P)
 
 ### Blog posts
 
+- [How to Become an Amazon Vendor in the UK](https://www.rosettabrands.com/how-to-become-amazon-vendor-uk): Why Amazon Vendor Central is invitation-only, who qualifies, how long it takes, and the realistic Vendor-as-a-Service route for FMCG brands
 - [Amazon Chargebacks](https://www.rosettabrands.com/amazon-chargebacks): What vendor chargebacks are, how they erode margins, and how FMCG brands can reduce exposure
 - [Subscribe and Save](https://www.rosettabrands.com/subscribe-and-save): How FMCG brands can use Amazon's Subscribe & Save programme to drive repeat purchase and lifetime value
 - [Brand Pricing on Amazon](https://www.rosettabrands.com/brand-pricing-amazon): How FMCG vendors can protect brand pricing when Amazon controls the retail price in Vendor Central
