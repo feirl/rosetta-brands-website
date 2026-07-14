@@ -1559,6 +1559,10 @@
     // ⚠️ Replace with the HubSpot Form GUID once the form is created in HubSpot (Marketing > Forms).
     const HUBSPOT_PORTAL_ID = "148770068";
     const HUBSPOT_FORM_GUID = "e75fd62f-91ab-45e7-8b39-1f0e68f683f4";
+    // Marketing email subscription type ID (Settings > Marketing > Email >
+    // Subscription types). Records a legitimate-interest lawful basis so
+    // HubSpot will send the guide follow-up email.
+    const HUBSPOT_SUBSCRIPTION_ID = 3020488850; // "Marketing Information" subscription type
 
     // Container is a <div>, not a <form>, so HubSpot's Collected Forms
     // scraper has no form-submit event to capture. elem() replaces the
@@ -1678,6 +1682,14 @@
         context: {
           pageUri: window.location.href,
           pageName: document.title
+        },
+        legalConsentOptions: {
+          legitimateInterest: {
+            value: true,
+            subscriptionTypeId: HUBSPOT_SUBSCRIPTION_ID,
+            legalBasis: "LEAD",
+            text: "Rosetta Brands will use your details to send the requested guide and occasional relevant Amazon insights, on the basis of legitimate interest. You can unsubscribe at any time."
+          }
         }
       };
     }
