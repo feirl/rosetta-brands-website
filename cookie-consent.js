@@ -42,9 +42,29 @@
     return obj;
   }
 
+  /* ─── Google Consent Mode v2 ────────────────────────────────────── */
+  /* GA loads on every page in "denied" state (cookieless pings). When the
+     visitor opts in we flip the relevant signals to "granted" so full
+     tracking resumes. Analytics -> analytics_storage; Advertising -> the
+     three ad_* signals. */
+
+  function updateGoogleConsent(consent) {
+    if (typeof window.gtag !== 'function') {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+    }
+    window.gtag('consent', 'update', {
+      'analytics_storage':  consent.analytics   ? 'granted' : 'denied',
+      'ad_storage':         consent.advertising ? 'granted' : 'denied',
+      'ad_user_data':       consent.advertising ? 'granted' : 'denied',
+      'ad_personalization': consent.advertising ? 'granted' : 'denied'
+    });
+  }
+
   /* ─── Script activation ─────────────────────────────────────────── */
 
   function activateScripts(consent) {
+    updateGoogleConsent(consent);
     var gated = document.querySelectorAll('script[type="text/plain"][data-consent]');
     for (var i = 0; i < gated.length; i++) {
       var orig     = gated[i];

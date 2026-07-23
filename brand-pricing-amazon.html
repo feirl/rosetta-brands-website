@@ -126,8 +126,25 @@
 .faq-answer-inner p { font-size: 15px !important; line-height: 1.7 !important; color: var(--text-secondary) !important; margin-bottom: 0 !important; }
 </style>
 
-  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
-  <script type="text/plain" data-consent="analytics">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1QWDWL7EP0');</script>
+  <!-- Google Consent Mode v2 - deny until the visitor opts in (runs on every page) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+
+  <!-- Google Analytics 4 - loads on every page; cookieless until analytics consent, full tracking after -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-1QWDWL7EP0');
+  </script>
   <script type="text/plain" data-consent="advertising">_linkedin_partner_id="LI-XXXXXXX";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script>
   <script type="text/plain" data-consent="advertising" async src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LI-XXXXXXX&fmt=gif" /></noscript>

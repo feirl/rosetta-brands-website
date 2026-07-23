@@ -468,11 +468,22 @@
        Replace G-1QWDWL7EP0 with GA4 Measurement ID
        Replace LI-XXXXXXX  with LinkedIn Partner ID            ═══ -->
 
-  <!-- Google Analytics 4 (fires only after analytics consent) -->
-  <script type="text/plain" data-consent="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
-  <script type="text/plain" data-consent="analytics">
+  <!-- Google Consent Mode v2 - deny until the visitor opts in (runs on every page) -->
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+
+  <!-- Google Analytics 4 - loads on every page; cookieless until analytics consent, full tracking after -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QWDWL7EP0"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-1QWDWL7EP0');
   </script>
